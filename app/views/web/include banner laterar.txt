@@ -1,0 +1,6 @@
+<br>
+<p class="heading"> 
+    @if(Banner::where('posicion','=',1)->count() != 0)
+    <img src="uploads/contenidos/banner/{{Banner::where('posicion','=',1)->first()->imagen}}" class="img-responsive"/>
+    @endif
+</p>

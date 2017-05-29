@@ -1,0 +1,68 @@
+@extends('web.base')
+@section('contenido')<br>
+<div class="sections3">
+<div class="col-lg-12 col-md-4 col-sm-4 col-xs-12"> 
+                    <!-- Video Box Start -->
+
+
+
+<h4 class="media-heading"><font color="#ff4f5e">Calendario</font></h4><br>
+
+@foreach($torneo_fase as $fase)
+
+<h4><font color="#000000" size="-4">{{$fase->nombre}}</font></h4>
+
+  @foreach($fase->leg as $leg)
+
+    <button type="button" class="btn btn-primary btn-xs">{{$leg->nombre}}</button>
+<hr>
+<div class="table-responsive">
+<table class="table table-hover table-striped" border="1" bordercolor="#dddddd">
+                              <tbody>
+    <tr>
+      <td width="12" align="center" class="info">Nro.</td>
+      <td width="80" align="center" class="info">Fecha</td>
+      <td align="center" width="30" class="info">Hora</td>
+      <td width="180" align="center" class="info">Local</td>
+      <td width="180" align="center" class="info">Visitante</td>
+      <td width="250" align="center" class="info">Estadio</td>
+      <td width="40" align="center" class="info">Tv</td>
+    </tr>
+
+        @foreach($leg->partido as $partido)
+
+         <tr >
+          <td align="center"  height="20" bgcolor="#eff0f2"><strong>{{$partido->numero_partido}}</strong></td>
+          <td align="center" bgcolor="#ffffff"><font size="-4">{{$partido->fecha_inicio}}</font></td>
+          <td align="center"bgcolor="#eff0f2"><font size="-4">{{$partido->hora}}</font></td>
+          <td align="center" bgcolor="#ffffff"><font size="-4">{{$partido->local_equipo_id->nombre }}</font></td>
+          <td align="center" bgcolor="#eff0f2"><font size="-4">{{$partido->visita_equipo_id->nombre }}</font></td>
+          <td align="center" bgcolor="#ffffff"><font size="-4">{{isset($partido->Estadio->nombre) ? $partido->Estadio->nombre : '' }}</font></td>
+         <td align="center" bgcolor="#eff0f2"><img src="assets/estilosweb/images/t_logo.png" border="0" height="16" width="48" />  </td>
+        </tr>
+
+        @endforeach
+
+  </tbody>
+</table>
+<br>
+</div>
+
+  @endforeach
+
+@endforeach
+
+
+<br>
+<table align="right">
+  <tr>
+<td align="left"  bgcolor="#ffffff"><font size="-4">Partidos Televisados</font> <img src="http://intranetaclav.sion.com/img/tel.gif" border="0" height="16" width="16" />  </td>
+</tr></table>
+<br><br>
+
+
+  
+</div>
+       
+  </div>
+@endsection 

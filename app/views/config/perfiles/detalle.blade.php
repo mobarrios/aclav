@@ -1,0 +1,1 @@
+<img class="avatar avatar-md img-circle" src="assets/template-2/img/user.jpg"></img><h1>{{$jugador->apellido}} {{$jugador->nombre}}</h1>

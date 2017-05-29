@@ -1,0 +1,38 @@
+
+PEDIDOS
+
+
+- Me tiró un error con el usuario del supervisor: cuando vas a Perfil – Editar datos del sistema. Con el usuario del árbitro no pasa.
+- MAIL : La tipografía y el color es el del manual de estilo que les mandé.
+- Costos: cuando cargo los costos a Aclav, ¿dónde veo esos costos? (como lo ven los clubes
+- Desgi :    color del estado. Rechazado=rojo, aceptado=verde, a confirmar=azul
+-  Staff: no carga la fot. Pparece que la carga pero no la muestra cuando se va a ver el detalle (lupa). En el carnet no la muestra (muestra una pero esa no la cargué yo, y está mal el logo aplicado así)
+
+
+- Designaciones: los estados de diferentes colores (rojo=rechazado, verde=aceptado, azul=a confirmar)
+- Designaciones y Costos de Oficiales: mostrar número de partido y sigla en la pantalla que se ingresa
+- Habilitaciones: poner el nombre del club seleccionado
+- En costos, cargué los honorarios pero me olvidé de seleccionar a quien se asigna ese costo. Tiró error y no pude volver a ingresar (Copa Aclav, partido 4)
+- Hay que borrar todas las designaciones y costos cargados, para cargar las designaciones que corresponden y tener el historial de las mismas correcto.
+- Imprimir Designaciones
+- Imprimir Habilitaciones
+- 
+
+
+------------------------------------------------
+permisos ('crear','borrar','editar','listar')
+
+
+	Jugador
+		validar delete
+
+	Club
+		boton delete
+
+	Archivos
+		revisar
+
+	Staff
+		delete
+
+

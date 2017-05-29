@@ -1,0 +1,100 @@
+
+25-05-17
+- routes
+- controllers/torneoController
+- models/tonreoEquipo
+- views/torneo/edit
+- models/torneos
+- view/torneo/create
+- view/torneo/fase/form
+- view/torneo/fase/forn_edit
+
+
+
+
+24-03-17
+
+models/profiles
+buenafebiscontroller
+view/torneo/partido/detalle
+viw/config/usuarios/list
+usuarioscontroller
+putnoxputto4
+puntoxpuntocontroller
+view/temporada/index
+view/club/equipo/02
+view/club/equipo/detalle
+perfilesController
+/repo/02bis
+
+db - formulario /  is_formulario (tinyint)
+
+
+
+20-08
+
+Controllers
+	- CostoController
+	
+
+
+
+
+
+------- ok
+18-06
+
+v routes
+
+Model
+	v Habilitaciones
+	v HabilitacionesStaff
+	v Partido
+	v BuenaFe
+	v Otro
+
+
+Controllers
+	v HabilitacionesControllers
+	v PartidoController
+	v ArchivoController
+	v TorneoController
+	v BuenaFeController
+	v HomeController
+	v OtroController
+
+
+
+
+Views
+	v habilitaciones/detalle
+	v habilitaciones/editar
+	v partido/detalle
+	v jugadores/detalle
+	v contenido/archivo/index
+	v contenido/archivo/form
+	v partido/detalle
+	v temporadas/index
+	v partido/form
+	v torneo/detalle
+	v + torneo/fase/form_edit
+	v club/detalle
+	v club/equipo/o2
+	v club/buenafebis/detalle
+	v repo/o2
+	v club/equipo/list
+	v club/equipo/detalle
+	v club/buenafe/index
+	v club/buenafe/form_jugador
+	v otro/..
+
+	v web/menu
+
+DB
+	v otro = arbitro 
+
+	v torneo
+	v	o2_web
+
+	v buena_fe_staff
+	v	fecha_desde / fecha_hasta

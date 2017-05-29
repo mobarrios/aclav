@@ -1,0 +1,36 @@
+@extends('template-2/template')
+
+@section('content') 
+
+<div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <img class="img-responsive" src="http://aclav.datachost.com/public/uploads/escudos/phpCF3yzy_1414014703.png" height="50%"/>
+                                
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <img class="img-responsive" src="http://aclav.datachost.com/public/uploads/escudos/phpIZoBAb_1414884510.png" height="50%"/>
+                                
+                            </div>
+                        </div>
+
+
+<div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <h4>LOCAL</h4>
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <h4>vs</h4>
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <h4>VISITANTE</h4>
+                                
+                            </div>
+                        </div>
+
+
+
+@endsection
+
+@stop
