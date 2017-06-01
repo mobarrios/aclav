@@ -25,28 +25,7 @@ Route::get('/', function()
 });
 */
 
-Route::group(array('prefix' => 'web_nuevo'), function()
-{
-
-	//set database original
-		//Config::set('database.default','mysql');	
-	//--
-
-	//consulta entre fechas actual
-	// @foreach(TorneoFaseLeg::whereRaw('CURDATE() BETWEEN fecha_inicio AND fecha_final')->get() as $leg )
-	Route::get('noticia/{id?}', 'ApiController@getNoticia');
-    Route::get('noticias', 'ApiController@getNoticias');
-    Route::get('homeNoticias', 'ApiController@getHomeNoticias');
-
-
-	Route::get('', function()
-	{
-		dd('sarasa');
-	});
-
-
-
-});	
+require(__DIR__ . '/web_nuevaRoute.php');
 
 
 Route::group(array('prefix' => 'api'), function()
