@@ -5,8 +5,7 @@ class NuevaWebController extends BaseController
 	public function getHomeNoticias()
 	{
 		$noticias = NoticiasPosicion::with('noticias')->get();
-
-		dd($noticias);
+        return View::make('web_nueva.inicio');
 	}
 
 	public function getNoticias()
@@ -49,7 +48,8 @@ class NuevaWebController extends BaseController
 	}
 
 	public function contacto(){
-		dd('contacto');
+		
+		return View::make('web_nueva.contacto');
 	}
 
 	public function social(){
