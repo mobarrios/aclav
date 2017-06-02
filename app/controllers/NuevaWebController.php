@@ -5,15 +5,12 @@ class NuevaWebController extends BaseController
 	public function getHomeNoticias()
 	{
 		$noticias = NoticiasPosicion::with('noticias')->get();
-
 		dd($noticias);
 	}
 
 	public function getNoticias()
 	{	
-
 		$noticias = Noticias::all();
-		
 		//return View::make('otro.index')->with($noticias);
 	}
 

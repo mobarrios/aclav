@@ -751,7 +751,7 @@ Route::group(array('prefix' => 'web'), function()
 	Route::get('/tribunal/{id}', function($id)
 	{
 		$temporada = Temporada::where('actual',1)->first();
-
+		
 		$desde = date('Y-m-d',strtotime($temporada->fecha_inicio));
 		$hasta =date('Y-m-d',strtotime($temporada->fecha_final));
 
