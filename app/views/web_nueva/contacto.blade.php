@@ -111,7 +111,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/001.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/001.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Personal Bolívar</h6>
@@ -127,7 +127,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/002.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Ciudad Voley</h6>
@@ -143,7 +143,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/003.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/003.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">UPCN San Juan Voley</h6>
@@ -159,7 +159,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/004.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/004.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Lomas Voley</h6>
@@ -175,7 +175,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/005.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/005.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Gigantes del Sur</h6>
@@ -191,7 +191,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/006.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/006.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Obras UDAP Voley</h6>
@@ -207,7 +207,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/007.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/007.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Alianza Jesús María</h6>
@@ -223,7 +223,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/008.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/008.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">River Plate</h6>
@@ -239,7 +239,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/009.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/009.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Deportivo Morón</h6>
@@ -255,7 +255,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/010.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/010.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Untref Voley</h6>
@@ -271,7 +271,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/011.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/011.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">PSM Voley</h6>
@@ -336,7 +336,7 @@
             <!-- Widget: Popular News -->
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
-                <h4><img src="assets/images/samples/banner002.jpg"></h4>
+                <h4><img src="assets/webnueva/images/samples/banner002.jpg"></h4>
               </div>
               
             </aside>
@@ -350,10 +350,10 @@
               </div>
               <div class="widget__content card__content">
                 <div class="widget-player__team-logo">
-                  <img src="assets/images/logo.png" alt="">
+                  <img src="assets/webnueva/images/logo.png" alt="">
                 </div>
                 <figure class="widget-player__photo">
-                  <img src="assets/images/samples/widget-featured-player.png" alt="">
+                  <img src="assets/webnueva/images/samples/widget-featured-player.png" alt="">
                 </figure>
                 <header class="widget-player__header clearfix">
                   <div class="widget-player__number">38</div>

@@ -4,7 +4,7 @@
       <div class="pushy-panel__inner">
         <header class="pushy-panel__header">
           <div class="pushy-panel__logo">
-            <a href="index.html"><img src="assets/images/logo.png" srcset="assets/images/logo@2x.png 2x" alt="Alchemists"></a>
+            <a href="index.html"><img src="assets/webnueva/images/logo.png" srcset="assets/webnueva/images/logo@2x.png 2x" alt="Alchemists"></a>
           </div>
         </header>
         <div class="pushy-panel__content">
@@ -27,7 +27,7 @@
                   <footer class="posts__footer card__footer">
                     <div class="post-author">
                       <figure class="post-author__avatar">
-                        <img src="assets/images/samples/avatar-1.jpg" alt="Post Author Avatar">
+                        <img src="assets/webnueva/images/samples/avatar-1.jpg" alt="Post Author Avatar">
                       </figure>
                       <div class="post-author__info">
                         <h4 class="post-author__name">James Spiegel</h4>
@@ -53,7 +53,7 @@
                   <footer class="posts__footer card__footer">
                     <div class="post-author">
                       <figure class="post-author__avatar">
-                        <img src="assets/images/samples/avatar-2.jpg" alt="Post Author Avatar">
+                        <img src="assets/webnueva/images/samples/avatar-2.jpg" alt="Post Author Avatar">
                       </figure>
                       <div class="post-author__info">
                         <h4 class="post-author__name">Jessica Hoops</h4>
@@ -100,7 +100,7 @@
           <aside class="widget widget--side-panel widget-banner">
             <div class="widget__content">
               <figure class="widget-banner__img">
-                <a href="#"><img src="{{asset('images/samples/banner.jpg')}}" alt="Banner"></a>
+                <a href="#"><img src="assets/webnueva/images/samples/banner.jpg" alt="Banner"></a>
               </figure>
             </div>
           </aside>
@@ -123,13 +123,13 @@
   
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="{{asset('images/samples/hero-slide1.jpg')}}" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
+          <img src="assets/webnueva/images/samples/hero-slide1.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
         </figure>
         <!-- Main Image / End -->
   
         <!-- Player Image -->
         <div class="posts__img-player">
-          <img src="{{(asset('images/samples/hero-unit-player.png'))}}" alt="Hero Unit Image">
+          <img src="assets/webnueva/images/samples/hero-unit-player.png'))}}" alt="Hero Unit Image">
         </div>
         <!-- Player Image / End -->
   
@@ -154,7 +154,7 @@
   
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="{{asset('images/samples/hero-slide2.jpg')}}" alt="" class="duotone-img" data-gradient-map="#282840, #9e69ee">
+          <img src="assets/webnueva/images/samples/hero-slide2.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #9e69ee">
         </figure>
         <!-- Main Image / End -->
   
@@ -179,7 +179,7 @@
   
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="{{asset('images/samples/hero-slide3.jpg')}}" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
+          <img src="assets/webnueva/images/samples/hero-slide3.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
         </figure>
         <!-- Main Image / End -->
   
@@ -208,7 +208,7 @@
   
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="{{asset('images/samples/hero-slide4.jpg')}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
+          <img src="assets/webnueva/images/samples/hero-slide4.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
         </figure>
         <!-- Main Image / End -->
   
@@ -246,7 +246,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                          <img src="{{asset('images/samples/logos/001.png')}}" alt="">
+                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Personal Bolívar</h5>
@@ -259,7 +259,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                          <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                          <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Ciudad Voley</h5>
@@ -283,7 +283,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">UPCN San Juan Voley</h5>
@@ -296,7 +296,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Lomas Voley</h5>
@@ -320,7 +320,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Gigantes del Sur</h5>
@@ -333,7 +333,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Obras UDAP Voley</h5>
@@ -357,7 +357,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Alianza Jesús María</h5>
@@ -370,7 +370,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">River Plate</h5>
@@ -394,7 +394,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Deportivo Morón</h5>
@@ -407,7 +407,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Untref Voley</h5>
@@ -431,7 +431,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
 
                         <div class="widget-results__team-details">
@@ -445,7 +445,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Ciudad Voley</h5>
@@ -471,7 +471,7 @@
               <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Personal Bolívar</h5>
@@ -497,7 +497,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Ciudad Voley</h5>
@@ -520,7 +520,7 @@
               <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">UPCN San Juan</h5>
@@ -546,7 +546,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Lomas Voley</h5>
@@ -569,7 +569,7 @@
               <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Gigantes del Sur</h5>
@@ -595,7 +595,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Obras UDAP Voley</h5>
@@ -618,7 +618,7 @@
               <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Alianza Jesús María</h5>
@@ -644,7 +644,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">River Plate</h5>
@@ -667,7 +667,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Personal Bolívar</h5>
@@ -680,7 +680,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Ciudad Voley</h5>
@@ -704,7 +704,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                          <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                          <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">UPCN San Juan Voley</h5>
@@ -717,7 +717,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Lomas Voley</h5>
@@ -741,7 +741,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Gigantes del Sur</h5>
@@ -754,7 +754,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Obras UDAP Voley</h5>
@@ -778,7 +778,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Alianza Jesús María</h5>
@@ -791,7 +791,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">River Plate</h5>
@@ -815,7 +815,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Deportivo Morón</h5>
@@ -828,7 +828,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Untref Voley</h5>
@@ -852,7 +852,7 @@
                     <div class="widget-results__content">
                       <div class="widget-results__team widget-results__team--first">
                         <figure class="widget-results__team-logo">
-                           <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                           <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">PSM Voley</h5>
@@ -865,7 +865,7 @@
                       </div>
                       <div class="widget-results__team widget-results__team--second">
                         <figure class="widget-results__team-logo">
-                            <img src="{{asset('images/samples/logos/002.png')}}" alt="">
+                            <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                         </figure>
                         <div class="widget-results__team-details">
                           <h5 class="widget-results__team-name">Ciudad Voley</h5>
@@ -894,7 +894,7 @@
               
             <!-- Featured News -->
             <div class="card card--clean">
-              <h4><img src="{{asset('images/samples/bna.gif')}}"></h4>
+              <h4><img src="assets/webnueva/images/samples/bna.gif"></h4>
               <div class="card__content">
 
                 <!-- Slider -->
@@ -913,7 +913,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img6.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img6.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -929,7 +929,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img3.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img3.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -946,7 +946,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img06.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img06.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -962,7 +962,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img03.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img03.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -981,7 +981,7 @@
             <!-- Last Game Results -->
             
               
-                <h4><img src="assets/images/samples/banner02.jpg"></h4>
+                <h4><img src="assets/webnueva/images/samples/banner02.jpg"></h4>
               
               
             <!-- Last Game Results / End -->
@@ -1006,7 +1006,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="#"><img src="assets/images/samples/post-img8.jpg" alt=""></a>
+                    <a href="#"><img src="assets/webnueva/images/samples/post-img8.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -1021,7 +1021,7 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="#"><img src="assets/images/samples/post-img2.jpg" alt=""></a>
+                    <a href="#"><img src="assets/webnueva/images/samples/post-img2.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
@@ -1068,7 +1068,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/001.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/001.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Personal Bolívar</h6>
@@ -1084,7 +1084,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/002.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/002.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Ciudad Voley</h6>
@@ -1100,7 +1100,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/003.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/003.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">UPCN San Juan Voley</h6>
@@ -1116,7 +1116,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/004.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/004.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Lomas Voley</h6>
@@ -1132,7 +1132,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/005.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/005.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Gigantes del Sur</h6>
@@ -1148,7 +1148,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/006.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/006.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Obras UDAP Voley</h6>
@@ -1164,7 +1164,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/007.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/007.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Alianza Jesús María</h6>
@@ -1180,7 +1180,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/008.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/008.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">River Plate</h6>
@@ -1196,7 +1196,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/009.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/009.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Deportivo Morón</h6>
@@ -1212,7 +1212,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/010.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/010.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">Untref Voley</h6>
@@ -1228,7 +1228,7 @@
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/images/samples/logos/011.png" alt="">
+                              <img src="assets/webnueva/images/samples/logos/011.png" alt="">
                             </figure>
                             <div class="team-meta__info">
                               <h6 class="team-meta__name">PSM Voley</h6>
@@ -1261,10 +1261,6 @@
             <!-- Widget: Twitter / End -->
 
             
-            
-
-            
-            
 
             <!-- Widget: Featured Player - Alternative Extended -->
             <aside class="widget card widget--sidebar widget-player widget-player--alt">
@@ -1273,10 +1269,10 @@
               </div>
               <div class="widget__content card__content">
                 <div class="widget-player__team-logo">
-                  <img src="assets/images/logo.png" alt="">
+                  <img src="assets/webnueva/images/logo.png" alt="">
                 </div>
                 <figure class="widget-player__photo">
-                  <img src="assets/images/samples/widget-featured-player.png" alt="">
+                  <img src="assets/webnueva/images/samples/widget-featured-player.png" alt="">
                 </figure>
                 <header class="widget-player__header clearfix">
                   <div class="widget-player__number">38</div>
@@ -1314,7 +1310,7 @@
             <!-- Widget: Popular News -->
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
-                <h4><img src="assets/images/samples/banner002.jpg"></h4>
+                <h4><img src="assets/webnueva/images/samples/banner002.jpg"></h4>
               </div>
               
             </aside>

@@ -8,7 +8,7 @@
       <!-- Header Secondary -->
       <div class="header__secondary">
         <div class="container">
-        <img src="assets/images/logo_002.png" class="header-mobile__logo-img" width="676" height="65" align="left">
+        <img src="assets/webnueva/images/logo_002.png" class="header-mobile__logo-img" width="676" height="65" align="left">
           <!-- Header Search Form -->
           <div class="header-search-form">
             <ul class="nav-account">
@@ -38,7 +38,7 @@
           <div class="header__primary-inner">
             <!-- Header Logo -->
             <div class="header-logo">
-              <a href="index.html"><img src="assets/images/logo.png" alt="Alchemists" srcset="assets/images/logo@2x.png 2x" class="header-logo__img"></a>
+              <a href="index.html"><img src="assets/webnueva/images/logo.png" alt="Alchemists" srcset="assets/webnueva/images/logo@2x.png 2x" class="header-logo__img"></a>
             </div>
             <!-- Header Logo / End -->
   
@@ -47,45 +47,45 @@
               <ul class="main-nav__list">
                 <li class=""><a href="#">Competencias</a>
                   <ul class="main-nav__sub">
-                    <li><a href="posiciones.html">Liga Argentina de Voleibol</a></li>
-                    <li><a href="posiciones.html">Copa Argentina</a></li>
-                    <li><a href="posiciones.html">Copa ACLAV</a></li>
-                    <li><a href="posiciones.html">Presudamericano</a></li>
-                    <li><a href="posiciones.html">Copa Desafio</a></li>
-                    <li><a href="posiciones.html">Copa Master</a></li>
+                    <li><a href="{{route('historia')}}">Liga Argentina de Voleibol</a></li>
+                    <li><a href="{{route('historia')}}">Copa Argentina</a></li>
+                    <li><a href="{{route('historia')}}">Copa ACLAV</a></li>
+                    <li><a href="{{route('historia')}}">Presudamericano</a></li>
+                    <li><a href="{{route('historia')}}">Copa Desafio</a></li>
+                    <li><a href="{{route('historia')}}">Copa Master</a></li>
                   </ul>
                 </li>
                 <li class=""><a href="#">Equipos</a>
                   <ul class="main-nav__sub">
-                    <li><a href="participantes.html">Participantes</a></li>
-                    <li><a href="estadios.html">Estadios</a></li>
+                    <li><a href="{{route('historia')}}">Participantes</a></li>
+                    <li><a href="{{route('historia')}}">Estadios</a></li>
                   </ul>
                 </li>
-                <li class=""><a href="estadisticas.html">Estadísticas</a></li>
+                <li class=""><a href="{{route('historia')}}">Estadísticas</a></li>
 
                 <li class=""><a href="#">Noticias</a>
                   <ul class="main-nav__sub">
-                    <li><a href="noticias.html">Noticias</a></li>
-                    <li><a href="entrevistas.html">Entrevistas</a></li>
-                    <li><a href="especial.html">Especiales</a></li>
-                    <li><a href="social.html">ACLAV Social</a></li>                 
+                    <li><a href="{{route('historia')}}">Noticias</a></li>
+                    <li><a href="{{route('historia')}}">Entrevistas</a></li>
+                    <li><a href="{{route('historia')}}">Especiales</a></li>
+                    <li><a href="{{route('historia')}}">ACLAV Social</a></li>                 
                     </ul>
                 </li>
                 
                 <li class=""><a href="#">Multimedia</a>
                   <ul class="main-nav__sub">
-                    <li><a href="galerias.html">Fotogalerías</a></li>
-                    <li><a href="descargas.html">Descargas</a></li>
-                    <li><a href="videos.html">Videos</a></li>                  
+                    <li><a href="{{route('historia')}}">Fotogalerías</a></li>
+                    <li><a href="{{route('historia')}}">Descargas</a></li>
+                    <li><a href="{{route('historia')}}">Videos</a></li>                  
                     </ul>
                 </li>
                 <li class=""><a href="#">Institucional</a>
                   <ul class="main-nav__sub">
-                    <li><a href="historia.html">Historia</a></li>
-                    <li><a href="autoridades.html">Autoridades ACLAV</a></li>
-                    <li><a href="staff.html">Staff ACLAV</a></li>
-                    <li><a href="sponsor.html">Sponsors</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="{{route('historia')}}">Historia</a></li>
+                    <li><a href="{{route('historia')}}">Autoridades ACLAV</a></li>
+                    <li><a href="{{route('historia')}}">Staff ACLAV</a></li>
+                    <li><a href="{{route('historia')}}">Sponsors</a></li>
+                    <li><a href="{{route('contacto')}}">Contacto</a></li>
                   </ul>
                 </li>
               </ul>

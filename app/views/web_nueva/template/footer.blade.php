@@ -7,37 +7,37 @@
           <div class="sponsors">
             <ul class="sponsors-logos">
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-001.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-001.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-002.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-002.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-003.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-003.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-004.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-004.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-005.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-005.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-006.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-006.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-007.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-007.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-008.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-008.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-009.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-009.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-010.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-010.png" alt=""></a>
               </li>
               <li class="sponsors__item">
-                <a href="#"><img src="assets/images/samples/sponsor-011.png" alt=""></a>
+                <a href="#"><img src="assets/webnueva/images/samples/sponsor-011.png" alt=""></a>
               </li>
             </ul>
           </div>
@@ -53,7 +53,7 @@
                   <!-- Footer Logo -->
                   <div class="footer-logo footer-logo--has-txt">
                     <a href="index.html">
-                      <img src="assets/images/soccer/logo-footer_1.png" srcset="assets/images/soccer/logo-footer@2xef.png 2x" alt="Alchemists" class="footer-logo__img">
+                      <img src="assets/webnueva/images/soccer/logo-footer_1.png" srcset="assets/webnueva/images/soccer/logo-footer@2xef.png 2x" alt="Alchemists" class="footer-logo__img">
                       
                     </a>
                   </div>
@@ -92,7 +92,7 @@
                     <div class="widget-contact-info__body info-block">
                         <div class="info-block__item">
                           <svg role="img" class="df-icon df-icon--soccer-ball">
-                            <use xlink:href="assets/images/icons-soccer.svg#soccer-ball"/>
+                            <use xlink:href="assets/webnueva/images/icons-soccer.svg#soccer-ball"/>
                           </svg>
                           <h6 class="info-block__heading">Contacto</h6>
                           <a class="info-block__link" href="mailto:info@aclav.com">info@aclav.com</a>

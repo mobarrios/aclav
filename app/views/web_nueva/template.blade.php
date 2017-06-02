@@ -10,7 +10,7 @@
   <meta name="description" content="Alchemists - Sports News HTML Template">
   <meta name="author" content="Dan Fisher">
   <meta name="keywords" content="Sports News HTML Template">
-
+  <base href="{{ asset('')}}">
   <!-- Favicons
   ================================================== -->
   <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
@@ -20,10 +20,31 @@
   <!-- Mobile Specific Metas
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-
   <!-- Google Web Fonts
   ================================================== -->
-  @include('web_nueva.template.css')
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">
+
+  <!-- CSS
+  ================================================== -->
+  <!-- Preloader CSS -->
+ 
+  <link href="assets/webnueva/css/preloader.css" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/webnueva/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/webnueva/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/webnueva/fonts/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="assets/webnueva/vendor/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+  <link href="assets/webnueva/vendor/slick/slick.css" rel="stylesheet">
+
+  <!-- Template CSS-->
+  <link href="assets/webnueva/css/content.css" rel="stylesheet">
+  <link href="assets/webnueva/css/components.css" rel="stylesheet">
+  <link href="assets/webnueva/css/style.css" rel="stylesheet">
+
+  <!-- Custom CSS-->
+  <link href="assets/webnueva/css/custom.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
 </head>
 <body class="template-basketball">
@@ -39,7 +60,7 @@
     <!-- Header Mobile -->
     <div class="header-mobile clearfix" id="header-mobile">
       <div class="header-mobile__logo">
-        <a href="index.html"><img src="assets/images/logo.png" srcset="assets/images/logo@2x.png 2x" alt="Alchemists" class="header-mobile__logo-img"></a>
+        <a href="index.html"><img src="assets/webnueva/images/logo.png" srcset="assets/images/logo@2x.png 2x" alt="Alchemists" class="header-mobile__logo-img"></a>
       </div>
       <div class="header-mobile__inner">
         <a id="header-mobile__toggle" class="burger-menu-icon"><span class="burger-menu-icon__line"></span></a>
@@ -147,7 +168,16 @@
   <!-- Javascript Files
   ================================================== -->
   <!-- Core JS -->
-  @include('web_nueva.template.js')
+  <script src="assets/webnueva/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/webnueva/js/core-min.js"></script>
+
+  <!-- Vendor JS -->
+  <script src="assets/webnueva/vendor/twitter/jquery.twitter.js"></script>
+
+
+  <!-- Template JS -->
+  <script src="assets/webnueva/js/init.js"></script>
+  <script src="assets/webnueva/js/custom.js"></script>
   
 
   </body>
