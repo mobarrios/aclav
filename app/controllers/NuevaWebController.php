@@ -10,8 +10,11 @@ class NuevaWebController extends BaseController
 
 	public function getNoticias()
 	{	
-		$noticias = Noticias::all();
-		//return View::make('otro.index')->with($noticias);
+		$data['model']		    = Noticias::where('fecha','<=', date('Y-m-d'))->where('estado','=',1)->where('web_noticia','=',1)->orderBy('id','DESC')->paginate(5);
+
+		
+		
+		return View::make('web_nueva.noticias.noticias')->with($data);
 	}
 
 	

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('web_nueva.template')
 @section('content')
 <div class="site-content">
       <div class="container">
@@ -9,7 +9,8 @@
 
             <!-- Posts List -->
             <div class="posts posts--cards posts--cards-thumb-left post-list">
-
+           
+              @foreach($model as $noticia)
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
@@ -31,102 +32,7 @@
                   </div>
                 </div>
               </div>
-
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img3-m.jpg" alt=""></a>
-                    
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      <div class="posts__cat">
-                        <span class="label posts__cat-label">ACLAV</span>
-                      </div>
-                      <h6 class="posts__title"><a href="detalle_noticia.html">Realizada la Gala de clausura de la temporada 2016/2017</a></h6>
-                      <time datetime="2016-08-22" class="posts__date">24-04-2017</time>
-                      <div class="posts__excerpt">
-                        Como es habitual al cierre de cada temporada de la Liga Argentina de Voleibol Banco Nación, se llevó a cabo la Gala de clausura de una nueva edición de la competencia...
-                      </div>
-                    </div>
-                    <footer class="posts__footer card__footer">
-                      <div class="post-author">
-                        <figure class="post-author__avatar">
-                          <img src="assets/images/samples/avatar-1.jpg" alt="Post Author Avatar">
-                        </figure>
-                        
-                      </div>
-                      
-                    </footer>
-                  </div>
-                </div>
-              </div>
-
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img5-m.jpg" alt=""></a>
-                   
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      <div class="posts__cat">
-                        <span class="label posts__cat-label">ACLAV</span>
-                      </div>
-                      <h6 class="posts__title"><a href="detalle_noticia.html">Voces de los protagonistas en la Gala ACLAV 16/17</a></h6>
-                      <time datetime="2016-08-21" class="posts__date">24-04-2017</time>
-                      <div class="posts__excerpt">
-                        En el marco del evento de cierre de una nueva temporada de la Liga Argentina de Voleibol Banco Nación, Pablo Crer (Personal Bolívar)....
-                      </div>
-                    </div>
-                    <footer class="posts__footer card__footer">
-                      <div class="post-author">
-                        <figure class="post-author__avatar">
-                          <img src="assets/images/samples/avatar-2.jpg" alt="Post Author Avatar">
-                        </figure>
-                        
-                      </div>
-                      
-                    </footer>
-                  </div>
-                </div>
-              </div>
-
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-2 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_noticia.html"><img src="assets/images/samples/post-img1-m.jpg" alt=""></a>
-                   
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      <div class="posts__cat">
-                        <span class="label posts__cat-label">ACLAV</span>
-                      </div>
-                      <h6 class="posts__title"><a href="detalle_noticia.html">Thomas Edgar: "Más que equipo, esto es una gran familia"</a></h6>
-                      <time datetime="2016-08-18" class="posts__date">24-04-2017</time>
-                      <div class="posts__excerpt">
-                        Personal Bolívar logró su tan ansiada séptima corona en la Liga Argentina y se convirtió en el máximo ganador de la historia del vóley argentino. El australiano fue una de las figuras del logro.
-                      </div>
-                    </div>
-                    <footer class="posts__footer card__footer">
-                      <div class="post-author">
-                        <figure class="post-author__avatar">
-                          <img src="assets/images/samples/avatar-2.jpg" alt="Post Author Avatar">
-                        </figure>
-                        
-                      </div>
-                      
-                    </footer>
-                  </div>
-                </div>
-              </div>
-
-             
-
-              
-
-             
+              @endforeach
 
             </div>
             <!-- Posts List / End -->
