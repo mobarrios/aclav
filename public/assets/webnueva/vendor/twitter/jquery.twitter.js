@@ -14,8 +14,7 @@ jQuery(function($){
 
   var headerHTML = '';
   var loadingHTML = '';
-  loadingHTML += '<div class="twitter-feed__preloader"><a class="twitter-timeline"  href="https://twitter.com/VoleyACLAV"  data-widget-id="487689182769192960">Tweets por @VoleyACLAV</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>';
+  loadingHTML += '<div class="twitter-feed__preloader">Aguarde por favor...</div>';
 
   twitter_feed.html(headerHTML + loadingHTML);
 

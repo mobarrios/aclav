@@ -21,7 +21,7 @@
   /*  Predefined Variables
   /* ----------------------------------------------------------- */
   var $template_var = $('body').attr('class'),
-      $color_primary = '#ffdc11',
+      $color_primary = '#CD3243',
       $main_nav     = $('.main-nav'),
       $circular_bar = $('.circular__bar'),
       $gmap         = $('.gm-map'),
@@ -380,9 +380,9 @@
       if ( $slick_featured_carousel.exists() ) {
 
         $slick_featured_carousel.slick({
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 5000,
           centerMode: true,
           centerPadding: 0,
@@ -394,7 +394,7 @@
                 arrows: false,
                 centerMode: true,
                 centerPadding: 0,
-                slidesToShow: 3
+                slidesToShow: 4
               }
             },
             {
@@ -403,7 +403,7 @@
                 arrows: false,
                 centerMode: true,
                 centerPadding: 0,
-                slidesToShow: 2
+                slidesToShow: 3
               }
             },
             {
@@ -812,7 +812,7 @@
             datasets: [{
               label: 'WON',
               data: [70, 67, 78, 87, 69, 76],
-              backgroundColor: "#ffdc11",
+              backgroundColor: "#CD3243",
             }, {
               label: 'LOST',
               data: [40, 45, 36, 28, 43, 35],
@@ -964,9 +964,9 @@
               label: 'POINTS',
               fill: false,
               lineTension: 0,
-              backgroundColor: "#ffdc11",
+              backgroundColor: "#CD3243",
               borderWidth: 2,
-              borderColor: "#ffdc11",
+              borderColor: "#CD3243",
               borderCapStyle: 'butt',
               borderDashOffset: 0.0,
               borderJoinStyle: 'bevel',
@@ -974,7 +974,7 @@
               pointBorderWidth: 0,
               pointHoverRadius: 5,
               pointHoverBackgroundColor: "#fff",
-              pointHoverBorderColor: "#ffcc00",
+              pointHoverBorderColor: "#CD3243",
               pointHoverBorderWidth: 5,
               pointHitRadius: 10,
               data: [104, 70, 115, 105, 45, 94, 84, 100, 82, 125, 78, 86, 110],
@@ -1252,7 +1252,7 @@
             datasets: [{
               data: [72, 25, 40, 72, 50],
               backgroundColor: "rgba(255,220,17,0.8)",
-              borderColor: "#ffdc11",
+              borderColor: "#CD3243",
               pointBorderColor: "rgba(255,255,255,0)",
               pointBackgroundColor: "rgba(255,255,255,0)",
               pointBorderWidth: 0
