@@ -5,149 +5,29 @@
 
         <!-- Equipos Inicio -->
         <div class="gallery row">
+          
+        @foreach($model_id as $id)
+        <?php $models = Equipo::find($id); ?>
+        @if($models->id != 15)
           <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
+            <a href="{{route('detalle_equipo',$models->id)}}" class="gallery__item-inner card">
               <header class="gallery__header card__header">
                 <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Alianza Jesus Maria</p></h4>
+                  <h4 class="gallery__name"><p>{{$models->nombre}}</p></h4>
                 </div>
               </header>
               <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e001.jpg" alt="">
+                <!--
+                assets/images/e008.jpg
+                -->
+                <img src="uploads/escudos/{{$models->escudo}}" alt="" >
                 <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
               </figure>
             </a>
           </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Ciudad Voley</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e002.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Deportivo Moron</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e003.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Gigantes del Sur</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e004.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Lomas Voley</h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e005.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Obras UDAP Voley</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e006.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Personal Bolivar</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e007.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>PSM Voley</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e008.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>River Plate</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e009.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Untref Voley</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e010.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
-          <div class="gallery__item col-xs-6 col-sm-4">
-            <a href="equipo_detalle.html" class="gallery__item-inner card">
-              <header class="gallery__header card__header">
-                <div class="gallery__details">
-                  <h4 class="gallery__name"><p>UPCN San Juan Voley Club</p></h4>
-                </div>
-              </header>
-              <figure class="gallery__thumb">
-                <img src="assets/webnueva/images/e011.jpg" alt="">
-                <span class="btn-fab btn-fab--clean gallery__btn-fab"></span>
-              </figure>
-            </a>
-          </div>
+           @endif
+        @endforeach
+         
         </div>
         <!-- Equipos End -->
 

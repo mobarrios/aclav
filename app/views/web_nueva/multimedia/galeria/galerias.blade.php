@@ -4,13 +4,15 @@
       <div class="container">
 
         <!-- Gallery -->
+        @foreach($model as $galerias)
         <div class="gallery row">
 
-          @foreach($model as $galeria)
+          @foreach($galerias as $galeria)
+
           <div class="gallery__item col-xs-6 col-sm-3">
-            <a href="album.html">
+            <a href="{{route('detalle_galeria', $galeria['id'])}}">
               <figure class="gallery__thumb">
-                <img src="assets/images/samples/post-img4.jpg" alt="">
+                <img src="uploads/contenidos/galeria/{{$galeria['imagen']}}" alt="">
                 <span class="btn-fab gallery__btn-fab"></span>
               </figure>
               <div class="gallery__content card__content">
@@ -18,22 +20,15 @@
                   <span class="icon-camera"></span>
                 </span>
                 <div class="gallery__details">
-                  <h4 class="gallery__name"><p>Temporada 2016 - 2017</p></h4>
+                  <h4 class="gallery__name"><p>{{$galeria['titulo']}}</p></h4>
                 </div>
               </div>
             </a>
           </div>
           @endforeach
-        <!-- Gallery / End -->
-
-
-        <div class="text-center">
-          <!-- Team Pagination -->
-          
-          <!-- Team Pagination / End -->
-          
-        </div>
+        
       </div>
+      @endforeach
     </div>
 </div>
 @endsection

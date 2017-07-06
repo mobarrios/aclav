@@ -1,6 +1,7 @@
 @extends('web_nueva.template')
 @section('site-content')
 
+
 <div class="site-contentchico">
         <div class="container">
          <div class="owl-carousel col-lg-12">
@@ -846,7 +847,7 @@
       <div class="posts__item posts__item-has-img posts__item--category-1">  
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="assets/webnueva/images/samples/hero-slide1.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
+          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
         </figure>
         <!-- Main Image / End -->  
         <!-- Player Image -->
@@ -856,7 +857,7 @@
         <!-- Player Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>River Plate conmemora un año de su ascenso y regreso a la A1</p></font></a></h3>          
+          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->titulo}}</p></font></a></h3>          
         </div>
         <!-- Post Content / End -->  
       </div>  
@@ -867,12 +868,12 @@
       <div class="posts__item posts__item--category-2">  
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="assets/webnueva/images/samples/hero-slide2.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #9e69ee">
+          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #9e69ee">
         </figure>
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h2 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>Martin Ramos: "Vamos a dar todo para hacer historia"</p></font></a></h2>          
+          <h2 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->titulo}}</p></font></a></h2>          
         </div>
         <!-- Post Content / End -->  
       </div>  
@@ -883,12 +884,12 @@
       <div class="posts__item posts__item--category-1">  
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="assets/webnueva/images/samples/hero-slide3.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
+          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',3)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
         </figure>
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>Liga Argentina BNA: Empieza la gran final entre Bolivar y UPCN</p></font></a></h3>
+          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',3)->first()->Noticias->titulo}}</p></font></a></h3>
           <footer class="posts__footer">           
           </footer>
         </div>
@@ -902,12 +903,12 @@
   
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="assets/webnueva/images/samples/hero-slide4.jpg" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
+          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',4)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
         </figure>
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>Liga Argentina BNA: Personal Bolivar es el nuevo campeón</p></font></a></h3>
+          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',4)->first()->Noticias->titulo}}</p></font></a></h3>
           <footer class="posts__footer">           
           </footer>
         </div>
@@ -925,41 +926,29 @@
 <div class="site-content-index">
       <div class="container">
 
-
         <div class="row">
-
-
-
 
           <!-- Content -->
           <div class="content col-md-8">
-                
               
             <!-- Featured News -->
             <div class="card card--clean">
               <h4><img src="assets/webnueva/images/samples/bna.gif"></h4>
               <div class="card__content">
 
-                <!-- Slider -->
-                
-                <!-- Slider / End -->
-
               </div>
             </div>
-            <!-- Featured News / End -->
-
-
             <!-- Post Area 1 -->
             <div class="posts posts--cards post-grid row">
 
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img6.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>Liga Argentina BNA: Bolivar vencio a UPCN y se llevo le</p></a></h6>                    
+                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -967,11 +956,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img3.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 05, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>Fabian Armoa y la confianza plena en el equipo de UPCN</p></a></h6>                    
+                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -979,11 +968,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img06.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>Demian Gonzalez: Tenemos que imponer nuestro juego</p></a></h6>
+                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->titulo}}</p></a></h6>
                   </div>                  
                 </div>
               </div>
@@ -991,11 +980,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="assets/webnueva/images/samples/post-img03.jpg" alt=""></a>
+                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>Copa Argentina: Obras UDAP Voley, campeon en Neuquen</p></a></h6>                    
+                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -1005,26 +994,16 @@
 
 
             <!-- Last Game Results -->
-            
               
-                <h4><img src="assets/webnueva/images/samples/banner02.jpg"></h4>
-              
+            <h4><img src="assets/webnueva/images/samples/banner02.jpg"></h4>
               
             <!-- Last Game Results / End -->
-
 
             <!-- Post Area 2 -->
             <div class="posts posts--cards post-grid row">
 
-              
-
-              
-
               <div class="clearfix hidden-md hidden-lg"></div>
 
-             
-
-              
 
               <div class="clearfix hidden-md hidden-lg"></div>
 
@@ -1032,12 +1011,12 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="#"><img src="assets/webnueva/images/samples/post-img8.jpg" alt=""></a>
+                    <a href="{{route('galeria')}}"><img src="assets/webnueva/images/samples/post-img8.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
-                    <a href="#" class="posts__cta"></a>
+                    <a href="{{route('galeria')}}" class="posts__cta"></a>
                     
-                    <h6 class="posts__title"><a href="#"><p>Galeria de Fotos</p></a></h6>
+                    <h6 class="posts__title"><a href="{{route('galeria')}}"><p>Galeria de Fotos</p></a></h6>
                   </div>
                   
                 </div>
@@ -1047,11 +1026,11 @@
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     
-                    <a href="#"><img src="assets/webnueva/images/samples/post-img2.jpg" alt=""></a>
+                    <a href="{{route('detalle_noticias',$social_ultima->id)}}"><img src="uploads/contenidos/noticias/{{$social_ultima->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
                     <a href="#" class="posts__cta"></a>
-                    <h6 class="posts__title"><a href="#"><p>ACLAV Social</p></a></h6>
+                    <h6 class="posts__title"><a href="{{route('social')}}"><p>ACLAV Social</p></a></h6>
                   </div>
                   
                 </div>
@@ -1062,59 +1041,59 @@
             <!-- Post Area 2 / End -->
 
             <!-- Videos Inicio -->
-<div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
-  <div class="rvs-item-container">
-    <div class="rvs-item-stage">
-      <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/maxresdefault.jpg)">
-        <p class="rvs-item-text">ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-        <a href="https://www.youtube.com/watch?v=Q_AWzaP51wg&t=1s" class="rvs-play-video"></a>
-      </div>
-      <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/maxresdefault.jpg)">
-        <p class="rvs-item-text">Sportia (TyC Sports) - Gala ACLAV 2016/2017 <small>by Voley ACLAV</small></p>
-        <a href="https://www.youtube.com/watch?v=WLjexk6qOzc" class="rvs-play-video"></a>
-      </div>
-      <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/maxresdefault.jpg)">
-        <p class="rvs-item-text">ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-        <a href="https://www.youtube.com/watch?v=wOF1udBPJ24&t=3s" class="rvs-play-video"></a>
-      </div>
-      <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/maxresdefault.jpg)">
-        <p class="rvs-item-text">ACLAV TV - Mejor líbero Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-        <a href="https://www.youtube.com/watch?v=aS0en6p9U38" class="rvs-play-video"></a>
-      </div>
-      <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/maxresdefault.jpg)">
-        <p class="rvs-item-text">ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-        <a href="https://www.youtube.com/watch?v=6ANUoV-UWeQ" class="rvs-play-video"></a>
-      </div>
-    </div>
-  </div>
-  <div class="rvs-nav-container">
-    <a class="rvs-nav-prev"></a>
-    <div class="rvs-nav-stage">
-      <a class="rvs-nav-item">
-        <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/default.jpg)"></span>
-        <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17</p></h5>        
-      </a>
-      <a class="rvs-nav-item">
-        <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/default.jpg)"></span>
-        <h5 class="rvs-nav-item-title" style="text-transform: none"><p>Sportia (TyC Sports) - Gala ACLAV 2016/2017</p></h5>
-        
-      </a>
-      <a class="rvs-nav-item">
-        <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/default.jpg)"></span>
-        <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17</p></h5>
-      </a>
-      <a class="rvs-nav-item">
-        <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/default.jpg)"></span>
-        <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor líbero Liga Argentina BNA 16/17</p></h5>        
-      </a>
-      <a class="rvs-nav-item">
-        <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/default.jpg)"></span>
-        <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17</p></h5>        
-      </a>
-    </div>
-    <a class="rvs-nav-next"></a>
-  </div>
-</div>
+            <div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
+              <div class="rvs-item-container">
+                <div class="rvs-item-stage">
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/maxresdefault.jpg)">
+                    <p class="rvs-item-text">ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
+                    <a href="https://www.youtube.com/watch?v=Q_AWzaP51wg&t=1s" class="rvs-play-video"></a>
+                  </div>
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/maxresdefault.jpg)">
+                    <p class="rvs-item-text">Sportia (TyC Sports) - Gala ACLAV 2016/2017 <small>by Voley ACLAV</small></p>
+                    <a href="https://www.youtube.com/watch?v=WLjexk6qOzc" class="rvs-play-video"></a>
+                  </div>
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/maxresdefault.jpg)">
+                    <p class="rvs-item-text">ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
+                    <a href="https://www.youtube.com/watch?v=wOF1udBPJ24&t=3s" class="rvs-play-video"></a>
+                  </div>
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/maxresdefault.jpg)">
+                    <p class="rvs-item-text">ACLAV TV - Mejor líbero Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
+                    <a href="https://www.youtube.com/watch?v=aS0en6p9U38" class="rvs-play-video"></a>
+                  </div>
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/maxresdefault.jpg)">
+                    <p class="rvs-item-text">ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
+                    <a href="https://www.youtube.com/watch?v=6ANUoV-UWeQ" class="rvs-play-video"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="rvs-nav-container">
+                <a class="rvs-nav-prev"></a>
+                <div class="rvs-nav-stage">
+                  <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/default.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17</p></h5>        
+                  </a>
+                  <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/default.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>Sportia (TyC Sports) - Gala ACLAV 2016/2017</p></h5>
+                    
+                  </a>
+                  <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/default.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17</p></h5>
+                  </a>
+                  <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/default.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor líbero Liga Argentina BNA 16/17</p></h5>        
+                  </a>
+                  <a class="rvs-nav-item">
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/default.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17</p></h5>        
+                  </a>
+                </div>
+                <a class="rvs-nav-next"></a>
+              </div>
+            </div>
             <!-- Videos / End -->
 
             

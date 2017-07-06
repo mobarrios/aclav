@@ -5,17 +5,7 @@
       <div class="container">
 
         <!-- Team Pages Filter -->
-        <nav class="content-filter">
-          <div class="container">
-            <a href="#" class="content-filter__toggle"></a>
-            <ul class="content-filter__list">
-              <li class="content-filter__item--active"><a href="calendario.html" class="content-filter__link"><small></small>Calendario y Resultados</a></li>
-              <li class="content-filter__item "><a href="posiciones.html" class="content-filter__link"><small></small>Posiciones</a></li>
-              <li class="content-filter__item "><a href="tribunal.html" class="content-filter__link"><small></small>Tribunal</a></li>
-              <li class="content-filter__item "><a href="formula.html" class="content-filter__link"><small></small>Formula de Juego</a></li>
-            </ul>
-          </div>
-        </nav>
+        @include('web_nueva.competencias.nav')
         <!-- Team Pages Filter / End -->
 
           <div class="row">

@@ -7,10 +7,18 @@ Route::group(array('prefix' => 'web_nueva'), function()
 
     //Competencias
     Route::get('calendario', ['as'=>'calendario','uses'=>'NuevaWebController@calendario']);
+    Route::get('formula', ['as'=>'formula','uses'=>'NuevaWebController@formula']);
+    Route::get('posiciones', ['as'=>'posiciones','uses'=>'NuevaWebController@posiciones']);
+    Route::get('tribunal', ['as'=>'tribunal','uses'=>'NuevaWebController@tribunal']);
+   
 
     //Equipos
     Route::get('participantes', [ 'as' => 'participantes' , 'uses' => 'NuevaWebController@participantes']);
     Route::get('estadios', [ 'as'=>'estadios' ,'uses'=>'NuevaWebController@estadios']);
+    Route::get('estadio/{id}', [ 'as'=>'detalle_estadio' ,'uses'=>'NuevaWebController@detalle_estadio']);
+    Route::get('participantes/{id}', ['as'=>'detalle_equipo' ,'uses'=>'NuevaWebController@detalle_equipo']);
+    Route::get('jugador/{id}', ['as'=>'jugador' ,'uses'=>'NuevaWebController@jugador']);
+
 
     //Estadisticas
     Route::get('estadisticas', ['as'=>'contacto','uses'=>'NuevaWebController@estadisticas']);
@@ -28,7 +36,7 @@ Route::group(array('prefix' => 'web_nueva'), function()
 
     
 	//Noticias
-	Route::get('detalle_noticias/{id}', [ 'as' => 'detalle_noticias', 'uses' => 'NuevaWebController@detalle_noticias']);
+	Route::get('noticia/{id}', [ 'as' => 'detalle_noticias', 'uses' => 'NuevaWebController@detalle_noticias']);
     Route::get('noticia/{id?}', 'NuevaWebController@getNoticia');
     Route::get('noticias', [ 'as' => 'noticias', 'uses' => 'NuevaWebController@noticias']);
     Route::get('especiales',  ['as'=>'especiales','uses'=>'NuevaWebController@especiales']);
@@ -39,7 +47,12 @@ Route::group(array('prefix' => 'web_nueva'), function()
 
     //Multimedia
     Route::get('galeria', ['as'=>'galeria','uses'=>'NuevaWebController@galeria']);    
-    Route::get('descargas', ['as'=>'descargas','uses'=>'NuevaWebController@descargas']);    
+    Route::get('galeria/{id}', ['as'=>'detalle_galeria','uses'=>'NuevaWebController@detalle_galeria']);   
+    Route::get('album/{id}', ['as'=>'album','uses'=>'NuevaWebController@album']);   
+     
+    
+    Route::get('descargas', ['as'=>'descargas','uses'=>'NuevaWebController@descargas']);   
+    Route::get('download/{id}', ['as'=>'download','uses'=>'NuevaWebController@download']); 
     Route::get('videos', ['as'=>'videos','uses'=>'NuevaWebController@videos']);    
 
 

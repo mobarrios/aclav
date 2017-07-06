@@ -13,9 +13,10 @@
 
   <!-- Favicons
   ================================================== -->
-  <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/favicon-120.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/favicon-152.png">
+  <base href="{{ asset('')}}">
+  <link rel="shortcut icon" href="assets/webnueva/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/webnueva/images/favicons/favicon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/webnueva/images/favicons/favicon-152.png">
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -30,7 +31,7 @@
   <!-- Preloader CSS -->
 
   <!-- Estilos Videos-->
-  <base href="{{ asset('')}}">
+  
   
   <link href="assets/webnueva/css/preloader.css" rel="stylesheet">
 
