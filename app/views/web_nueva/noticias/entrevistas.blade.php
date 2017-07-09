@@ -14,7 +14,7 @@
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-2 card">
                   <figure class="posts__thumb">
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{$entrevista->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias',$entrevista->id)}}"><img src="uploads/contenidos/noticias/{{$entrevista->imagen}}" alt=""></a>
                    
                   </figure>
                   <div class="posts__inner">
@@ -22,7 +22,7 @@
                       <div class="posts__cat">
                         <span class="label posts__cat-label">ACLAV</span>
                       </div>
-                      <h6 class="posts__title"><a href="detalle_noticia.html">{{$entrevista->titulo}}</a></h6>
+                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$entrevista->id)}}">{{$entrevista->titulo}}</a></h6>
                       <time datetime="2016-08-18" class="posts__date">{{$entrevista->fecha}}</time>
                       <div class="posts__excerpt">
                         {{$entrevista->copete}}

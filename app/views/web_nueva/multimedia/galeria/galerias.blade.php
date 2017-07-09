@@ -26,9 +26,20 @@
             </a>
           </div>
           @endforeach
+       
+
+           <div class="text-center">
+          <!-- Team Pagination -->
+              <nav class="team-pagination">
+               
+              </nav>
+            <!-- Team Pagination / End -->
+            
+          </div>
         
       </div>
       @endforeach
     </div>
 </div>
+
 @endsection

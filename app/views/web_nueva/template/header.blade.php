@@ -5,7 +5,7 @@
         <div class="container">          
         <!-- Header Logo -->
             <div class="header-logo">
-              <a href="index.html"><img src="assets/webnueva/images/logo.png" alt="ACLAV" srcset="assets/images/logo@2x.png 2x" class="header-logo__img"></a>
+              <a href="{{route('inicio')}}"><img src="assets/webnueva/images/logo.png" alt="ACLAV" srcset="assets/images/logo@2x.png 2x" class="header-logo__img"></a>
             </div>
             <!-- Header Logo / End --> 
         </div>

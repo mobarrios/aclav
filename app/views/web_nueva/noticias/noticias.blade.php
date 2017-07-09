@@ -14,12 +14,12 @@
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{$noticia->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias',$noticia->id)}}"><img src="uploads/contenidos/noticias/{{$noticia->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner">
                     <div class="card__content">
                       
-                      <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{$noticia->titulo}} </p></a></h6>
+                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$noticia->id)}}"><p>{{$noticia->titulo}} </p></a></h6>
                       <time datetime="2016-08-23" class="posts__date">{{$noticia->fecha}}</time>
                       <div class="posts__excerpt">
                         <p><font size="3">{{$noticia->copete}}</font> </p>

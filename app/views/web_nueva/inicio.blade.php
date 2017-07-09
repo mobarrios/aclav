@@ -857,7 +857,7 @@
         <!-- Player Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->titulo}}</p></font></a></h3>          
+          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->titulo}}</p></font></a></h3>          
         </div>
         <!-- Post Content / End -->  
       </div>  
@@ -873,7 +873,7 @@
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h2 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->titulo}}</p></font></a></h2>          
+          <h2 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->titulo}}</p></font></a></h2>          
         </div>
         <!-- Post Content / End -->  
       </div>  
@@ -889,7 +889,7 @@
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',3)->first()->Noticias->titulo}}</p></font></a></h3>
+          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',3)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',3)->first()->Noticias->titulo}}</p></font></a></h3>
           <footer class="posts__footer">           
           </footer>
         </div>
@@ -908,7 +908,7 @@
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h3 class="posts__title"><a href="detalle_noticia.html"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',4)->first()->Noticias->titulo}}</p></font></a></h3>
+          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',4)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',4)->first()->Noticias->titulo}}</p></font></a></h3>
           <footer class="posts__footer">           
           </footer>
         </div>
@@ -933,7 +933,7 @@
               
             <!-- Featured News -->
             <div class="card card--clean">
-              <h4><img src="assets/webnueva/images/samples/bna.gif"></h4>
+              <h4><img src="uploads/contenidos/banner/{{$banner_superior->imagen}}"></h4>
               <div class="card__content">
 
               </div>
@@ -944,11 +944,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->titulo}}</p></a></h6>                    
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->id )}}"><p>{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -956,11 +956,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 05, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->titulo}}</p></a></h6>                    
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->id )}}"><p>{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -968,11 +968,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->titulo}}</p></a></h6>
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->id )}}"><p>{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->titulo}}</p></a></h6>
                   </div>                  
                 </div>
               </div>
@@ -980,11 +980,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="detalle_noticia.html"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->imagen}}" alt=""></a>
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">Abril 06, 2017</time>
-                    <h6 class="posts__title"><a href="detalle_noticia.html"><p>{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->titulo}}</p></a></h6>                    
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->id )}}"><p>{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->titulo}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -994,9 +994,9 @@
 
 
             <!-- Last Game Results -->
-              
-            <h4><img src="assets/webnueva/images/samples/banner02.jpg"></h4>
-              
+              @if(isset($banner_inferior))
+            <h4><img src="uploads/contenidos/banner/{{$banner_inferior->imagen}}"></h4>
+              @endif
             <!-- Last Game Results / End -->
 
             <!-- Post Area 2 -->

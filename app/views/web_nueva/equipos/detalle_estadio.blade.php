@@ -27,8 +27,7 @@
                 </div>
               </li>
               <li class="posts__item card posts__item--category-1">
-                
-                  <iframe src="{{$models->mapa}}" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  {{$models->mapa}}
                   
               </li>
               <li class="posts__item card posts__item--category-1">

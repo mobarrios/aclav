@@ -2,7 +2,7 @@
 Route::group(array('prefix' => 'web_nueva'), function()
 {
 	//Home
-    Route::get('', 'NuevaWebController@getHomeNoticias');
+    Route::get('', [ 'as'=>'inicio','uses'=>'NuevaWebController@getHomeNoticias']);
 		
 
     //Competencias
@@ -18,7 +18,8 @@ Route::group(array('prefix' => 'web_nueva'), function()
     Route::get('estadio/{id}', [ 'as'=>'detalle_estadio' ,'uses'=>'NuevaWebController@detalle_estadio']);
     Route::get('participantes/{id}', ['as'=>'detalle_equipo' ,'uses'=>'NuevaWebController@detalle_equipo']);
     Route::get('jugador/{id}', ['as'=>'jugador' ,'uses'=>'NuevaWebController@jugador']);
-
+    Route::get('staff/{id}', ['as'=>'detalle_staff' ,'uses'=>'NuevaWebController@detalle_staff']);
+   
 
     //Estadisticas
     Route::get('estadisticas', ['as'=>'contacto','uses'=>'NuevaWebController@estadisticas']);

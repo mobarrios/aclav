@@ -9,7 +9,9 @@ class NuevaWebController extends BaseController
 		
 		$data['video_ultimo']	 = Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['banner_superior'] =  Banner::where('posicion','=',3)->first();
+		$data['banner_inferior'] =  Banner::where('posicion','=',2)->first();
 
+		
         return View::make('web_nueva.inicio')->with($data);
 	}
 	/*
@@ -61,6 +63,11 @@ class NuevaWebController extends BaseController
 
 		return View::make('web_nueva.equipos.participantes')->with($data);
 	}	
+
+	public function detalle_staff($id){
+		$data['models'] = Oficial::find($id);
+		return View::make('web_nueva.equipos.detalle_staff')->with($data);
+	}
 	public function detalle_equipo($id){
 		   $temporada_actual 	=  Temporada::where('actual','=','1')->first()->id;
 		   $torneos    			=  Torneos::where('o2_web',1)->first();
@@ -377,6 +384,8 @@ class NuevaWebController extends BaseController
 
 	public function sponsors(){
 		$data['model'] = Sponsor::all();
+
+
 
 		return View::make('web_nueva.institucional.sponsors')->with($data);
 	}
