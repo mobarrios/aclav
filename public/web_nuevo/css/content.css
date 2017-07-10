@@ -57,7 +57,7 @@ h6 {
 
 /* Paragraphs */
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 0em;
 }
 
 .lead {
@@ -67,12 +67,12 @@ p {
 
 /* Links */
 a {
-  color: #ffcc00;
+  color: #143969;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #ffdc11;
+  color: #143969;
   text-decoration: none;
   outline: none;
 }
@@ -127,7 +127,7 @@ ul.list li::before {
   left: 0;
   /* move the counter label into the space from the padding */
   width: 20px;
-  color: #ffdc11;
+  color: #143969;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   content: "\f00c";
@@ -318,7 +318,7 @@ img {
   width: 28px;
   height: 28px;
   fill: none;
-  stroke: #ffdc11;
+  stroke: #143969;
 }
 
 .df-icon-stack {
@@ -478,8 +478,8 @@ th {
   padding: 6.5px;
   vertical-align: top;
   border-top: 1px solid #e4e7ed;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
+  font-family: "square721_cn_btroman", sans-serif;
+  font-size: 12px;
 }
 
 @media (min-width: 992px) {
@@ -490,7 +490,7 @@ th {
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
     padding: 13px 10px;
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 
@@ -500,6 +500,7 @@ th {
   font-weight: 700;
   color: #31404b;
   text-transform: uppercase;
+  font-family: "square721_cn_btroman", sans-serif;
 }
 
 .table > tbody > tr > th {
@@ -644,7 +645,7 @@ th {
   bottom: 0;
   width: 120px;
   height: 25px;
-  background-color: #ffdc11;
+  background-color: #143969;
   border-radius: 3px;
 }
 
@@ -823,9 +824,9 @@ th {
 }
 
 .df-color-pallete__item.color-primary {
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .df-color-pallete__item.color-primary-darken {
-  background-color: #ffcc00;
+  background-color: #143969;
 }

@@ -2,3 +2,58 @@
 File Name: 		custom.css
 Description:  You can add your custom CSS here and it will overwrite template styles
 */
+
+
+.resultadosActuales {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.resultadoActual {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: : 50px;
+}
+
+@media (max-width: 720px) {
+	.resultadoActual {
+		margin: 0 0 20px 0;
+	}
+}
+
+.owl-carousel {
+position: relative;
+margin-bottom: 20px;
+height: 200px;
+}
+.owl-prev,
+.owl-next {
+position: absolute;
+top: 50%;
+margin-top: -10px; // Half of the prev/next buttons height here in negatives to center them perfectly
+}
+.owl-prev {
+left: 0;
+}
+.owl-next {
+right: 0;
+}
+
+.owl-stage { 
+margin: 20px 0;
+}
+
+/*
+.resultados {
+	padding: 20px 11px !important;
+}*/
+
+.resultados.match-preview__date.fontEstadio.estadio {
+	font-size: 10px;
+	text-align: center;
+}

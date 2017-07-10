@@ -2,7 +2,7 @@ body {
   display: none; }
 
 #jpreOverlay {
-  background-color: #1e2024; }
+  background-color: #293B68; }
 
 #jpreLoader {
   text-align: center;
@@ -16,7 +16,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #ffdc11;
+  color: #CD3243;
   text-align: center;
   width: 260px;
   margin: 0 auto; }

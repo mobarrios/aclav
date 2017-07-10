@@ -19,7 +19,7 @@
                        
                             <div class="media-body">
                               
-                                <p><font size="3" color="#000000"> {{$models->cuerpo}} </font></p>
+                                <p><font size="3" color="#000000"> {{$model->cuerpo}} </font></p>
                             </div>
                         
 

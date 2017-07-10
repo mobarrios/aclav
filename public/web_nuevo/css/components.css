@@ -64,7 +64,7 @@ Description:  Reusable components built to provide buttons, dropdowns, input gro
 }
 
 .alert-success::before {
-  background-color: #24d9b0;
+  background-color: #f2293a;
 }
 
 .alert-success::before {
@@ -82,7 +82,7 @@ Description:  Reusable components built to provide buttons, dropdowns, input gro
 }
 
 .alert-info::before {
-  background-color: #0cb2e2;
+  background-color: #143969;
 }
 
 .alert-info::before {
@@ -253,7 +253,7 @@ fieldset[disabled] .btn-primary.focus {
 
 .btn-primary-inverse {
   color: #fff;
-  background-color: #ffcc00;
+  background-color: #f2293a;
   border-color: transparent;
 }
 
@@ -570,6 +570,40 @@ fieldset[disabled] .btn-gplus.focus {
   color: #9a9da2;
 }
 
+.btn-outline.btn-default1 {
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: #143969;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.btn-outline.btn-default2 {
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: #ccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.btn-outline.btn-default3 {
+  border: none;
+  color: #fff;  
+  font-weight: 600;
+  background-color: #143969;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  cursor: default;
+}
+
 .btn-outline.btn-default:hover {
   background-color: #9a9da2;
   border-color: #9a9da2;
@@ -715,7 +749,7 @@ fieldset[disabled] .btn-gplus.focus {
 }
 
 .btn-fab--clean::before, .btn-fab--clean::after {
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .btn-fab--sm {
@@ -740,6 +774,44 @@ fieldset[disabled] .btn-gplus.focus {
   border-radius: 4px;
   background-color: #fff;
   margin-bottom: 15px;
+}
+
+.card_novivo {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+ background-color: #DCDCDC;  
+  margin-bottom: 15px;
+}
+
+.card1 {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 0px;
+}
+
+
+/* Card
+/* ------------------------- */
+.card {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.card_vivo {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background-color: #f2293a;  
+  margin-bottom: 15px;
+}
+
+.card1 {
+  border: 1px solid #e4e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 0px;
 }
 
 .card--clean {
@@ -775,7 +847,7 @@ fieldset[disabled] .btn-gplus.focus {
 }
 
 .card__header {
-  padding: 27px 23px;
+  padding: 17px 23px;
   border-radius: 4px 4px 0 0;
   position: relative;
   border-bottom: 1px solid #e4e7ed;
@@ -799,7 +871,7 @@ fieldset[disabled] .btn-gplus.focus {
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: #ffdc11;
+  background-color: #143969;
   border-radius: 3px 0 0 0;
 }
 
@@ -819,8 +891,8 @@ fieldset[disabled] .btn-gplus.focus {
 }
 
 .card__header--has-btn {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .card__header--has-btn > h4 {
@@ -918,7 +990,11 @@ fieldset[disabled] .btn-gplus.focus {
 }
 
 .card__content {
-  padding: 24px 24px;
+  padding: 14px 24px;
+}
+
+.card__content1 {
+  padding: 0px 24px;
 }
 
 .card__content-inner {
@@ -931,8 +1007,8 @@ fieldset[disabled] .btn-gplus.focus {
   border-bottom: 1px solid #e4e7ed;
   text-align: center;
   padding: 8px 0;
-  margin-left: -24px;
-  margin-right: -24px;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-bottom: 20px;
 }
 
@@ -960,13 +1036,13 @@ fieldset[disabled] .btn-gplus.focus {
 
 @media (min-width: 992px) {
   .card--lg .card__content {
-    padding: 43px 43px;
+    padding: 23px 23px;
   }
 }
 
 @media (min-width: 992px) {
   .card--xlg .card__content {
-    padding: 70px 70px;
+    padding: 50px 50px;
   }
 }
 
@@ -994,6 +1070,11 @@ fieldset[disabled] .btn-gplus.focus {
   text-transform: uppercase;
 }
 
+.label1 {
+  padding: 0 0;
+  max-width: 60 px important;
+}
+
 a.label:hover, a.label:focus {
   color: #fff;
 }
@@ -1007,7 +1088,7 @@ a.label:hover, a.label:focus {
 }
 
 .label-primary {
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .label-primary[href]:hover, .label-primary[href]:focus {
@@ -1057,7 +1138,7 @@ label {
 }
 
 label .required {
-  color: #ffdc11;
+  color: #143969;
 }
 
 .form-control {
@@ -1080,7 +1161,7 @@ label .required {
 .form-control:focus {
   color: #31404b;
   background-color: #fff;
-  border-color: #ffdc11;
+  border-color: #143969;
   box-shadow: none;
 }
 
@@ -1679,10 +1760,11 @@ abbr.required {
 /* Tooltips
 /* ------------------------- */
 .tooltip {
-  font-size: 9px;
-  text-transform: uppercase;
+  font-size: 9px;  
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
+  z-index: 150;
+  overflow: visible;
 }
 
 .tooltip.in {
@@ -1693,7 +1775,7 @@ abbr.required {
   padding: 5px 10px;
   color: #292c31;
   text-align: center;
-  background-color: #ffdc11;
+  background-color: #ccc;
   border-radius: 2px;
 }
 
@@ -1710,7 +1792,7 @@ abbr.required {
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #ffdc11;
+  border-top-color: #ccc;
 }
 
 .tooltip.top-left .tooltip-arrow {
@@ -1718,7 +1800,7 @@ abbr.required {
   right: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #ffdc11;
+  border-top-color: #143969;
 }
 
 .tooltip.top-right .tooltip-arrow {
@@ -1726,7 +1808,7 @@ abbr.required {
   left: 5px;
   margin-bottom: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #ffdc11;
+  border-top-color: #143969;
 }
 
 .tooltip.right .tooltip-arrow {
@@ -1734,7 +1816,7 @@ abbr.required {
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #ffdc11;
+  border-right-color: #143969;
 }
 
 .tooltip.left .tooltip-arrow {
@@ -1742,7 +1824,7 @@ abbr.required {
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #ffdc11;
+  border-left-color: #143969;
 }
 
 .tooltip.bottom .tooltip-arrow {
@@ -1750,7 +1832,7 @@ abbr.required {
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #ffdc11;
+  border-bottom-color: #143969;
 }
 
 .tooltip.bottom-left .tooltip-arrow {
@@ -1758,7 +1840,7 @@ abbr.required {
   right: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #ffdc11;
+  border-bottom-color: #143969;
 }
 
 .tooltip.bottom-right .tooltip-arrow {
@@ -1766,7 +1848,7 @@ abbr.required {
   left: 5px;
   margin-top: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #ffdc11;
+  border-bottom-color: #143969;
 }
 
 /* Countdown
@@ -1833,7 +1915,7 @@ abbr.required {
 }
 
 .breadcrumb > li > a:hover {
-  color: #ffdc11 !important;
+  color: #143969 !important;
 }
 
 .breadcrumb > .active {
@@ -1887,8 +1969,8 @@ abbr.required {
 
 .pagination > li > a:hover,
 .pagination > li > span:hover {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
+  background-color: #f2293a;
+  border-color: #f2293a;
   color: #fff;
 }
 
@@ -1896,8 +1978,8 @@ abbr.required {
 .pagination > .active > span,
 .pagination > .active > span:hover,
 .pagination > .active > span:focus {
-  background-color: #ffcc00;
-  border-color: #ffcc00;
+  background-color: #f2293a;
+  border-color: #f2293a;
   color: #fff;
 }
 
@@ -1959,7 +2041,7 @@ abbr.required {
   height: 100%;
   line-height: 6px;
   color: #fff;
-  background-color: #ffdc11;
+  background-color: #143969;
   box-shadow: none;
   border-radius: 3px;
 }
@@ -2240,8 +2322,8 @@ abbr.required {
   position: relative;
   z-index: 1;
   background-color: transparent;
-  background-image: -webkit-radial-gradient(circle, #ffdc11, #ffdc11 2px, transparent 2px, transparent), -webkit-radial-gradient(circle, #ffdc11, #ffdc11 2px, transparent 2px, transparent), -webkit-linear-gradient(left, #ffdc11, #ffdc11 4px, transparent 4px, transparent 8px);
-  background-image: radial-gradient(circle, #ffdc11, #ffdc11 2px, transparent 2px, transparent), radial-gradient(circle, #ffdc11, #ffdc11 2px, transparent 2px, transparent), linear-gradient(to right, #ffdc11, #ffdc11 4px, transparent 4px, transparent 8px);
+  background-image: -webkit-radial-gradient(circle, #143969, #143969 2px, transparent 2px, transparent), -webkit-radial-gradient(circle, #143969, #143969 2px, transparent 2px, transparent), -webkit-linear-gradient(left, #143969, #143969 4px, transparent 4px, transparent 8px);
+  background-image: radial-gradient(circle, #143969, #143969 2px, transparent 2px, transparent), radial-gradient(circle, #143969, #143969 2px, transparent 2px, transparent), linear-gradient(to right, #143969, #143969 4px, transparent 4px, transparent 8px);
   background-size: 8px 8px, 8px 8px, 8px 16px;
   background-position: -2px -2px, -2px 14px, 0 2px;
   background-repeat: repeat-x, repeat-x, repeat-x;
@@ -2525,7 +2607,7 @@ abbr.required {
   bottom: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 2px solid #ffdc11;
+  border: 2px solid #143969;
   background-color: rgba(237, 239, 244, 0.6);
   border-radius: 50%;
   color: #fff;
@@ -2621,7 +2703,7 @@ abbr.required {
   line-height: 16px;
   left: 10px;
   top: 0;
-  border: 2px solid #ffdc11;
+  border: 2px solid #143969;
   border-radius: 50%;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -3027,7 +3109,7 @@ div.cs-skin-border li.cs-focus span {
 }
 
 .slick-dots li.slick-active button {
-  background-color: #ffdc11;
+  background-color: #143969;
   opacity: 0.75;
 }
 
@@ -3114,8 +3196,8 @@ div.cs-skin-border li.cs-focus span {
 .featured-carousel .slick-prev,
 .team-roster--slider .slick-prev,
 .awards--slider .slick-prev {
-  left: 50%;
-  margin-left: -20%;
+  left: 5%;
+  margin-left: 0%;
 }
 
 .featured-carousel .slick-prev::before,
@@ -3128,8 +3210,8 @@ div.cs-skin-border li.cs-focus span {
 .featured-carousel .slick-next,
 .team-roster--slider .slick-next,
 .awards--slider .slick-next {
-  right: 50%;
-  margin-right: -20%;
+  right: 5%;
+  margin-right: 0%;
 }
 
 .featured-carousel .slick-next::before,
@@ -3256,7 +3338,7 @@ div.cs-skin-border li.cs-focus span {
 
 .team-roster--card-slider .slick-prev:hover,
 .team-roster--card-slider .slick-next:hover {
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .team-roster--card-slider .slick-prev:hover::before,
@@ -3306,7 +3388,7 @@ div.cs-skin-border li.cs-focus span {
 
 .team-roster--case-slider .slick-prev:hover,
 .team-roster--case-slider .slick-next:hover {
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .team-roster--case-slider .slick-prev:hover::before,
@@ -3394,7 +3476,7 @@ div.cs-skin-border li.cs-focus span {
 
 .posts--slider-top-news .slick-dots li.slick-active button {
   opacity: 1;
-  color: #ffdc11;
+  color: #f2293a;
 }
 
 /* Post Categories Filter
@@ -3641,7 +3723,7 @@ div.cs-skin-border li.cs-focus span {
 }
 
 .noUi-connect {
-  background-color: #ffdc11;
+  background-color: #143969;
   -webkit-transition: background 450ms;
   transition: background 450ms;
 }
@@ -3707,7 +3789,7 @@ div.cs-skin-border li.cs-focus span {
   height: 50px;
   overflow: hidden;
   position: relative;
-  color: #ffdc11;
+  color: #143969;
 }
 
 .icobox__icon i {
@@ -3731,7 +3813,7 @@ div.cs-skin-border li.cs-focus span {
 }
 
 .icobox__icon--filled {
-  background-color: #ffdc11;
+  background-color: #143969;
   color: #fff;
 }
 
@@ -3751,11 +3833,11 @@ div.cs-skin-border li.cs-focus span {
 }
 
 .icobox__icon--color--primary {
-  color: #ffdc11;
+  color: #143969;
 }
 
 .icobox__icon--color--primary.icobox__icon--filled {
-  background-color: #ffdc11;
+  background-color: #143969;
   color: #fff;
 }
 
@@ -3782,7 +3864,7 @@ div.cs-skin-border li.cs-focus span {
 
 /* Ratings */
 .ratings .fa {
-  color: #ffdc11;
+  color: #143969;
 }
 
 .ratings .empty {
@@ -3823,8 +3905,8 @@ div.cs-skin-border li.cs-focus span {
   width: 19px;
   height: 19px;
   border-radius: 50%;
-  background-color: #ffdc11;
-  border: 2px solid #ffdc11;
+  background-color: #143969;
+  border: 2px solid #143969;
   box-shadow: inset 0 0 0 5px #fff;
 }
 
@@ -3889,7 +3971,7 @@ div.cs-skin-border li.cs-focus span {
   top: 0;
   bottom: 0;
   width: 50%;
-  background-color: #ffdc11;
+  background-color: #143969;
 }
 
 .marquee-wrapper::after {
@@ -3959,7 +4041,7 @@ div.cs-skin-border li.cs-focus span {
     font-weight: 700;
     letter-spacing: -0.02em;
     color: #31404b;
-    background-color: #ffdc11;
+    background-color: #143969;
   }
   .marquee-label::before {
     content: "";
@@ -3968,7 +4050,7 @@ div.cs-skin-border li.cs-focus span {
     right: -26px;
     top: 0;
     bottom: 0;
-    background-color: #ffdc11;
+    background-color: #143969;
     width: 35px;
     -webkit-transform: skew(-25deg);
             transform: skew(-25deg);
