@@ -115,7 +115,7 @@ Route::group(array('prefix' => 'web'), function()
 
 		//$data['torneosMasculinos']			= Torneos::where('muestra_web','=',1)->where('serie_id','=',1)->get();
 		//$data['torneosFemeninos']			= Torneos::where('muestra_web','=',1)->where('serie_id','=',2)->get();
-
+		
 		 return View::make('web.index')->with($data);
 	});
 
