@@ -9,6 +9,10 @@ class PartidoPunto extends Eloquent
 		return $this->belongsTo('Partido');
 	}
 
+	public function estadio(){
+		return $this->belongsTo('Estadio');
+	}
+
 }
 
 ?>
