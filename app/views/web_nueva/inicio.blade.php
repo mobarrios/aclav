@@ -216,7 +216,7 @@
         <!-- Main Image / End -->  
         <!-- Post Content -->
         <div class="posts__inner">          
-          <h2 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->titulo}}</p></font></a></h2>          
+          <h2 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->id )}}"><font color="#ffffff"><p> {{ str_limit(NoticiasPosicion::where('posicion_web','=',2)->first()->Noticias->titulo, 10,'...')}}</p></font></a></h2>          
         </div>
         <!-- Post Content / End -->  
       </div>  

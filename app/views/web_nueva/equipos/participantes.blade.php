@@ -16,7 +16,7 @@
                   <h4 class="gallery__name"><p>{{$models->nombre}}</p></h4>
                 </div>
               </header>
-              <figure class="gallery__thumb">
+              <figure class="gallery__thumb text-center">
                 <!--
                 assets/images/e008.jpg
                 -->

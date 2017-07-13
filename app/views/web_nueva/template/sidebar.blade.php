@@ -237,7 +237,7 @@
               <div class="widget__title card__header">
                 <h4><p>Jugador de la Fecha</p></h4>
               </div>
-                <h4><img src="uploads/contenidos/goleador/{{$goleador->imagen}}"></h4>
+                <h4><img src="assets/webnueva/images/samples/banner002.jpg"></h4>
              </aside>
             <!-- Widget: Featured Player - Alternative Extended / End -->
 
