@@ -55,6 +55,7 @@ Route::group(array('prefix' => 'web_nueva'), function()
     Route::get('descargas', ['as'=>'descargas','uses'=>'NuevaWebController@descargas']);   
     Route::get('download/{id}', ['as'=>'download','uses'=>'NuevaWebController@download']); 
     Route::get('videos', ['as'=>'videos','uses'=>'NuevaWebController@videos']);    
+    Route::get('videos/{id}', ['as'=>'detalle_video','uses'=>'NuevaWebController@detalle_video']);    
 
 
     //Institucional

@@ -6,7 +6,7 @@
         <div class="row">
           <!-- Content -->
           <div class="content col-md-8">
-
+            
             <!-- Posts List -->
             <div class="posts posts--cards posts--cards-thumb-left post-list">
 
