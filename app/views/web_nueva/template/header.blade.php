@@ -21,12 +21,12 @@
               <ul class="main-nav__list">
                 <li class=""><a href="#">Competencias</a>
                   <ul class="main-nav__sub">
-                    <li><a href="{{route('calendario')}}">Liga Argentina de Voleibol</a></li>
-                    <li><a href="{{route('calendario')}}">Copa Argentina</a></li>
-                    <li><a href="{{route('calendario')}}">Copa ACLAV</a></li>
-                    <li><a href="{{route('calendario')}}">Presudamericano</a></li>
-                    <li><a href="{{route('calendario')}}">Copa Desafio</a></li>
-                    <li><a href="{{route('calendario')}}">Copa Master</a></li>
+                    @foreach(Temporada::with('Torneos')->where('actual','=',1)->get() as $temporada)
+                      @foreach(Torneos::where('temporada_id',$temporada->id)->where('muestra_web','=',1)->orderBy('posicion','ASC')->get() as $torneo )  
+                      <li><a href="{{route('calendario', $torneo->id)}}">{{$torneo->nombre_torneo}}</a></li>
+                     
+                      @endforeach
+                    @endforeach
                   </ul>
                 </li>
                 <li class=""><a href="#">Equipos</a>
