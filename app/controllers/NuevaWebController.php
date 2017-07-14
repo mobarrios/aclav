@@ -16,6 +16,8 @@ class NuevaWebController extends BaseController
 		$data['model'] 			 =  NoticiasPosicion::with('noticias')->get();
 		$data['social_ultima'] 	 =  Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
+		$data['resultados'] = 		Partido::where('estado','=', 1 )->orderBy('fecha_inicio','ASC')->take(5)->get();
+			
 		$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		
 		$data['banner_superior'] =  Banner::where('posicion','=',3)->first();
@@ -55,6 +57,7 @@ class NuevaWebController extends BaseController
 
 	//Equipos
 	public function participantes(){
+		   $data['goleador']        =  Goleador::where('estado','=',1)->first();
 		   $temporada_actual 	= Temporada::where('actual','=','1')->first()->id;
 		   $torneos = Torneos::where('temporada_id',$temporada_actual)->get();
 
@@ -79,6 +82,7 @@ class NuevaWebController extends BaseController
 		return View::make('web_nueva.equipos.detalle_staff')->with($data);
 	}
 	public function detalle_equipo($id){
+		   $data['goleador']        =  Goleador::where('estado','=',1)->first();
 		   $temporada_actual 	=  Temporada::where('actual','=','1')->first()->id;
 		   $torneos    			=  Torneos::where('o2_web',1)->first();
 
@@ -239,17 +243,19 @@ class NuevaWebController extends BaseController
 	}
 
 	public function jugador($id){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['models'] = Jugador::find($id);
 		return View::make('web_nueva.equipos.jugador')->with($data);
 	}
 
 	public function estadios(){
-		
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Estadio::where('estado',1)->orderBy('nombre','ASC')->get();
 		return View::make('web_nueva.equipos.estadios')->with($data);
 	}
 
 	public function detalle_estadio($id){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['models']	= Estadio::find($id);
 		return View::make('web_nueva.equipos.detalle_estadio')->with($data);
 
@@ -258,6 +264,7 @@ class NuevaWebController extends BaseController
 
 	//Estadisticas
 	public function jugadores(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		return View::make('web_nueva.estadisticas.jugadores');
 	}
 
@@ -285,29 +292,34 @@ class NuevaWebController extends BaseController
 
 	//noticias
 	public function detalle_noticias($id){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Noticias::find($id);
 		return View::make('web_nueva.noticias.detalle_noticia')->with($data);
 	}
 
 
 	public function noticias(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model']		    = Noticias::where('fecha','<=', date('Y-m-d'))->where('estado','=',1)->where('web_noticia','=',1)->orderBy('id','DESC')->paginate(5);
 
 		return View::make('web_nueva.noticias.noticias')->with($data);
 	}
 	
 	public function entrevistas(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model']			 = Noticias::where('estado','=',1)->where('web_entrevista','=', 1)->orderBy('fecha','DESC')->paginate(5);
 
 		return View::make('web_nueva.noticias.entrevistas')->with($data);
 	}
 
 	public function especiales(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] 			= Noticias::where('web_especial','=',1)->where('web_especial','=',1)->orderBy('fecha','DESC')->paginate(5);
 		return View::make('web_nueva.noticias.especial')->with($data);
 	}
 	
 	public function social(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Noticias::where('estado','=',1)->where('web_social','=',1)->orderBy('fecha','DESC')->paginate(5);
 		return View::make('web_nueva.noticias.social')->with($data);
 	}
@@ -316,6 +328,7 @@ class NuevaWebController extends BaseController
 
 	//Multimedia
 	public function descargas(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Archivo::orderBy('created_at','DESC')->get();
 		return View::make('web_nueva.multimedia.descargas')->with($data);
 	}
@@ -383,7 +396,7 @@ class NuevaWebController extends BaseController
 	}
 
 	public function videos(){
-		
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['models'] = Video::where('estado','=',1)->orderBy('created_at','ASC')->paginate(4);
 		return View::make('web_nueva.multimedia.videos')->with($data);
 	}
@@ -399,12 +412,14 @@ class NuevaWebController extends BaseController
 	}
 
 	public function sponsors(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Sponsor::all();
 		return View::make('web_nueva.institucional.sponsors')->with($data);
 	}
 
 
 	public function historia(){
+		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Historia::all()->first();
 		return View::make('web_nueva.institucional.historia')->with($data);
 	}
