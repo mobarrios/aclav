@@ -203,6 +203,7 @@ return array(
     'Noticias' => $baseDir . '/app/models/Noticias.php',
     'NoticiasClub' => $baseDir . '/app/models/NoticiasClub.php',
     'NoticiasPosicion' => $baseDir . '/app/models/NoticiasPosicion.php',
+    'NuevaWebController' => $baseDir . '/app/controllers/NuevaWebController.php',
     'Null_Frame_Decorator' => $vendorDir . '/dompdf/dompdf/include/null_frame_decorator.cls.php',
     'Null_Frame_Reflower' => $vendorDir . '/dompdf/dompdf/include/null_frame_reflower.cls.php',
     'Null_Positioner' => $vendorDir . '/dompdf/dompdf/include/null_positioner.cls.php',

@@ -390,6 +390,7 @@ class ComposerStaticInitd1d48f1fd026eef1671294c65e777260
         'Noticias' => __DIR__ . '/../..' . '/app/models/Noticias.php',
         'NoticiasClub' => __DIR__ . '/../..' . '/app/models/NoticiasClub.php',
         'NoticiasPosicion' => __DIR__ . '/../..' . '/app/models/NoticiasPosicion.php',
+        'NuevaWebController' => __DIR__ . '/../..' . '/app/controllers/NuevaWebController.php',
         'Null_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_frame_decorator.cls.php',
         'Null_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_frame_reflower.cls.php',
         'Null_Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/null_positioner.cls.php',

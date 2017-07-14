@@ -10,12 +10,19 @@
               </div>
             </aside>
             <!-- Widget: Standings -->
+            <?php
+            $tablas = TorneoFase::where('tabla_web',1)->get();
+            $count  =  '1';
+            ?>
+
+            @foreach($tablas as $fase)
             <aside class="widget card widget--sidebar widget-standings">
               <div class="widget__title card__header card__header--has-btn">
-                <h4><p>Liga Argentina de Voleibol</p></h4>
+                <h4><p>{{$fase->nombre}}</p></h4>
               </div>
               <div class="widget__content card__content">
                 <div class="table-responsive">
+                  @if($fase->tipo_fase_id == 1)
                   <table class="table table-hover table-standings">
                     <thead>
                       <tr>
@@ -27,187 +34,38 @@
                       </tr>
                     </thead>
                     <tbody>
+
+                    @foreach($fase->TablaPosicion as $tabla)
+
+                    @if($tabla->Equipo->id != 15) 
                       <tr>
                         <td>
                           <div class="team-meta">
                             <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/001.png" alt="">
+                              <img src="uploads/escudos/{{$tabla->Equipo->escudo}}" alt="">
                             </figure>
                             <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Personal Bolivar</p></h6>
+                              <h6 class="team-meta__name"><p>{{$tabla->Equipo->nombre}}</p></h6>
                             </div>
                           </div>
                         </td>
-                        <td><span class="glossary__abbr"><font size=4>48</font></span></td>
-                        <td><p>36</p></td>
-                        <td><p>14</p></td>
-                        <td><p>10</p></td>                        
+                        <td><span class="glossary__abbr"><font size=4>{{$tabla->puntos}}</font></span></td>
+                        <td><p>{{$tabla->partido_ganado}}</p></td>
+                        <td><p>{{$tabla->partido_perdido}}</p></td>
+                        <td><p>{{$tabla->partido_total}}</p></td>                        
                       </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/002.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h5 class="team-meta__name"><p>Ciudad Voley</p></h5>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>46</font></span></td>
-                        <td><p>20</p></td>
-                        <td><p>8</p></td>
-                        <td><p>104</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/003.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>UPCN San Juan Voley</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>47</font></span></td>
-                        <td><p>21</p></td>
-                        <td><p>7</p></td>
-                        <td><p>103</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/004.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Lomas Voley</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>46</font></span></td>
-                        <td><p>20</p></td>
-                        <td><p>10</p></td>
-                        <td><p>100</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/005.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Gigantes del Sur</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>36</font></span></td>
-                        <td><p>24</p></td>
-                        <td><p>8</p></td>
-                        <td><p>92</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/006.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Obras UDAP Voley</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>33</font></span></td>
-                        <td><p>24</p></td>
-                        <td><p>9</p></td>
-                        <td><p>90</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/007.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Alianza Jesus Maria</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>28</font></span></td>
-                        <td><p>28</p></td>
-                        <td><p>7</p></td>
-                        <td><p>82</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>River Plate</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>25</font></span></td>
-                        <td><p>30</p></td>
-                        <td><p>6</p></td>
-                        <td><p>78</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/009.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Deportivo Moron</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>25</font></span></td>
-                        <td><p>30</p></td>
-                        <td><p>6</p></td>
-                        <td><p>78</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/010.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>Untref Voley</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>24</font></span></td>
-                        <td><p>30</p></td>
-                        <td><p>6</p></td>
-                        <td><p>78</p></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="team-meta">
-                            <figure class="team-meta__logo">
-                              <img src="assets/webnueva/images/samples/logos/011.png" alt="">
-                            </figure>
-                            <div class="team-meta__info">
-                              <h6 class="team-meta__name"><p>PSM Voley</p></h6>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="glossary__abbr"><font size=4>20</font></span></td>
-                        <td><p>30</p></td>
-                        <td><p>6</p></td>
-                        <td><p>78</p></td>
-                      </tr>
+                      <?php $count = $count + 1 ?>
+                      @endif
+                      @endforeach
+                      <?php $count = '1'?>
+                    
                     </tbody>
                   </table>
+                  @endif
                 </div>
               </div>
             </aside>
+            @endforeach  
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
                 <h4><img src="assets/webnueva/images/banner003.png"></h4>

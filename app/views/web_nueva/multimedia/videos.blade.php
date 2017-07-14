@@ -14,7 +14,7 @@
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
-                    <a href="detalle_video.html"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
+                    <a href="{{('detalle_video',$model->id)}}"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
                     
                   </figure>
                   <div class="posts__inner">
