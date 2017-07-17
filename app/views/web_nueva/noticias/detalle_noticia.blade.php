@@ -23,7 +23,7 @@
                 <div id="chacslider-container1">
                 	<div class="ws_images">
                     <ul>
-                		  <li><img src="assets/webnueva/images/noti001.jpg" alt="noti001" title="noti001" id="wows1_0"/></li>
+                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="noti001" title="noti001" id="wows1_0"/></li>
                 		  <li><img src="assets/webnueva/images/noti002.jpg" alt="noti002" title="noti002" id="wows1_1"/></li>
                 		  <li><img src="assets/webnueva/images/noti003.jpg" alt="noti003" title="noti003" id="wows1_2"/></li>
                 		  <li><img src="assets/webnueva/images/noti004.jpg" alt="noti004" title="noti004" id="wows1_3"/></li>

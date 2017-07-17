@@ -329,7 +329,7 @@ class NuevaWebController extends BaseController
 
 	public function noticias(){
 		$data['goleador']        =  Goleador::where('estado','=',1)->first();
-		$data['model']		    = Noticias::where('fecha','<=', date('Y-m-d'))->where('estado','=',1)->where('web_noticia','=',1)->orderBy('id','DESC')->paginate(5);
+		$data['model']		    = Noticias::where('fecha','<=', date('Y-m-d'))->where('estado','=',1)->where('web_noticia','=',1)->orderBy('created_at' ,'DESC')->paginate(5);
 
 		return View::make('web_nueva.noticias.noticias')->with($data);
 	}
