@@ -74,7 +74,7 @@ Route::group(array('prefix' => 'web_nueva'), function()
 
     });
     */    
-    Route::post('contacto', array('as'=>'contacto.procesar',  'action' => 'NuevaWebController@procesar' ));
+    Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
    // Route::post(array('action' => 'NuevaWebController@procesar'));
 
 });	

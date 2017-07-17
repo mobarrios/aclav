@@ -390,26 +390,14 @@
             <div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
               <div class="rvs-item-container">
                 <div class="rvs-item-stage">
+                  @foreach($videos as $video)
+                  
                   <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/maxresdefault.jpg)">
-                    <p class="rvs-item-text">ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
+                    <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
                     <a href="https://www.youtube.com/watch?v=Q_AWzaP51wg&t=1s" class="rvs-play-video"></a>
                   </div>
-                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/maxresdefault.jpg)">
-                    <p class="rvs-item-text">Sportia (TyC Sports) - Gala ACLAV 2016/2017 <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v=WLjexk6qOzc" class="rvs-play-video"></a>
-                  </div>
-                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/maxresdefault.jpg)">
-                    <p class="rvs-item-text">ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v=wOF1udBPJ24&t=3s" class="rvs-play-video"></a>
-                  </div>
-                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/maxresdefault.jpg)">
-                    <p class="rvs-item-text">ACLAV TV - Mejor líbero Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v=aS0en6p9U38" class="rvs-play-video"></a>
-                  </div>
-                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/maxresdefault.jpg)">
-                    <p class="rvs-item-text">ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17 <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v=6ANUoV-UWeQ" class="rvs-play-video"></a>
-                  </div>
+                  @endforeach
+               
                 </div>
               </div>
               <div class="rvs-nav-container">

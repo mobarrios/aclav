@@ -1,14 +1,16 @@
 <div id="sidebar" class="sidebar col-md-4">
+
+            <?php
+            $banner_superior = Banner::where('posicion',1)->get();
+            ?>
+            @foreach($banner_superior as $banner)
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/banner003.png"></h4>
+                <h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4>
               </div>
             </aside>
-            <aside class="widget widget--sidebar card widget-popular-posts">
-              <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/banner003.png"></h4>
-              </div>
-            </aside>
+            @endforeach
+          
             <!-- Widget: Standings -->
             <?php
             $tablas = TorneoFase::where('tabla_web',1)->get();
@@ -66,16 +68,18 @@
               </div>
             </aside>
             @endforeach  
+
+            <?php
+            $banner_medio = Banner::where('posicion',4)->get();
+            ?>
+            @foreach($banner_medio as $banner)
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/banner003.png"></h4>
+                <h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4>
               </div>
             </aside>
-            <aside class="widget widget--sidebar card widget-popular-posts">
-              <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/banner003.png"></h4>
-              </div>
-            </aside>
+            @endforeach
+
             <!-- Widget: Twitter -->
             <aside class="widget widget--sidebar card widget-twitter">
               <div class="widget__title card__header">
@@ -100,16 +104,16 @@
             <!-- Widget: Featured Player - Alternative Extended / End -->
 
             <!-- Widget: Popular News -->
+            <?php
+            $banner_inferior = Banner::where('posicion',0)->get();
+            ?>
+            @foreach($banner_inferior as $banner)
             <aside class="widget widget--sidebar card widget-popular-posts">
               <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/samples/banner002.jpg"></h4>
+                <h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4>
               </div>
             </aside>
-            <aside class="widget widget--sidebar card widget-popular-posts">
-              <div class="widget__title card__header">
-                <h4><img src="assets/webnueva/images/banner003.png"></h4>
-              </div>
-            </aside>
+            @endforeach
             
             <!-- Widget: Popular News / End -->
 </div>

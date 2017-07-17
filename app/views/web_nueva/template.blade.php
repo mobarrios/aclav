@@ -65,7 +65,7 @@
   <link href="assets/webnueva/css/custom.css" rel="stylesheet">
   <link href="assets/webnueva/css/carousel.css" rel="stylesheet">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
+  @yield('css')
 
 </head>
 <body class="template-voleibol">

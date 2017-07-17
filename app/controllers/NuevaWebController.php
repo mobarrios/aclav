@@ -18,8 +18,10 @@ class NuevaWebController extends BaseController
 		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		$data['resultados'] = 		Partido::where('estado','=', 1 )->orderBy('fecha_inicio','ASC')->take(5)->get();
 			
-		$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
+		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
+		$data['videos'] = Video::where('estado','=',1)->orderBy('id','DESC')->take(5)->get();
 		
+
 		$data['banner_superior'] =  Banner::where('posicion','=',3)->first();
 		$data['banner_inferior'] =  Banner::where('posicion','=',2)->first();
 		$data['goleador']        =  Goleador::where('estado','=',1)->first();
@@ -424,11 +426,12 @@ class NuevaWebController extends BaseController
 
 	public function videos(){
 		$data['goleador']        =  Goleador::where('estado','=',1)->first();
-		$data['models'] = Video::where('estado','=',1)->orderBy('created_at','ASC')->paginate(4);
+		$data['models'] = Video::where('estado','=',1)->orderBy('id','DESC')->paginate(4);
 		return View::make('web_nueva.multimedia.videos')->with($data);
 	}
 
 	public function detalle_video($id){
+				$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['model'] = Video::find($id);
 		return View::make('web_nueva.multimedia.detalle_video')->with($data);
 	}
@@ -472,8 +475,60 @@ class NuevaWebController extends BaseController
 	}
 
 	public function procesar(){
-		dd('asdasd');
+	
+
+		$data = 'sarasa';
+
+		sendMail::send($data, 'mail', 'rochaleandroleonel@gmail.com','Paula Parisi','Designaciones Pendientes!');
+
+		return "enviado";
+		/*
+		$to="info@aclav.com"; /*Your Email
+
+		$subject="Mensaje desde la Web";
+
+		$date=date("l, F jS, Y");
+		$time=date("h:i A");
+
+		$type=$_REQUEST['type'];
+		$name=$_REQUEST['name'];
+		$email=$_REQUEST['email'];
+		$message=$_REQUEST['message'];
+
+		$msg  = "";
+		$msg .= "Mensaje recibido desde el Website el dia:  $date, hour: $time.\n";
+		$msg .= "Email: $email\n";
+		$msg .= "Nombre: $name\n";
+		$msg .= "Mensaje: $message\n";
+
+
+		if($name == "" && $type == 'contact') {
+			echo "<div class='alert alert-danger'>
+				<a class='close' data-dismiss='alert'>×</a>
+				<strong>Cuidado!</strong> Falta su Nombre.
+			</div>";
+
+		} else if($email=="") {
+			echo "<div class='alert alert-danger'>
+				<a class='close' data-dismiss='alert'>×</a>
+				<strong>Cuidado!</strong> Falta su Email.
+			</div>";
+
+		} else if($message == "" && $type == 'contact') {
+			echo "<div class='alert alert-danger'>
+				<a class='close' data-dismiss='alert'>×</a>
+				<strong>Cuidado!</strong> Ingrese su Mensaje.
+			</div>";
+
+		} else {
+			mail($to,$subject,$msg,"From:".$email);
+			echo "<div class='alert alert-success'>
+				<a class='close' data-dismiss='alert'>×</a>
+				<strong>Gracias por contactarse, proximamente recibirá noticias nuestras!</strong>
+			</div>";
+		}
 		
+		*/
 	}
 
 

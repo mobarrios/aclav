@@ -36,7 +36,7 @@
               <div class="col-md-8">
                 <!-- Contact Form -->
 
-                {{ Form::open(array('route' => 'contacto.procesar')) }}
+                {{ Form::open(array('route' => 'procesar')) }}
 
                   <div class="row">
                     <div class="col-md-6">

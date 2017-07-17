@@ -1,4 +1,10 @@
 @extends('web_nueva.template')
+@section('css')
+  <!-- comienzo Slider chaco -->
+  <link rel="stylesheet" type="text/css" href="assets/webnueva/css/slider_style.css" />
+  <script type="text/javascript" src="assets/webnueva/js/slider_jquery.js"></script>
+  <!-- fin Slider chaco -->
+@endsection
 @section('site-content')
   <div class="site-content">
       <div class="container">
