@@ -116,6 +116,8 @@
         @endif
 
         <!-- Comienzo proxima fecha -->
+        @foreach($proximos_partidos as $partido) 
+                
                 <div class="team-roster__item card_novivo card--no-paddings">
                     <div class="card__content">
                         <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
@@ -143,11 +145,11 @@
                               </div></center>
                               </div>
                           </div>
-                            <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
+                            <time class="match-preview__date"><font size="2" class="fontEstadio"><p>{{$pxp->estadio->nombre}}</p></font></time>
                     </div>
                 </div> 
         <!-- Fin proxima fecha -->  
-
+        @endforeach
 
 
         </div>

@@ -102,7 +102,7 @@
                   <div class="widget widget--footer widget-instagram">                    
                     <div class="widget__content">                      
                       <div class="footer-copyright"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Echeverria 1444 Ep. Of. 40 C.A.B.A.</div>
-                      <div class="footer-copyright"><a href="index.html">ACLAV.com</a>  2017 | <i class="fa fa-copyright" aria-hidden="true"></i> Todos los derechos reservados.</div>
+                      <div class="footer-copyright"><a href="{{route('inicio')}}">ACLAV.com</a>  2017 | <i class="fa fa-copyright" aria-hidden="true"></i> Todos los derechos reservados.</div>
                     </div>
                   </div>                      
                 </div>
