@@ -58,6 +58,8 @@
 							@elseif($models->posicion == 1)
 								
 								<span class="label label-primary">Superior Lateral</span>
+							@elseif($models->posicion == 4)	
+								<span class="label label-primary">Medio Lateral</span>
 							@else
 								
 								<span class="label label-primary">Inferior Lateral</span>

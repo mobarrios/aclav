@@ -4,6 +4,7 @@
 	    <center>
 	    	<ul class="thumbnails">
 	    	@foreach(Sponsor::all() as $sponsor)
+	    	
 	    	 		<li align="center" class="col-lg-1">
 	    	 			<center><a class="iconGris thumbnail1" href="{{$sponsor->url}}" target="_blank"  class="lightbox-gallery">
 	    	 				<img src="uploads/contenidos/sponsor/{{$sponsor->imagen}}" width="200" height="138" />
