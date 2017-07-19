@@ -477,9 +477,17 @@ class NuevaWebController extends BaseController
 	public function procesar(){
 	
 
-		$data = 'sarasa';
-
-		sendMail::send($data, 'mail', 'rochaleandroleonel@gmail.com','Paula Parisi','Designaciones Pendientes!');
+		$data['nombre']  = 'sarasa';
+		$data['email']   = 'sarasa@hotmail.com';
+		$data['mensaje'] = 'saras saras asras asras asd sad da sda ds sda aa sda sda sdasadsasdadsadsa';
+		/*
+		sendMail::send($data, 'web_nueva.institucional.mail', 'rochaleandroleonel@gmail.com','Paula Parisi','Designaciones Pendientes!');
+		*/
+		Mail::send('web_nueva.institucional.mail', $data, function($message)
+			{
+			  $message->to('rochaleandroleonel@gmail.com', 'Philip Brown')
+			          ->subject('Welcome to Cribbb!');
+			});
 
 		return "enviado";
 		/*

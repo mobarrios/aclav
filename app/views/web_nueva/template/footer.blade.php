@@ -6,39 +6,11 @@
 <!-- Sponsors -->        
           <div class="sponsors">
             <ul class="sponsors-logos">
+             @foreach(Sponsor::all() as $sponsor)
               <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-001.png" alt=""></a>
+                <a href="{{$sponsor->url}}" target="_blank"> <img src="uploads/contenidos/sponsor/{{$sponsor->imagen}}" alt=""></a>
               </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-002.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-003.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-004.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-005.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-006.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-007.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-008.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-009.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-010.png" alt=""></a>
-              </li>
-              <li class="sponsors__item">
-                <a href="#"><img src="assets/webnueva/images/samples/sponsor-011.png" alt=""></a>
-              </li>
+             @endforeach
             </ul>
           </div>        
 <!-- Sponsors / End --> 
@@ -50,7 +22,7 @@
               <div class="col-sm-4 col-md-3">
                 <div class="footer-col-inner">                  
                   <div class="footer-logo">
-                    <a href="index.html"><img src="assets/webnueva/images/logo-footer.png" srcset="assets/webnueva/images/logo@2x.png 2x" alt="ACLAV" class="footer-logo__img"></a>
+                    <a href="{{route('inicio')}}"><img src="assets/webnueva/images/logo-footer.png" srcset="assets/webnueva/images/logo@2x.png 2x" alt="ACLAV" class="footer-logo__img"></a>
                   </div>                    
                 </div>
               </div>
@@ -102,7 +74,7 @@
                   <div class="widget widget--footer widget-instagram">                    
                     <div class="widget__content">                      
                       <div class="footer-copyright"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Echeverria 1444 Ep. Of. 40 C.A.B.A.</div>
-                      <div class="footer-copyright"><a href="index.html">ACLAV.com</a>  2017 | <i class="fa fa-copyright" aria-hidden="true"></i> Todos los derechos reservados.</div>
+                      <div class="footer-copyright"><a href="{{route('inicio')}}">ACLAV.com</a>  2017 | <i class="fa fa-copyright" aria-hidden="true"></i> Todos los derechos reservados.</div>
                     </div>
                   </div>                      
                 </div>

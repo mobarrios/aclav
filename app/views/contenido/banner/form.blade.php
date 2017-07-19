@@ -46,7 +46,7 @@
 
 		    <div class="col-sm-10">
 			  
-			    {{ Form::select('posicion',array('3' => 'Superior Noticias','2'=>'Inferior Noticias','1'=>'Superior Lateral','0'=>'Inferior Lateral') )}}
+			    {{ Form::select('posicion',array('3' => 'Superior Noticias','2'=>'Inferior Noticias','1'=>'Superior Lateral','0'=>'Inferior Lateral', '4' => 'Medio Lateral' ) )}}
 
 			</div>
 		</div>

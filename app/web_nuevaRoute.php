@@ -75,6 +75,7 @@ Route::group(array('prefix' => 'web_nueva'), function()
     });
     */    
     Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
+    Route::get('test', function() { Mail::send('Email.test', function ($message) { $message->to('rochaleandroleonel@gmail.com', [], 'example')->subject('Welcome!'); }); });
    // Route::post(array('action' => 'NuevaWebController@procesar'));
 
 });	
