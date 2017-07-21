@@ -7,6 +7,8 @@ class NuevaWebController extends BaseController
 		$data['model'] = NoticiasPosicion::with('noticias')->get();
 		$data['social_ultima'] 	 = Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		
+		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
+	
 		$data['video_ultimo']	 = Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['banner_superior'] =  Banner::where('posicion','=',3)->first();
 		$data['banner_inferior'] =  Banner::where('posicion','=',2)->first();

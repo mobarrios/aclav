@@ -6,7 +6,7 @@
         <div class="container">
          <div class="owl-carousel col-lg-12">
 
-<!-- Comienzo de resultados pasados -->
+          <!-- Comienzo de resultados pasados -->
           <div class="team-roster__item card_novivo card--no-paddings">
             <div class="card__content">
               <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
@@ -56,753 +56,96 @@
                     <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
             </div>
           </div>
+          <!-- Fin resultados jugados -->      
 
-            <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">              
-              <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
-              <div class="widget-results__content resultados">
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>3</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>PSM</p></h5>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">10</span> </p>        
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">17</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">19</span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">11</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">20</span></p>
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>2</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                        </div></center>
-                      </div>
-                    </div>            
-        <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-          </div>
-
-            <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">              
-              <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
-              <div class="widget-results__content resultados">
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>3</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>PSM</p></h5>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">10</span> </p>        
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">17</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">19</span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">11</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">20</span></p>
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>2</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                        </div></center>
-                      </div>
-                    </div>            
-        <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-          </div>
-
-            <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">              
-              <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
-              <div class="widget-results__content resultados">
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>3</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>PSM</p></h5>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">10</span> </p>        
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">17</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">19</span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">11</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">20</span></p>
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>2</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                        </div></center>
-                      </div>
-                    </div>            
-        <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-          </div>
-
-            <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">              
-              <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
-              <div class="widget-results__content resultados">
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>3</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>PSM</p></h5>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">10</span> </p>        
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">17</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">19</span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">11</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">20</span></p>
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>2</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                        </div></center>
-                      </div>
-                    </div>            
-        <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-          </div>
-
-              <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">              
-              <h5 class="widget-results__title"><font size="2"><p>Jue 30 dic | 18:00</p></font></h5>              
-              <div class="widget-results__content resultados">
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>3</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>PSM</p></h5>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">10</span> </p>        
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">17</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">19</span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total">11</span> - <span class="team-leader__total"><b>25</b></span></p>
-                        </div>
-                        <div class="widget-results__score">
-                          <p><span class="team-leader__total"><b>25</b></span> - <span class="team-leader__total">20</span></p>
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo">
-                        <center>
-                          <div class="widget-results__team-details">
-                          <h3><p>2</p></h3>
-                        </div></center>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                        </div></center>
-                      </div>
-                    </div>            
-        <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
-            </div>
-          </div>
-
-<!-- Fin resultados jugados -->      
-
-<!-- Comienzo Punto por Punto VIVO! -->  
-            <div class="team-roster__item card card--no-paddings">
-              <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>
-                <div class="widget-results__content resultados">
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
-                          </figure></center>
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
-                          </div></center>
-                        </div>
-                        <div class="widget-results__result">
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                        </div>
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                          </figure></center>                        
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                          </div></center>
-                        </div>
-                      </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
-              </div>
-            </div>
-
-
+          @if($partidosDiarios->count() != 0)
+            <!-- Comienzo Punto por Punto VIVO! -->  
+              @foreach($partidosDiarios as $pxp)
               <div class="team-roster__item card card--no-paddings">
               <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_tv.png"></a></span></p></font></h5>              
+                <h5 class="widget-results__title"><font size="2"><p>{{$pxp->fecha_inicio}} | {{$pxp->hora}} <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
                 <div class="widget-results__content resultados">
                         <div class="widget-results__team-logo">
                           <center>
                             <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
+                            <h3><p>{{$pxp->local_set}}</p></h3>
                           </div></center>                        
                           <center><figure class="widget-results__team-logo">
                             <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
                           </figure></center>
                           <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
+                            <h5 class="widget-results__team-name"><p>{{$pxp->local_equipo_id->sigla}}</p></h5>
                           </div></center>
                         </div>
                         <div class="widget-results__result">
                           <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
+                            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(1)->puntos_local)? $pxp->puntoPorSet(1)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(1)->puntos_visita)? $pxp->puntoPorSet(1)->puntos_visita : '0'}}</span> </p>        
                           </div>
                           <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
+                            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(2)->puntos_local)? $pxp->puntoPorSet(2)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(2)->puntos_visita)? $pxp->puntoPorSet(2)->puntos_visita : '0'}}</span></p>         
                           </div>
                           <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
+                            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(3)->puntos_local)? $pxp->puntoPorSet(3)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(3)->puntos_visita)? $pxp->puntoPorSet(3)->puntos_visita : '0'}}</span> </p>        
                           </div>
                           <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
+                            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(4)->puntos_local)? $pxp->puntoPorSet(4)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(4)->puntos_visita)? $pxp->puntoPorSet(4)->puntos_visita : '0'}}</span> </p>        
                           </div>
                           <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
+                            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(5)->puntos_local)? $pxp->puntoPorSet(5)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(5)->puntos_visita)? $pxp->puntoPorSet(5)->puntos_visita : '0'}}</span></p>         
                           </div>
                         </div>
                         <div class="widget-results__team-logo">
                           <center>
                             <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
+                            <h3><p>{{$pxp->visita_set}}</p></h3>
                           </div></center>                        
                           <center><figure class="widget-results__team-logo">
                             <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
                           </figure></center>                        
                           <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
+                            <h5 class="widget-results__team-name"><p>{{$pxp->visita_equipo_id->sigla}}</p></h5>
                           </div></center>
                         </div>
                       </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
+                <time class="match-preview__date"><font size="2" class="fontEstadio"><p>{{$pxp->estadio->nombre}}</p></font></time>
               </div>
             </div>
+            @endforeach
+        <!-- Fin punto por punto VIVO! -->
+        @endif
 
-              <div class="team-roster__item card card--no-paddings">
-              <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_tv.png"></a></span></p></font></h5>              
-                <div class="widget-results__content resultados">
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
-                          </figure></center>
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
-                          </div></center>
-                        </div>
-                        <div class="widget-results__result">
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
+        <!-- Comienzo proxima fecha -->
+                <div class="team-roster__item card_novivo card--no-paddings">
+                    <div class="card__content">
+                        <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
+                        <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
+                          <div class="widget-results__content">
+                              <div class="widget-results__team-logo"><h3></h3>                        
+                                <center><figure class="widget-results__team-logo">
+                                  <img src="assets/webnueva/images/samples/logos/001.png" alt="">
+                                </figure></center>
+                                <center><div class="widget-results__team-logo">
+                                  <h2 class="widget-results__team-name"><p>CIU</p></h2>
+                                </div></center>
+                              </div>
+                              <div class="widget-results__result">
+                                <div class="widget-results__score">
+                                  <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
+                                </div>
+                              </div>
+                              <div class="widget-results__team-logo"><h3></h3>                        
+                                <center><figure class="widget-results__team-logo">
+                                  <img src="assets/webnueva/images/samples/logos/008.png" alt="">
+                                </figure></center>                        
+                                <center><div class="widget-results__team-logo">
+                                  <h2 class="widget-results__team-name"><p>RIV</p></h2>
+                              </div></center>
+                              </div>
                           </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                        </div>
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                          </figure></center>                        
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                          </div></center>
-                        </div>
-                      </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-              </div>
-            </div>
-
-              <div class="team-roster__item card card--no-paddings">
-              <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_tv.png"></a></span></p></font></h5>               
-                <div class="widget-results__content resultados">
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
-                          </figure></center>
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
-                          </div></center>
-                        </div>
-                        <div class="widget-results__result">
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                        </div>
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                          </figure></center>                        
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                          </div></center>
-                        </div>
-                      </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-              </div>
-            </div>
-
-              <div class="team-roster__item card card--no-paddings">
-              <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
-                <div class="widget-results__content resultados">
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
-                          </figure></center>
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
-                          </div></center>
-                        </div>
-                        <div class="widget-results__result">
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                        </div>
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                          </figure></center>                        
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                          </div></center>
-                        </div>
-                      </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
-              </div>
-            </div>
-
-              <div class="team-roster__item card card--no-paddings">
-              <div class="card__content">              
-                <h5 class="widget-results__title"><font size="2"><p>Mar 23 Nov | 18:00 <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_tv.png"></a></span></p></font></h5>               
-                <div class="widget-results__content resultados">
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
-                          </figure></center>
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>PLB</p></h5>
-                          </div></center>
-                        </div>
-                        <div class="widget-results__result">
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span> </p>        
-                          </div>
-                          <div class="widget-results__score">
-                            <p><span class="team-leader__total">0</span> - <span class="team-leader__total">0</span></p>         
-                          </div>
-                        </div>
-                        <div class="widget-results__team-logo">
-                          <center>
-                            <div class="widget-results__team-details">
-                            <h3><p>0</p></h3>
-                          </div></center>                        
-                          <center><figure class="widget-results__team-logo">
-                            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
-                          </figure></center>                        
-                          <center><div class="widget-results__team-logo">
-                            <h5 class="widget-results__team-name"><p>CIU</p></h5>
-                          </div></center>
-                        </div>
-                      </div>            
-          <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-              </div>
-            </div>          
-<!-- Fin punto por punto VIVO! -->
-
-<!-- Comienzo proxima fecha -->
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-        </div>
-
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-        </div>
-
-
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-        </div>
-
-
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Aldo Cantoni</p></font></time>
-            </div>
-        </div>
-
-
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
-            </div>
-        </div>
-
-
-        <div class="team-roster__item card_novivo card--no-paddings">
-            <div class="card__content">
-                <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-                <h5 class="widget-results__title"><p>Sab 25 jun | 22:00</p></h5>
-                  <div class="widget-results__content">
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
-                        </figure></center>
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>CIU</p></h2>
-                        </div></center>
-                      </div>
-                      <div class="widget-results__result">
-                        <div class="widget-results__score">
-                          <span class="team-leader__total"><font size="5"><p>VS</p></font></span> 
-                        </div>
-                      </div>
-                      <div class="widget-results__team-logo"><h3></h3>                        
-                        <center><figure class="widget-results__team-logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure></center>                        
-                        <center><div class="widget-results__team-logo">
-                          <h2 class="widget-results__team-name"><p>RIV</p></h2>
-                      </div></center>
-                      </div>
-                  </div>
-                    <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
-            </div>
-        </div> 
-<!-- Fin proxima fecha -->  
+                            <time class="match-preview__date"><font size="2" class="fontEstadio"><p>Microest. Lomas de Zamora</p></font></time>
+                    </div>
+                </div> 
+        <!-- Fin proxima fecha -->  
 
 
 
