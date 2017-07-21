@@ -35,7 +35,9 @@
 
               <div class="col-md-8">
                 <!-- Contact Form -->
-                <form action="#" class="contact-form">
+
+                {{ Form::open(array('route' => 'contacto.procesar')) }}
+
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -57,7 +59,8 @@
                   <div class="form-group form-group--submit">
                     <button type="submit" class="btn btn-primary-inverse btn">Envia tu mensaje</button>
                   </div>
-                </form>
+                  {{ Form::close() }}
+
                 <!-- Contact Form / End -->
               </div>
             </div>

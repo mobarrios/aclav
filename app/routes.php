@@ -237,7 +237,7 @@ Route::group(array('prefix' => 'web'), function()
 	Route::post('/news', function(){
 
 		$input  =  Input::all();
-
+		
 		Newsletter::create($input);
 
 		return Redirect::back();

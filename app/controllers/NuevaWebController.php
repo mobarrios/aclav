@@ -4,12 +4,10 @@ class NuevaWebController extends BaseController
 {
 	public function getHomeNoticias()
 	{
-		$data['model'] = NoticiasPosicion::with('noticias')->get();
-		$data['social_ultima'] 	 = Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
-		
+		$data['model'] 			 =  NoticiasPosicion::with('noticias')->get();
+		$data['social_ultima'] 	 =  Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
-	
-		$data['video_ultimo']	 = Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
+		$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['banner_superior'] =  Banner::where('posicion','=',3)->first();
 		$data['banner_inferior'] =  Banner::where('posicion','=',2)->first();
 
@@ -375,7 +373,8 @@ class NuevaWebController extends BaseController
 	}
 
 	public function videos(){
-			return View::make('web_nueva.multimedia.videos');
+		$data['models'] = Video::where('estado','=',1)->orderBy('created_at','ASC')->paginate(4);
+		return View::make('web_nueva.multimedia.videos')->with($data);
 	}
 
 
@@ -386,8 +385,6 @@ class NuevaWebController extends BaseController
 
 	public function sponsors(){
 		$data['model'] = Sponsor::all();
-
-
 
 		return View::make('web_nueva.institucional.sponsors')->with($data);
 	}
@@ -419,7 +416,10 @@ class NuevaWebController extends BaseController
 		return View::make('web_nueva.institucional.contacto');
 	}
 
-	
+	public function procesar(){
+		dd('asdasd');
+		
+	}
 
 
 }

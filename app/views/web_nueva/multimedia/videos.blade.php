@@ -10,6 +10,7 @@
             <!-- Posts List -->
             <div class="posts posts--cards posts--cards-thumb-left post-list">
 
+              @foreach($models as $model)
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
@@ -19,7 +20,7 @@
                   <div class="posts__inner">
                     <div class="card__content">
                       
-                      <h6 class="posts__title"><a href="detalle_video.html"><p>Partido de Obras vs Bolivar</p></a></h6>
+                      <h6 class="posts__title"><a href="detalle_video.html"><p>{{$model->titulo}}</p></a></h6>
                       
                       <div class="posts__excerpt">
                         <p><font size="3">Cinco competiciones oficiales, tres podios, 43 partidos disputados y 28 victorias. Un gran balance de UPCN San Juan Voley en la temporada 2016/17 que lo sigue manteniendo en lo alto del voley argentino.</font> </p>
@@ -29,85 +30,16 @@
                   </div>
                 </div>
               </div>
+              @endforeach
 
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_video.html"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
-                    
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      
-                      <h6 class="posts__title"><a href="detalle_video.html"><p>Partido de Obras vs Bolivar</p></a></h6>
-                   
-                      <div class="posts__excerpt">
-                        <p><font size="3">Cinco competiciones oficiales, tres podios, 43 partidos disputados y 28 victorias. Un gran balance de UPCN San Juan Voley en la temporada 2016/17 que lo sigue manteniendo en lo alto del voley argentino.</font> </p>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_video.html"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
-                   
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      
-                      <h6 class="posts__title"><a href="detalle_video.html"><p>Partido de Obras vs Bolivar</p></a></h6>
-                      <div class="posts__excerpt">
-                        <p><font size="3">Cinco competiciones oficiales, tres podios, 43 partidos disputados y 28 victorias. Un gran balance de UPCN San Juan Voley en la temporada 2016/17 que lo sigue manteniendo en lo alto del voley argentino.</font> </p>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-2 card">
-                  <figure class="posts__thumb">
-                    <a href="detalle_video.html"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
-                   
-                  </figure>
-                  <div class="posts__inner">
-                    <div class="card__content">
-                      
-                      <h6 class="posts__title"><a href="detalle_video.html"><p>Partido de Obras vs Bolivar</p></a></h6>
-                    <div class="posts__excerpt">
-                        <p><font size="3">Cinco competiciones oficiales, tres podios, 43 partidos disputados y 28 victorias. Un gran balance de UPCN San Juan Voley en la temporada 2016/17 que lo sigue manteniendo en lo alto del voley argentino.</font> </p>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-
-             
-
-              
-
-             
+   
 
             </div>
             <!-- Posts List / End -->
 
             <!-- Post Pagination -->
             <nav class="post-pagination text-center">
-              <ul class="pagination">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><span>...</span></li>
-                <li><a href="#">16</a></li>
-              </ul>
+              {{$models->links()}}
             </nav>
             <!-- Post Pagination / End -->
             

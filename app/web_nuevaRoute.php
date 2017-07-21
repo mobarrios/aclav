@@ -63,6 +63,17 @@ Route::group(array('prefix' => 'web_nueva'), function()
     Route::get('autoridades', ['as'=>'autoridades','uses'=>'NuevaWebController@autoridades']);
     Route::get('sponsors', ['as'=>'sponsors','uses'=>'NuevaWebController@sponsors']);
     
-    Route::get('contacto', ['as'=>'contacto','uses'=>'NuevaWebController@contacto']);
+    Route::get('contacto', ['as'=>'contacto',       'uses'=>'NuevaWebController@contacto']);
+    //Route::post('procesar',['as'=>'contacto.procesar', 'uses'=>'NuevaWebController@procesar' ])
+    /*
+    Route::post('news', function(){
+
+        $input  =  Input::all();
+        dd($input);
+
+    });
+    */    
+    Route::post('contacto', ['as'=>'contacto.procesar',  'action' => 'NuevaWebController@procesar' ]);
+   // Route::post(array('action' => 'NuevaWebController@procesar'));
 
 });	
