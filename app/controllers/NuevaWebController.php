@@ -68,23 +68,23 @@ class NuevaWebController extends BaseController
 
 		//$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
 		$data['leg_actual'] = $act;
-
+		Session::put('torneo_id', $id );
 
 		return View::make('web_nueva.competencias.calendario')->with($data);
 	}
 
-	public function formula(){
+	public function formula($id){
 
 		
 		
 		return View::make('web_nueva.competencias.formula');	
 	}
 
-	public function posiciones(){
+	public function posiciones($id){
 		return View::make('web_nueva.competencias.posiciones');	
 	}
 
-	public function tribunal(){
+	public function tribunal($id){
 		return View::make('web_nueva.competencias.tribunal');	
 	}
 

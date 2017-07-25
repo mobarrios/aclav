@@ -110,6 +110,7 @@
                           </div></center>
                         </div>
                       </div>            
+                <time class="match-preview__date"><font size="2" class="fontEstadio"><p>@if(isset($pxp->estadio->nombre)) {{$pxp->estadio->nombre}} @else No definido  @endif </p></font></time>
               </div>
             </div>
             @endforeach
