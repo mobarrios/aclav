@@ -110,7 +110,6 @@
                           </div></center>
                         </div>
                       </div>            
-                <time class="match-preview__date"><font size="2" class="fontEstadio"><p>{{ $pxp->estadio->nombre ? : "" }}</p></font></time>
               </div>
             </div>
             @endforeach
