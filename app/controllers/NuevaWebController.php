@@ -74,6 +74,9 @@ class NuevaWebController extends BaseController
 	}
 
 	public function formula(){
+
+		
+		
 		return View::make('web_nueva.competencias.formula');	
 	}
 
@@ -407,10 +410,11 @@ class NuevaWebController extends BaseController
 	}
 
 	public function galeria(){
-		$galerias = Galeria::orderBy('created_at','DESC')->get();
-		$g = $galerias->toArray();
+		//$galerias = Galeria::orderBy('created_at','DESC')->get();
+		//$g = $galerias->toArray();
 
-		$data['model'] = array_chunk($g, 4);
+
+		$data['model'] = Galeria::orderBy('created_at','DESC')->paginate(4);
 
 		return View::make('web_nueva.multimedia.galeria.galerias')->with($data);
 	}
