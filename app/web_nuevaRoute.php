@@ -73,7 +73,18 @@ Route::group(array('prefix' => 'web_nueva'), function()
         dd($input);
 
     });
-    */    
+    Route::get('mail', function(){
+        
+        $data['nombre']  = 'Pepe';
+        $data['email']   = 'pepe@gotmail.com';
+        $data['mensaje'] = 'Lorem ipsum sarasa, rasa';
+        $data['dia']     = date("l, F jS, Y");
+        $data['hora']    = date("h:i A");
+
+        return View::make('web_nueva.Institucional.mail')->with($data);
+    });    
+    */
+    
     Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
    // Route::get('test', function() { Mail::send('Email.test', function ($message) { $message->to('rochaleandroleonel@gmail.com', [], 'example')->subject('Welcome!'); }); });
    // Route::post(array('action' => 'NuevaWebController@procesar'));

@@ -51,6 +51,7 @@ class NuevaWebController extends BaseController
 	public function calendario($id){
 		$data['torneo'] 	= 	Torneos::find($id);
 		$data['fases']		=	TorneoFase::where('torneo_id','=', $id)->get();	
+		$data['temporadas'] = 	Temporada::all();
 
 		$act = array();
 
@@ -81,11 +82,23 @@ class NuevaWebController extends BaseController
 	}
 
 	public function posiciones($id){
-		return View::make('web_nueva.competencias.posiciones');	
+
+		$data['count']			= 	'1';
+		$data['torneos'] 		= 	Torneos::find($id);
+		$data['fases'] 			= 	TorneoFase::where('torneo_id','=',$id)->get();
+		return View::make('web_nueva.competencias.posiciones')->with($data);	
 	}
 
 	public function tribunal($id){
-		return View::make('web_nueva.competencias.tribunal');	
+		$temporada = Temporada::where('actual',1)->first();
+		
+		$desde = date('Y-m-d',strtotime($temporada->fecha_inicio));
+		$hasta =date('Y-m-d',strtotime($temporada->fecha_final));
+
+		//$data['model']	= Tribunal::whereBetween('vencimiento_sanc',array($desde,$hasta))->orderBy('id','DESC')->paginate(10);
+
+		$data['model']	= Tribunal::where('temporada_id',$temporada->id)->orderBy('id','DESC')->paginate(10);
+		return View::make('web_nueva.competencias.tribunal')->with($data);	
 	}
 
 	//Equipos
@@ -482,19 +495,23 @@ class NuevaWebController extends BaseController
 	public function procesar(){
 	
 
-		$data['nombre']  = 'sarasa';
-		$data['email']   = 'sarasa@hotmail.com';
-		$data['mensaje'] = 'saras saras asras asras asd sad da sda ds sda aa sda sda sdasadsasdadsadsa';
+		$data['nombre']  = Input::get('nombre');
+		$data['email']   = Input::get('email');
+		$data['mensaje'] = Input::get('mensaje');
+		$data['dia']	 = date("l, F jS, Y");
+		$data['hora']	 = date("h:i A");
+		
+		return Redirect::back()->with('msg', 'The Message');
+
 		/*
 		sendMail::send($data, 'web_nueva.institucional.mail', 'rochaleandroleonel@gmail.com','Paula Parisi','Designaciones Pendientes!');
 		*/
 		Mail::send('web_nueva.institucional.mail', $data, function($message)
 			{
-			  $message->to('rochaleandroleonel@gmail.com', 'Philip Brown')
-			          ->subject('Welcome to Cribbb!');
+			  $message->to('info@aclav.com"', 'Philip Brown')
+			          ->subject('Aclav web');
 			});
 
-		return "enviado";
 		/*
 		$to="info@aclav.com"; /*Your Email
 

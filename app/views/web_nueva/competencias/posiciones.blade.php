@@ -4,13 +4,15 @@
       <div class="container">
 
         <!-- Team Pages Filter -->
-          @include('web_nueva.competencias.nav')
+        @include('web_nueva.competencias.nav')
         <!-- Team Pages Filter / End -->
 
         <!-- Team Standings -->
+        @foreach($fases as $fase)
+        @if($fase->tipo_fase_id == 1)
         <div class="card card--has-table">
           <div class="card__header">
-            <h4>Liga Argentina de Voleibol</h4>
+            <h4>{{$fase->nombre}}</h4>
           </div>
           <div class="card__content">
             <div class="table-responsive">
@@ -56,289 +58,51 @@
                   
                 </thead>
                 <tbody>
+                  @foreach($fase->TablaPosicion as $tabla)
+                  @if($tabla->equipo_id != 15)
                   <tr>
-                    <td class="team-standings__pos">1</td>
-                    <td class="team-standings__win">BOL</td>
+                    <td class="team-standings__pos"><?php echo $count ?></td>
+                    <td class="team-standings__win ">{{$tabla->Equipo->sigla}}</td>
                     <td class="team-standings__team">
                       <div class="team-meta">
                         <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/001.png" alt="">
+                          <img src="uploads/escudos/{{$tabla->Equipo->escudo}}" alt="">
                         </figure>
                         <div class="team-meta__info">
-                          <h6 class="team-meta__name">Personal Bolivar</h6>
-                          
+                          <h6 class="team-meta__name">{{$tabla->Equipo->sigla}} {{$tabla->Equipo->nombre}}</h6>
                         </div>
                       </div>
                     </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">2</td>
-                    <td class="team-standings__win">CIU</span></td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/002.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Ciudad Voley</h6>
-                        </div>
-                      </div>
+                    <td class="team-standings__win"><span class="glossary__abbr">{{$tabla->puntos}}</span></td>
+                    <td class="team-standings__lose">{{$tabla->partido_ganado}}</td>
+                    <td class="team-standings__pct">{{$tabla->partido_perdido}}</td>
+                    <td class="team-standings__gb">{{$tabla->partido_total}}</td>
+                    <td class="team-standings__home">{{$tabla->set_ganado}}</td>
+                    <td class="team-standings__road">{{$tabla->set_perdido}}</td>
+                    <td class="team-standings__div">
+                    @if($tabla->set_coeficiente == '1000')
+                      max.
+                    @else
+                       {{$tabla->set_coeficiente}}
+                    @endif
                     </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
+                    <td class="team-standings__ppg">{{$tabla->punto_ganado}}</td>
+                    <td class="team-standings__op-ppg">{{$tabla->punto_perdido}}</td>
+                    <td class="team-standings__diff">{{$tabla->punto_coeficiente}}</td>
+                    <td class="team-standings__strk">{{$tabla->racha}}</td>
                   </tr>
-                  <tr>
-                    <td class="team-standings__pos">3</td>
-                    <td class="team-standings__win">UPC</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/003.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">UPCN San Juan Voley</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">4</td>
-                    <td class="team-standings__win">LOM</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/004.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Lomas Voley</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">5</td>
-                    <td class="team-standings__win">NQN</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/005.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Gigantes del Sur</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">6</td>
-                    <td class="team-standings__win">OSJ</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/006.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Obras UDAP Voley</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">7</td>
-                    <td class="team-standings__win">AJM</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/007.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Alianza Jesus Maria</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">8</td>
-                    <td class="team-standings__win">RIV</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/008.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">River Plate</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">9</td>
-                    <td class="team-standings__win">MOR</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/009.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Deportivo Moron</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">10</td>
-                    <td class="team-standings__win">UNT</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/010.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">Untref Voley</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
-                  <tr>
-                    <td class="team-standings__pos">11</td>
-                    <td class="team-standings__win ">PSM</td>
-                    <td class="team-standings__team">
-                      <div class="team-meta">
-                        <figure class="team-meta__logo">
-                          <img src="assets/webnueva/images/samples/logos/011.png" alt="">
-                        </figure>
-                        <div class="team-meta__info">
-                          <h6 class="team-meta__name">PSM Voley</h6>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="team-standings__win"><span class="glossary__abbr">48</span></td>
-                    <td class="team-standings__lose">16</td>
-                    <td class="team-standings__pct">4</td>
-                    <td class="team-standings__gb">20</td>
-                    <td class="team-standings__home">52</td>
-                    <td class="team-standings__road">16</td>
-                    <td class="team-standings__div"> 3.250</td>
-                    <td class="team-standings__ppg">1636</td>
-                    <td class="team-standings__op-ppg">1421</td>
-                    <td class="team-standings__diff">1.151</td>
-                    <td class="team-standings__strk">3</td>
-                  </tr>
+                  <?php $count = $count + 1 ?>
+                  @endif
+                  @endforeach
+                  <?php $count = '1'?>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+        @endif
         <!-- Team Standings / End -->
-
+        @endforeach
         
 
       </div>

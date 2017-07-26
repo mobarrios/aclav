@@ -42,19 +42,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="contact-form-name"><p>Su Nombre <span class="required">*</span></p></label>
-                        <input type="text" name="contact-form-name" id="contact-form-name" class="form-control" placeholder="Nombre...">
+                        <input type="text" required name="nombre" id="contact-form-name" class="form-control" placeholder="Nombre...">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="contact-form-email"><p>Su Email <span class="required">*</p></span></label>
-                        <input type="email" name="contact-form-email" id="contact-form-email" class="form-control" placeholder="Email...">
+                        <input type="email" required name="email" id="contact-form-email" class="form-control" placeholder="Email...">
                       </div>
                     </div>                    
                   </div>
                   <div class="form-group">
                     <label for="contact-form-message"><p>Comentario <span class="required">*</p></span></label>
-                    <textarea name="name" rows="5" class="form-control" placeholder="Ingresa tu comentario aqui..."></textarea>
+                    <textarea name="mensaje" required rows="5" class="form-control" placeholder="Ingresa tu comentario aqui..."></textarea>
                   </div>
                   <div class="form-group form-group--submit">
                     <button type="submit" class="btn btn-primary-inverse btn">Envia tu mensaje</button>

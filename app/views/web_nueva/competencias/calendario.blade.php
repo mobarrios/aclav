@@ -21,9 +21,9 @@
                   <ul class="shop-filter__params">
                     <li class="shop-filter__control">
                       <select class="form-control input-sm">
-                        <option>Temporada 2016-2017</option>
-                        <option>Temporada 2015-2016</option>
-                        <option>Temporada 2014-2015</option>
+                      @foreach($temporadas as $temporada)
+                        <option value="{{$temporada->id}}">Temporada  {{$temporada->nombre_temporada}}</option>
+                      @endforeach
                       </select>
                     </li>                
                   </ul>                  

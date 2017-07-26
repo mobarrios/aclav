@@ -1,4 +1,6 @@
-<h1>Hi, {{ $nombre }}!</h1>
-
+<h2>Mensaje recibido desde el Website el dia:  {{$dia}}, hour: {{$hora}}</h2>
  
-<p>{{$mensaje}}</p>
+<p>Mail: {{$email}}</p>
+<p>Nombre:{{$nombre}}</p>
+<p>Mensaje:{{$mensaje}}</p>
+

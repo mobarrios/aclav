@@ -4,7 +4,7 @@
       <div class="container">
 
         <!-- Team Pages Filter -->
-         @include('web_nueva.competencias.nav')
+        @include('web_nueva.competencias.nav')
         <!-- Team Pages Filter / End -->
 
         <!-- Wishlist -->
@@ -25,23 +25,26 @@
                   </tr>
                 </thead>
                 <tbody>
+
+            @foreach ($model  as $models)
                   <tr>
                     <td class="product__info"><center>
-                     <font size="2"><p>Expulsión</p></font></center>
+                     <font size="2"><p>{{$models->resolucion}}</p></font></center>
                     </td>
                     <td class="product__info"><center>
-                      <font size="2"><p>Javier FILARDI [UPCN SAN JUAN VOLEY CLUB]</p></font></center>
+                      <font size="2"><p>{{$models->jugador}}</p></font></center>
                     </td>
-                    <td class="product__info"><center>
-                      <font size="2"><p>Castigo (Tarjeta Roja) en el 2do set (marcador 5-5) al jugador n° 14 Javier Filardi, de UPCN San Juan Voley Club. 07/04/2017, partido # 142 Personal Bolivar vs UPCN San JUan Voley Club, Final 2 de la Liga Argentina de Voleibol.
-<br>
-Expulsión en el 3° set (marcador 27-25) al jugador n° 14 Javier Filardi, de UPCN San Juan Voley Club. 07/04/2017, partido # 142 Personal Bolivar vs UPCN San Juan Voley Club, Final 2 de la Liga Argentina de Voleibol.</p></font></center>
+                    <td class="product__info">
+                    <center>
+                      {{$models->sancion}}
                     </td>
                     <td class="product__price">
-                      <font size="2"><p>Castigos Acumulados: 2 (dos)</p></font>
+                      <font size="2"><p>{{$models->cant_fecha}}</p></font>
                     
                   </tr>
                   
+                @endforeach
+
                 </tbody>
               </table>
             </div>
