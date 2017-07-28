@@ -3,8 +3,15 @@
 @section('site-content')
 <div class="site-content1">
       <div class="container">
-        
-
+          @if(Session::has('msg'))
+          <div class="row">
+               <div class="col-xs-12">
+                 <div class="alert alert-success">
+                  <strong>Mensaje enviado con éxito.</strong>
+                </div>
+               </div>
+          </div>
+          @endif
           <div class="row">
 
           <!-- Content -->

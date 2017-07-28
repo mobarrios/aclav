@@ -501,8 +501,6 @@ class NuevaWebController extends BaseController
 		$data['dia']	 = date("l, F jS, Y");
 		$data['hora']	 = date("h:i A");
 		
-		return Redirect::back()->with('msg', 'The Message');
-
 		/*
 		sendMail::send($data, 'web_nueva.institucional.mail', 'rochaleandroleonel@gmail.com','Paula Parisi','Designaciones Pendientes!');
 		*/
@@ -512,6 +510,7 @@ class NuevaWebController extends BaseController
 			          ->subject('Aclav web');
 			});
 
+		return Redirect::back()->with('msg', 'The Message');
 		/*
 		$to="info@aclav.com"; /*Your Email
 
@@ -560,7 +559,6 @@ class NuevaWebController extends BaseController
 		
 		*/
 	}
-
 
 }
 
