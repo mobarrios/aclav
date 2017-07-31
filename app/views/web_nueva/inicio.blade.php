@@ -260,10 +260,14 @@
               <div class="rvs-item-container">
                 <div class="rvs-item-stage">
                   @foreach($videos as $video)
-                  
+                    <?php
+                    preg_match('/src="([^"]+)"/', $video->object, $match);
+                    $url = $match[1];
+                    ?>  
+
                   <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/maxresdefault.jpg)">
                     <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v=Q_AWzaP51wg&t=1s" class="rvs-play-video"></a>
+                    <a href="{{$url}}" class="rvs-play-video"></a>
                   </div>
                   @endforeach
                
@@ -272,27 +276,17 @@
               <div class="rvs-nav-container">
                 <a class="rvs-nav-prev"></a>
                 <div class="rvs-nav-stage">
+                  @foreach($videos as $video)
+                    <?php
+                    preg_match('/src="([^"]+)"/', $video->object, $match);
+                    $url = $match[1];
+                    ?>  
                   <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor jugador nacional Liga Argentina BNA 16/17</p></h5>        
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i1.ytimg.com/vi/{{$match[1]}}/mqdefault.jpg)"></span>
+                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>{{$video->titulo}}</p></h5>        
                   </a>
-                  <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/WLjexk6qOzc/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>Sportia (TyC Sports) - Gala ACLAV 2016/2017</p></h5>
-                    
-                  </a>
-                  <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/wOF1udBPJ24/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - MVP de la serie final Liga Argentina BNA 16/17</p></h5>
-                  </a>
-                  <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/aS0en6p9U38/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Mejor líbero Liga Argentina BNA 16/17</p></h5>        
-                  </a>
-                  <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/6ANUoV-UWeQ/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>ACLAV TV - Segundo mejor central Liga Argentina BNA 16/17</p></h5>        
-                  </a>
+                  @endforeach
+                
                 </div>
                 <a class="rvs-nav-next"></a>
               </div>

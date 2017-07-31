@@ -12,7 +12,7 @@
 
             
               <article class="card card--lg post post--single">
-<br>
+              <br>
               <div class="video-container">
                     {{$model->object}}
               </div>
