@@ -2,7 +2,13 @@
   <!-- Comienzo de resultados pasados -->
   <div class="team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
-      <h5 class="widget-results__title"><font size="2"><p>{{$resultado->fecha_inicio}} | {{$resultado->hora}}</p></font></h5>              
+      <h5 class="widget-results__title">
+      @if($resultado->hora == 'A CON')
+      <font size="1">
+      @else
+      <font size="2">
+      @endif
+      <p>{{$resultado->fecha_inicio}} | {{$resultado->hora}}</p></font></h5>              
       <div class="widget-results__content resultados">
             <div class="widget-results__team-logo">
                 <center>

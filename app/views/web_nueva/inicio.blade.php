@@ -260,14 +260,10 @@
               <div class="rvs-item-container">
                 <div class="rvs-item-stage">
                   @foreach($videos as $video)
-                    <?php
-                    preg_match('/src="([^"]+)"/', $video->object, $match);
-                    $url = $match[1];
-                    ?>  
-
+                  
                   <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/Q_AWzaP51wg/maxresdefault.jpg)">
                     <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
-                    <a href="{{$url}}" class="rvs-play-video"></a>
+                    <a href="#" class="rvs-play-video"></a>
                   </div>
                   @endforeach
                
@@ -277,12 +273,9 @@
                 <a class="rvs-nav-prev"></a>
                 <div class="rvs-nav-stage">
                   @foreach($videos as $video)
-                    <?php
-                    preg_match('/src="([^"]+)"/', $video->object, $match);
-                    $url = $match[1];
-                    ?>  
+                  
                   <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i1.ytimg.com/vi/{{$match[1]}}/mqdefault.jpg)"></span>
+                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i1.ytimg.com/vi/Q_AWzaP51wg/mqdefault.jpg)"></span>
                     <h5 class="rvs-nav-item-title" style="text-transform: none"><p>{{$video->titulo}}</p></h5>        
                   </a>
                   @endforeach

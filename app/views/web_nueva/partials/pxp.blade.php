@@ -2,7 +2,13 @@
 
 <div class="team-roster__item card card--no-paddings">
 <div class="card__content">              
-<h5 class="widget-results__title"><font size="2"><p>{{$pxp->fecha_inicio}} | {{$pxp->hora}} <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
+<h5 class="widget-results__title">
+@if($pxp->hora == 'A CON')
+<font size="1">
+@else
+<font size="2">
+@endif
+<p>{{$pxp->fecha_inicio}} | {{$pxp->hora}} <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
 <div class="widget-results__content resultados">
         <div class="widget-results__team-logo">
           <center>
