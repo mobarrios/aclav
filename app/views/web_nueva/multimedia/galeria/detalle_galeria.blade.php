@@ -11,7 +11,7 @@
                  <div class="gallery__item col-xs-6 col-sm-3">
                     <a href="{{route('album',$galerias->id)}}">
                       <figure>
-                        <img src="assets/webnueva/images/samples/post-img4x.jpg">
+                        <img src="uploads/contenidos/galeria/{{$galerias->imagen}}">
                       </figure>
                       <div class="gallery__content card__content">
                         <span class="gallery__icon">

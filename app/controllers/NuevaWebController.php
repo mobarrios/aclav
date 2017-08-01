@@ -124,11 +124,12 @@ class NuevaWebController extends BaseController
 	}	
 
 	public function detalle_staff($id){
-		$data['models'] = Oficial::find($id);
+		$data['models'] 	= Oficial::find($id);
+		$data['goleador']   =  Goleador::where('estado','=',1)->first();
 		return View::make('web_nueva.equipos.detalle_staff')->with($data);
 	}
 	public function detalle_equipo($id){
-		   $data['goleador']        =  Goleador::where('estado','=',1)->first();
+		   $data['goleador']    =  Goleador::where('estado','=',1)->first();
 		   $temporada_actual 	=  Temporada::where('actual','=','1')->first()->id;
 		   $torneos    			=  Torneos::where('o2_web',1)->first();
 
