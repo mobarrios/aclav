@@ -3,7 +3,7 @@
   <div class="team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
       <h5 class="widget-results__title">
-      @if($resultado->hora == 'A CON')
+      @if($resultado->hora == 'a Confirmar')
       <font size="1">
       @else
       <font size="2">
