@@ -12,7 +12,7 @@
 
               @foreach($model as $archivo)
               <div class="alert alert-success">
-                <a href="uploads/formularios/{{$archivo->archivo}}" download type="button" class="btn btn-xs btn-default btn-outline alert-btn-right">Descargar</a>
+                <a href="uploads/contenidos/archivo/{{$archivo->archivo}}" download type="button" class="btn btn-xs btn-default btn-outline alert-btn-right">Descargar</a>
                 <strong>{{$archivo->titulo}}</strong> 
               </div>
               @endforeach
