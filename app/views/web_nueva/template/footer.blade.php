@@ -1,4 +1,4 @@
-  <footer id="footer" class="footer">
+ <footer id="footer" class="footer grises">
     
       <!-- Footer Widgets -->
       <div class="footer-widgets">
