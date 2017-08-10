@@ -48,29 +48,53 @@ class NuevaWebController extends BaseController
 	*/
 
 	//Competencias
-	public function calendario($id){
+	public function calendario($id =  null , $legId = null)
+	{
 		$data['torneo'] 	= 	Torneos::find($id);
 		$data['fases']		=	TorneoFase::where('torneo_id','=', $id)->get();	
 		$data['temporadas'] = 	Temporada::all();
 
 		$act = array();
 
-		foreach($data['fases'] as $fase)
+		
+		// foreach($data['fases'] as $fase)
+		// {
+		
+		// $actual = TorneoFaseLeg::where('torneo_fase_id','=', $fase->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
+			
+		// 	if(!is_null($actual))
+		// 	{
+		// 		array_push($act, $actual->id);
+		// 	}
+
+			
+		// }
+
+		// //$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
+		// $data['leg_actual'] = $act;
+
+$legs = array();
+
+		if($legId != null)
 		{
-			$actual = TorneoFaseLeg::where('torneo_fase_id','=', $fase->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
-			
-			if(!is_null($actual))
+			$data['legs'] = TorneoFaseLeg::where('id', $legId)->get();
+		}
+		else
+		{
+			foreach ($data['fases'] as $fase ) 
 			{
-				array_push($act, $actual->id);
+				foreach ($fase->leg as $leg ) 
+				{
+					array_push($legs, $leg);
+				}
 			}
-			
+
+			$data['legs'] = $legs;
 		}
 
+		$data['today'] =  date('d-m-Y');
 
-		//$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
-		$data['leg_actual'] = $act;
 		Session::put('torneo_id', $id );
-
 		return View::make('web_nueva.competencias.calendario')->with($data);
 	}
 

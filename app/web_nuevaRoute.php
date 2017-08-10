@@ -6,7 +6,7 @@ Route::group(array('prefix' => 'web_nueva'), function()
 		
 
     //Competencias
-    Route::get('calendario/{id?}', array('as'=>'calendario','uses'=>'NuevaWebController@calendario'));
+    Route::get('calendario/{id?}/{filter?}', array('as'=>'calendario','uses'=>'NuevaWebController@calendario'));
     Route::get('formula/{id}', array('as'=>'formula','uses'=>'NuevaWebController@formula'));
     Route::get('posiciones/{id?}', array('as'=>'posiciones','uses'=>'NuevaWebController@posiciones'));
     Route::get('tribunal/{id}', array('as'=>'tribunal','uses'=>'NuevaWebController@tribunal'));

@@ -128,12 +128,27 @@
   <!-- Javascript Files
   ================================================== -->
   <!-- Core JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}
+  <script
+        src="http://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
   <!-- Responsive Video Slider JS -->
   <script src="assets/webnueva/js/rvslider.min.js"></script>
   <script>
+
     jQuery(function($){
       $('.rvs-container').rvslider();
+    });
+
+    $('.fase').on('click',function(){
+
+        var id = $(this).attr('data-id');
+
+        $('.weeks').css("display","none");
+        $('.card'+id).removeAttr("style");
+
+
     });
   </script>
 

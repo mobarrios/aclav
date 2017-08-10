@@ -12,11 +12,7 @@
 
                  {{ Form::model($model, array('class' => 'form-horizontal ','role'=>'form', 'enctype' => 'multipart/form-data')) }}
            
-                <div class="form-group col-xs-12">
-                    {{ Form::label('Nombre Torneo', 'Nombre Torneo', array('class' => 'control-label')) }}
-                    {{ Form::text('nombre_torneo', Input::old('nombre_torneo'), array('class'=>'form-control' )) }}
-                </div>
-
+                
                 <div class="form-group col-xs-6">
                     {{ Form::label('Inicio', 'Inicio', array('class' => 'control-label')) }}
 
