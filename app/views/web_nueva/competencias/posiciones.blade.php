@@ -69,7 +69,7 @@
                           <img src="uploads/escudos/{{$tabla->Equipo->escudo}}" alt="">
                         </figure>
                         <div class="team-meta__info">
-                          <h6 class="team-meta__name">{{$tabla->Equipo->sigla}} {{$tabla->Equipo->nombre}}</h6>
+                          <h6 class="team-meta__name"> {{$tabla->Equipo->nombre}}</h6>
                         </div>
                       </div>
                     </td>

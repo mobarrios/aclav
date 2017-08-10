@@ -74,7 +74,8 @@
                   <h6 class="posts__title"><a href="#"><p>Auspiciantes</p></a></h6>
                   <div class="posts__excerpt">
                   @foreach(Sponsor::where('estado','=',0)->get() as $main)
-                    <div class="match-preview__match-place" align="center"> <img src="uploads/contenidos/sponsor/{{$media->imagen}}" width="200" height="200"></div>
+                 
+                    <div class="match-preview__match-place" align="center"> <img src="uploads/contenidos/sponsor/{{$main->imagen}}" width="200" height="200"></div>
                   @endforeach  
                   </div>
                 </div>

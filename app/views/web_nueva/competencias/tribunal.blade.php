@@ -18,7 +18,7 @@
               <table class="table shop-table">
                 <thead>
                   <tr>
-                    <th class="product__price"><font size="2"><p>Motivo</p></font></th>
+                    <th class="product__price"><font size="2"><p>Resolución</p></font></th>
                     <th class="product__price"><font size="2"><p>Jugador/Staff</p></font></th>
                     <th class="product__price"><font size="2"><p>Sanción</p></font></th>
                     <th class="product__price"><font size="2"><p>Cantidad de Fechas</p></font></th>
