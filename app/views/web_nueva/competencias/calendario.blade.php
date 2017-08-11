@@ -18,7 +18,7 @@
               <header class="card__header card__header--shop-filter">
                 <div class="shop-filter">
                   <h4 class="shop-filter__result">Calendario y Resultados</h4>
-                  <ul class="shop-filter__params">
+                  {{-- <ul class="shop-filter__params">
                     <li class="shop-filter__control">
                       <select class="form-control input-sm">
                       @foreach($temporadas as $temporada)
@@ -26,7 +26,7 @@
                       @endforeach
                       </select>
                     </li>                
-                  </ul>                  
+                  </ul>     --}}              
                 </div>
               </header>                     
             </div>
@@ -36,13 +36,13 @@
             <div class="card1">              
               <div>                
                 <center>
-                    <a href="#" class="btn btn-default1 btn-outline btn-sm card-header__button">
+                    <a href="#" class="btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
 
                       @foreach($fases as  $fase)
                         
-                        <label  class="fase btn btn-default1 btn-outline btn-sm card-header__button" data-id="{{$fase->id}}">{{$fase->nombre}}</label>
+                        <label  class="fase btn btn-default1 btn-outline btn-xs card-header__button" data-id="{{$fase->id}}">{{$fase->nombre}}</label>
                         
                       @endforeach
                   
@@ -56,7 +56,7 @@
               @foreach($fases as $fase )
                 <div class="card1 weeks card{{$fase->id}}" style="display: none;">  
                 <center>
-                <a href="#" class="btn btn-default1 btn-outline btn-xs card-header__button">
+                    <a href="#" class="btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
                       @foreach($fase->leg as $leg)            
@@ -73,8 +73,11 @@
             <!-- comienzo Encabezado por equipos -->
             <div class="card">                             
               <center>
+                    <a href="#" class="btn btn-default2 btn-outline btn-xs card-header__button">
+                      </font><i class="fa fa-bars"></i>
+                    </a>  
                   @foreach($torneo->Equipo as $equipo)
-                      <a href="#" style="width: 5%" class="btn btn-default2 btn-outline btn-xs card-header__button"><img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}"></a>
+                      <a style="width: 5%" class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" ><img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}"></a>
                   @endforeach
               </center>                                   
             </div> 
@@ -88,7 +91,10 @@
             
                   @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
-                  <div class="card1" id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}' >
+                  <div class="partido card1" id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
+                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
+                   >
                           <div class="card__content1">                
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt">
@@ -164,9 +170,33 @@
 
 <script type="text/javascript">
 
+    $('.equipo').on('click',function(){
+        var id = $(this).attr('equipo-id');
+
+        $('.partido').hide();
+
+        $('.partido').each(function()
+        {
+
+          //alert($(this).attr('local-id') , $(this).attr('vistia-id') , id);
+
+            if($(this).attr('local-id') == id )
+                $(this).show();
+            
+            if($(this).attr('visita-id') == id )
+                $(this).show();
+          
+        }); 
+
+
+
+     });
+
      $('html, body').animate({
         scrollTop: $("#today").offset().top
     }, 2000);
+
+
 </script>
 @endsection   
 
