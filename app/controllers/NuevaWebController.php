@@ -313,6 +313,11 @@ $legs = array();
 		return View::make('web_nueva.equipos.detalle_equipo')->with($data);
 	}
 
+	public function informacion($id){
+		$data['partido'] = Partido::find($id);	
+		return View::make('web_nueva.competencias.informacion')->with($data);
+	}
+
 	public function jugador($id){
 		$data['goleador']        =  Goleador::where('estado','=',1)->first();
 		$data['models'] = Jugador::find($id);

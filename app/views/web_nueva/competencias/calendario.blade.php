@@ -126,7 +126,7 @@
                                       </p>
                                       </font></div>          
                                         <a class="chac" href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> | </span>  
-                                        <a href="informacion.html" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
                                         <a href="#" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                               </div>

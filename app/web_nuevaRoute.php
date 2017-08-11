@@ -10,7 +10,8 @@ Route::group(array('prefix' => 'web_nueva'), function()
     Route::get('formula/{id}', array('as'=>'formula','uses'=>'NuevaWebController@formula'));
     Route::get('posiciones/{id?}', array('as'=>'posiciones','uses'=>'NuevaWebController@posiciones'));
     Route::get('tribunal/{id}', array('as'=>'tribunal','uses'=>'NuevaWebController@tribunal'));
-   
+    Route::get('informacion/{id}', array('as'=>'informacion','uses'=>'NuevaWebController@informacion'));
+      
 
     //Equipos
     Route::get('participantes', array( 'as' => 'participantes' , 'uses' => 'NuevaWebController@participantes'));
