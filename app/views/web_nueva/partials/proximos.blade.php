@@ -6,10 +6,10 @@
           <div class="widget-results__content">
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
-                  <img src="assets/webnueva/images/samples/logos/001.png" alt="">
+                  <img src="uploads/escudos/{{isset($partido->local_equipo_id->escudo)}}" alt="">
                 </figure></center>
                 <center><div class="widget-results__team-logo">
-                  <h2 class="widget-results__team-name"><p>{{$partido->local_equipo_id->sigla}}</p></h2>
+                  <h2 class="widget-results__team-name"><p>{{isset($partido->local_equipo_id->sigla)}}</p></h2>
                 </div></center>
               </div>
               <div class="widget-results__result">
@@ -19,10 +19,10 @@
               </div>
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
-                  <img src="assets/webnueva/images/samples/logos/008.png" alt="">
+                  <img src="uploads/escudos/{{isset($partido->visita_equipo_id->escudo)}}" alt="">
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">
-                  <h2 class="widget-results__team-name"><p>{{$partido->visita_equipo_id->sigla}}</p></h2>
+                  <h2 class="widget-results__team-name"><p>{{isset($partido->visita_equipo_id->sigla)}}</p></h2>
               </div></center>
               </div>
           </div>

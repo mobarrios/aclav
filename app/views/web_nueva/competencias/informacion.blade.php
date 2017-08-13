@@ -25,7 +25,7 @@
                   <div class="widget-game-result__main">                        
                         <div class="widget-game-result__team widget-game-result__team--first">
                             <figure class="widget-game-result__team-logo">
-                              <img src="assets/images/e002.jpg" alt="">
+                              <img src="uploads/escudos/{{$partido->local_equipo_id->escudo}}" alt="">
                             </figure>
                         <div class="widget-game-result__team-info">
                               <h2 class="game-result__date"><font size="2"><p>{{$partido->local_equipo_id->nombre}}</p></font></h2>
@@ -43,7 +43,7 @@
                   <!-- comienzo segundo Equipo -->
                   <div class="widget-game-result__team widget-game-result__team--first">
                         <figure class="widget-game-result__team-logo">
-                          <img src="assets/images/e004.jpg" alt="">
+                          <img src="uploads/escudos/{{$partido->visita_equipo_id->escudo}}" alt="">
                         </figure>
                         <div class="widget-game-result__team-info">
                             <h2 class="game-result__date"><font size="2"><p>{{$partido->visita_equipo_id->nombre}}</p></font></h2>
@@ -64,15 +64,15 @@
           </div>
           <div class="card__content">
             <div class="glossary">
-              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> Liga Argentina de Voley</div>
+              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> </div>
               <div class="glossary__item"><span class="glossary__abbr">Fase:</span> Fase Clasificacion - 1er Triangular</div>
               <div class="glossary__item"><span class="glossary__abbr">Etapa:</span> Weekend 11</div>
-              <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> 20/05/2017</div>
-              <div class="glossary__item"><span class="glossary__abbr">Hora:</span> 18:30 hs</div>
-              <div class="glossary__item"><span class="glossary__abbr">N° de Partido:</span> 128</div>
-              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> RENE Karina</div>
-              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> CABRERA Ricardo</div>
-              <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> Microest. Lomas de Zamora</div>
+              <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> {{$partido->fecha_inicio}} </div>
+              <div class="glossary__item"><span class="glossary__abbr">Hora:</span> {{$partido->hora}} hs</div>
+              <div class="glossary__item"><span class="glossary__abbr">N° de Partido:</span> {{$partido->numero_partido}}</div>
+              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> {{ $partido->Arbitro1->nombre }}, {{ $partido->Arbitro1->apellido }} </div>
+              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{$partido->Arbitro2->nombre }}, {{ $partido->Arbitro1->apellido }}</div>
+              <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
               <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> <a href="#"><img src="assets/images/tyc_tv.png"></a></div>
             </div>
           </div>
@@ -86,7 +86,7 @@
                 <!-- Widget: Team Leaders -->
                 <aside class="widget widget--sidebar card card--has-table widget-leaders">
                   <div class="widget__title card__header">
-                    <h4>Ciudad Voley</h4>
+                    <h4>{{$partido->local_equipo_id->nombre}}</h4>
                   </div>
                   <div class="widget__content card__content">
                 
@@ -101,6 +101,8 @@
                           </tr>
                         </thead>
                         <tbody>
+
+
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
@@ -112,127 +114,7 @@
                             <td class="team-leader__total">Arce Federico</td>
                             <td class="team-leader__gp">Punta Receptor</td>                            
                           </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">02</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">03</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">04</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">05</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">06</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">07</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">08</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">09</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">10</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">11</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">12</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>                          
+                                             
                         </tbody>
                       </table>
                     </div>
@@ -251,36 +133,6 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
@@ -309,7 +161,7 @@
                 <!-- Widget: Team Leaders -->
                 <aside class="widget widget--sidebar card card--has-table widget-leaders">
                   <div class="widget__title card__header">
-                    <h4>GIGANTES DEL SUR</h4>
+                    <h4>{{$partido->visita_equipo_id->nombre}}</h4>
                   </div>
                   <div class="widget__content card__content">
                 
@@ -335,127 +187,8 @@
                             <td class="team-leader__total">Arce Federico</td>
                             <td class="team-leader__gp">Punta Receptor</td>                            
                           </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">02</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">03</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">04</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">05</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">06</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">07</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">08</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">09</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">10</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">11</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">12</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
-                          </tr>                          
+                          
+                                             
                         </tbody>
                       </table>
                     </div>
@@ -474,36 +207,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
-                          <tr>
-                            <td class="team-leader__player">
-                              <div class="team-leader__player-info">                                
-                                <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
-                                </div>
-                              </div>
-                            </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
-                          </tr>
+                         
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                

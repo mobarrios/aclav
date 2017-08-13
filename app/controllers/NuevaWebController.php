@@ -17,7 +17,8 @@ class NuevaWebController extends BaseController
 		$data['social_ultima'] 	 =  Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		$data['resultados'] 	 =	Partido::where('estado','=', 1 )->orderBy('fecha_inicio','ASC')->take(5)->get();
-		$data['proximos_partidos'] 	 =	Partido::where('estado','=', 0 )->orderBy('fecha_inicio','ASC')->get();
+		$data['proximos_partidos'] 	 =	Partido::where('estado','=', 0 )->orWhere('estado','=', '' )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->take(5)->get();
+		
 		
 		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['videos'] = Video::where('estado','=',1)->orderBy('id','DESC')->take(5)->get();
@@ -93,6 +94,7 @@ $legs = array();
 		}
 
 		$data['today'] =  date('d-m-Y');
+		$data['sesion_calendario'] = 1;
 
 		Session::put('torneo_id', $id );
 		return View::make('web_nueva.competencias.calendario')->with($data);
@@ -100,9 +102,9 @@ $legs = array();
 
 	public function formula($id){
 
+		$data['sesion_formula'] = 1;
 		
-		
-		return View::make('web_nueva.competencias.formula');	
+		return View::make('web_nueva.competencias.formula')->with($data);	
 	}
 
 	public function posiciones($id){
@@ -110,6 +112,7 @@ $legs = array();
 		$data['count']			= 	'1';
 		$data['torneos'] 		= 	Torneos::find($id);
 		$data['fases'] 			= 	TorneoFase::where('torneo_id','=',$id)->get();
+		$data['sesion_posiciones'] = 1;
 		return View::make('web_nueva.competencias.posiciones')->with($data);	
 	}
 
@@ -118,7 +121,7 @@ $legs = array();
 		
 		$desde = date('Y-m-d',strtotime($temporada->fecha_inicio));
 		$hasta =date('Y-m-d',strtotime($temporada->fecha_final));
-
+		$data['sesion_tribunal'] = 1;
 		//$data['model']	= Tribunal::whereBetween('vencimiento_sanc',array($desde,$hasta))->orderBy('id','DESC')->paginate(10);
 
 		$data['model']	= Tribunal::where('temporada_id',$temporada->id)->orderBy('id','DESC')->paginate(10);
@@ -315,6 +318,7 @@ $legs = array();
 
 	public function informacion($id){
 		$data['partido'] = Partido::find($id);	
+		$data['sesion_calendario'] = 1;
 		return View::make('web_nueva.competencias.informacion')->with($data);
 	}
 

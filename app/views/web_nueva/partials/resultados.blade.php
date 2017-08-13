@@ -16,7 +16,7 @@
                   <h3><p>{{$resultado->local_set}}</p></h3>
                 </div></center>                        
                 <center><figure class="widget-results__team-logo">
-                  <img src="assets/webnueva/images/samples/logos/011.png" title="aca va el nombre del club completo">
+                  <img src="uploads/escudos/{{$resultado->local_equipo_id->escudo}}" title="{{$resultado->local_equipo_id->nombre}}">
                 </figure></center>
                 <center><div class="widget-results__team-logo">
                   <h5 class="widget-results__team-name"><p>{{$resultado->local_equipo_id->sigla}}</p></h5>
