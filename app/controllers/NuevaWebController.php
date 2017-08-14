@@ -317,7 +317,13 @@ $legs = array();
 	}
 
 	public function informacion($id){
-		$data['partido'] = Partido::find($id);	
+		$data['partido'] 		   = Partido::find($id);	
+
+		$data['jugadores_locales'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id)->get();
+
+		$data['jugadores_visitantes'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id',$data['partido']->local_visita_id)->get();
+		
+
 		$data['sesion_calendario'] = 1;
 		return View::make('web_nueva.competencias.informacion')->with($data);
 	}

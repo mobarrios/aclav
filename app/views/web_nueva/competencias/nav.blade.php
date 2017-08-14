@@ -2,10 +2,7 @@
           <div class="container">
             <a href="#" class="content-filter__toggle"></a>
             <ul class="content-filter__list">
-              @if(isset($msg_page) && $msg_page == 1)
-              ssiisii
-              @endif
-
+            
 
               <li class="{{isset($sesion_calendario) ? 'content-filter__item--active' : 'content-filter__item' }}"><a href="{{route('calendario', Session::get('torneo_id'))}}" class="content-filter__link"><small></small>Calendario y Resultados</a></li>
               

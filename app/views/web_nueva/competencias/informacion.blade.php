@@ -36,7 +36,9 @@
                   <div class="widget-game-result__score-wrap">
                       <div class="widget-game-result__score">
                           <h3 class="widget-game-result__title"><p>{{$partido->local_set}} - {{$partido->visita_set}}</p></h3>
-                          <div class="game-result__date"><p>25-22 / 25-22 / 25-21 <br> 26-24 / 25-23 </p></div>
+                          <div class="game-result__date"><p> @foreach($partido->puntoPartido as $punto)
+                                          {{$punto->puntos_local}} - {{$punto->puntos_local}}  
+                                          @endforeach </p></div>
                       </div>                        
                   </div>
                   <!-- fin resultado medio -->                   
@@ -70,8 +72,9 @@
               <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> {{$partido->fecha_inicio}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Hora:</span> {{$partido->hora}} hs</div>
               <div class="glossary__item"><span class="glossary__abbr">N° de Partido:</span> {{$partido->numero_partido}}</div>
-              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> {{ $partido->Arbitro1->nombre }}, {{ $partido->Arbitro1->apellido }} </div>
-              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{$partido->Arbitro2->nombre }}, {{ $partido->Arbitro1->apellido }}</div>
+              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> {{ isset($partido->Arbitro1->nombre) ? $partido->Arbitro1->nombre : '' }} , {{ isset($partido->Arbitro1->apellido) ? $partido->Arbitro1->apellido : '' }}
+               </div>
+              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{ isset($partido->Arbitro2->nombre) ? $partido->Arbitro2->nombre : '' }} , {{ isset($partido->Arbitro2->apellido) ? $partido->Arbitro2->apellido : '' }}</div>
               <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
               <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> <a href="#"><img src="assets/images/tyc_tv.png"></a></div>
             </div>
@@ -102,7 +105,6 @@
                         </thead>
                         <tbody>
 
-
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
@@ -114,7 +116,7 @@
                             <td class="team-leader__total">Arce Federico</td>
                             <td class="team-leader__gp">Punta Receptor</td>                            
                           </tr>
-                                             
+
                         </tbody>
                       </table>
                     </div>
