@@ -104,19 +104,19 @@
                           </tr>
                         </thead>
                         <tbody>
-
+                        @foreach($jugadores_locales as $j)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">01</h5>                                  
+                                  <h5 class="team-leader__player-name">{{$j->BuenaFe->nro}}</h5>                                  
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
+                            <td class="team-leader__total">{{ $j->BuenaFe->Jugador->nombre}}, {{ $j->BuenaFe->Jugador->apellido}}</td>
+                            <td class="team-leader__gp">{{$j->BuenaFe->Jugador->posicion}}</td>                            
                           </tr>
-
+                        @endforeach  
                         </tbody>
                       </table>
                     </div>
@@ -135,16 +135,18 @@
                           </tr>
                         </thead>
                         <tbody>
+                        @foreach($staff_local as $s)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
+                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}}, {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
+                            <td class="team-leader__total"> {{$s->BuenaFeStaff->Oficial->Funcion->funcion}}</td>                            
                           </tr>
+                        @endforeach
                         </tbody>
                       </table>
                     </div>
@@ -178,18 +180,19 @@
                           </tr>
                         </thead>
                         <tbody>
+                          @foreach($jugadores_visitantes as $j)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">01</h5>                                  
+                                  <h5 class="team-leader__player-name">{{ $j->BuenaFe->nro}} </h5>                                  
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">Arce Federico</td>
-                            <td class="team-leader__gp">Punta Receptor</td>                            
+                            <td class="team-leader__total"> {{ $j->BuenaFe->Jugador->nombre}}, {{ $j->BuenaFe->Jugador->apellido}}</td>
+                            <td class="team-leader__gp">{{ $j->BuenaFe->Jugador->posicion}}</td>                            
                           </tr>
-                          
+                           @endforeach 
                                              
                         </tbody>
                       </table>
@@ -209,17 +212,18 @@
                           </tr>
                         </thead>
                         <tbody>
-                         
+                         @foreach($staff_visitante as $s)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">Weber Javier</h5>                                  
+                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}}, {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">Entrenador en Jefe</td>                            
+                            <td class="team-leader__total">{{ isset($s->BuenaFeStaff->Oficial->Funcion->funcion) ? $s->BuenaFeStaff->Oficial->Funcion->funcion : '' }}</td>                            
                           </tr>
+                          @endforeach
                         </tbody>
                       </table>
                     </div>
