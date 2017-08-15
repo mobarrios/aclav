@@ -16,7 +16,7 @@
             <h3><p>{{$pxp->local_set}}</p></h3>
           </div></center>                        
           <center><figure class="widget-results__team-logo">
-            <img src="assets/webnueva/images/samples/logos/001.png" title="aca va el nombre del club completo">
+            <img src="uploads/escudos/{{$pxp->local_equipo_id->escudo}}" title="{{$pxp->local_equipo_id->nombre}}">
           </figure></center>
           <center><div class="widget-results__team-logo">
             <h5 class="widget-results__team-name"><p>{{isset($pxp->local_equipo_id->sigla) ? $pxp->local_equipo_id->sigla : '' }}</p></h5>
@@ -45,7 +45,7 @@
             <h3><p>{{$pxp->visita_set}}</p></h3>
           </div></center>                        
           <center><figure class="widget-results__team-logo">
-            <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
+            <img src="uploads/escudos/{{$pxp->visita_equipo_id->escudo}}" title="{{$pxp->visita_equipo_id->nombre}}">
           </figure></center>                        
           <center><div class="widget-results__team-logo">
             <h5 class="widget-results__team-name"><p>{{isset($pxp->visita_equipo_id->sigla) ? $pxp->visita_equipo_id->sigla : '' }}</p></h5>

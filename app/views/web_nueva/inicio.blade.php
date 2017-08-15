@@ -9,6 +9,7 @@
          @include('web_nueva.partials.pxp')
          @include('web_nueva.partials.resultados')
          @include('web_nueva.partials.proximos')
+        
       @endif  
 
        @if($partidosDiarios->count() == 0)
