@@ -14,8 +14,9 @@
               <div class="post-list__item">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
-                    <a href="{{route('detalle_video',$model->id)}}"><img src="assets/webnueva/images/video001a.jpg" alt=""></a>
+                    <a href="{{route('detalle_video',$model->id)}}"><img src="http://img.youtube.com/vi/{{$model->object}}/0.jpg" alt=""></a>
                     
+
                   </figure>
                   <div class="posts__inner">
                     <div class="card__content">
@@ -23,7 +24,7 @@
                       <h6 class="posts__title"><a href="{{route('detalle_video',$model->id)}}"><p>{{$model->titulo}}</p></a></h6>
                       
                       <div class="posts__excerpt">
-                        <p><font size="3">Cinco competiciones oficiales, tres podios, 43 partidos disputados y 28 victorias. Un gran balance de UPCN San Juan Voley en la temporada 2016/17 que lo sigue manteniendo en lo alto del voley argentino.</font> </p>
+                        <p><font size="3">{{$model->copete}}</font> </p>
                       </div>
                     </div>
                     

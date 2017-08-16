@@ -14,7 +14,9 @@
               <article class="card card--lg post post--single">
               <br>
               <div class="video-container">
-                    {{$model->object}}
+                <iframe id="player" type="text/html" width="640" height="360"
+  src="http://www.youtube.com/embed/{{$model->object}}?enablejsapi=1"
+  frameborder="0"></iframe>
               </div>
 
 
@@ -30,7 +32,7 @@
 
 
                 <div class="post__content">
-                  <p><font size="3">Nicolas Lazo y Cristian Poglajen, dos hombres de Seleccion nacional que le aportan jerarquia a la Liga Argentina de Voleibol Banco Nacion, tambien estuvieron entre los puntos mas altos de la edicion que finalizo dias atras. Avanzando con la conformacion del Equipo Ideal de la temporada, surgen el sanjuanino de UPCN San Juan Voley Club y el olimpico de Lomas Voley, como los mejores en el rol de puntas receptores de todo el torneo.</font> 
+                  <p><font size="3">{{$model->copete}}</font> 
                   </p>
   
               </div>

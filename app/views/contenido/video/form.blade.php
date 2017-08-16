@@ -37,7 +37,15 @@
 	    {{ Form::label('label', 'Codigo Video', array('class' => 'col-sm-2 control-label')) }}
 
 		    <div class="col-sm-10">
-			    {{ Form::textarea ('object', Input::old('object'), array('class' => 'form-control')) }}
+			    {{ Form::text ('object', Input::old('object'), array('class' => 'form-control')) }}
+			</div>
+		</div>
+
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Copete', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::textarea ('copete', Input::old('copete'), array('class' => 'form-control')) }}
 			</div>
 		</div>
 

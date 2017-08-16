@@ -96,6 +96,11 @@
                 {{ Form::select('televisado', array('0'=>'No','1'=>'Web','2'=>'TV') , Input::old('televisado') , array('class'=>'form-control'))}}
                 </div>
 
+                <div class="form-group ">
+                {{ Form::label('label', 'URL Televisado', array('class' => 'col-sm-2 control-label')) }}
+                {{ Form::text('televisado_url',  Input::old('televisado_url') , array('class'=>'form-control'))}}
+                </div>
+
                  <div class="form-group ">
                     {{ Form::label('label', 'Condicional', array('class' => 'col-sm-2 control-label')) }}
                     {{ Form::checkbox('condicional') }}
