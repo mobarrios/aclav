@@ -144,7 +144,7 @@
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total"> {{$s->BuenaFeStaff->Oficial->Funcion->funcion}}</td>                            
+                            <td class="team-leader__total"> {{ isset($s->BuenaFeStaff->Oficial->Funcion->funcion) ? $s->BuenaFeStaff->Oficial->Funcion->funcion : '' }}</td>                            
                           </tr>
                         @endforeach
                         </tbody>
