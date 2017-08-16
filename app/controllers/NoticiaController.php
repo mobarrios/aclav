@@ -67,7 +67,50 @@ class NoticiaController extends BaseController
 			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
 			}
 		}
-		
+		if($input['imagen_1'] != null)
+		{
+			if($up != false)
+			{
+				$input['imagen_1'] = $up;
+			}
+			else
+			{
+			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
+			}
+		}
+		if($input['imagen_2'] != null)
+		{
+			if($up != false)
+			{
+				$input['imagen_2'] = $up;
+			}
+			else
+			{
+			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
+			}
+		}
+		if($input['imagen_3'] != null)
+		{
+			if($up != false)
+			{
+				$input['imagen_3'] = $up;
+			}
+			else
+			{
+			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
+			}
+		}
+		if($input['imagen_4'] != null)
+		{
+			if($up != false)
+			{
+				$input['imagen_4'] = $up;
+			}
+			else
+			{
+			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
+			}
+		}
 		$noti->titulo = $input['titulo'];
 		$noti->fecha  = $input['fecha'];
 		$noti->copete = $input['copete'];
@@ -147,6 +190,64 @@ class NoticiaController extends BaseController
 		}else
 		{
 			$input['imagen'] = $noticia->imagen;
+		}
+
+		if($input['imagen_1'] != null)
+		{
+			$up 	= $this->up->up($input['imagen_1'] , $this->imgPath );
+			
+			if($up != false)
+			{
+				$this->up->del($noticia->imagen, $this->imgPath);
+
+				$input['imagen_1'] = $up;
+			}	
+		}else
+		{
+			$input['imagen_1'] = $noticia->imagen;
+		}
+
+		if($input['imagen_2'] != null)
+		{
+			$up 	= $this->up->up($input['imagen_2'] , $this->imgPath );
+			
+			if($up != false)
+			{
+				$this->up->del($noticia->imagen, $this->imgPath);
+
+				$input['imagen_2'] = $up;
+			}	
+		}else
+		{
+			$input['imagen_2'] = $noticia->imagen;
+		}
+		if($input['imagen_3'] != null)
+		{
+			$up 	= $this->up->up($input['imagen_3'] , $this->imgPath );
+			
+			if($up != false)
+			{
+				$this->up->del($noticia->imagen, $this->imgPath);
+
+				$input['imagen_3'] = $up;
+			}	
+		}else
+		{
+			$input['imagen_3'] = $noticia->imagen;
+		}
+		if($input['imagen_4'] != null)
+		{
+			$up 	= $this->up->up($input['imagen_4'] , $this->imgPath );
+			
+			if($up != false)
+			{
+				$this->up->del($noticia->imagen, $this->imgPath);
+
+				$input['imagen_4'] = $up;
+			}	
+		}else
+		{
+			$input['imagen_4'] = $noticia->imagen;
 		}
 
 
