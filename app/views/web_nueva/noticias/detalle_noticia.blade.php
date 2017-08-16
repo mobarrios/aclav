@@ -24,20 +24,20 @@
                 	<div class="ws_images">
                     <ul>
                 		  <li><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="noti001" title="noti001" id="wows1_0"/></li>
-                		  <li><img src="assets/webnueva/images/noti002.jpg" alt="noti002" title="noti002" id="wows1_1"/></li>
-                		  <li><img src="assets/webnueva/images/noti003.jpg" alt="noti003" title="noti003" id="wows1_2"/></li>
-                		  <li><img src="assets/webnueva/images/noti004.jpg" alt="noti004" title="noti004" id="wows1_3"/></li>
-                		  <li><img src="assets/webnueva/images/noti005.jpg" alt="noti005" title="noti005" id="wows1_4"/></li>		
+                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="noti002" title="noti002" id="wows1_1"/></li>
+                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="noti003" title="noti003" id="wows1_2"/></li>
+                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="noti004" title="noti004" id="wows1_3"/></li>
+                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="noti005" title="noti005" id="wows1_4"/></li>		
                 	  </ul>
                   </div>
 
                 	<div class="ws_thumbs">
                     <div>
-                		  <a href="#" title="noti001"><img src="assets/webnueva/images/noti001.jpg" alt="" /></a>
-                		  <a href="#" title="noti002"><img src="assets/webnueva/images/noti002.jpg" alt="" /></a>
-                		  <a href="#" title="noti003"><img src="assets/webnueva/images/noti003.jpg" alt="" /></a>
-                		  <a href="#" title="noti004"><img src="assets/webnueva/images/noti004.jpg" alt="" /></a>
-                		  <a href="#" title="noti005"><img src="assets/webnueva/images/noti005.jpg" alt="" /></a>		
+                		  <a href="#" title="noti001"><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="" /></a>
+                		  <a href="#" title="noti002"><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="" /></a>
+                		  <a href="#" title="noti003"><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="" /></a>
+                		  <a href="#" title="noti004"><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="" /></a>
+                		  <a href="#" title="noti005"><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="" /></a>		
                 	  </div>
                   </div>
 
