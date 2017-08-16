@@ -136,12 +136,43 @@
 		</div>
 
 		<div class="form-group">	  
-	    {{ Form::label('label', 'Imagen', array('class' => 'col-sm-2 control-label')) }}
+	    {{ Form::label('label', 'Imagen ', array('class' => 'col-sm-2 control-label')) }}
 
 		    <div class="col-sm-10">
 			    {{ Form::file('imagen') }}
 			</div>
 		</div>
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Imagen 1', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::file('imagen_1') }}
+			</div>
+		</div>
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Imagen 2', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::file('imagen_2') }}
+			</div>
+		</div>
+
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Imagen 3', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::file('imagen_3') }}
+			</div>
+		</div>
+
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Imagen 4', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::file('imagen_4') }}
+			</div>
+		</div>
+
 
 		<div class="form-group">	  
 	    {{ Form::label('label', 'Estado', array('class' => 'col-sm-2 control-label')) }}
