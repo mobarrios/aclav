@@ -74,6 +74,10 @@ class NoticiaController extends BaseController
 		$noti->cuerpo = $input['cuerpo'];
 		$noti->fuente = $input['fuente']; 
 		$noti->imagen = $input['imagen'];
+				$noti->imagen_1 = $input['imagen_1'];
+				$noti->imagen_2 = $input['imagen_2'];
+				$noti->imagen_3 = $input['imagen_3'];
+				$noti->imagen_4 = $input['imagen_4'];
 		$noti->estado = $input['estado'];
 		$noti->web_noticia = Input::has('web_noticia') ? true : false ;
 		$noti->web_accion = Input::has('web_accion') ? true : false ;
@@ -159,6 +163,10 @@ class NoticiaController extends BaseController
 		$noticia->cuerpo = $input['cuerpo'];
 		$noticia->fuente = $input['fuente']; 
 		$noticia->imagen = $input['imagen'];
+		$noti->imagen_1 = $input['imagen_1'];
+				$noti->imagen_2 = $input['imagen_2'];
+				$noti->imagen_3 = $input['imagen_3'];
+				$noti->imagen_4 = $input['imagen_4'];
 		$noticia->estado = $input['estado'];
 		$noticia->web_noticia 	= Input::has('web_noticia') ? true : false ;
 		$noticia->web_accion 	= Input::has('web_accion') ? true : false ;
