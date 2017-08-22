@@ -261,8 +261,8 @@
               <div class="rvs-item-container">
                 <div class="rvs-item-stage">
                   @foreach($videos as $video)
-                
-                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/{{$video->object}}/maxresdefault.jpg)">
+
+                  <div class="rvs-item" style="background-image: url({{$video->getFetchHighestRes()}})">
                     <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
                     <a href="https://www.youtube.com/watch?v={{$video->object}}" class="rvs-play-video"></a>
                   </div>

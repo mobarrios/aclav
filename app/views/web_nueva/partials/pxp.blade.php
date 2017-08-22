@@ -24,7 +24,11 @@
         </div>
         <div class="widget-results__result">
           <div class="widget-results__score">
-            <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(1)->puntos_local)? $pxp->puntoPorSet(1)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(1)->puntos_visita)? $pxp->puntoPorSet(1)->puntos_visita : '0'}}</span> </p>        
+            <p>
+          
+            <span class="team-leader__total"><b>{{isset($pxp->puntoPorSet(1)->puntos_local)? $pxp->puntoPorSet(1)->puntos_local : '0'}} </b>
+            </span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(1)->puntos_visita)? $pxp->puntoPorSet(1)->puntos_visita : '0'}}</span>
+            </p>        
           </div>
           <div class="widget-results__score">
             <p><span class="team-leader__total">{{isset($pxp->puntoPorSet(2)->puntos_local)? $pxp->puntoPorSet(2)->puntos_local : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->puntoPorSet(2)->puntos_visita)? $pxp->puntoPorSet(2)->puntos_visita : '0'}}</span></p>         
