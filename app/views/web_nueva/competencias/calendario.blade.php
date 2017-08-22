@@ -91,6 +91,7 @@
             
                   @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
+
                   <div class="partido card1" id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
@@ -115,6 +116,22 @@
                               </div>
                               <!-- fin primer Equipo -->                
                               <!-- comienzo resultado medio -->
+                              @if($partido->estado == '' || $partido->estado == 0)
+                                <div class="widget-game-result__score-wrap">
+                                  <div class="widget-game-result__score">
+                                      <p class="widget-game-result__title"><p>{{$partido->fecha_inicio}} <br> {{$partido->hora}} hs.</p></p>
+                                      <div class="game-result__date"><font size="3"><p>{{ isset($partido->Estadio->nombre) ? $partido->Estadio->nombre : '' }}</p></font></div>             
+                                        
+                                        @if($partido->televisado == 1 )
+                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
+                                        @endif
+
+                                        <span style="font-weight:100;color:#CD3243"> | </span>  
+                                        <a href="javascript:void(0)" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="#" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+                                    </div>                        
+                                </div>
+                              @else
                               <div class="widget-game-result__score-wrap">
                                   <div class="widget-game-result__score">
                                       <h3 class="widget-game-result__title"><p>{{$partido->local_set}} - {{$partido->visita_set}}</p></h3>
@@ -136,6 +153,7 @@
                                         <a href="#" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                               </div>
+                              @endif
                               <!-- fin resultado medio -->                   
                               <!-- comienzo segundo Equipo -->
                               <div class="widget-game-result__team widget-game-result__team--first">

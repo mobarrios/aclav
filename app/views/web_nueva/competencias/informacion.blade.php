@@ -76,7 +76,8 @@
                </div>
               <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{ isset($partido->Arbitro2->nombre) ? $partido->Arbitro2->nombre : '' }} , {{ isset($partido->Arbitro2->apellido) ? $partido->Arbitro2->apellido : '' }}</div>
               <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
-              <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> <a href="#"><img src="assets/images/tyc_tv.png"></a></div>
+              
+        <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> <a href="#"><img src="assets/webnueva/images/tyc_tv.png"></a></div>
             </div>
           </div>
         </div>

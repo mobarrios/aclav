@@ -168,6 +168,12 @@ class Partido extends Eloquent
 
 		}
 
+		public function getFechaDeInicio(){
+			setlocale(LC_ALL,"es_ES");
+			date_default_timezone_set("America/Argentina/Buenos_Aires");
+			$hora = strftime("%A, %d de %B del %Y", strtotime($this->attributes['fecha_inicio']));
+			return $hora;
+		}
 
 		public function getHoraAttribute($value)
 		{
