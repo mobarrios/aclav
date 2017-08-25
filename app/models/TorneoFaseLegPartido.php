@@ -7,6 +7,9 @@ class TorneoFaseLegPartido extends Eloquent
 	protected $fillable	= 	array('*');
 
 
-	
+	public function TorneoFaseLeg()
+	{
+		return $this->belongsTo('TorneoFaseLeg','torneo_fase_leg_id');
+	}
 }
 ?>

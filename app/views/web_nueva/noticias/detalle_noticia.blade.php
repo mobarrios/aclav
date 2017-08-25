@@ -52,14 +52,18 @@
                   <h3 class="post-author__name"><p>{{$model->titulo}}</p></h3>
                   
                 	<div class="post-author__info">
-                          <h5 class="post-author__name"><p>Prensa ACLAV</p></h5>
-                    </div>
-				</header>
+                          <h6>@foreach($model->club as $club)
+                          <img src="uploads/escudos/{{$club->escudo}}" width="40">
+                          @endforeach</h6>
+                  </div><br>
+                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i> {{$model->fecha}}</font>
+                                    
+				        </header>
 
                 <div class="post__content">
                   {{$model->cuerpo}}
-                </div>
-
+                </div><br>
+                <h5 class="post-author__name"><p>{{$model->fuente}}</p></h5>
                 
               </div>
             </article>
