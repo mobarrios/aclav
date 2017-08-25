@@ -353,28 +353,34 @@ $legs = array();
 	//Estadisticas
 	public function jugadores(){
 		$data['goleador']        =  Goleador::where('estado','=',1)->first();
-		return View::make('web_nueva.estadisticas.jugadores');
+		$data['sesion_jugador']  = 1;
+		return View::make('web_nueva.estadisticas.jugadores')->with($data);
 	}
 
 
 
 	public function individuales(){
-		return View::make('web_nueva.estadisticas.individuales');
+		$data['sesion_individuales'] = 1;
+		return View::make('web_nueva.estadisticas.individuales')->with($data);
 	}
 
 	public function entreequipos(){
-		return View::make('web_nueva.estadisticas.entreequipos');
+		$data['sesion_entreequipos'] = 1;
+		return View::make('web_nueva.estadisticas.entreequipos')->with($data);
 	}
 
 	public function porequipo(){
-		return View::make('web_nueva.estadisticas.porequipo');
+		$data['sesion_porequipo'] = 1;
+		return View::make('web_nueva.estadisticas.porequipo')->with($data);
 	}
 
 	public function records(){
-		return View::make('web_nueva.estadisticas.records');
+		$data['sesion_records'] = 1;
+		return View::make('web_nueva.estadisticas.records')->with($data);
 	}
 	public function curiosidades(){
-		return View::make('web_nueva.estadisticas.curiosidades');
+		$data['sesion_curiosidades'] = 1;
+		return View::make('web_nueva.estadisticas.curiosidades')->with($data);
 	}
 
 

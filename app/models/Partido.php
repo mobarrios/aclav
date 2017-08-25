@@ -32,6 +32,28 @@ class Partido extends Eloquent
 
 	}
 
+	public function ventajaPorSet($set)
+	{
+		$local = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_local;
+		$visita = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_visita;
+		$data = [];
+
+		if($local > $visita){
+				$data['local'] = '<b>'.$local.'</b>';		
+				$data['visita'] = $visita;		
+		}
+		if($visita > $local){
+			$data['visita'] = '<b>'.$visita.'</b>';		
+			$data['local'] = $local;
+		}
+		if($visita == $local){
+			$data['visita'] = '<b>'.$visita.'</b>';		
+			$data['local'] = $local;
+		}
+
+		return $data;									
+
+	}
 
 	public function ventajaPorSet($set)
 	{
@@ -178,9 +200,9 @@ class Partido extends Eloquent
 
 		public function getFechaDeInicio(){
 			setlocale(LC_ALL,"es_ES");
-			date_default_timezone_set("America/Argentina/Buenos_Aires");
-			$hora = strftime("%A, %d de %B del %Y", strtotime($this->attributes['fecha_inicio']));
-			return $hora;
+			$today = $this->attributes['fecha_inicio'];
+        	$date_string = utf8_encode(strftime('%d %B %Y', strtotime($today)));
+        	return $date_string;
 		}
 
 		public function getHoraAttribute($value)
