@@ -55,13 +55,6 @@ class Partido extends Eloquent
 
 	}
 
-	public function ventajaPorSet($set)
-	{
-		$local = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_local;
-		$visita = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_visita;
-		return 'assdd';
-		
-	}
 
 	// detalle del equipo
 	public function getLocalEquipoIdAttribute($value)
