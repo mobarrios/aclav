@@ -6,8 +6,8 @@
     <div class="container">
      <div class="owl-carousel col-lg-12">
       @if($partidosDiarios->count() > 0)
-         @include('web_nueva.partials.pxp')
          @include('web_nueva.partials.resultados')
+         @include('web_nueva.partials.pxp')
          @include('web_nueva.partials.proximos')
         
       @endif  
@@ -149,7 +149,7 @@
               
             <!-- Featured News -->
             <div class="card card--clean">
-              <h4><img src="uploads/contenidos/banner/{{$banner_superior->imagen}}"></h4>
+              <a href="{{$banner_superior->url}}" target="_blank"><h4><img src="uploads/contenidos/banner/{{$banner_superior->imagen}}"></h4></a>
               <div class="card__content">
 
               </div>
@@ -211,7 +211,7 @@
 
             <!-- Last Game Results -->
               @if(isset($banner_inferior))
-            <h4><img src="uploads/contenidos/banner/{{$banner_inferior->imagen}}"></h4>
+            <a href="{{$banner_inferior->url}}" target="_blank"><h4><img src="uploads/contenidos/banner/{{$banner_inferior->imagen}}"></h4></a>
               @endif
             <!-- Last Game Results / End -->
 
@@ -230,7 +230,6 @@
                     <a href="{{route('galeria')}}"><img src="assets/webnueva/images/samples/post-img8.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
-                    <a href="{{route('galeria')}}" class="posts__cta"></a>
                     
                     <h6 class="posts__title"><a href="{{route('galeria')}}"><p>Galeria de Fotos</p></a></h6>
                   </div>
@@ -245,7 +244,7 @@
                     <a href="{{route('detalle_noticias',$social_ultima->id)}}"><img src="uploads/contenidos/noticias/{{$social_ultima->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
-                    <a href="{{route('social')}}" class="posts__cta"></a>
+                   
                     <h6 class="posts__title"><a href="{{route('social')}}"><p>ACLAV Social</p></a></h6>
                   </div>
                   

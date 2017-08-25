@@ -11,8 +11,7 @@
             <div class="posts posts--cards posts--cards-thumb-left post-list">
               @foreach($model as $estadio)
               <div class="alert alert-info">
-                <a href="{{ route('detalle_estadio',$estadio->id) }}"><button type="button" class="btn btn-xs btn-default btn-outline alert-btn-right">Acceder</button></a>
-                <strong>{{$estadio->nombre}}</strong> 
+                <strong> <a href="{{ route('detalle_estadio',$estadio->id) }}">{{$estadio->nombre}}</a></strong> 
               </div>
               @endforeach
             </div>
