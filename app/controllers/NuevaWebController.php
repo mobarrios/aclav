@@ -317,6 +317,8 @@ $legs = array();
 	}
 
 	public function informacion($id){
+		
+		
 		$data['partido'] 		   = Partido::find($id);	
 		
 		$data['jugadores_locales'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();

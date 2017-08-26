@@ -14,7 +14,6 @@ class Partido extends Eloquent
 	public function Designaciones()
 	{
 		return $this->hasMany('Designaciones');
-
 	}
 
 	//puntos x partido 
