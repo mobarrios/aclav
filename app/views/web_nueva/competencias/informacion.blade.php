@@ -99,7 +99,7 @@
                     <h4>{{$partido->local_equipo_id->nombre}}</h4>
                   </div>
                   <div class="widget__content card__content">
-                
+                    
                     <!-- Leader: Points -->
                     <div class="table-responsive">
                       <table class="table team-leader">
