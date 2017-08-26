@@ -36,7 +36,7 @@ class Partido extends Eloquent
 	{
 		$local = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_local;
 		$visita = PartidoPunto::where('partido_id','=', $this->attributes['id'])->where('set_numero','=',$set)->first()->puntos_visita;
-		$data = [];
+		//$data = [];
 
 		if($local > $visita){
 				$data['local'] = '<b>'.$local.'</b>';		

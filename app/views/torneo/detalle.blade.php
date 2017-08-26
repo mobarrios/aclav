@@ -55,10 +55,11 @@
 														<tr>
 															<th style="width: 5%">Nro.</th>
 															<th style="width: 10%">Datos</th>
-															<th style="width: 20%">Equipos</th>
+															<th style="width: 15%">Equipos</th>
 															<th style="width: 15%">Resultado</th>
 															<th style="width: 20%">Datos</th>
 															<th style="width: 5%">PxP</th>
+															<th style="width: 5%">Home</th>
 															<th style="width: 5%"></th>		
 															<th style="width: 5%"></th>								
 														</tr>
