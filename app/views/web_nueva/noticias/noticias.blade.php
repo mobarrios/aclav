@@ -19,7 +19,7 @@
                   <div class="posts__inner">
                     <div class="card__content">
                       
-                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$noticia->id)}}"><p>{{$noticia->titulo}} </p></a></h6>
+                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$noticia->id)}}"><p>{{$noticia->titulo}}</p></a></h6>
                       <time datetime="2016-08-23" class="posts__date">{{$noticia->fecha}}</time>
                       <div class="posts__excerpt">
                         <p><font size="3">{{$noticia->copete}}</font> </p>

@@ -12,31 +12,18 @@
 
             @foreach($model as $especial)
               <div class="post-list__item">
-                <div class="posts__item posts__item--card posts__item--category-2 card">
+                <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">
                     <a href="{{route('detalle_noticias',$especial->id)}}"><img src="uploads/contenidos/noticias/{{$especial->imagen}}" alt=""></a>
-                   
                   </figure>
                   <div class="posts__inner">
                     <div class="card__content">
-                      <div class="posts__cat">
-                        <span class="label posts__cat-label">ACLAV</span>
-                      </div>
-                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$especial->id)}}">{{$especial->titulo}}</a></h6>
+                      <h6 class="posts__title"><a href="{{route('detalle_noticias',$especial->id)}}"><p>{{$especial->titulo}}</p></a></h6>
                       <time datetime="2016-08-18" class="posts__date">{{$especial->fecha}}</time>
                       <div class="posts__excerpt">
                         {{$especial->copete}}
                       </div>
                     </div>
-                    <footer class="posts__footer card__footer">
-                      <div class="post-author">
-                        <figure class="post-author__avatar">
-                          <img src="assets/webnueva/images/samples/avatar-2.jpg" alt="Post Author Avatar">
-                        </figure>
-                        
-                      </div>
-                      
-                    </footer>
                   </div>
                 </div>
               </div>

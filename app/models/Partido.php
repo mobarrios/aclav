@@ -55,6 +55,7 @@ class Partido extends Eloquent
 
 	}
 
+
 	// detalle del equipo
 	public function getLocalEquipoIdAttribute($value)
 	{

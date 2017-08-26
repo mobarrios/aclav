@@ -66,9 +66,9 @@
           </div>
           <div class="card__content">
             <div class="glossary">
-              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> </div>
-              <div class="glossary__item"><span class="glossary__abbr">Fase:</span> Fase Clasificacion - 1er Triangular</div>
-              <div class="glossary__item"><span class="glossary__abbr">Etapa:</span> Weekend 11</div>
+              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> {{$torneo_fase->TorneoFaseLeg->fase}} </div>
+              <div class="glossary__item"><span class="glossary__abbr">Fase:</span> {{$torneo_fase->TorneoFaseLeg->fase->nombre}} </div>
+              <div class="glossary__item"><span class="glossary__abbr">Etapa:</span> {{$torneo_fase->TorneoFaseLeg->nombre}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> {{$partido->fecha_inicio}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Hora:</span> {{$partido->hora}} hs</div>
               <div class="glossary__item"><span class="glossary__abbr">N° de Partido:</span> {{$partido->numero_partido}}</div>
@@ -106,7 +106,7 @@
                         <thead>
                           <tr>
                             <th class="team-leader__type">N°</th>
-                            <th class="team-leader__total">Apellido y Nombre</th>
+                            <th class="team-leader__total">Nombre y Apellido</th>
                             <th class="team-leader__gp">Posición</th>                            
                           </tr>
                         </thead>
@@ -120,8 +120,8 @@
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">{{ $j->BuenaFe->Jugador->nombre}}, {{ $j->BuenaFe->Jugador->apellido}}</td>
-                            <td class="team-leader__gp">{{$j->BuenaFe->Jugador->posicion}}</td>                            
+                            <td class="team-leader__total">{{ $j->BuenaFe->Jugador->nombre}} {{ $j->BuenaFe->Jugador->apellido}} </td>
+                            <td class="team-leader__gp">{{$j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
                           </tr>
                         @endforeach  
                         </tbody>
@@ -137,7 +137,7 @@
                         </header>
                         <thead>                          
                           <tr>
-                            <th class="team-leader__type">Apellido y Nombre</th>
+                            <th class="team-leader__type"> Nombre y Apellido</th>
                             <th class="team-leader__total">Función</th>                            
                           </tr>
                         </thead>
@@ -147,7 +147,7 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}}, {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
+                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
                                 </div>
                               </div>
                             </td>
@@ -182,7 +182,7 @@
                         <thead>
                           <tr>
                             <th class="team-leader__type">N°</th>
-                            <th class="team-leader__total">Apellido y Nombre</th>
+                            <th class="team-leader__total">Nombre y Apellido</th>
                             <th class="team-leader__gp">Posición</th>                            
                           </tr>
                         </thead>
@@ -196,8 +196,8 @@
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total"> {{ $j->BuenaFe->Jugador->nombre}}, {{ $j->BuenaFe->Jugador->apellido}}</td>
-                            <td class="team-leader__gp">{{ $j->BuenaFe->Jugador->posicion}}</td>                            
+                            <td class="team-leader__total"> {{ $j->BuenaFe->Jugador->nombre}} {{ $j->BuenaFe->Jugador->apellido}}</td>
+                            <td class="team-leader__gp">{{ $j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
                           </tr>
                            @endforeach 
                                              
@@ -214,7 +214,7 @@
                         </header>
                         <thead>                          
                           <tr>
-                            <th class="team-leader__type">Apellido y Nombre</th>
+                            <th class="team-leader__type">Nombre y Apellido</th>
                             <th class="team-leader__total">Función</th>                            
                           </tr>
                         </thead>
@@ -224,7 +224,7 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}}, {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
+                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
                                 </div>
                               </div>
                             </td>
