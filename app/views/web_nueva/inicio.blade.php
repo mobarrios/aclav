@@ -239,12 +239,11 @@
 
               <div class="post-grid__item col-sm-6" >
                 <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb" style="height: 275px;">
+                  <figure class="posts__thumb">
                     
-                    <a href="{{route('detalle_noticias',$social_ultima->id)}}"><img src="uploads/contenidos/noticias/{{$social_ultima->imagen}}" alt=""></a>
+                    <a href="{{route('social')}}"><img src="assets/webnueva/images/samples/post-img2.jpg" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">
-                   
                     <h6 class="posts__title"><a href="{{route('social')}}"><p>ACLAV Social</p></a></h6>
                   </div>
                   
