@@ -28,7 +28,7 @@
   <div class="pushy-panel__inner">
     <header class="pushy-panel__header">
       <div class="pushy-panel__logo">
-        <a href="index.html"><img src="assets/webnueva/images/logo.png" srcset="assets/images/logo@2x.png 2x" alt="ACLAV"></a>
+        <a href="{{route('inicio')}}"><img src="assets/webnueva/images/logo.png" srcset="assets/images/logo@2x.png 2x" alt="ACLAV"></a>
       </div>
     </header>
     <div class="pushy-panel__content">

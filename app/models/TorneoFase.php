@@ -11,6 +11,11 @@ class TorneoFase extends Eloquent
 		return $this->belongsTo('Torneos');
 	}
 
+	public function Torneo()
+	{
+		return $this->belongsTo('Torneos','torneo_id');
+	}
+
 	public function equipo()
 	{
 		return $this->belongsToMany('Equipo','torneo_fase_equipo','torneo_fase_id');
