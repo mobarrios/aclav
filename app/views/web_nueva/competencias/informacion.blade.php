@@ -66,7 +66,7 @@
           </div>
           <div class="card__content">
             <div class="glossary">
-              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> {{$torneo_fase->TorneoFaseLeg->fase}} </div>
+              <div class="glossary__item"><span class="glossary__abbr">Torneo:</span> {{$torneo_fase->TorneoFaseLeg->fase->Torneo->nombre_torneo}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Fase:</span> {{$torneo_fase->TorneoFaseLeg->fase->nombre}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Etapa:</span> {{$torneo_fase->TorneoFaseLeg->nombre}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> {{$partido->fecha_inicio}} </div>
@@ -99,7 +99,7 @@
                     <h4>{{$partido->local_equipo_id->nombre}}</h4>
                   </div>
                   <div class="widget__content card__content">
-                
+                    
                     <!-- Leader: Points -->
                     <div class="table-responsive">
                       <table class="table team-leader">

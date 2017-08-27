@@ -13,6 +13,7 @@ class Video extends Eloquent
 	        if(@getimagesize(($imgUrl))) 
 	            return $imgUrl;
 	    }
+	
 	}
 
 }
