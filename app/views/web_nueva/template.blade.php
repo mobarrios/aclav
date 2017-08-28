@@ -179,7 +179,15 @@
 
     <script>
       $(document).ready(function(){
+
+      start = {{ (isset($resultados) )? $resultados->count() : 0 }};
+     
+
+
+
        $('.owl-carousel').owlCarousel({
+
+          startPosition : start,
           loop:false,
           margin: 15,
           autoHeight:true,

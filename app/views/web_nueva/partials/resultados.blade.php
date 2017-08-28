@@ -1,6 +1,6 @@
 @foreach($resultados as $resultado)
   <!-- Comienzo de resultados pasados -->
-  <div class="team-roster__item card_novivo card--no-paddings">
+  <div class=" team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
       <h5 class="widget-results__title">
       @if($resultado->hora == 'a Confirmar')

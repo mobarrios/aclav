@@ -1,6 +1,6 @@
 @foreach($partidosDiarios as $pxp)
 
-<div class="team-roster__item card card--no-paddings active">
+<div class="actual team-roster__item card card--no-paddings">
 <div class="card__content">              
 <h5 class="widget-results__title">
 @if($pxp->hora == 'a Confirmar')
