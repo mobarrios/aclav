@@ -13,6 +13,7 @@
               <div class="alert alert-info">
                 <strong> <a href="{{ route('detalle_estadio',$estadio->id) }}">{{$estadio->nombre}}</a></strong> 
               </div>
+
               @endforeach
             </div>
     

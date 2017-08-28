@@ -48,7 +48,7 @@
       <!-- Checkout Payment -->
       <div class="df-checkout-payment">
         <div class="form-row place-order">
-          <center><h6><p>{{$s['cargo']}}</p></h6></center>
+          <center><h5><p>{{$s['cargo']}}</p></h5></center>
         </div>
       </div>
       <!-- Checkout Payment / End -->

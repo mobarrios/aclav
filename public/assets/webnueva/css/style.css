@@ -15824,11 +15824,7 @@ td.team-leader__avg {
   color: #fff;
 }
 
-.gallery__item-inner:hover .gallery__btn-fab {
-  opacity: 1;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
+
 
 .gallery__item-inner:hover .gallery__thumb img {
   opacity: 0.2;
