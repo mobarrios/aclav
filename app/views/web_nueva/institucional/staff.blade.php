@@ -28,7 +28,7 @@
                 <th><p>Email</p></th>
                 <td>
                   <span class="amount">
-                    <span class="df-Price-currencySymbol"><a href="mailto:paulaparisi@aclav.com"><font size="3" color="#000000"><p>{{$s['email']}}</p></font></a></span>
+                    <span class="df-Price-currencySymbol"><a href="#"><font size="3" color="#000000"><p>{{$s['email']}}</p></font></a></span>
                   </span>
                 </td>
               </tr>
@@ -48,7 +48,7 @@
       <!-- Checkout Payment -->
       <div class="df-checkout-payment">
         <div class="form-row place-order">
-          <center><h5><p>{{$s['cargo']}}</p></h5></center>
+          <center><h4><p>{{$s['cargo']}}</p></h4></center>
         </div>
       </div>
       <!-- Checkout Payment / End -->
