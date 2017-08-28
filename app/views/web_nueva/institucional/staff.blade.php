@@ -28,12 +28,12 @@
                 <th><p>Email</p></th>
                 <td>
                   <span class="amount">
-                    <span class="df-Price-currencySymbol"><a href="#"><font size="3" color="#000000"><p>{{$s['email']}}</p></font></a></span>
+                    <span class="df-Price-currencySymbol"><a href="#"> <font size="3" color="#000000"><p>{{$s['email']}}</p></font></a></span>
                   </span>
                 </td>
               </tr>
               <tr class="coupon">
-                <th><p>Teléfono</p></th>
+                <th><p>Teléfono:</p></th>
                 <td>                            
                     <p><font size="2" color="#333">{{$s['tel']}}</p>                            
                 </td>
