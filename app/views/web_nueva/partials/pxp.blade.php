@@ -25,10 +25,6 @@
         <div class="widget-results__result">
           <div class="widget-results__score">
             <p>
-<<<<<<< HEAD
-          
-=======
->>>>>>> f8d536db7956baa74230e1a7b070dd64efcb389a
             <span class="team-leader__total">
             @if($pxp->puntoPorSet(1)->puntos_local > $pxp->puntoPorSet(1)->puntos_visita)
             <b>{{isset($pxp->puntoPorSet(1)->puntos_local) ? $pxp->puntoPorSet(1)->puntos_local : '0'}}</b>
@@ -42,10 +38,6 @@
             {{isset($pxp->puntoPorSet(1)->puntos_visita)? $pxp->puntoPorSet(1)->puntos_visita : '0'}} 
             @endif
             </span>
-<<<<<<< HEAD
-
-            <p><span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['local'])? $pxp->ventajaPorSet(5)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['visita'])? $pxp->ventajaPorSet(5)['visita'] : '0'}}</span></p>            <p><span class="team-leader__total">
-=======
             </p>        
           </div>
           <div class="widget-results__score">
@@ -98,7 +90,6 @@
           </div>
           <div class="widget-results__score">
             <p><span class="team-leader__total">
->>>>>>> f8d536db7956baa74230e1a7b070dd64efcb389a
             @if($pxp->puntoPorSet(5)->puntos_local > $pxp->puntoPorSet(5)->puntos_visita)
             <b>{{isset($pxp->puntoPorSet(5)->puntos_local)? $pxp->puntoPorSet(5)->puntos_local : '0'}}</b>
             @else
