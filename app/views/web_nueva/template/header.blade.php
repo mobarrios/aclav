@@ -27,6 +27,9 @@
                       <li><a href="{{route('calendario', $torneo->id)}}">{{$torneo->nombre_torneo}}</a></li>
                       @endforeach
                     @endforeach
+
+                    <li><a href="{{route('calendario')}}">Temporadas Anteriores</a></li>
+
                   </ul>
                 </li>
                 <li class=""><a href="#">Equipos</a>
