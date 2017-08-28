@@ -8,7 +8,7 @@
       @else
       <font size="2">
       @endif
-      <p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$resultado->hora}}</p></font></h5>              
+      <p>{{ strtoupper($resultado->getFechaDeInicio()) }} | {{$resultado->hora}}</p></font></h5>              
       <div class="widget-results__content resultados">
             <div class="widget-results__team-logo">
                 <center>
