@@ -13,9 +13,7 @@
             </div>
             @endforeach
           </div>
-          
           @include('web_nueva.template.sidebar')
-
         </div>
 
      </div>

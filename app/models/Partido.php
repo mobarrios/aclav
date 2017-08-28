@@ -167,6 +167,56 @@ class Partido extends Eloquent
 		}
 
 
+		public function getMesAttribute(){
+			$mes =  date('M',strtotime($this->attributes['fecha_inicio']));
+		
+			switch ($mes) {
+				case 'Jan':
+					$m = 'Ene';			
+					break;	
+
+				case 'Feb':
+					$m = 'Feb';			
+					break;		
+
+				case 'Mar':
+					$m = 'Mar';			
+					break;	
+
+				case 'Apr':
+					$m = 'Abr';			
+					break;
+				case 'May':
+					$m = 'May';			
+					break;	
+				case 'Jun':
+					$m = 'Jun';			
+					break;	
+				case 'Jul':
+					$m = 'Jul';			
+					break;				
+				case 'Aug':
+					$m = 'Ago';			
+					break;	
+				case 'Sep':
+					$m = 'Sep';			
+					break;	
+				case 'Oct':
+					$m = 'Oct';			
+					break;				
+				case 'Nov':
+					$m = 'Nov';			
+					break;		
+				case 'Dec':
+					$m = 'Dic';			
+					break;
+		
+			}
+			return $m;
+		}
+
+
+
 		public function getFechaInicioAttribute($value)
 		{
 			if($value == '1969-12-31' )
@@ -191,10 +241,7 @@ class Partido extends Eloquent
 		}
 
 		public function getFechaDeInicio(){
-			setlocale(LC_ALL,"es_ES");
-			$today = $this->attributes['fecha_inicio'];
-        	$date_string = utf8_encode(strftime('%d %B %Y', strtotime($today)));
-        	return $date_string;
+			return $this->getDiaAttribute() .' '. date('d',strtotime($this->attributes['fecha_inicio'])) .' '.$this->getMesAttribute();
 		}
 
 		public function getHoraAttribute($value)
