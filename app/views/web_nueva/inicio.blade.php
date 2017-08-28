@@ -5,6 +5,7 @@
 <div class="site-contentchico">
     <div class="container">
      <div class="owl-carousel col-lg-12">
+     
       @if($partidosDiarios->count() > 0)
          @include('web_nueva.partials.resultados')
          @include('web_nueva.partials.pxp')

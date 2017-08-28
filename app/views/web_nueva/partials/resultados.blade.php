@@ -8,7 +8,7 @@
       @else
       <font size="2">
       @endif
-      <p>{{$resultado->fecha_inicio}} | {{$resultado->hora}}</p></font></h5>              
+      <p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$resultado->hora}}</p></font></h5>              
       <div class="widget-results__content resultados">
             <div class="widget-results__team-logo">
                 <center>
@@ -23,7 +23,10 @@
                 </div></center>
             </div>
             <div class="widget-results__result">
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8d536db7956baa74230e1a7b070dd64efcb389a
                 <div class="widget-results__score">
                   <p><span class="team-leader__total">
                   @if($resultado->puntoPorSet(1)->puntos_local > $resultado->puntoPorSet(1)->puntos_visita )
@@ -88,7 +91,10 @@
                   </span></p>
                 </div>
                 <div class="widget-results__score">
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8d536db7956baa74230e1a7b070dd64efcb389a
                   <p><span class="team-leader__total">
                   @if($resultado->puntoPorSet(5)->puntos_local > $resultado->puntoPorSet(5)->puntos_visita)
                   <b>{{isset($resultado->puntoPorSet(5)->puntos_local)? $resultado->puntoPorSet(5)->puntos_local : '0'}}</b>
