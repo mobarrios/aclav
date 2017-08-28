@@ -65,7 +65,7 @@
                         <th class="team-roster-table__number">Imagen</th>
                         <th class="team-roster-table__number">N°</th>
                         <th class="team-roster-table__name">Apellido y Nombre</th>
-                        <th class="team-roster-table__position hidden-xs hidden-sm">Posicion</th>
+                        <th class="team-roster-table__position">Posicion</th>
                         <th class="team-roster-table__age">Fecha Nac.</th>
                         <th class="team-roster-table__height">Altura</th>
                       </tr>
@@ -139,7 +139,7 @@
                         <th class="team-roster-table__number">Imagen</th>
                         <th class="team-roster-table__number">N°</th>
                         <th class="team-roster-table__name">Apellido y Nombre</th>
-                        <th class="team-roster-table__position hidden-xs hidden-sm">Posicion</th>
+                        <th class="team-roster-table__position">Posicion</th>
                         <th class="team-roster-table__age">Fecha Nac.</th>
                         <th class="team-roster-table__height">Altura</th>
                       </tr>

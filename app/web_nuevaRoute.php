@@ -11,7 +11,8 @@ Route::group(array('prefix' => 'web_nueva'), function()
     Route::get('posiciones/{id?}', array('as'=>'posiciones','uses'=>'NuevaWebController@posiciones'));
     Route::get('tribunal/{id}', array('as'=>'tribunal','uses'=>'NuevaWebController@tribunal'));
     Route::get('informacion/{id}', array('as'=>'informacion','uses'=>'NuevaWebController@informacion'));
-      
+    Route::get('temporadas', array('as'=>'temporadas','uses'=>'NuevaWebController@temporadas'));
+    Route::post('getTorneos', array('as'=>'getTorneos','uses'=>'NuevaWebController@getTorneos'));      
 
     //Equipos
     Route::get('participantes', array( 'as' => 'participantes' , 'uses' => 'NuevaWebController@participantes'));
