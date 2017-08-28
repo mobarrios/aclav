@@ -4,23 +4,16 @@
       <div class="container">
 
         <div class="row">
-          <!-- Content -->
           <div class="content col-md-8">
-
-            <!-- Posts List -->
-            <div class="posts posts--cards posts--cards-thumb-left post-list">
-              @foreach($model as $estadio)
-              <div class="alert alert-info">
-                <strong> <a href="{{ route('detalle_estadio',$estadio->id) }}">{{$estadio->nombre}}</a></strong> 
-              </div>
-
-              @endforeach
+            @foreach($model as $estadio)
+            <div class="card card--clean">
+              <header class="card__header card__header--has-btn">
+                <h4><a href="{{ route('detalle_estadio',$estadio->id) }}">{{$estadio->nombre}}</a></h4>
+              </header>
             </div>
-    
+            @endforeach
           </div>
-          
-           @include('web_nueva.template.sidebar')
-
+          @include('web_nueva.template.sidebar')
         </div>
 
      </div>
