@@ -147,10 +147,11 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
+                                  {{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}                                  
                                 </div>
                               </div>
                             </td>
+                            
                             <td class="team-leader__total"> {{ isset($s->BuenaFeStaff->Oficial->Funcion->funcion) ? $s->BuenaFeStaff->Oficial->Funcion->funcion : '' }}</td>                            
                           </tr>
                         @endforeach
@@ -224,7 +225,7 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}</h5>                                  
+                                  {{$s->BuenaFeStaff->Oficial->nombre}} {{$s->BuenaFeStaff->Oficial->apellido}}                                
                                 </div>
                               </div>
                             </td>

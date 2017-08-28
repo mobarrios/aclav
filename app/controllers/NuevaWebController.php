@@ -101,7 +101,7 @@ $legs = array();
 	}
 
 	public function formula($id){
-
+		$data['torneo'] 	= 	Torneos::find($id);
 		$data['sesion_formula'] = 1;
 		
 		return View::make('web_nueva.competencias.formula')->with($data);	
@@ -110,7 +110,7 @@ $legs = array();
 	public function posiciones($id){
 
 		$data['count']			= 	'1';
-		$data['torneos'] 		= 	Torneos::find($id);
+		$data['torneo'] 		= 	Torneos::find($id);
 		$data['fases'] 			= 	TorneoFase::where('torneo_id','=',$id)->get();
 		$data['sesion_posiciones'] = 1;
 		return View::make('web_nueva.competencias.posiciones')->with($data);	
@@ -118,7 +118,7 @@ $legs = array();
 
 	public function tribunal($id){
 		$temporada = Temporada::where('actual',1)->first();
-		
+		$data['torneo'] 	= 	Torneos::find($id);
 		$desde = date('Y-m-d',strtotime($temporada->fecha_inicio));
 		$hasta =date('Y-m-d',strtotime($temporada->fecha_final));
 		$data['sesion_tribunal'] = 1;
@@ -320,7 +320,7 @@ $legs = array();
 		
 		
 		$data['partido'] 		   = Partido::find($id);	
-		
+		$data['torneo'] = Torneos::find(Session::get('torneo_id'));
 		$data['jugadores_locales'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
 		$data['staff_local'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
 		$data['jugadores_visitantes'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id',$data['partido']->visita_equipo_id->id)->get();
