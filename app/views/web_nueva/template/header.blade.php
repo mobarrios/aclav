@@ -28,7 +28,7 @@
                       @endforeach
                     @endforeach
 
-                    <li><a href="{{route('calendario')}}">Temporadas Anteriores</a></li>
+                    <li><a href="{{route('temporadas')}}">Temporadas Anteriores</a></li>
 
                   </ul>
                 </li>

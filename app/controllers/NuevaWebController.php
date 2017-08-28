@@ -50,10 +50,37 @@ class NuevaWebController extends BaseController
 	*/
 
 	//Competencias
+	public function temporadas(){
+ 		$data['goleador']       =  Goleador::where('estado','=',1)->first();
+ 		$data['temporadas'] 	=  Temporada::all();
+ 		$data['series'] 		=  Series::all();
+ 		
+ 		$data['torneos']		=  Torneos::all();
+
+		return View::make('web_nueva.competencias.anteriores')->with($data);
+	}
+
+	public function getTorneos(){
+		$temporada_id = Input::get('temporada_id');
+		$serie_id     = Input::get('serie_id');
+		$torneos = Torneos::where('temporada_id', $temporada_id)->where('serie_id', $serie_id)->get();
+		return Response::json($torneos);
+		
+	}
+
 	public function calendario($id =  null , $legId = null)
 	{
-		$data['torneo'] 	= 	Torneos::find($id);
-		$data['fases']		=	TorneoFase::where('torneo_id','=', $id)->get();	
+		
+		if(Input::get('torneo_id')){
+			$data['torneo'] 	= 	Torneos::find(Input::get('torneo_id'));	
+			$data['fases']		=	TorneoFase::where('torneo_id','=', Input::get('torneo_id'))->get();	
+			Session::put('torneo_id', Input::get('torneo_id') );		
+		}else{
+			$data['torneo'] 	= 	Torneos::find($id);
+			$data['fases']		=	TorneoFase::where('torneo_id','=', Input::get('torneo_id'))->get();	
+			Session::put('torneo_id', $id );
+		}
+
 		$data['temporadas'] = 	Temporada::all();
 
 		$act = array();
@@ -75,7 +102,7 @@ class NuevaWebController extends BaseController
 		// //$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
 		// $data['leg_actual'] = $act;
 
-$legs = array();
+		$legs = array();
 
 		if($legId != null)
 		{
@@ -97,7 +124,7 @@ $legs = array();
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;
 
-		Session::put('torneo_id', $id );
+		
 		return View::make('web_nueva.competencias.calendario')->with($data);
 	}
 
