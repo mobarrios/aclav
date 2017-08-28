@@ -1089,7 +1089,6 @@ input.header-mobile__search-control:focus {
     border: 2px solid white;
     border-radius: 20px;
     padding: 11px;
-    
   }
   .main-nav .main-nav__back:hover {
     cursor: pointer;
