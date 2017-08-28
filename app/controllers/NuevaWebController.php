@@ -326,7 +326,7 @@ $legs = array();
 		$data['jugadores_visitantes'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id',$data['partido']->visita_equipo_id->id)->get();
 		$data['staff_visitante'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->visita_equipo_id->id)->get();
 
-		$data['torneo_fase'] = torneoFaseLegPartido::where('partido_id', $data['partido']->id)->get()->first();
+		$data['torneo_fase'] = TorneoFaseLegPartido::where('partido_id', $data['partido']->id)->get()->first();
 		$data['sesion_calendario'] = 1;
 		return View::make('web_nueva.competencias.informacion')->with($data);
 	}
