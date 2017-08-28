@@ -26,7 +26,7 @@
           <div class="widget-results__score">
             <p>
           
-            <span class="team-leader__total">{{isset($pxp->ventajaPorSet(1)['local'])? $pxp->ventajaPorSet(1)['local'] : '0'}} 
+{{--             <span class="team-leader__total">{{isset($pxp->ventajaPorSet(1)['local'])? $pxp->ventajaPorSet(1)['local'] : '0'}} 
             </span> - <span class="team-leader__total">{{isset($pxp->ventajaPorSet(1)['visita'])? $pxp->ventajaPorSet(1)['visita'] : '0'}}</span>
             </p>        
           </div>
@@ -40,7 +40,7 @@
             <p><span class="team-leader__total">{{isset($pxp->ventajaPorSet(4)['local'])? $pxp->ventajaPorSet(4)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->ventajaPorSet(4)['visita'])? $pxp->ventajaPorSet(4)['visita'] : '0'}}</span> </p>        
           </div>
           <div class="widget-results__score">
-            <p><span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['local'])? $pxp->ventajaPorSet(5)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['visita'])? $pxp->ventajaPorSet(5)['visita'] : '0'}}</span></p>         
+            <p><span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['local'])? $pxp->ventajaPorSet(5)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($pxp->ventajaPorSet(5)['visita'])? $pxp->ventajaPorSet(5)['visita'] : '0'}}</span></p>          --}}
           </div>
         </div>
         <div class="widget-results__team-logo">

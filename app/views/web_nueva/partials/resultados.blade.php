@@ -23,7 +23,7 @@
                 </div></center>
             </div>
             <div class="widget-results__result">
-                <div class="widget-results__score">
+                {{-- <div class="widget-results__score">
                   <p><span class="team-leader__total">{{isset($resultado->ventajaPorSet(1)['local'])? $resultado->ventajaPorSet(1)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($resultado->ventajaPorSet(1)['visita'])? $resultado->ventajaPorSet(1)['visita'] : '0'}}</span> </p>  
                 </div>
                 <div class="widget-results__score">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="widget-results__score">
                   <p><span class="team-leader__total">{{isset($resultado->ventajaPorSet(5)['local'])? $resultado->ventajaPorSet(5)['visita'] : '0'}}</span> - <span class="team-leader__total">{{isset($resultado->ventajaPorSet(5)['visita'])? $resultado->ventajaPorSet(5)['visita'] : '0'}}</span></p>
-                </div>
+                </div> --}}
             </div>
             <div class="widget-results__team-logo">
                 <center>
