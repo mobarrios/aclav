@@ -23,10 +23,7 @@
                 </div></center>
             </div>
             <div class="widget-results__result">
-<<<<<<< HEAD
-                {{-- <div class="widget-results__score">
-                  <p><span class="team-leader__total">{{isset($resultado->ventajaPorSet(1)['local'])? $resultado->ventajaPorSet(1)['local'] : '0'}}</span> - <span class="team-leader__total">{{isset($resultado->ventajaPorSet(1)['visita'])? $resultado->ventajaPorSet(1)['visita'] : '0'}}</span> </p>  
-=======
+
                 <div class="widget-results__score">
                   <p><span class="team-leader__total">
                   @if($resultado->puntoPorSet(1)->puntos_local > $resultado->puntoPorSet(1)->puntos_visita )
@@ -42,7 +39,6 @@
                   {{isset($resultado->puntoPorSet(1)->puntos_visita)? $resultado->puntoPorSet(1)->puntos_visita : '0'}}
                   @endif                  
                   </span> </p>  
->>>>>>> ad0193c2f6bc6fc5dc20891f8c976af2efcb8906
                 </div>
                 <div class="widget-results__score">
                   <p><span class="team-leader__total">
@@ -92,10 +88,7 @@
                   </span></p>
                 </div>
                 <div class="widget-results__score">
-<<<<<<< HEAD
-                  <p><span class="team-leader__total">{{isset($resultado->ventajaPorSet(5)['local'])? $resultado->ventajaPorSet(5)['visita'] : '0'}}</span> - <span class="team-leader__total">{{isset($resultado->ventajaPorSet(5)['visita'])? $resultado->ventajaPorSet(5)['visita'] : '0'}}</span></p>
-                </div> --}}
-=======
+
                   <p><span class="team-leader__total">
                   @if($resultado->puntoPorSet(5)->puntos_local > $resultado->puntoPorSet(5)->puntos_visita)
                   <b>{{isset($resultado->puntoPorSet(5)->puntos_local)? $resultado->puntoPorSet(5)->puntos_local : '0'}}</b>
@@ -110,7 +103,6 @@
                   @endif
                   </span></p>
                 </div>
->>>>>>> ad0193c2f6bc6fc5dc20891f8c976af2efcb8906
             </div>
             <div class="widget-results__team-logo">
                 <center>
