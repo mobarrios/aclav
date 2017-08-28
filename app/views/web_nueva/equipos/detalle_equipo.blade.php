@@ -72,7 +72,36 @@
   
                     </thead>
                     <tbody>
-                      @foreach($jugadores_actuales as $v)
+
+
+                    @foreach($jugadores as $k)
+                      @if($k->fecha_hasta == 'actual' && $k->borrado == 0)
+                        <tr>
+                          <td class="team-roster-table__number">
+                            <figure class="team-meta__logo">
+                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->Foto}}" alt=""></a>
+                            </figure>
+                          </td>
+                          <td class="team-roster-table__number">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->nro}}</font></a>
+                          </td> 
+                          <td class="team-roster-table__name">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a>
+                          </td>
+                          <td class="team-roster-table__position hidden-xs hidden-sm">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>
+                          </td>
+                          <td class="team-roster-table__age">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->fecha_nacimiento}}</font></a>
+                          </td>
+                          <td class="team-roster-table__height">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->altura}}</font></a>
+                          </td>  
+                        </tr>
+                      @endif
+                    @endforeach
+
+                      {{-- @foreach($jugadores_actuales as $v)
                       <tr>
                         <td class="team-roster-table__number"><figure class="team-meta__logo">
                               <a href="{{route('jugador',$v['jugador_id']['id'])}}"><img src="uploads/jugadores/{{$v['jugador_id']['foto']}}" alt=""></a>
@@ -87,7 +116,7 @@
                         <td class="team-roster-table__age"><a href="{{route('jugador',$v['jugador_id']['id'])}}"><font color="#000000">{{$v['jugador_id']['fecha_nacimiento']}}</font></a></td>
                         <td class="team-roster-table__height"><a href="{{route('jugador',$v['jugador_id']['id'])}}"><font color="#000000">{{$v['jugador_id']['altura']}}</font></a></td>
                       </tr>
-                    @endforeach
+                    @endforeach --}}
                     </tbody>
                   </table>
                 </div>
@@ -117,7 +146,36 @@
   
                   </thead>
                     <tbody>
-                       @foreach($jugadores_baja as $ex_jugador)
+
+                     @foreach($jugadores as $k)
+                      @if($k->fecha_hasta != 'actual' && $k->borrado == 0)
+                        <tr>
+                          <td class="team-roster-table__number">
+                            <figure class="team-meta__logo">
+                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->Foto}}" alt=""></a>
+                            </figure>
+                          </td>
+                          <td class="team-roster-table__number">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->nro}}</font></a>
+                          </td> 
+                          <td class="team-roster-table__name">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a><br>
+                             <label class="label label-default">hasta {{$k->fecha_hasta}}</label>
+                          </td>
+                          <td class="team-roster-table__position hidden-xs hidden-sm">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>
+                          </td>
+                          <td class="team-roster-table__age">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->fecha_nacimiento}}</font></a>
+                          </td>
+                          <td class="team-roster-table__height">
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->altura}}</font></a>
+                          </td>  
+                        </tr>
+                      @endif
+                    @endforeach
+
+                      {{--  @foreach($jugadores_baja as $ex_jugador)
                       <tr>
                         <td class="team-roster-table__number"><figure class="team-meta__logo">
                               <a href="{{route('jugador',$v['jugador_id']['id'])}}"><img src="uploads/jugadores/{{$ex_jugador['jugador_id']['foto']}}" alt=""></a>
@@ -132,7 +190,7 @@
                         <td class="team-roster-table__age"><a href="{{route('jugador',$v['jugador_id']['id'])}}"><font color="#000000">{{$ex_jugador['jugador_id']['fecha_nacimiento']}}</font></a></td>
                         <td class="team-roster-table__height"><a href="{{route('jugador',$v['jugador_id']['id'])}}"><font color="#000000">{{$ex_jugador['jugador_id']['altura']}}</font></a></td>
                       </tr>
-                      @endforeach
+                      @endforeach --}}
                  
                       
                     </tbody>
@@ -155,12 +213,30 @@
                         <th class="team-roster-table__number">Imagen</th>
                         <th class="team-roster-table__name">Apellido y Nombre</th>
                         <th class="team-roster-table__age">Funcion</th>
-
                       </tr>
-  
-          </thead>
+                   </thead>
                     <tbody>
-                        @foreach($staffs_actuales as $staff)
+
+                    @foreach($staffs as $k)
+                      @if($k->fecha_hasta == 'actual' && $k->borrado == 0)
+                        <tr>
+                          <td class="team-roster-table__number">
+                            <figure class="team-meta__logo">
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                            </figure>
+                          </td>
+                          <td class="team-roster-table__name">
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a>
+                          </td>
+                          <td class="team-roster-table__age">
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
+                          </td>
+                        </tr>
+                      @endif
+                    @endforeach
+
+
+                       {{--  @foreach($staffs_actuales as $staff)
                       <tr>
                         <td class="team-roster-table__number"><figure class="team-meta__logo">
                               <a href="{{route('detalle_staff',$staff['staff_id']['id'])}}"><font color="#000000"><img src="uploads/oficial/{{$staff['staff_id']['imagen']}}" alt=""></a>
@@ -172,7 +248,7 @@
                         </font></a></td>
                         <td class="team-roster-table__age"><a href="{{route('detalle_staff',$staff['staff_id']['id'])}}"><font color="#000000">{{$staff['buena_fe_staff']['funcion']->funcion}}</font></a></td>
                       </tr>
-                      @endforeach
+                      @endforeach --}}
                     </tbody>
                   </table>
                 </div>
@@ -196,7 +272,26 @@
                       </tr>  
                    </thead>
                     <tbody>
-                      @foreach($staffs_baja as $ex_staff)
+                     @foreach($staffs as $k)
+                      @if($k->fecha_hasta != 'actual' && $k->borrado == 0)
+                        <tr>
+                          <td class="team-roster-table__number">
+                            <figure class="team-meta__logo">
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                            </figure>
+                          </td>
+                          <td class="team-roster-table__name">
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a><br>
+                              <label class="label label-default">hasta {{$k->fecha_hasta}}</label>
+                          </td>
+                          <td class="team-roster-table__age">
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
+                          </td>
+                        </tr>
+                      @endif
+                    @endforeach
+
+                     {{--  @foreach($staffs_baja as $ex_staff)
                       <tr>
                         <td class="team-roster-table__number"><figure class="team-meta__logo">
                               <a href="{{route('detalle_staff',$staff['staff_id']['id'])}}"><font color="#000000"><img src="uploads/oficial/{{$ex_staff['staff_id']['imagen']}}" alt=""></a>
@@ -208,7 +303,7 @@
                         </font></a></td>
                         <td class="team-roster-table__age"><a href="{{route('detalle_staff',$staff['staff_id']['id'])}}"><font color="#000000">{{$ex_staff['buena_fe_staff']['funcion']->funcion}}</font></a></td>
                       </tr>
-                      @endforeach
+                      @endforeach --}}
                    
                       
                     </tbody>

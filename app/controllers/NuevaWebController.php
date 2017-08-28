@@ -162,8 +162,8 @@ $legs = array();
 		   $torneos    			=  Torneos::where('o2_web',1)->first();
 
 
-		   $data['jugadores']   =  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->get();
-		   $data['staffs']		=  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->get();
+		   $data['jugadores']   =  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFe;
+		   $data['staffs']		=  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFeStaff;
 
 
 		   
