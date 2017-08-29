@@ -71,13 +71,17 @@ class NuevaWebController extends BaseController
 	public function calendario($id =  null , $legId = null)
 	{
 		
-		if(Input::get('torneo_id')){
+		if(Input::get('torneo_id'))
+		{
 			$data['torneo'] 	= 	Torneos::find(Input::get('torneo_id'));	
 			$data['fases']		=	TorneoFase::where('torneo_id','=', Input::get('torneo_id'))->get();	
-			Session::put('torneo_id', Input::get('torneo_id') );		
-		}else{
+			Session::put('torneo_id', Input::get('torneo_id') );
+
+		}
+		else
+		{
 			$data['torneo'] 	= 	Torneos::find($id);
-			$data['fases']		=	TorneoFase::where('torneo_id','=', Input::get('torneo_id'))->get();	
+			$data['fases']		=	TorneoFase::where('torneo_id','=', $id)->get();	
 			Session::put('torneo_id', $id );
 		}
 
@@ -124,7 +128,6 @@ class NuevaWebController extends BaseController
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;
 
-		
 		return View::make('web_nueva.competencias.calendario')->with($data);
 	}
 
@@ -509,12 +512,14 @@ class NuevaWebController extends BaseController
 		return View::make('web_nueva.multimedia.galeria.galerias')->with($data);
 	}
 
-	public function detalle_galeria($id){
-		$data['models'] = GaleriaSub::where('galeria_id','=',$id)->orderBy('created_at','ASC')->paginate(4);
+	public function detalle_galeria($id)
+	{
+		$data['models'] = GaleriaSub::where('galeria_id','=',$id)->orderBy('created_at','DESC')->paginate(4);
 		return View::make('web_nueva.multimedia.galeria.detalle_galeria')->with($data);
 	}
 
-	public function album($id){
+	public function album($id)
+	{
 		$data['models'] = GaleriaImagenes::where('galeria_sub_id','=',$id)->orderBy('created_at','DESC')->paginate(8);
 		return View::make('web_nueva.multimedia.galeria.album')->with($data);
 	}

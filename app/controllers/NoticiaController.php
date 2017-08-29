@@ -54,6 +54,10 @@ class NoticiaController extends BaseController
 		$noti   = new Noticias();
 
 		$up 	= $this->up->up($input['imagen'] , $this->imgPath );
+		$up1	= $this->up->up($input['imagen_1'] , $this->imgPath );
+		$up2	= $this->up->up($input['imagen_2'] , $this->imgPath );
+		$up3 	= $this->up->up($input['imagen_3'] , $this->imgPath );
+		$up4 	= $this->up->up($input['imagen_4'] , $this->imgPath );
 
 
 		if($input['imagen'] != null)
@@ -69,9 +73,9 @@ class NoticiaController extends BaseController
 		}
 		if($input['imagen_1'] != null)
 		{
-			if($up != false)
+			if($up1 != false)
 			{
-				$input['imagen_1'] = $up;
+				$input['imagen_1'] = $up1;
 			}
 			else
 			{
@@ -80,9 +84,9 @@ class NoticiaController extends BaseController
 		}
 		if($input['imagen_2'] != null)
 		{
-			if($up != false)
+			if($up2 != false)
 			{
-				$input['imagen_2'] = $up;
+				$input['imagen_2'] = $up2;
 			}
 			else
 			{
@@ -91,9 +95,9 @@ class NoticiaController extends BaseController
 		}
 		if($input['imagen_3'] != null)
 		{
-			if($up != false)
+			if($up3 != false)
 			{
-				$input['imagen_3'] = $up;
+				$input['imagen_3'] = $up3;
 			}
 			else
 			{
@@ -102,15 +106,16 @@ class NoticiaController extends BaseController
 		}
 		if($input['imagen_4'] != null)
 		{
-			if($up != false)
+			if($up4 != false)
 			{
-				$input['imagen_4'] = $up;
+				$input['imagen_4'] = $up4;
 			}
 			else
 			{
 			   return Redirect::back()->with('danger','Error en el tamaño del  archivo')->withInput();
 			}
 		}
+
 		$noti->titulo = $input['titulo'];
 		$noti->fecha  = $input['fecha'];
 		$noti->copete = $input['copete'];
@@ -174,7 +179,6 @@ class NoticiaController extends BaseController
 
 		$id 		= Crypt::decrypt($id);
 		$noticia 	= Noticias::find($id);
-
 		$input  	= Input::all();
 
 		if($input['imagen'] != null)
@@ -184,8 +188,8 @@ class NoticiaController extends BaseController
 			if($up != false)
 			{
 				$this->up->del($noticia->imagen, $this->imgPath);
-
 				$input['imagen'] = $up;
+				$noticia->imagen = $input['imagen'];
 			}	
 		}else
 		{
@@ -199,8 +203,8 @@ class NoticiaController extends BaseController
 			if($up != false)
 			{
 				$this->up->del($noticia->imagen, $this->imgPath);
-
 				$input['imagen_1'] = $up;
+				$noticia->imagen_1 = $input['imagen_1'];
 			}	
 		}else
 		{
@@ -214,8 +218,8 @@ class NoticiaController extends BaseController
 			if($up != false)
 			{
 				$this->up->del($noticia->imagen, $this->imgPath);
-
 				$input['imagen_2'] = $up;
+				$noticia->imagen_2 = $input['imagen_2'];
 			}	
 		}else
 		{
@@ -228,8 +232,8 @@ class NoticiaController extends BaseController
 			if($up != false)
 			{
 				$this->up->del($noticia->imagen, $this->imgPath);
-
 				$input['imagen_3'] = $up;
+				$noticia->imagen_3 = $input['imagen_3'];
 			}	
 		}else
 		{
@@ -242,8 +246,8 @@ class NoticiaController extends BaseController
 			if($up != false)
 			{
 				$this->up->del($noticia->imagen, $this->imgPath);
-
 				$input['imagen_4'] = $up;
+				$noticia->imagen_4 = $input['imagen_4'];
 			}	
 		}else
 		{
@@ -263,11 +267,13 @@ class NoticiaController extends BaseController
 		$noticia->copete = $input['copete'];
 		$noticia->cuerpo = $input['cuerpo'];
 		$noticia->fuente = $input['fuente']; 
-		$noticia->imagen = $input['imagen'];
-		$noti->imagen_1 = $input['imagen_1'];
-				$noti->imagen_2 = $input['imagen_2'];
-				$noti->imagen_3 = $input['imagen_3'];
-				$noti->imagen_4 = $input['imagen_4'];
+				
+				//$noticia->imagen = $input['imagen'];
+				//$noticia->imagen_1 = $input['imagen_1'];
+				//$noticia->imagen_2 = $input['imagen_2'];
+				//$noticia->imagen_3 = $input['imagen_3'];
+				//$noticia->imagen_4 = $input['imagen_4'];
+
 		$noticia->estado = $input['estado'];
 		$noticia->web_noticia 	= Input::has('web_noticia') ? true : false ;
 		$noticia->web_accion 	= Input::has('web_accion') ? true : false ;

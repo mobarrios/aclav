@@ -9,7 +9,7 @@
 
           <!-- Content -->
           <div class="content col-md-8">
-      {{ Form::open(['route' => 'calendario', 'method' => 'GET'])}}      
+      {{ Form::open(array('route' => 'calendario', 'method' => 'GET'))}}      
       <div class="card card--has-table">
           <div class="card__header card__header--has-btn">
             <h4>Seleccione Temporada</h4>
@@ -19,7 +19,7 @@
                 <select class="form-control input-xs temporada_id">
                   <option >TEMPORADA</option>
                   @foreach($temporadas as $temporada)
-                  <option value="{{$temporada->id}}">Temporada {{$temporada->nombre_temporada}}</option>
+                  <option value="{{$temporada->id}}">{{$temporada->nombre_temporada}}</option>
                   @endforeach 
                 </select>
               </li>

@@ -32,12 +32,33 @@
 				@foreach($model as $models)
 
 					<tr>
-						<td>
-							<div>
+						<td class='col-xs-5'>
+							<div class='col-xs-2'>
 								<a href="uploads/contenidos/noticias/{{$models->imagen}}" class="thumbnail">
 									<img src="uploads/contenidos/noticias/{{$models->imagen}}" width="50" height="50" >
 								</a>
+							</div>	
+							<div class='col-xs-2'>
+								<a href="uploads/contenidos/noticias/{{$models->imagen_1}}" class="thumbnail">
+									<img src="uploads/contenidos/noticias/{{$models->imagen_1}}" width="50" height="50" >
+								</a>
 							</div>
+							<div class='col-xs-2'>
+								<a href="uploads/contenidos/noticias/{{$models->imagen_2}}" class="thumbnail">
+									<img src="uploads/contenidos/noticias/{{$models->imagen_2}}" width="50" height="50" >
+								</a>
+							</div>	
+							<div class='col-xs-2'>
+								<a href="uploads/contenidos/noticias/{{$models->imagen_3}}" class="thumbnail">
+									<img src="uploads/contenidos/noticias/{{$models->imagen_3}}" width="50" height="50" >
+								</a>
+							</div>
+							<div class='col-xs-2'>
+								<a href="uploads/contenidos/noticias/{{$models->imagen_4}}" class="thumbnail">
+									<img src="uploads/contenidos/noticias/{{$models->imagen_4}}" width="50" height="50" >
+								</a>
+							</div>
+							
 						</td>
 						<td>
 							{{$models->created_at}}

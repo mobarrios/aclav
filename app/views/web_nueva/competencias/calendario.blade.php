@@ -36,7 +36,7 @@
             <div class="card1">              
               <div>                
                 <center>
-                    <a href="#" class="btn btn-default1 btn-outline btn-xs card-header__button">
+                    <a href="{{route('calendario',$torneo->id)}}" class="btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
 
@@ -56,7 +56,7 @@
               @foreach($fases as $fase )
                 <div class="card1 weeks card{{$fase->id}}" style="display: none;">  
                 <center>
-                    <a href="#" class="btn btn-default1 btn-outline btn-xs card-header__button">
+                    <a href="{{route('calendario',$torneo->id)}}" class="btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
                       @foreach($fase->leg as $leg)            
@@ -73,7 +73,7 @@
             <!-- comienzo Encabezado por equipos -->
             <div class="card">                             
               <center>
-                    <a href="#" class="btn btn-default2 btn-outline btn-xs card-header__button">
+                    <a href="#" class="allTeams btn btn-default2 btn-outline btn-xs card-header__button">
                       </font><i class="fa fa-bars"></i>
                     </a>  
                   @foreach($torneo->Equipo as $equipo)
@@ -194,6 +194,17 @@
 
 <script type="text/javascript">
 
+    $('.allTeams').on('click',function(ev)
+    {
+      ev.preventDefault();
+      
+        $('.partido').each(function()
+        {
+                $(this).show();
+        }); 
+
+    });
+
     $('.equipo').on('click',function(){
         var id = $(this).attr('equipo-id');
 
@@ -201,16 +212,12 @@
 
         $('.partido').each(function()
         {
-
             if($(this).attr('local-id') == id )
                 $(this).show();
             
             if($(this).attr('visita-id') == id )
                 $(this).show();
         }); 
-
-
-
      });
 
      $('html, body').animate({
