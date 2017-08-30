@@ -15,7 +15,7 @@
             <!-- Game Scoreboard -->
             <div class="card">
               <header class="card__header card__header--has-btn">
-                <h4><p>Copa Aclav</p></h4>
+                <h4><p>Copa Aclav - {{$torneo->nombre_torneo}}</p></h4>
                 
               </header>
               <div class="card__content">

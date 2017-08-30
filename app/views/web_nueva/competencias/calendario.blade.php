@@ -17,7 +17,8 @@
             <div class="card1 card--clean">
               <header class="card__header card__header--shop-filter">
                 <div class="shop-filter">
-                  <h4 class="shop-filter__result">Calendario y Resultados -  <h4 class="text-center">{{$torneo->nombre_torneo}}</h4></h4>
+                  <h4 class="shop-filter__result">Calendario y Resultados - {{$torneo->nombre_torneo}} </h4>
+                 
                   {{-- <ul class="shop-filter__params">
                     <li class="shop-filter__control">
                       <select class="form-control input-sm">

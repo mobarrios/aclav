@@ -12,7 +12,7 @@
         @if($fase->tipo_fase_id == 1)
         <div class="card card--has-table">
           <div class="card__header">
-            <h4>{{$fase->nombre}}</h4>
+            <h4>{{$fase->nombre}} - {{$torneo->nombre_torneo}}</h4>
           </div>
           <div class="card__content">
             <div class="table-responsive">

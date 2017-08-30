@@ -79,7 +79,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->Foto}}" alt=""></a>
+                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->foto}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__number">
@@ -88,7 +88,7 @@
                           <td class="team-roster-table__name">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a>
                           </td>
-                          <td class="team-roster-table__position hidden-xs hidden-sm">
+                          <td class="team-roster-table__position">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>
                           </td>
                           <td class="team-roster-table__age">
@@ -152,7 +152,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->Foto}}" alt=""></a>
+                              <a href="{{route('jugador',$k->Jugador->id)}}"><img src="uploads/jugadores/{{$k->Jugador->foto}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__number">
@@ -162,7 +162,7 @@
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a><br>
                              <label class="label label-default">hasta {{$k->fecha_hasta}}</label>
                           </td>
-                          <td class="team-roster-table__position hidden-xs hidden-sm">
+                          <td class="team-roster-table__position">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>
                           </td>
                           <td class="team-roster-table__age">
@@ -222,7 +222,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->foto}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__name">
@@ -277,7 +277,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->foto}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__name">
