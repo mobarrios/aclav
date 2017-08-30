@@ -19,9 +19,10 @@
                   <div class="posts__inner">
                     <div class="card__content">
                       <h6 class="posts__title"><a href="{{route('detalle_noticias',$social->id)}}"><p>{{$social->titulo}}</p></a></h6>
-                      <time datetime="2016-08-18" class="posts__date">{{$social->fecha}}</time>
-                      <div class="posts__excerpt">
+                      <time datetime="2016-08-18" class="posts__date"><p>{{$social->fecha}}</p></time>
+                      <div class="posts__excerpt"><p>
                        {{$social->copete}}
+                       </p>
                       </div>
                     </div>
                   </div>
