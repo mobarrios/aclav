@@ -25,10 +25,10 @@
                   <div class="widget-game-result__main">                        
                         <div class="widget-game-result__team widget-game-result__team--first">
                             <figure class="widget-game-result__team-logo">
-                              <img src="uploads/escudos/{{$partido->local_equipo_id->escudo}}" alt="">
+                              <img src="uploads/escudos/{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo : '' }}" alt="">
                             </figure>
                         <div class="widget-game-result__team-info">
-                              <h2 class="game-result__date"><font size="2"><p>{{$partido->local_equipo_id->nombre}}</p></font></h2>
+                              <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo: ''  }}</p></font></h2>
                         </div>
                   </div>
                   <!-- fin primer Equipo -->                
@@ -45,10 +45,10 @@
                   <!-- comienzo segundo Equipo -->
                   <div class="widget-game-result__team widget-game-result__team--first">
                         <figure class="widget-game-result__team-logo">
-                          <img src="uploads/escudos/{{$partido->visita_equipo_id->escudo}}" alt="">
+                          <img src="uploads/escudos/{{ isset($partido->visita_equipo_id->escudo) ? $partido->visita_equipo_id->escudo: '' }}" alt="">
                         </figure>
                         <div class="widget-game-result__team-info">
-                            <h2 class="game-result__date"><font size="2"><p>{{$partido->visita_equipo_id->nombre}}</p></font></h2>
+                            <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->visita_equipo_id->nombre) ? $partido->visita_equipo_id->nombre : ''}}</p></font></h2>
                         </div>
                   </div>
                   <!-- fin segundo Equipo -->
@@ -71,10 +71,10 @@
               <div class="glossary__item"><span class="glossary__abbr">Etapa:</span> {{$torneo_fase->TorneoFaseLeg->nombre}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Fecha:</span> {{$partido->fecha_inicio}} </div>
               <div class="glossary__item"><span class="glossary__abbr">Hora:</span> {{$partido->hora}} hs</div>
-              <div class="glossary__item"><span class="glossary__abbr">N° de Partido:</span> {{$partido->numero_partido}}</div>
-              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> {{ isset($partido->Arbitro1->nombre) ? $partido->Arbitro1->nombre : '' }} , {{ isset($partido->Arbitro1->apellido) ? $partido->Arbitro1->apellido : '' }}
+              <div class="glossary__item"><span class="glossary__abbr">Partido N°:</span> {{$partido->numero_partido}}</div>
+              <div class="glossary__item"><span class="glossary__abbr">1º Arbitro:</span> {{ isset($partido->Arbitro1->nombre) ? $partido->Arbitro1->nombre : '' }} {{ isset($partido->Arbitro1->apellido) ? $partido->Arbitro1->apellido : '' }}
                </div>
-              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{ isset($partido->Arbitro2->nombre) ? $partido->Arbitro2->nombre : '' }} , {{ isset($partido->Arbitro2->apellido) ? $partido->Arbitro2->apellido : '' }}</div>
+              <div class="glossary__item"><span class="glossary__abbr">2º Arbitro:</span> {{ isset($partido->Arbitro2->nombre) ? $partido->Arbitro2->nombre : '' }} {{ isset($partido->Arbitro2->apellido) ? $partido->Arbitro2->apellido : '' }}</div>
               <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
               
               <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> 
@@ -96,7 +96,7 @@
                 <!-- Widget: Team Leaders -->
                 <aside class="widget widget--sidebar card card--has-table widget-leaders">
                   <div class="widget__title card__header">
-                    <h4>{{$partido->local_equipo_id->nombre}}</h4>
+                    <h4>{{isset($partido->local_equipo_id->nombre) ? $partido->local_equipo_id->nombre : '' }}</h4>
                   </div>
                   <div class="widget__content card__content">
                     
@@ -111,12 +111,13 @@
                           </tr>
                         </thead>
                         <tbody>
+                        @if(isset($jugadores_locales))
                         @foreach($jugadores_locales as $j)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{$j->BuenaFe->nro}}</h5>                                  
+                                  {{$j->BuenaFe->nro}}                              
                                 </div>
                               </div>
                             </td>
@@ -124,6 +125,7 @@
                             <td class="team-leader__gp">{{$j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
                           </tr>
                         @endforeach  
+                        @endif
                         </tbody>
                       </table>
                     </div>
@@ -142,6 +144,7 @@
                           </tr>
                         </thead>
                         <tbody>
+                        @if(isset($staff_local))
                         @foreach($staff_local as $s)
                           <tr>
                             <td class="team-leader__player">
@@ -155,6 +158,7 @@
                             <td class="team-leader__total"> {{ isset($s->BuenaFeStaff->Oficial->Funcion->funcion) ? $s->BuenaFeStaff->Oficial->Funcion->funcion : '' }}</td>                            
                           </tr>
                         @endforeach
+                        @endif
                         </tbody>
                       </table>
                     </div>
@@ -173,7 +177,7 @@
                 <!-- Widget: Team Leaders -->
                 <aside class="widget widget--sidebar card card--has-table widget-leaders">
                   <div class="widget__title card__header">
-                    <h4>{{$partido->visita_equipo_id->nombre}}</h4>
+                    <h4>{{ isset($partido->visita_equipo_id->nombre) ? $partido->visita_equipo_id->nombre : '' }}</h4>
                   </div>
                   <div class="widget__content card__content">
                 
@@ -188,12 +192,13 @@
                           </tr>
                         </thead>
                         <tbody>
+                         @if(isset($jugadores_visitantes))
                           @foreach($jugadores_visitantes as $j)
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  <h5 class="team-leader__player-name">{{ $j->BuenaFe->nro}} </h5>                                  
+                                  {{ $j->BuenaFe->nro}}                                 
                                 </div>
                               </div>
                             </td>
@@ -201,6 +206,7 @@
                             <td class="team-leader__gp">{{ $j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
                           </tr>
                            @endforeach 
+                           @endif
                                              
                         </tbody>
                       </table>
@@ -220,6 +226,7 @@
                           </tr>
                         </thead>
                         <tbody>
+                        @if(isset($staff_visitante))
                          @foreach($staff_visitante as $s)
                           <tr>
                             <td class="team-leader__player">
@@ -232,6 +239,7 @@
                             <td class="team-leader__total">{{ isset($s->BuenaFeStaff->Oficial->Funcion->funcion) ? $s->BuenaFeStaff->Oficial->Funcion->funcion : '' }}</td>                            
                           </tr>
                           @endforeach
+                          @endif
                         </tbody>
                       </table>
                     </div>

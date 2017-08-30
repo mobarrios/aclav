@@ -127,7 +127,7 @@
                                         @endif
 
                                         <span style="font-weight:100;color:#CD3243"> | </span>  
-                                        <a href="javascript:void(0)" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
                                         <a href="{{route('porequipo')}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                                 </div>
@@ -150,7 +150,7 @@
 
                                          </span>  
                                         <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
-                                        <a href="{{route('porequipo')}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                               </div>
                               @endif
