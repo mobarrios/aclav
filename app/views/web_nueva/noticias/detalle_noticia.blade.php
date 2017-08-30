@@ -55,11 +55,11 @@
                           <h6>@foreach($model->club as $club)
                           <img src="uploads/escudos/{{$club->escudo}}" width="40">
                           @endforeach</h6>
-                  </div><br>
-                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i> {{$model->fecha}}</font>
+                  </div>
+                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i><p> {{$model->fecha}}</p></font>
                                     
 				        </header>
-
+<br>
                 <div class="post__content">
                   {{$model->cuerpo}}
                 </div><br>

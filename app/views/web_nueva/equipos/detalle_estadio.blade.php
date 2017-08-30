@@ -9,7 +9,7 @@
 
             <div class="posts__item card posts__item--category-2">
                 <div class="posts__inner card__content">
-                  <h5 class="posts__title">{{$models->nombre}}</h5>
+                  <h5 class="posts__title"><p>{{$models->nombre}}</p></h5>
                 </div>
             </div>
 
@@ -18,11 +18,11 @@
               <li class="posts__item card posts__item--category-2">
                 <div class="posts__inner card__content">
                   
-                  <p><h6 class="posts__title">Direccion: {{$models->direccion}}</h6><p>
-                  <p><h6 class="posts__title">Ciudad: {{$models->ciudad}}</h6><p>
-                  <p><h6 class="posts__title">Provincia: {{$models->provincia}}</h6><p>
-                  <p><h6 class="posts__title">Telefono: {{$models->telefono}}</h6><p>
-                  <p><h6 class="posts__title">Capacidad: {{$models->capacidad}}</h6>
+                  <h6 class="posts__title"><p>Direccion: {{$models->direccion}}</p></h6>
+                  <h6 class="posts__title"><p>Ciudad: {{$models->ciudad}}</p></h6>
+                  <h6 class="posts__title"><p>Provincia: {{$models->provincia}}</h6>
+                  <h6 class="posts__title"><p>Telefono: {{$models->telefono}}</p></h6>
+                  <h6 class="posts__title"><p>Capacidad: {{$models->capacidad}}</p></h6>
 
                 </div>
               </li>
@@ -32,7 +32,7 @@
               </li>
               <li class="posts__item card posts__item--category-1">
                 <div class="posts__inner card__content">
-                  <h6 class="posts__title"><a href="#">Imagenes del Estadio</a></h6>
+                  <h6 class="posts__title"><a href="#"><p>Imagenes del Estadio</a></p></h6>
                   <div class="posts__excerpt">
                     <div class="album__item col-xs-6 col-sm-4">
 			            <center><div class="album__item-holder">
