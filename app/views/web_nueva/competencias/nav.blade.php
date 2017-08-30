@@ -1,4 +1,4 @@
-  <h3 class="text-center">{{$torneo->nombre_torneo}}</h3>
+
   <nav class="content-filter">
     <div class="container">
     <a href="#" class="content-filter__toggle"></a>
