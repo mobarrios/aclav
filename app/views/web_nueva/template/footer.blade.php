@@ -62,7 +62,7 @@
                   <div class="widget widget--footer widget-instagram">                    
                     <div class="widget__content">                      
                       <div class="footer-copyright"><a href="mailto:info@aclav.com"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; info@aclav.com</a></div>
-                      <div class="footer-copyright"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +54 9 11 4783-5010</div>
+                      <div class="footer-copyright"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +54 11 4783-5010</div>
                     </div>
                   </div>                                  
                 </div>

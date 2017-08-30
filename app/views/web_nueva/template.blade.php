@@ -84,10 +84,11 @@
       <a id="header-mobile__toggle" class="burger-menu-icon"><span class="burger-menu-icon__line"></span></a>
        </div>
       <div class="header-mobile__logo">
-        <a href="{{route('inicio')}}"><img src="assets/webnueva/images/logo.png" srcset="assets/webnueva/images/logo@2x.png 2x" alt="ACLAV" class="header-mobile__logo-img"></a>
+        <a href="{{route('inicio')}}"><img src="assets/images/logo.png" srcset="assets/images/logo.png 2x" alt="ACLAV" class="header-mobile__logo-img"></a>
         
       </div>
     </div>
+
   
     <!-- Header Desktop -->
     @include('web_nueva.template.header')
