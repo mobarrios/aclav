@@ -98,7 +98,6 @@ siguientes datos: temporada, serie, nombre del equipo donde jugó, nº de camise
 el que jugó, nacionalidad (la sigla de 3 letras), notas (para poner “desde” o
 “hasta” si se incorporó al equipo luego de presentado el O2 o si lo dieron de baja
 antes de finalizar la temporada). Adjunto un par de capturas como ejemplo</h4></td>
-                        
                       </tr>
                     </tbody>
                   </table>
