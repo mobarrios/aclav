@@ -6,10 +6,13 @@
             @foreach($banner_superior as $banner)
 
             <aside class="widget widget--sidebar card widget-popular-posts">
-              <!-- <div class="widget__title card__header">-->
-             <a href="{{$banner->url}}" target="_blank"><h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4></a>
-              <!-- </div>-->
+              <div class="widget__title card__header">
+             <a href="{{$banner->url}}" target="_blank"><img src="uploads/contenidos/banner/{{$banner->imagen}}"></a>
+              </div>
             </aside>
+
+
+
             @endforeach
           
             <!-- Widget: Standings -->
@@ -75,9 +78,9 @@
             ?>
             @foreach($banner_medio as $banner)
             <aside class="widget widget--sidebar card widget-popular-posts">
-              <!-- <div class="widget__title card__header"> -->
-                <a href="{{$banner->url}}" target="_blank"><h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4></a>
-             <!--  </div> -->
+              <div class="widget__title card__header">
+                <a href="{{$banner->url}}" target="_blank"><img src="uploads/contenidos/banner/{{$banner->imagen}}"></a>
+             </div>
             </aside>
             @endforeach
 
@@ -110,9 +113,9 @@
             ?>
             @foreach($banner_inferior as $banner)
             <aside class="widget widget--sidebar card widget-popular-posts">
-              <!--  <div class="widget__title card__header"> -->
-               <a href="{{$banner->url}}" target="_blank"> <h4><img src="uploads/contenidos/banner/{{$banner->imagen}}"></h4></a>
-              <!-- </div> -->
+              <div class="widget__title card__header"> 
+               <a href="{{$banner->url}}" target="_blank"><img src="uploads/contenidos/banner/{{$banner->imagen}}"></a>
+              </div> 
             </aside>
             @endforeach
             
