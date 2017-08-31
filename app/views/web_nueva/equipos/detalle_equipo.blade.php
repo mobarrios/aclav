@@ -222,7 +222,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->imagen}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__name">
@@ -277,7 +277,7 @@
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
-                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->Foto}}" alt=""></a>
+                              <a href="{{route('detalle_staff',$k->Oficial->id)}}"><img src="uploads/jugadores/{{$k->Oficial->imagen}}" alt=""></a>
                             </figure>
                           </td>
                           <td class="team-roster-table__name">
