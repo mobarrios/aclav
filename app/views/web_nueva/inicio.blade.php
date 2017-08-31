@@ -33,7 +33,7 @@
     </header>
     <div class="pushy-panel__content">
 
-
+      
       <!-- Widget: Banner -->
       <aside class="widget widget--side-panel widget-banner">
         <div class="widget__content">
