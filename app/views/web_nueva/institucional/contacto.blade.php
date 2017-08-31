@@ -42,11 +42,10 @@
 
               <div class="col-md-8">
                 <!-- Contact Form -->
-
-                <div class="card__content1">                
+               
                   <!-- comienzo titulos -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13143.411233036815!2d-58.45267499999999!3d-34.557282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5cca3cde53f%3A0x784b4e50df27f094!2sEcheverr%C3%ADa+1444%2C+C1428DQS+CABA%2C+Argentina!5e0!3m2!1ses!2sar!4v1496851092604" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>  
-        </div>
+        
 
                 <!-- Contact Form / End -->
               </div>
