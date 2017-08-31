@@ -37,14 +37,13 @@
             <div class="card1">              
               <div>                
                 <center>
-                    <a href="{{route('calendario',$torneo->id)}}" class="btn btn-default1 btn-outline btn-xs card-header__button">
+                    <a href="#" class="allFases btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
 
                       @foreach($fases as  $fase)
-                        
                         <label  class="fase btn btn-default1 btn-outline btn-xs card-header__button" data-id="{{$fase->id}}">{{$fase->nombre}}</label>
-                        
+                      
                       @endforeach
                   
                 </center>       
@@ -57,7 +56,7 @@
               @foreach($fases as $fase )
                 <div class="card1 weeks card{{$fase->id}}" style="display: none;">  
                 <center>
-                    <a href="{{route('calendario',$torneo->id)}}" class="btn btn-default1 btn-outline btn-xs card-header__button">
+                    <a href="#" class="allLegs btn btn-default1 btn-outline btn-xs card-header__button">
                     </font><i class="fa fa-bars"></i>
                     </a>   
                       @foreach($fase->leg as $leg)            
@@ -77,13 +76,15 @@
                     <a href="#" class="allTeams btn btn-default2 btn-outline btn-xs card-header__button">
                       </font><i class="fa fa-bars"></i>
                     </a>  
-                  @foreach($torneo->Equipo as $equipo)
-                      <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
-                        <figure class="widget-game-result__team-logo">
-                          <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}">
-                        </figure>
-                      </a>
-                  @endforeach
+                    @foreach($torneo->Equipo as $equipo)
+                      @if($equipo->id != 15)
+                        <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
+                          <figure class="widget-game-result__team-logo">
+                            <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}">
+                          </figure>
+                        </a>
+                      @endif
+                    @endforeach
               </center>                                   
             </div> 
             <!-- fin Encabezado por equipos -->
@@ -217,7 +218,6 @@ var teams_id = 0;
             if($(this).attr('leg-id') == id )
                   $(this).show();
           });
-
     });
 
     // muestra las fases especifica
@@ -246,9 +246,34 @@ var teams_id = 0;
       
         $('.partido').each(function()
         {
-           $(this).show();
+          if($(this).attr('fase-id') == fase_id && $(this).attr('leg-id') == leg_id)
+            $(this).show();
         }); 
 
+    });
+
+    //muestra todos las fases
+    $('.allFases').on('click',function(ev)
+    {
+        ev.preventDefault();
+
+        $('.weeks').css("display","none");
+
+         $('.partido').each(function()
+        {
+           $(this).show();
+        }); 
+    });
+
+    //muestra todos los legs
+    $('.allLegs').on('click',function(ev)
+    {   ev.preventDefault();
+
+         $('.partido').each(function()
+        {
+          if(fase_id == $(this).attr('fase-id'))
+              $(this).show();
+        }); 
     });
 
     //filtra equipos
@@ -256,15 +281,22 @@ var teams_id = 0;
         var id = $(this).attr('equipo-id');
         //teams_id = id;
 
-        $('.partido').hide();
+       // $('.partido').hide();
 
         $('.partido').each(function()
         {
-              if(fase_id == $(this).attr('fase-id') && leg_id == $(this).attr('leg-id') && $(this).attr('local-id') == id )
-                  $(this).show();
+
+          if($(this).css('display') == 'block' )
+            {
+              console.log($(this).attr('local-id'));
+                            console.log(id);
+
+              if($(this).attr('local-id') != id  &&  $(this).attr('visita-id') != id )
+                  $(this).hide();
               
-              if(fase_id == $(this).attr('fase-id') && leg_id == $(this).attr('leg-id') && $(this).attr('visita-id') == id )
-                  $(this).show();          
+              //if($(this).attr('visita-id') != id )
+                //  $(this).hide();  
+            }         
         }); 
      });
 
@@ -272,6 +304,9 @@ var teams_id = 0;
      $('html, body').animate({
         scrollTop: $("#today").offset().top
     }, 2000);
+
+
+
 
 
 </script>
