@@ -19,7 +19,7 @@
             <!-- Main Navigation -->
             <nav class="main-nav clearfix">
               <ul class="main-nav__list">
-                <li class=""><a href="#">Competencias</a>
+                <li class=""><a href="javascript:void(0)">Competencias</a>
                   <ul class="main-nav__sub">
                     @foreach(Temporada::with('Torneos')->where('actual','=',1)->get() as $temporada)
                   
@@ -32,7 +32,7 @@
 
                   </ul>
                 </li>
-                <li class=""><a href="#">Equipos</a>
+                <li class=""><a href="javascript:void(0)">Equipos</a>
                   <ul class="main-nav__sub">
                     <li><a href="{{route('participantes')}}">Participantes</a></li>
                     <li><a href="{{route('estadios')}}">Estadios</a></li>
@@ -40,7 +40,7 @@
                 </li>
                 <li class=""><a href="{{route('jugadores')}}">Estadisticas</a></li>
 
-                <li class=""><a href="#">Noticias</a>
+                <li class=""><a href="javascript:void(0)">Noticias</a>
                   <ul class="main-nav__sub">
                     <li><a href="{{route('noticias')}}">Noticias</a></li>
                     <li><a href="{{route('entrevistas')}}">Entrevistas</a></li>
@@ -49,14 +49,14 @@
                     </ul>
                 </li>
                 
-                <li class=""><a href="#">Multimedia</a>
+                <li class=""><a href="javascript:void(0)">Multimedia</a>
                   <ul class="main-nav__sub">
                     <li><a href="{{route('galeria')}}">Fotogalerias</a></li>
                     <li><a href="{{route('descargas')}}">Descargas</a></li>
                     <li><a href="{{route('videos')}}">Videos</a></li>                  
                     </ul>
                 </li>
-                <li class=""><a href="#">Institucional</a>
+                <li class=""><a href="javascript:void(0)">Institucional</a>
                   <ul class="main-nav__sub">
                     <li><a href="{{route('historia')}}">Historia</a></li>
                     <li><a href="{{route('autoridades')}}">Autoridades ACLAV</a></li>
