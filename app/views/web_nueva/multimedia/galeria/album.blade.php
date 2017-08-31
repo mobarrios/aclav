@@ -7,7 +7,8 @@
         <div class="gallery row">
 
           @foreach($models as $imagen)
-          <div class="gallery__item col-xs-6 col-sm-3" style="height: 280px;">
+          <!-- style="height: 280px;" -->
+          <div class="gallery__item col-xs-6 col-sm-3">
             <a href="uploads/contenidos/galeria/{{$imagen->GaleriaSub->Galeria->id}}/{{$imagen->GaleriaSub->id}}/{{$imagen->imagen}}" class="album__item-link mp_gallery">
               <figure class="gallery__thumb">
                 <img src="uploads/contenidos/galeria/{{$imagen->GaleriaSub->Galeria->id}}/{{$imagen->GaleriaSub->id}}/{{$imagen->imagen}}" alt="">
