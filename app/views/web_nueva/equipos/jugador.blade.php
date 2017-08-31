@@ -48,59 +48,74 @@
                       <tr>
                         
                         <td class="team-roster-table__number">Posición: </td>    
-                        <td class="team-roster-table__name"><h4>{{$models->Posicion($models->posicion)}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->Posicion($models->posicion)}}</p></h5></td>
                         
                         
                       </tr>
                       <tr>
                         
                         <td class="team-roster-table__number">Fecha Nac.:</td> 
-                        <td class="team-roster-table__name"><h4>{{$models->fecha_nacimiento}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->fecha_nacimiento}}</p></h5></td>
                        
                       </tr>
-                      <tr>
-                        
-                        <td class="team-roster-table__number">Nacionalidad:</td> 
-                        <td class="team-roster-table__name">Argentino</td>
-                       
-                      </tr>
+                      
                       <tr>
                         
                         <td class="team-roster-table__number">Altura:</td> 
-                        <td class="team-roster-table__name"><h4>{{$models->altura}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->altura}}</p></h5></td>
                         
                       </tr>
                       <tr>
                        
                         <td class="team-roster-table__number">Peso:</td> 
-                        <td class="team-roster-table__name"><h4>{{$models->peso}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->peso}}</p></h5></td>
                       
                       </tr>
                       <tr>
                         
                         <td class="team-roster-table__number">Alcance Ataque:</td> 
-                        <td class="team-roster-table__name"><h4>{{$models->alcance_ataque}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->alcance_ataque}}</p></h5></td>
                         
                       </tr>
                       <tr>
                         
                         <td class="team-roster-table__number">Alcance Bloqueo:</td> 
-                        <td class="team-roster-table__name"><h4>{{$models->alcance_bloqueo}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->alcance_bloqueo}}</p></h5></td>
                         
                       </tr>
                       
                       <tr>
                         
                         <td class="team-roster-table__number">Carrera:</td> 
-                        <td class="team-roster-table__name"><h4>equipos donde jugó en temporadas anteriores. Podemos ya poner lo
-que figura en el sistema. Habría que hacer una tabla con columnas para poner los
-siguientes datos: temporada, serie, nombre del equipo donde jugó, nº de camiseta con
-el que jugó, nacionalidad (la sigla de 3 letras), notas (para poner “desde” o
-“hasta” si se incorporó al equipo luego de presentado el O2 o si lo dieron de baja
-antes de finalizar la temporada). Adjunto un par de capturas como ejemplo</h4></td>
-                      </tr>
+                        
                     </tbody>
                   </table>
+                  <div class="table-responsive">
+                  <table class="table table--lg team-roster-table">
+                    <thead>
+                      <tr>
+                        <th class="team-roster-table__name">Temporada</th>
+                        <th class="team-roster-table__name">Serie</th>
+                        <th class="team-roster-table__name">Equipo</th>
+                        <th class="team-roster-table__name">N°</th>
+                        <th class="team-roster-table__name">Nacionalidad</th>
+                        <th class="team-roster-table__name">Notas</th>
+                      </tr>
+  
+</thead>
+                    <tbody>
+                      <tr>
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>    
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                      </tr>
+                      
+                     </tbody>
+                  </table>
+                </div>
                 </div>
 
                       </div>
