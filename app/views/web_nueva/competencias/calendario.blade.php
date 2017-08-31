@@ -107,7 +107,7 @@
                               <header class="game-result__header1 game-result__header--alt">
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
                                   <h3 class="game-result__title">{{$leg->fase->nombre}} :  {{$leg->nombre}}</h3>
-                                  <time class="game-result__league1"><b>{{$partido->fecha_inicio}} : {{$partido->hora}}  </b></time>
+                                  <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} : {{$partido->hora}}  </b></time>
                               </header>                         
                               <!-- fin titulos -->                    
                               <!-- comienzo primer Equipo -->
@@ -144,7 +144,7 @@
                                       <div class="game-result__date"><font size="3">
                                       <p>
                                           @foreach($partido->puntoPartido as $punto)
-                                          {{$punto->puntos_local}}-{{$punto->puntos_local}}  
+                                            {{$punto->puntos_local}}-{{$punto->puntos_local}}  
                                           @endforeach
                                       </p>
                                       </font></div>          

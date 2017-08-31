@@ -16,10 +16,11 @@ class NuevaWebController extends BaseController
 		$data['model'] 			 =  NoticiasPosicion::with('noticias')->get();
 		$data['social_ultima'] 	 =  Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		//Tabla partidos
-		$data['partidosDiarios'] = 	Partido::where('pxp','=', 1 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
-		$data['resultados'] 	 =	Partido::where('estado','=', 1 )->where('home','=',1)->orderBy('fecha_inicio','ASC')->get();
-		$data['proximos_partidos'] 	 =	Partido::where('estado','=', 0 )->where('home','=',1)->orWhere('estado','=', '' )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
+		$data['partidosDiarios'] = 	Partido::where('home',1)->where('pxp',1)->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
+		$data['resultados'] 	 =	Partido::where('home',1)->where('estado','=', 2 )->orderBy('fecha_inicio','ASC')->get();
+		$data['proximos_partidos'] 	 =	Partido::where('home',1)->where('estado','')->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		
+
 		
 		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['videos'] = Video::where('estado','=',1)->orderBy('id','DESC')->take(5)->get();

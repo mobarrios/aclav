@@ -324,6 +324,32 @@ class PartidoController extends BaseController
 		return Redirect::back()->with('warning','Eliminado Correctamente');
 
 	}
+
+	public function getHome($accion, $id)
+	{
+		//modulo ActivarPxP
+		$this->moduloId = '83';
+
+		if(!parent::validarPermisos($this->moduloId,'editar'))
+        {
+            return Redirect::back()->with('warning','Acceso denegado a esta seccion');
+        }
+
+		if($accion == 'si' )
+		{
+			$accion = 1;
+		}else
+		{
+			$accion = 0;
+		}
+
+		$partido = Partido::find($id);
+
+		$partido->home = $accion;
+		$partido->save();
+
+		return Redirect::back();
+	}
 	
 }
 

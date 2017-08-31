@@ -190,12 +190,12 @@
 															</td>
 															<td>
 																	<div class="btn-group">
-																		@if($partido->pxp == 0)
-																			<a href="puntoxpunto/mostrar/si/{{$partido->id}}" class="btn btn-default btn-xs">si</a>
+																		@if($partido->home == 0)
+																			<a href="partido/home/si/{{$partido->id}}" class="btn btn-default btn-xs">si</a>
 																			<button class="btn btn-danger btn-xs">no</button>
 																		@else
 																			<button class="btn btn-success btn-xs">si</button>
-																			<a href="puntoxpunto/mostrar/no/{{$partido->id}}" class="btn btn-default btn-xs">no</a>
+																			<a href="partido/home/no/{{$partido->id}}" class="btn btn-default btn-xs">no</a>
 																		@endif
 																	</div>
 															</td>
