@@ -16,10 +16,18 @@
                   <h3><p>{{$resultado->local_set}}</p></h3>
                 </div></center>                        
                 <center><figure class="widget-results__team-logo">
+                  @if($resultado->local_text == '')
                   <img src="uploads/escudos/{{$resultado->local_equipo_id->escudo}}" title="{{$resultado->local_equipo_id->nombre}}">
+                  @endif
                 </figure></center>
                 <center><div class="widget-results__team-logo">
-                  <h5 class="widget-results__team-name"><p>{{$resultado->local_equipo_id->sigla}}</p></h5>
+                  <h5 class="widget-results__team-name"><p>
+                     @if($resultado->local_text != '')
+                          {{$resultado->local_text}}
+                      @else
+                          {{isset($resultado->local_equipo_id->sigla) ? $resultado->local_equipo_id->sigla : '' }}
+                      @endif
+                  </p></h5>
                 </div></center>
             </div>
             <div class="widget-results__result">
@@ -108,10 +116,18 @@
                   <h3><p>{{$resultado->visita_set}}</p></h3>
                 </div></center>                        
                 <center><figure class="widget-results__team-logo">
+                  @if($resultado->visita_text == '')
                   <img src="assets/webnueva/images/samples/logos/002.png" title="aca va nombre club completo">
+                  @endif
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">
-                  <h5 class="widget-results__team-name"><p>{{$resultado->visita_equipo_id->sigla}}</p></h5>
+                  <h5 class="widget-results__team-name"><p>
+                      @if($resultado->visita_text != '')
+                          {{$resultado->visita_text}}
+                      @else
+                          {{isset($resultado->visita_equipo_id->sigla) ? $resultado->visita_equipo_id->sigla : '' }}
+                      @endif
+                  </p></h5>
                 </div></center>
             </div>
       </div>            
