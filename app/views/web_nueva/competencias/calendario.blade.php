@@ -78,7 +78,11 @@
                       </font><i class="fa fa-bars"></i>
                     </a>  
                   @foreach($torneo->Equipo as $equipo)
-                      <a style="width: 5%" class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" ><img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}"></a>
+                      <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
+                        <figure class="widget-game-result__team-logo">
+                          <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}">
+                        </figure>
+                      </a>
                   @endforeach
               </center>                                   
             </div> 
