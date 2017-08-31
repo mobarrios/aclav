@@ -13,7 +13,7 @@ Description:  General styling for template (including Header, Footer, Sidebar)
 */
 /* Table of Content
 ==================================================
-
+modificado por fer
   #Common
 
   #Base
@@ -522,7 +522,7 @@ input.header-mobile__search-control:focus {
     background-color: #143969;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
-   }
+  }
   /* Header Mobile Logo */
   .header-mobile__logo {
     text-align: center;
@@ -2023,8 +2023,6 @@ input.header-mobile__search-control:focus {
   o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
-
 
 /* Footer Widgets */
 .footer-widgets {
@@ -15832,11 +15830,7 @@ td.team-leader__avg {
   color: #fff;
 }
 
-.gallery__item-inner:hover .gallery__btn-fab {
-  opacity: 1;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-}
+
 
 .gallery__item-inner:hover .gallery__thumb img {
   opacity: 0.2;

@@ -10,7 +10,7 @@
         <!-- Wishlist -->
         <div class="card card--has-table">
           <div class="card__header">
-            <h4>Tribunal de Disciplina</h4>
+            <h4>Tribunal de Disciplina - {{$torneo->nombre_torneo}}</h4>
           </div>
           <div class="card__content">
 

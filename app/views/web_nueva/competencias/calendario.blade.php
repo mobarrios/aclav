@@ -17,7 +17,8 @@
             <div class="card1 card--clean">
               <header class="card__header card__header--shop-filter">
                 <div class="shop-filter">
-                  <h4 class="shop-filter__result">Calendario y Resultados</h4>
+                  <h4 class="shop-filter__result">Calendario y Resultados - {{$torneo->nombre_torneo}} </h4>
+                 
                   {{-- <ul class="shop-filter__params">
                     <li class="shop-filter__control">
                       <select class="form-control input-sm">
@@ -77,7 +78,11 @@
                       </font><i class="fa fa-bars"></i>
                     </a>  
                   @foreach($torneo->Equipo as $equipo)
-                      <a style="width: 5%" class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" ><img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}"></a>
+                      <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
+                        <figure class="widget-game-result__team-logo">
+                          <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}">
+                        </figure>
+                      </a>
                   @endforeach
               </center>                                   
             </div> 
