@@ -48,7 +48,7 @@
                       <tr>
                         
                         <td class="team-roster-table__number">Función: </td>    
-                        <td class="team-roster-table__name"><h4>{{$models->funcion->funcion}}</h4></td>
+                        <td class="team-roster-table__name"><h5><p>{{$models->funcion->funcion}}</p></h5></td>
                         
                         
                       </tr>
@@ -74,11 +74,11 @@
 </thead>
                     <tbody>
                       <tr>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>    
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000"></font></a></td>    
+                        <td class="team-roster-table__name"><font color="#000000"></font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000"></font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000"></font></a></td>
+                        <td class="team-roster-table__name"><font color="#000000"></font></a></td>
                       </tr>
                       
                      </tbody>
