@@ -142,15 +142,15 @@
       $('.rvs-container').rvslider();
     });
 
-    $('.fase').on('click',function(){
+    // $('.fase').on('click',function(){
 
-        var id = $(this).attr('data-id');
+    //     var id = $(this).attr('data-id');
 
-        $('.weeks').css("display","none");
-        $('.card'+id).removeAttr("style");
+    //     $('.weeks').css("display","none");
+    //     $('.card'+id).removeAttr("style");
 
 
-    });
+    // });
   </script>
 
   <!-- Javascript Files

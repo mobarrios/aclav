@@ -60,7 +60,7 @@
                     </font><i class="fa fa-bars"></i>
                     </a>   
                       @foreach($fase->leg as $leg)            
-                        <a href="{{route('calendario' , array($torneo->id, $leg->id) )}}" class=" btn btn-default1 btn-outline btn-xs card-header__button">{{$leg->nombre}}</a>
+                        <a href="#" class="leg btn btn-default1 btn-outline btn-xs card-header__button" data-id='{{$leg->id}}'>{{$leg->nombre}}</a>
                       @endforeach     
                  </center>                            
               </div>
@@ -92,7 +92,7 @@
                   @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
 
-                  <div class="partido card1" id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                  <div class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
                    >
@@ -194,31 +194,75 @@
 
 <script type="text/javascript">
 
+var fase_id = 0;
+var leg_id = 0;
+var teams_id = 0;
+
+   //mustra los legs especifico
+    $('.leg').on('click', function(ev)
+    { ev.preventDefault();
+  
+        var id = $(this).attr('data-id');
+        leg_id = id;
+
+        $('.partido').hide();
+
+        $('.partido').each(function()
+          { 
+            if($(this).attr('leg-id') == id )
+                  $(this).show();
+          });
+
+    });
+
+    // muestra las fases especifica
+    $('.fase').on('click',function()
+    {
+        var id = $(this).attr('data-id');
+        fase_id = id;
+
+        $('.weeks').css("display","none");
+        $('.card'+id).removeAttr("style");
+
+        $('.partido').hide();
+
+        $('.partido').each(function()
+          { 
+            if($(this).attr('fase-id') == id )
+                  $(this).show();
+          });
+
+    });
+
+    //muestra todos los equipos
     $('.allTeams').on('click',function(ev)
     {
       ev.preventDefault();
       
         $('.partido').each(function()
         {
-                $(this).show();
+           $(this).show();
         }); 
 
     });
 
+    //filtra equipos
     $('.equipo').on('click',function(){
         var id = $(this).attr('equipo-id');
+        //teams_id = id;
 
         $('.partido').hide();
 
         $('.partido').each(function()
         {
-            if($(this).attr('local-id') == id )
-                $(this).show();
-            
-            if($(this).attr('visita-id') == id )
-                $(this).show();
+              if(fase_id == $(this).attr('fase-id') && leg_id == $(this).attr('leg-id') && $(this).attr('local-id') == id )
+                  $(this).show();
+              
+              if(fase_id == $(this).attr('fase-id') && leg_id == $(this).attr('leg-id') && $(this).attr('visita-id') == id )
+                  $(this).show();          
         }); 
      });
+
 
      $('html, body').animate({
         scrollTop: $("#today").offset().top
