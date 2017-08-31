@@ -8,7 +8,7 @@
             @foreach($model as $estadio)
             <div class="card card--clean">
               <header class="card__header card__header--has-btn">
-                <h4><a href="{{ route('detalle_estadio',$estadio->id) }}">{{$estadio->nombre}}</a></h4>
+                <h4><a href="{{ route('detalle_estadio',$estadio->id) }}"><p>{{$estadio->nombre}}</p></a></h4>
               </header>
             </div>
             @endforeach
