@@ -5,22 +5,20 @@
  <div class="container">
 
         <div class="row">
+          <div class="content col-md-8">
 
-
-          <div class="col-md-8">
             <div class="card">
               <div class="card__header">
                 <h4>Seleccione Temporada</h4>
               </div>
               <div class="card__content">
-
-               {{ Form::open(array('route' => 'calendario', 'method' => 'GET'))}}  
+                 {{ Form::open(array('route' => 'calendario', 'method' => 'GET'))}}    
                   <div class="form-group form-group--sm">
                     <select class="form-control temporada_id">
-                      <option >TEMPORADA</option>
-                      @foreach($temporadas as $temporada)
-                      <option value="{{$temporada->id}}">{{$temporada->nombre_temporada}}</option>
-                      @endforeach 
+                        <option >TEMPORADA</option>
+                        @foreach($temporadas as $temporada)
+                        <option value="{{$temporada->id}}">{{$temporada->nombre_temporada}}</option>
+                        @endforeach 
                     </select>
                   </div>
                   <div class="form-group form-group--sm">
@@ -49,6 +47,8 @@
           @include('web_nueva.template.sidebar')
 
         </div>
+
+
 </div>
 </div>
 @endsection

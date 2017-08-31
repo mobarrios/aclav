@@ -48,19 +48,19 @@
                       <tr>
                         
                         <td class="team-roster-table__number">Función: </td>    
-                        <td class="team-roster-table__name">{{$models->funcion->funcion}}</td>
+                        <td class="team-roster-table__name"><h4>{{$models->funcion->funcion}}</h4></td>
                         
                         
                       </tr>
                       <tr>
                         
                         <td class="team-roster-table__number">Carrera:</td> 
-                        <td class="team-roster-table__name">equipos donde jugó en temporadas anteriores. Podemos ya poner lo
+                        <td class="team-roster-table__name"><h4>equipos donde jugó en temporadas anteriores. Podemos ya poner lo
 que figura en el sistema. Habría que hacer una tabla con columnas para poner los
 siguientes datos: temporada, serie, nombre del equipo donde jugó, nº de camiseta con
 el que jugó, nacionalidad (la sigla de 3 letras), notas (para poner “desde” o
 “hasta” si se incorporó al equipo luego de presentado el O2 o si lo dieron de baja
-antes de finalizar la temporada). Adjunto un par de capturas como ejemplo</td>
+antes de finalizar la temporada). Adjunto un par de capturas como ejemplo</h4></td>
                         
                       </tr>
                       

@@ -13,9 +13,6 @@
           <!-- Content -->
           <div class="content col-md-8">
 
-            <!-- Article -->
-            <article class="card card--lg post post--single">
-          
  <!-- inicio slider chaco -->
               <article class="card card--lg post post--single">
 
@@ -23,22 +20,45 @@
                 <div id="chacslider-container1">
                 	<div class="ws_images">
                     <ul>
-                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="noti001" title="noti001" id="wows1_0"/></li>
-                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="noti002" title="noti002" id="wows1_1"/></li>
-                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="noti003" title="noti003" id="wows1_2"/></li>
-                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="noti004" title="noti004" id="wows1_3"/></li>
-                		  <li><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="noti005" title="noti005" id="wows1_4"/></li>		
-                	  </ul>
+
+                		  @if(!empty($model->imagen))
+                      <li><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="noti001" title="noti001" id="wows1_0"/></li>
+                		  @endif
+                      @if(!empty($model->imagen_1))
+                      <li><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="noti002" title="noti002" id="wows1_1"/></li>
+                		  @endif
+                      @if(!empty($model->imagen_2))
+                      <li><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="noti003" title="noti003" id="wows1_2"/></li>
+                		  @endif
+                       @if(!empty($model->imagen_3))
+                      <li><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="noti004" title="noti004" id="wows1_3"/></li>
+                		   @endif
+                       @if(!empty($model->imagen_4))
+                      <li><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="noti005" title="noti005" id="wows1_4"/></li>		
+                	     @endif
+                    </ul>
                   </div>
 
                 	<div class="ws_thumbs">
                     <div>
-                		  <a href="#" title="noti001"><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="" /></a>
-                		  <a href="#" title="noti002"><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="" /></a>
-                		  <a href="#" title="noti003"><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="" /></a>
-                		  <a href="#" title="noti004"><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="" /></a>
-                		  <a href="#" title="noti005"><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="" /></a>		
-                	  </div>
+
+                       @if(!empty ($model->imagen))
+                       <a href="#" title="noti001"><img src="uploads/contenidos/noticias/{{$model->imagen}}" alt="" /></a>
+                       @endif
+                       @if(!empty($model->imagen_1))
+                      <a href="#" title="noti002"><img src="uploads/contenidos/noticias/{{$model->imagen_1}}" alt="" /></a>
+                		  @endif
+                       @if(!empty($model->imagen_2))
+                      <a href="#" title="noti003"><img src="uploads/contenidos/noticias/{{$model->imagen_2}}" alt="" /></a>
+                		  @endif
+                       @if(!empty($model->imagen_3))
+                      <a href="#" title="noti004"><img src="uploads/contenidos/noticias/{{$model->imagen_3}}" alt="" /></a>
+                		  @endif
+
+                       @if(!empty($model->imagen_4))
+                      <a href="#" title="noti005"><img src="uploads/contenidos/noticias/{{$model->imagen_4}}" alt="" /></a>		
+                	   @endif
+                    </div>
                   </div>
 
 	                <div class="ws_shadow"></div>
@@ -55,11 +75,11 @@
                           <h6>@foreach($model->club as $club)
                           <img src="uploads/escudos/{{$club->escudo}}" width="40">
                           @endforeach</h6>
-                  </div><br>
-                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i> {{$model->fecha}}</font>
+                  </div>
+                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i><p> {{$model->fecha}}</p></font>
                                     
 				        </header>
-
+<br>
                 <div class="post__content">
                   {{$model->cuerpo}}
                 </div><br>

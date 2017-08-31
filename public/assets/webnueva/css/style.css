@@ -1052,6 +1052,7 @@ input.header-mobile__search-control:focus {
     padding: 5px 0 18px 0;
     display: block;
     border-bottom: 1px solid #292c31;
+    width: 110%;
   }
   .main-nav .main-nav__item--shopping-cart .info-block__link-wrapper {
     overflow: hidden;
@@ -1993,35 +1994,6 @@ input.header-mobile__search-control:focus {
   line-height: 22px;
   color: #ffffff;
   padding-top: 30px;
-}
-
-.grises img {
-  filter: url('#grayscale'); /* Versión SVG para IE10, Chrome 17, FF3.5, Safari 5.2 and Opera 11.6 */
-  webkit-filter: grayscale(100%);
-  moz-filter: grayscale(100%);
-  ms-filter: grayscale(100%);
-  o-filter: grayscale(100%);
-  filter: grayscale(100%); /* Para cuando es estándar funcione en todos */
-  filter: Gray(); /* IE4-8 and 9 */
-
-  webkit-transition: all 0.5s ease;
-  moz-transition: all 0.5s ease;
-  ms-transition: all 0.5s ease;
-  o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  }
-  .grises img:hover {
-  webkit-filter: grayscale(0%);
-  moz-filter: grayscale(0%);
-  ms-filter: grayscale(0%);
-  o-filter: grayscale(0%);
-  filter: none;
-
-  webkit-transition: all 0.5s ease;
-  moz-transition: all 0.5s ease;
-  ms-transition: all 0.5s ease;
-  o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 /* Footer Widgets */
@@ -14789,7 +14761,11 @@ td.team-leader__avg {
   margin-bottom: 15px;
   background-color: #ccc;
 }
-
+.game-result__header2 {
+  text-align: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
 .game-result__title {
   font-size: 12px;
   line-height: 1.2em;
@@ -15830,7 +15806,11 @@ td.team-leader__avg {
   color: #fff;
 }
 
-
+.gallery__item-inner:hover .gallery__btn-fab {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
 
 .gallery__item-inner:hover .gallery__thumb img {
   opacity: 0.2;
