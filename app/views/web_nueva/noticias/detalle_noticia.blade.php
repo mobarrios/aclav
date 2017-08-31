@@ -76,7 +76,7 @@
                           <img src="uploads/escudos/{{$club->escudo}}" width="40">
                           @endforeach</h6>
                   </div>
-                  <font color="#000000"></font><font color="#000000"> <i class="fa fa-align-justify"></i><p> {{$model->fecha}}</p></font>
+                  <font color="#000000"></font><font color="#000000"> <p> {{$model->fecha}}</p></font>
                                     
 				        </header>
 <br>
