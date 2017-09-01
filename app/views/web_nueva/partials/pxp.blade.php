@@ -8,7 +8,7 @@
 @else
 <font size="2">
 @endif
-<p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}} <span class="label1 posts__cat-label1"><a href="#"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
+<p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}} <span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : 'javascript:void(0)' }}"><img src="assets/webnueva/images/tyc_play.png"></a></span></p></font></h5>              
 <div class="widget-results__content resultados">
         <div class="widget-results__team-logo">
           <center>
