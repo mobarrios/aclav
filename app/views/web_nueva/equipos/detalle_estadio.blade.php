@@ -18,11 +18,11 @@
               <li class="posts__item card posts__item--category-2">
                 <div class="posts__inner card__content">
                   
-                  <h6 class="posts__title"><p>Direccion: {{$models->direccion}}</p></h6>
-                  <h6 class="posts__title"><p>Ciudad: {{$models->ciudad}}</p></h6>
-                  <h6 class="posts__title"><p>Provincia: {{$models->provincia}}</h6>
-                  <h6 class="posts__title"><p>Telefono: {{$models->telefono}}</p></h6>
-                  <h6 class="posts__title"><p>Capacidad: {{$models->capacidad}}</p></h6>
+                  <h6 class="posts__title">Direccion: </h6><p>{{$models->direccion}}</p>
+                  <h6 class="posts__title">Ciudad: </h6><p>{{$models->ciudad}}</p>
+                  <h6 class="posts__title">Provincia: </h6><p>{{$models->provincia}}</p>
+                  <h6 class="posts__title">Telefono: </h6><p>{{$models->telefono}}</p>
+                  <h6 class="posts__title">Capacidad: </h6><p>{{$models->capacidad}}</p>
 
                 </div>
               </li>

@@ -3,6 +3,8 @@
 
 
 <div class="site-contentchico">
+
+@if($partidosDiarios->count() != 0)
     <div class="container">
      <div class="owl-carousel col-lg-12">
      
@@ -17,10 +19,10 @@
          @include('web_nueva.partials.pxp')
          @include('web_nueva.partials.proximos')
       @endif  
-          
-
+        
       </div>
     </div>
+  @endif
 </div>        
 
     <!-- Pushy Panel -->
