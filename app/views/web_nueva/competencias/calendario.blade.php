@@ -129,7 +129,11 @@
                                       <div class="game-result__date"><font size="3"><p>{{ isset($partido->Estadio->nombre) ? $partido->Estadio->nombre : '' }}</p></font></div>             
                                         
                                         @if($partido->televisado == 1 )
-                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
+                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play"><img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243">
+                                       @elseif($partido->televisado == 2 )
+
+                                       <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
+
                                         @endif
 
                                         <span style="font-weight:100;color:#CD3243"> | </span>  
@@ -150,8 +154,11 @@
                                       </font></div>          
                                         
                                         @if($partido->televisado == 1 )
-
-                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
+                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
+                                           <img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243"> |
+                                        @elseif($partido->televisado == 2 )
+<a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
+                                           <img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
                                         @endif
 
                                          </span>  

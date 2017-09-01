@@ -1,5 +1,5 @@
 <?php
-Route::group(array('prefix' => 'web_nueva'), function()
+Route::group(array('prefix' => 'web'), function()
 {
 	//Home
     Route::get('', array( 'as'=>'inicio','uses'=>'NuevaWebController@getHomeNoticias'));
