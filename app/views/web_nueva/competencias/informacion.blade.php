@@ -25,10 +25,10 @@
                   <div class="widget-game-result__main">                        
                         <div class="widget-game-result__team widget-game-result__team--first">
                             <figure class="widget-game-result__team-logo">
-                              <img src="uploads/escudos/{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo : '' }}" alt="">
+                           <img src="uploads/escudos/{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo: '' }}" alt="">
                             </figure>
                         <div class="widget-game-result__team-info">
-                              <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo: ''  }}</p></font></h2>
+                              <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->local_equipo_id->nombre) ? $partido->local_equipo_id->nombre: ''  }}</p></font></h2>
                         </div>
                   </div>
                   <!-- fin primer Equipo -->                
