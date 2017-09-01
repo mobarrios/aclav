@@ -107,7 +107,7 @@
                               <header class="game-result__header1 game-result__header--alt">
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
                                   <h3 class="game-result__title">{{$leg->fase->nombre}} :  {{$leg->nombre}}</h3>
-                                  <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} : {{$partido->hora}}  </b></time>
+                                  <time class="game-result__league1"><b>{{$partido->getfullFechaCompletaAttribute()}} {{ $partido->getAno()}}  </b></time>
                               </header>                         
                               <!-- fin titulos -->                    
                               <!-- comienzo primer Equipo -->
@@ -117,7 +117,13 @@
                                           <img src="uploads/escudos/{{ ($partido->local_text == '') ? $partido->local_equipo_id->escudo: ''  }}" alt="">
                                         </figure>
                                     <div class="widget-game-result__team-info">
-                                          <h2 class="game-result__date"><font size="2"><p>{{ ($partido->local_text == '') ? $partido->local_equipo_id->nombre: 'a Confirmar'  }}</p></font></h2>
+                                          <h2 class="game-result__date"><font size="2"><p>
+                                            @if($partido->local_text == '')
+                                              {{$partido->local_equipo_id->nombre }} 
+                                            @else
+                                              {{$partido->local_text}}    
+                                            @endif
+                                          </p></font></h2>
                                     </div>
                               </div>
                               <!-- fin primer Equipo -->                
@@ -143,9 +149,12 @@
                                       <h3 class="widget-game-result__title"><p>{{$partido->local_set}} - {{$partido->visita_set}}</p></h3>
                                       <div class="game-result__date"><font size="3">
                                       <p>
-                                          @foreach($partido->puntoPartido as $punto)
-                                            {{$punto->puntos_local}}-{{$punto->puntos_local}}  
-                                          @endforeach
+                                           @foreach(array_chunk($partido->puntoPartido->toArray(),3) as $punto)
+                                            @foreach($punto as $p)
+                                              {{ $p['puntos_local'] }}-{{ $p['puntos_visita'] }} / 
+                                            @endforeach
+                                          <br>
+                                          @endforeach 
                                       </p>
                                       </font></div>          
                                         
@@ -167,7 +176,14 @@
                                       <img src="uploads/escudos/{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->escudo: ''  }}" alt="">
                                     </figure>
                                     <div class="widget-game-result__team-info">
-                                        <h2 class="game-result__date"><font size="2"><p>{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->nombre: 'a Confirmar'  }}</p></font></h2>
+                                        <h2 class="game-result__date"><font size="2"><p>
+                                    
+                                          @if($partido->visita_text == '')
+                                            {{$partido->visita_equipo_id->nombre }} 
+                                          @else
+                                            {{$partido->visita_text}}    
+                                          @endif
+                                        </p></font></h2>
                                     </div>
                               </div>
                               <!-- fin segundo Equipo -->

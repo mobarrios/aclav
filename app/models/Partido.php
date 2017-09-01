@@ -248,6 +248,10 @@ class Partido extends Eloquent
 
 		}
 
+		public function getAno(){
+			$a =  date('Y',strtotime($this->attributes['fecha_inicio']));
+			return $a;
+		}
 
 		public function getMesAttribute(){
 			$mes =  date('M',strtotime($this->attributes['fecha_inicio']));
