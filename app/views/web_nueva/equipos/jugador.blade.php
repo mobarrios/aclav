@@ -86,7 +86,7 @@
                       
                       <tr>
                         
-                        <td class="team-roster-table__number">Carrera:</td> 
+                        <!-- <td class="team-roster-table__number">Carrera:</td>  -->
                         
                     </tbody>
                   </table>
