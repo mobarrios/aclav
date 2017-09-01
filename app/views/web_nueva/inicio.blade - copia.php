@@ -60,17 +60,20 @@
   <div class="slick posts posts-slider posts--slider-top-news">
     <!-- Slide #1 -->
     <div class="slick__slide">  
-      <div class="posts__item posts__item--category-1">  
+      <div class="posts__item posts__item-has-img posts__item--category-1">  
         <!-- Main Image -->
         <figure class="posts__thumb">
-          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #9e69ee">
+          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #f92552">
         </figure>
         <!-- Main Image / End -->  
+        <!-- Player Image -->
+        <div class="posts__img-player">
+          <ig src="assets/images/samples/hero-unit-player.png" >
+        </div>
+        <!-- Player Image / End -->  
         <!-- Post Content -->
-     
-
         <div class="posts__inner">          
-          <h2 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->id )}}"><font color="#ffffff"><p> {{ NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->titulo }}</p></font></a></h2>          
+          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',1)->first()->Noticias->titulo}}</p></font></a></h3>          
         </div>
         <!-- Post Content / End -->  
       </div>  
@@ -131,44 +134,6 @@
       </div>  
     </div>
     <!-- Slide #4 / End -->  
-    <!-- Slide #5 -->
-    <div class="slick__slide">  
-      <div class="posts__item posts__item--category-1">
-  
-        <!-- Main Image -->
-        <figure class="posts__thumb">
-          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
-        </figure>
-        <!-- Main Image / End -->  
-        <!-- Post Content -->
-        <div class="posts__inner">          
-          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->titulo}}</p></font></a></h3>
-          <footer class="posts__footer">           
-          </footer>
-        </div>
-        <!-- Post Content / End -->  
-      </div>  
-    </div>
-    <!-- Slide #5 / End -->
-    <!-- Slide #6 -->
-    <div class="slick__slide">  
-      <div class="posts__item posts__item--category-1">
-  
-        <!-- Main Image -->
-        <figure class="posts__thumb">
-          <img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
-        </figure>
-        <!-- Main Image / End -->  
-        <!-- Post Content -->
-        <div class="posts__inner">          
-          <h3 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->id )}}"><font color="#ffffff"><p>{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->titulo}}</p></font></a></h3>
-          <footer class="posts__footer">           
-          </footer>
-        </div>
-        <!-- Post Content / End -->  
-      </div>  
-    </div>
-    <!-- Slide #6 / End -->
   </div>  
 
 <!-- fin slider ================================================== -->   
