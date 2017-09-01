@@ -90,34 +90,31 @@
                         
                     </tbody>
                   </table>
-                  <div class="table-responsive">
-                  <table class="table table--lg team-roster-table">
-                    <thead>
-                      <tr>
-                        <th class="team-roster-table__name">Temporada</th>
-                        <th class="team-roster-table__name">Serie</th>
-                        <th class="team-roster-table__name">Equipo</th>
-                        <th class="team-roster-table__name">N°</th>
-                        <th class="team-roster-table__name">Nacionalidad</th>
-                        <th class="team-roster-table__name">Notas</th>
-                      </tr>
-  
-</thead>
-                    <tbody>
-                      <tr>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>    
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                        <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
-                      </tr>
-                      
-                     </tbody>
-                  </table>
-                </div>
-                </div>
-
+                          <div class="table-responsive">
+                                <table class="table table--lg team-roster-table">
+                                  <thead>
+                                    <tr>
+                                      <th class="team-roster-table__name">Temporada</th>
+                                      <th class="team-roster-table__name">Serie</th>
+                                      <th class="team-roster-table__name">Equipo</th>
+                                      <th class="team-roster-table__name">N°</th>
+                                      <th class="team-roster-table__name">Nacionalidad</th>
+                                      <th class="team-roster-table__name">Notas</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                                      <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>    
+                                      <td class="team-roster-table__name"><font color="#000000">xxxx</font></a></td>
+                                      <td class="team-roster-table__name"><font color="#000000">{{$models->nro}} </font></a></td>
+                                      <td class="team-roster-table__name"><font color="#000000">{{$models->Pais->nombre}}</font></a></td>
+                                      <td class="team-roster-table__name"><font color="#000000">{{$models->notas}}</font></a></td>
+                                    </tr>
+                                   </tbody>
+                                </table>
+                           </div>
+                        </div>
                       </div>
                     </div>
                   </section>
