@@ -282,7 +282,7 @@
                           </td>
                           <td class="team-roster-table__name">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a><br>
-                              <label class="label label-default">hasta {{$k->fecha_hasta}}</label>
+                              <h6><p>hasta {{$k->fecha_hasta}}</p></h6>
                           </td>
                           <td class="team-roster-table__age">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
