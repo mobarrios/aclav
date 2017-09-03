@@ -197,35 +197,11 @@
               <div class="post-grid__item col-sm-6">
                 <div class="posts__item posts__item--card posts__item--category-1 card">
                   <figure class="posts__thumb">                    
-                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->imagen}}" alt=""></a>
-                  </figure>
-                  <div class="posts__inner card__content">                    
-                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->fecha}} </time>
-                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->id )}}"><p>{{ Str::limit(NoticiasPosicion::where('posicion_web','=',5)->first()->Noticias->titulo, $limit=50, $end='...') }}</p></a></h6>                    
-                  </div>                  
-                </div>
-              </div>
-
-              <div class="post-grid__item col-sm-6">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">                    
-                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->imagen}}" alt=""></a>
-                  </figure>
-                  <div class="posts__inner card__content">                    
-                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->fecha}}</time>
-                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->id )}}"><p>{{ Str::limit(NoticiasPosicion::where('posicion_web','=',6)->first()->Noticias->titulo,$limit=50, $end='...')}}</p></a></h6>                    
-                  </div>                  
-                </div>
-              </div>
-
-              <div class="post-grid__item col-sm-6">
-                <div class="posts__item posts__item--card posts__item--category-1 card">
-                  <figure class="posts__thumb">                    
                     <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->imagen}}" alt=""></a>
                   </figure>
                   <div class="posts__inner card__content">                    
-                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->fecha}}</time>
-                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->id )}}"><p>{{Str::limit(NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->titulo,$limit=50,$end='...')}}</p></a></h6>
+                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->fecha}} </time>
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->id )}}"><p>{{ Str::limit(NoticiasPosicion::where('posicion_web','=',7)->first()->Noticias->titulo, $limit=50, $end='...') }}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
@@ -237,7 +213,31 @@
                   </figure>
                   <div class="posts__inner card__content">                    
                     <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->fecha}}</time>
-                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->id )}}"><p>{{Str::limit(NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->titulo,$limit=50,$end='...')}}</p></a></h6>                    
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->id )}}"><p>{{ Str::limit(NoticiasPosicion::where('posicion_web','=',8)->first()->Noticias->titulo,$limit=50, $end='...')}}</p></a></h6>                    
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="post-grid__item col-sm-6">
+                <div class="posts__item posts__item--card posts__item--category-1 card">
+                  <figure class="posts__thumb">                    
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',9)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',9)->first()->Noticias->imagen}}" alt=""></a>
+                  </figure>
+                  <div class="posts__inner card__content">                    
+                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',9)->first()->Noticias->fecha}}</time>
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',9)->first()->Noticias->id )}}"><p>{{Str::limit(NoticiasPosicion::where('posicion_web','=',9)->first()->Noticias->titulo,$limit=50,$end='...')}}</p></a></h6>
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="post-grid__item col-sm-6">
+                <div class="posts__item posts__item--card posts__item--category-1 card">
+                  <figure class="posts__thumb">                    
+                    <a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',10)->first()->Noticias->id )}}"><img src="uploads/contenidos/noticias/{{NoticiasPosicion::where('posicion_web','=',10)->first()->Noticias->imagen}}" alt=""></a>
+                  </figure>
+                  <div class="posts__inner card__content">                    
+                    <time datetime="2016-08-23" class="posts__date">{{NoticiasPosicion::where('posicion_web','=',10)->first()->Noticias->fecha}}</time>
+                    <h6 class="posts__title"><a href="{{route('detalle_noticias', NoticiasPosicion::where('posicion_web','=',10)->first()->Noticias->id )}}"><p>{{Str::limit(NoticiasPosicion::where('posicion_web','=',10)->first()->Noticias->titulo,$limit=50,$end='...')}}</p></a></h6>                    
                   </div>                  
                 </div>
               </div>
