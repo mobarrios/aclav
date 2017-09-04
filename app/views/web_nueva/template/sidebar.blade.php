@@ -97,7 +97,7 @@
             <!-- Widget: Featured Player - Alternative Extended -->
             <aside class="widget card widget--sidebar widget-player widget-player--alt">
               <div class="widget__title card__header">
-                <h4><p>Jugador de la Fecha</p></h4>
+                <h4><p>Destacados</p></h4>
               </div>
                 <h4><img src="uploads/contenidos/goleador/{{$goleador->imagen}}"></h4>
              </aside>

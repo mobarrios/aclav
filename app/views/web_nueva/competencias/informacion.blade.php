@@ -25,10 +25,18 @@
                   <div class="widget-game-result__main">                        
                         <div class="widget-game-result__team widget-game-result__team--first">
                             <figure class="widget-game-result__team-logo">
+                             @if($partido->local_text == '')
                            <img src="uploads/escudos/{{ isset($partido->local_equipo_id->escudo) ? $partido->local_equipo_id->escudo: '' }}" alt="">
+                            @endif
                             </figure>
                         <div class="widget-game-result__team-info">
-                              <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->local_equipo_id->nombre) ? $partido->local_equipo_id->nombre: ''  }}</p></font></h2>
+                              <h2 class="game-result__date"><font size="2"><p>
+                              @if($partido->local_text == '')
+                                  {{ isset($partido->local_equipo_id->nombre) ? $partido->local_equipo_id->nombre: ''  }}
+                              @else  
+                                  {{$partido->local_text}}
+                              @endif
+                              </p></font></h2>
                         </div>
                   </div>
                   <!-- fin primer Equipo -->                
@@ -36,19 +44,34 @@
                   <div class="widget-game-result__score-wrap">
                       <div class="widget-game-result__score">
                           <h3 class="widget-game-result__title"><p>{{$partido->local_set}} - {{$partido->visita_set}}</p></h3>
-                          <div class="game-result__date"><p> @foreach($partido->puntoPartido as $punto)
-                                          {{$punto->puntos_local}} - {{$punto->puntos_local}}  
-                                          @endforeach </p></div>
+                          <div class="game-result__date">
+                              <p> 
+                                @foreach(array_chunk($partido->puntoPartido->toArray(),3) as $punto)
+                                  @foreach($punto as $p)
+                                    {{ $p['puntos_local'] }}-{{ $p['puntos_visita'] }} / 
+                                  @endforeach
+                                <br>
+                                @endforeach 
+                              </p>
+                          </div>
                       </div>                        
                   </div>
                   <!-- fin resultado medio -->                   
                   <!-- comienzo segundo Equipo -->
                   <div class="widget-game-result__team widget-game-result__team--first">
                         <figure class="widget-game-result__team-logo">
+                          @if($partido->visita_text == '')
                           <img src="uploads/escudos/{{ isset($partido->visita_equipo_id->escudo) ? $partido->visita_equipo_id->escudo: '' }}" alt="">
+                          @endif
                         </figure>
                         <div class="widget-game-result__team-info">
-                            <h2 class="game-result__date"><font size="2"><p>{{ isset($partido->visita_equipo_id->nombre) ? $partido->visita_equipo_id->nombre : ''}}</p></font></h2>
+                            <h2 class="game-result__date"><font size="2"><p>
+                             @if($partido->visita_text != '')
+                                  {{$partido->visita_text}}
+                              @else   
+                                  {{ isset($partido->visita_equipo_id->nombre) ? $partido->visita_equipo_id->nombre : ''}}
+                              @endif
+                            </p></font></h2>
                         </div>
                   </div>
                   <!-- fin segundo Equipo -->

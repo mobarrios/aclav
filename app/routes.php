@@ -45,7 +45,8 @@ Route::get('',function(){
 	return Redirect::to('web');
 });
 
-Route::group(array('prefix' => 'web_nueva'), function()
+
+Route::group(array('prefix' => 'web_old'), function()
 {
 
 	//set database original
