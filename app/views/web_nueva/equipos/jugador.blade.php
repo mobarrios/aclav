@@ -90,6 +90,7 @@
                         
                     </tbody>
                   </table>
+
                           <div class="table-responsive">
                                 <table class="table table--lg team-roster-table">
                                   <thead>
@@ -115,6 +116,7 @@
                                 </table>
                            </div>
                         </div>
+
                       </div>
                     </div>
                   </section>

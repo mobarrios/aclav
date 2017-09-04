@@ -9,7 +9,7 @@
 
             <div class="posts__item card posts__item--category-2">
                 <div class="posts__inner card__content">
-                  <h5 class="posts__title"><p>{{$models->nombre}}</p></h5>
+                  <h4 class="posts__title"><p>{{$models->nombre}}</p></h4>
                 </div>
             </div>
 

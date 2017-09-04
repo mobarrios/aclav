@@ -166,6 +166,88 @@ class Partido extends Eloquent
 
 		}
 
+		public function getfullFechaCompletaAttribute()
+		{
+
+			$dia =  date('D',strtotime($this->attributes['fecha_inicio']));
+
+			if($dia == 'Mon')
+			{
+				$dia = 'Lunes';
+			}
+			if($dia == 'Tue')
+			{
+				$dia = 'Martes';
+			}
+			if($dia == 'Wed')
+			{
+				$dia = 'Miercoles';
+			}
+			if($dia == 'Thu')
+			{
+				$dia = 'Jueves';
+			}
+			if($dia == 'Fri')
+			{
+				$dia = 'Viernes';
+			}
+			if($dia == 'Sat')
+			{
+				$dia = 'Sabado';
+			}
+			if($dia == 'Sun')
+			{
+				$dia = 'Domingo';
+			}
+
+			$mes =  date('M',strtotime($this->attributes['fecha_inicio']));
+			
+				switch ($mes) {
+					case 'Jan':
+						$m = 'Enero';			
+						break;	
+
+					case 'Feb':
+						$m = 'Febrero';			
+						break;		
+
+					case 'Mar':
+						$m = 'Marzo';			
+						break;	
+
+					case 'Apr':
+						$m = 'Abril';			
+						break;
+					case 'May':
+						$m = 'Mayo';			
+						break;	
+					case 'Jun':
+						$m = 'Junio';			
+						break;	
+					case 'Jul':
+						$m = 'Julio';			
+						break;				
+					case 'Aug':
+						$m = 'Agosto';			
+						break;	
+					case 'Sep':
+						$m = 'Septiembre';			
+						break;	
+					case 'Oct':
+						$m = 'Octubre';			
+						break;				
+					case 'Nov':
+						$m = 'Noviembre';			
+						break;		
+					case 'Dec':
+						$m = 'Diciembre';			
+						break;
+			
+				}
+			return $dia .' '. date('d',strtotime($this->attributes['fecha_inicio'])) .' de '. $m;
+
+		}
+
 
 		public function getMesAttribute(){
 			$mes =  date('M',strtotime($this->attributes['fecha_inicio']));

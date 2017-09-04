@@ -2,14 +2,22 @@
 <div class="team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
         <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-        <h5 class="widget-results__title"><p>{{ strtoupper($partido->getFechaDeInicio()) }} | {{$partido->hora}}</p></h5>
+        <h5 class="widget-results__title"><font size="1"><p>{{ strtoupper($partido->getfullFechaCompletaAttribute()) }} | {{$partido->hora}}</p></font></h5>
           <div class="widget-results__content">
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
+                  @if($partido->local_text == '')
                   <img src="uploads/escudos/{{isset($partido->local_equipo_id->escudo)}}" alt="">
+                  @endif
                 </figure></center>
                 <center><div class="widget-results__team-logo">
-                  <h2 class="widget-results__team-name"><p>{{isset($partido->local_equipo_id->sigla)}}</p></h2>
+                  <h2 class="widget-results__team-name"><p>
+                     @if($partido->local_text != '')
+                        {{$partido->local_text}}
+                    @else
+                        {{isset($partido->local_equipo_id->sigla) ? $partido->local_equipo_id->sigla : '' }}
+                    @endif
+                  </p></h2>
                 </div></center>
               </div>
               <div class="widget-results__result">
@@ -19,10 +27,18 @@
               </div>
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
+                  @if($partido->visita_text == '')
                   <img src="uploads/escudos/{{isset($partido->visita_equipo_id->escudo)}}" alt="">
+                  @endif
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">
-                  <h2 class="widget-results__team-name"><p>{{isset($partido->visita_equipo_id->sigla)}}</p></h2>
+                  <h2 class="widget-results__team-name"><p>
+                   @if($partido->visita_text != '')
+                        {{$partido->visita_text}}
+                    @else
+                        {{isset($partido->visita_equipo_id->sigla) ? $partido->visita_equipo_id->sigla : '' }}
+                    @endif
+                  </p></h2>
               </div></center>
               </div>
           </div>

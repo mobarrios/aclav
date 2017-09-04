@@ -61,7 +61,7 @@
                       
                     </tbody>
                   </table>
-                  <table class="table table--lg team-roster-table">
+                  <!-- <table class="table table--lg team-roster-table">
                     <thead>
                       <tr>
                         <th class="team-roster-table__name">Temporada</th>
@@ -82,7 +82,7 @@
                       </tr>
                       
                      </tbody>
-                  </table>
+                  </table>-->
                 </div>
 
                       </div>

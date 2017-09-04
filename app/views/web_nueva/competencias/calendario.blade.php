@@ -125,7 +125,7 @@
                               @if($partido->estado == '' || $partido->estado == 0)
                                 <div class="widget-game-result__score-wrap">
                                   <div class="widget-game-result__score">
-                                      <p class="widget-game-result__title"><p>{{$partido->fecha_inicio}} <br> {{$partido->hora}} hs.</p></p>
+                                      <p class="widget-game-result__title"><p>{{$partido->getfullFechaCompletaAttribute()}} <br> {{$partido->hora}} hs.</p></p>
                                       <div class="game-result__date"><font size="3"><p>{{ isset($partido->Estadio->nombre) ? $partido->Estadio->nombre : '' }}</p></font></div>             
                                         
                                         @if($partido->televisado == 1 )
