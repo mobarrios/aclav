@@ -45,6 +45,7 @@ Route::get('',function(){
 	return Redirect::to('web');
 });
 
+
 Route::group(array('prefix' => 'web_old'), function()
 {
 

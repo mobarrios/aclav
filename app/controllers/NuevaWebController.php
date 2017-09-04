@@ -573,7 +573,8 @@ class NuevaWebController extends BaseController
 
 	public function contacto(){
 		
-		return View::make('web_nueva.institucional.contacto');
+		$data['model'] = Contacto::where('estado',1)->first();
+		return View::make('web_nueva.institucional.contacto')->with($data);
 	}
 
 	public function procesar(){

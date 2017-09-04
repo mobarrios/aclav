@@ -160,7 +160,7 @@
                           </td> 
                           <td class="team-roster-table__name">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a><br>
-                             <h6><p>hasta {{$k->fecha_hasta}}<p><h6>
+                             <font color="#000000">hasta {{$k->fecha_hasta}}</font>
                           </td>
                           <td class="team-roster-table__position">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>
@@ -282,7 +282,7 @@
                           </td>
                           <td class="team-roster-table__name">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a><br>
-                              <h6><p>hasta {{$k->fecha_hasta}}</p></h6>
+                              <font color="#000000">hasta {{$k->fecha_hasta}}</font>
                           </td>
                           <td class="team-roster-table__age">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
