@@ -12,7 +12,11 @@
 
                  {{ Form::model($model, array('class' => 'form-horizontal ','role'=>'form', 'enctype' => 'multipart/form-data')) }}
            
-                
+                <div class="form-group col-xs-12">
+                    {{ Form::label('Nombre Torneo', 'Nombre Torneo', array('class' => 'control-label')) }}
+                    {{ Form::text('nombre_torneo', Input::old('nombre_torneo'), array('class'=>'form-control' )) }}
+                </div>
+
                 <div class="form-group col-xs-6">
                     {{ Form::label('Inicio', 'Inicio', array('class' => 'control-label')) }}
 
@@ -31,12 +35,20 @@
                     </div>
                 </div>
                
+                <div class="form-group">
+                    {{ Form::label('O2', 'O2', array('class' => 'col-sm-2 control-label')) }}   
+                    {{ Form::select('o2',array('0'=>'O2 Nuevo')+ $torneos , Input::old('o2_id') , array('class'=>'form-control') )}}
+                </div>
 
                 <div class="form-group col-xs-12">
                     {{ Form::label('label', 'Presentación O2', array('class' => 'col-sm-2 control-label')) }}
                     {{ Form::checkbox('presenta_o2', Input::old('presenta_o2') , null ) }}
                 </div>
 
+                <div class="form-group">
+                    {{ Form::label('Serie', 'Serie', array('class' => 'col-sm-2 control-label')) }}   
+                    {{ Form::select('serie_id', $series , $model->serie_id , array('class'=>'form-control'))}}
+                </div>
 
                 <button class="btn btn-default" type="submit">Guardar</button>
             {{Form::close()}}
@@ -45,7 +57,7 @@
 
         @if($model->CantidadPartidos() <= 0  )
                 <div class="form-group col-xs-10">
-                    <form action='torneos/addequipo' method="POST">
+                    <form action='torneos/torneoaddequipo' method="POST">
                          {{ Form::hidden('torneos_id', $model->id) }}
                          {{ Form::label('Agregar Equipo',null, array('class' => 'control-label')) }}
                             <div class="input-group mg-b-md input-append">                       
