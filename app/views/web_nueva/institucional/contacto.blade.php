@@ -34,8 +34,11 @@
                 <h5><p>Telefono: </p></h5>
                 <p>{{$model->telefono}}</p>
                 <div class="spacer-sm"></div>
+                <div class="spacer-sm"></div>
                 <h5><p>Direccion:</p></h5>
                 <p>{{$model->direccion}}</p>
+                <div class="spacer-sm"></div>
+                <div class="spacer-sm"></div>
                 <h5><p>Email de Contacto:</p></h5>
                 <p><a href="mailto:info@aclav.com"><font color="#000000">{{$model->email}}</font></a></p>
               </div>
