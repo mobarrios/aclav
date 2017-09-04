@@ -4530,7 +4530,7 @@ height: 100%;
 .posts--slider-top-news .posts__inner {
   position: absolute;
   left: 50%;
-  top: 80%;
+  top: 90%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
