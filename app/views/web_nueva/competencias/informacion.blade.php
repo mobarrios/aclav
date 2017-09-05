@@ -135,7 +135,9 @@
                         </thead>
                         <tbody>
                         @if(isset($jugadores_locales))
+
                         @foreach($jugadores_locales as $j)
+                          
                           <tr>
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                

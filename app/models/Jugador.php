@@ -33,7 +33,7 @@ class Jugador extends Eloquent
  
  	public function BuenaFe()
 	{
-		return $this->hasMany('buenafe');
+		return $this->hasMany('buenafe')->orderBy('nro','ASC');
 	}
 
 
