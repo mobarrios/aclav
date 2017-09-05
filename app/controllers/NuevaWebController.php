@@ -134,6 +134,35 @@ class NuevaWebController extends BaseController
 
 	public function formula($id){
 		$data['torneo'] 	= 	Torneos::find($id);
+
+		switch ($data['torneo']->formula) {
+			case 'a':
+				$data['formula'] = Formulacopaa::all()->first();
+				$data['formula']->letra = 'a';
+				break;
+			case 'b':
+				$data['formula'] = Formulacopab::all()->first();
+				$data['formula']->letra = 'b';
+				break;
+			case 'c':
+				$data['formula'] = Formulacopac::all()->first();
+				$data['formula']->letra = 'c';
+				break;		
+			case 'd':
+				$data['formula'] = Formulacopad::all()->first();
+				$data['formula']->letra = 'd';
+				break;
+			case 'e':
+				$data['formula'] = Formulacopae::all()->first();
+				$data['formula']->letra = 'e';
+				break;
+			case 'f':
+				$data['formula'] = Formulacopaf::all()->first();
+				$data['formula']->letra = 'f';
+				break;				
+		}
+		
+
 		$data['sesion_formula'] = 1;
 		
 		return View::make('web_nueva.competencias.formula')->with($data);	
