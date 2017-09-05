@@ -25,7 +25,7 @@
                   <section class="game-result__section">
                     <header class="game-result__header">
                       <div class="match-preview__match-place" align="center">
-                        <img src="uploads/contenidos/formulacopa{{$formula->letra}}/{{$formula->imagen}}" alt="">
+                        <img src="uploads/contenidos/formulacopa{{isset($formula->letra) ? $formula->letra: ''}}/{{ isset($formula->imagen) ? $formula->imagen: ''}}" alt="">
                       </div>
                     </header>
                     <div class="game-result__content">          
@@ -34,7 +34,7 @@
                    
                         
                   <div style="text-align: justify-all; font-size:3"> 
-                    {{$formula->cuerpo}}
+                    {{isset($formula->cuerpo) ? $formula->cuerpo: ''}}
                   </div>
         </div>
 
