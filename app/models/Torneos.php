@@ -3,7 +3,7 @@
 class Torneos extends Eloquent
 {
 	protected $table 	=	"torneo";
-	protected $fillable	= array('nombre_torneo','serie_id','temporada_id','fecha_inicio','fecha_final','actualiza_o2','actualiza_o2_cantidad','presenta_o2');
+	protected $fillable	= array('nombre_torneo','serie_id','temporada_id','fecha_inicio','fecha_final','actualiza_o2','actualiza_o2_cantidad','presenta_o2','formula');
 	//protected $guarded  = array('');
 
 	public function cantidadPartidos()
