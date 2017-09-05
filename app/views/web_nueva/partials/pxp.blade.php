@@ -11,10 +11,10 @@
 <p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}} <span class="label1 posts__cat-label1">
 @if($pxp->televisado == 1 )
 <a class="chac" href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
-<img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243"> |
+<img src="assets/webnueva/images/tyc_play.png"></a> 
 @elseif($pxp->televisado == 2 )
 <a class="chac" href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
-<img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
+<img src="assets/webnueva/images/tyc_tv.png"></a> 
 @endif
 
 </span>
