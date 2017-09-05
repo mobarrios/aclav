@@ -8,16 +8,14 @@
 @else
 <font size="2">
 @endif
-<p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}} <span class="label1 posts__cat-label1">
+<p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}}
 @if($pxp->televisado == 1 )
-<a class="chac" href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
-<img src="assets/webnueva/images/tyc_play.png"></a> 
+<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}"><img src="assets/webnueva/images/tyc_play.png"></a></span>
+
 @elseif($pxp->televisado == 2 )
-<a class="chac" href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
-<img src="assets/webnueva/images/tyc_tv.png"></a> 
+<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}"><img src="assets/webnueva/images/tyc_tv.png"></a></span>
 @endif
 
-</span>
 </p>
 </font>
 </h5>              
