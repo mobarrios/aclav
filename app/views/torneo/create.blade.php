@@ -43,6 +43,13 @@
                 </div>
 
 
+                <hr>
+                <div class="form-group">
+                    {{ Form::label('Formula de Juego', null ) }}   
+                    {{ Form::select('formula',array('a'=>'Formula A','b'=>'Formula B','c'=>'Formula C','d'=>'Formula D','e'=>'Formula E','f'=>'Formula F' ) , Input::old('formula') , array('class'=>'form-control') )}}
+                </div>
+                 <hr>
+
 
                 <hr>
                 <div class="form-group">

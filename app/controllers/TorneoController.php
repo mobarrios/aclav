@@ -108,6 +108,7 @@ class TorneoController extends BaseController
 		$torneo->fecha_inicio	= $input['fecha_inicio'];
 		$torneo->fecha_final 	= $input['fecha_final'];
 		$torneo->presenta_o2 	= Input::has('presenta_o2') ? true : false ;
+		$torneo->formula 		= $input['formula'];
 		$torneo->save();
 
 		return Redirect::to('temporada');

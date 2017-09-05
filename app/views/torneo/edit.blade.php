@@ -35,6 +35,13 @@
                     </div>
                 </div>
                
+               <hr>
+                <div class="form-group">
+                    {{ Form::label('Formula de Juego', null ) }}   
+                    {{ Form::select('formula',array('a'=>'Formula A','b'=>'Formula B','c'=>'Formula C','d'=>'Formula D','e'=>'Formula E','f'=>'Formula F' ) , Input::old('formula') , array('class'=>'form-control') )}}
+                </div>
+                 <hr>
+
                 <div class="form-group">
                     {{ Form::label('O2', 'O2', array('class' => 'col-sm-2 control-label')) }}   
                     {{ Form::select('o2',array('0'=>'O2 Nuevo')+ $torneos , Input::old('o2_id') , array('class'=>'form-control') )}}
