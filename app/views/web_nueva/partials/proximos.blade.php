@@ -2,7 +2,7 @@
 <div class="team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
         <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
-        <h5 class="widget-results__title"><font size="1"><p>{{ strtoupper($partido->getfullFechaCompletaAttribute()) }} | {{$partido->hora}}</p></font></h5>
+        <h5 class="widget-results__title"><font size="2"><p>{{ strtoupper($partido->getFechaDeInicio()) }} | {{$partido->hora}}</p></font></h5>
           <div class="widget-results__content">
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
