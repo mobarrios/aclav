@@ -55,6 +55,8 @@
 
 @section('javascript')
 <script type="text/javascript">
+  
+
   $(".serie_id").change(function() 
   {
       var temporada_id = ($(".temporada_id option:selected" ).val());
