@@ -384,16 +384,18 @@ class NuevaWebController extends BaseController
 		$data['partido'] 		   = Partido::find($id);	
 		$data['torneo'] = Torneos::find(Session::get('torneo_id'));
 		if($data['partido']->estado != '' || $data['partido']->estado != 0){
+			
+
 			$data['jugadores_locales'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
-			/*
+			/*	
+			
 			$data['jugadores_locales'] = DB::table('buena_fe_bis')
             ->join('buena_fe', 'buena_fe_bis.buena_fe_id', '=', 'buena_fe.id')
             ->where('partido_id', $data['partido']->id)
             ->where('equipo_id', $data['partido']->local_equipo_id->id)
             ->orderBy('nro','ASC')
             ->get();
-				*/
-           	
+			*/
 			$data['staff_local'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
 			$data['jugadores_visitantes'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id',$data['partido']->visita_equipo_id->id)->get();
 			$data['staff_visitante'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->visita_equipo_id->id)->get();	
