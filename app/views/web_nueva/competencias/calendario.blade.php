@@ -101,7 +101,7 @@
                   <div  class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
-                    style="{{ $partido->condicional === 1 ? "background-color:#f5e6e6;" : "" }} "
+                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
                    >
                           <div class="card__content1">                
                               <!-- comienzo titulos -->

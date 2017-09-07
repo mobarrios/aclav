@@ -53,7 +53,7 @@ class NuevaWebController extends BaseController
 	//Competencias
 	public function temporadas(){
  		$data['goleador']       =  Goleador::where('estado','=',1)->first();
- 		$data['temporadas'] 	=  Temporada::all();
+ 		$data['temporadas'] 	=  Temporada::orderBy('id','desc')->get();
  		$data['series'] 		=  Series::all();
  		
  		$data['torneos']		=  Torneos::all();
@@ -67,6 +67,13 @@ class NuevaWebController extends BaseController
 		$torneos = Torneos::where('temporada_id', $temporada_id)->where('serie_id', $serie_id)->get();
 		return Response::json($torneos);
 		
+	}
+
+	public function getSeries(){
+		$temporada_id = Input::get('temporada_id');
+		$torneos = Torneos::where('temporada_id', $temporada_id)->where('serie_id', $serie_id)->get();
+		
+		//$series  = Series::where('id', )
 	}
 
 	public function calendario($id =  null , $legId = null)
