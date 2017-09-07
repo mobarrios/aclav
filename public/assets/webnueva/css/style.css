@@ -16515,3 +16515,18 @@ td.team-leader__avg {
         max-height: 28px;
     }
 }
+
+/*incio imagenes blanco slider*/
+.blanco 
+{
+    -webkit-filter: grayscale(100%) brightness(3.0);
+    filter: grayscale(100%) brightness(3.0);
+}
+
+.blanco:hover
+{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+/*Fin imagenes blanco slider*/
+

@@ -91,7 +91,7 @@
                     </tbody>
                   </table>
 
-                          <div class="table-responsive">
+                          <!-- <div class="table-responsive">
                                 <table class="table table--lg team-roster-table">
                                   <thead>
                                     <tr>
@@ -114,7 +114,7 @@
                                     </tr>
                                    </tbody>
                                 </table>
-                           </div>
+                           </div> -->
                         </div>
 
                       </div>
