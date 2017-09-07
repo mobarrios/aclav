@@ -7,7 +7,7 @@
           <div class="sponsors">
             <ul class="sponsors-logos">
              @foreach(Sponsor::all() as $sponsor)
-              <li class="sponsors__item">
+              <li class="sponsors__item blanco">
                 <a href="{{$sponsor->url}}" target="_blank"> <img src="uploads/contenidos/sponsor/{{$sponsor->imagen}}" alt=""></a>
               </li>
              @endforeach
