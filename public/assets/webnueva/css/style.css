@@ -16483,3 +16483,35 @@ td.team-leader__avg {
   visibility: hidden;
 }
 /*fin estilos checkbox Chaco*/
+
+/*
+  Estilos logos equipos en calendario
+*/
+
+@media (max-width:767px) {
+    .equipo img {
+         max-width: 28px;
+        max-height: 28px;
+    }
+}
+
+@media (min-width:768px) {
+    .equipo img {
+       max-width: 28px;
+        max-height: 28px;
+    }
+}
+
+@media (min-width:992px) {
+    .equipo img {
+         max-width: 28px;
+        max-height: 28px;
+    }
+}
+
+@media (min-width:1200px) {
+    .equipo img {
+        max-width: 28px;
+        max-height: 28px;
+    }
+}
