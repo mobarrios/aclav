@@ -25,7 +25,7 @@
   @endif
 </div>        
 
-    <!-- Pushy Panel -->
+    <!-- Pushy Panel action-->
 <aside class="pushy-panel">
   <div class="pushy-panel__inner">
     <header class="pushy-panel__header">
