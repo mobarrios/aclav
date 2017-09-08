@@ -37,6 +37,7 @@ class VideoController extends BaseController
 		}
 
 		$data['modulo'] = "Video";
+		$data['clubes']	= Club::all();
 		$data['action'] = "create";
 		return View::make('contenido.video.form')->with($data);
 	}

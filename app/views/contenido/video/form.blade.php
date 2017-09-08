@@ -49,7 +49,32 @@
 			</div>
 		</div>
 
-		
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Club Relacionado', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+
+				@foreach($clubes as $club)
+
+					@if(isset($modelo))	
+						@if(NoticiasClub::where('noticias_id','=',$modelo->id)->where('club_id','=',$club->id)->count() == 1 )
+							
+							{{Form::checkbox('club[]', $club->id, true)}} {{$club->nombre}}<br>	
+						@else
+							
+							{{Form::checkbox('club[]' , $club->id)}} {{$club->nombre}}<br>	
+						@endif
+
+					@else
+						
+							{{Form::checkbox('club[]' , $club->id)}} {{$club->nombre}}<br>
+					@endif
+					
+				@endforeach	
+
+				
+			</div>
+		</div>
 
 		<div class="form-group">	  
 	    {{ Form::label('label', 'Estado', array('class' => 'col-sm-2 control-label')) }}

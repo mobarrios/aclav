@@ -74,7 +74,7 @@ class NuevaWebController extends BaseController
 		$temporada_id = Input::get('temporada_id');
 
 		$torneos = Torneos::where('temporada_id', $temporada_id)->select('serie_id')->distinct()->get();
-		$series  = [];
+		$series  = array();
 
 		foreach ($torneos as $value) {
 			$serie = Series::where('nombre_serie' ,$value->serie_id)->first();
