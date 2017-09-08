@@ -42,7 +42,8 @@ class Jugador extends Eloquent
 		return $this->belongsTo('Pais');
 	}
 
-	public function Posicion($val)
+	//cambie a static para llamar en blade
+	public static function Posicion($val)
 	{
 		if($val == 'O'){
 		return 'Opuesto';

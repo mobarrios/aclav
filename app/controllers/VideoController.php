@@ -37,6 +37,7 @@ class VideoController extends BaseController
 		}
 
 		$data['modulo'] = "Video";
+		$data['clubes']	= Club::all();
 		$data['action'] = "create";
 		return View::make('contenido.video.form')->with($data);
 	}
@@ -46,6 +47,7 @@ class VideoController extends BaseController
 	public function postNew()
 	{
 		$input  = Input::all();
+	
 		/*$up 	= $this->up->up($input['imagen'] , $this->imgPath );
 
 			if($up != false)
@@ -53,7 +55,16 @@ class VideoController extends BaseController
 				$input['imagen'] = $up;
 			}
 */
-		Video::create($input);
+		$v = Video::create($input);
+		if(isset($input['club'])){
+			foreach($input['club'] as $club )
+			{
+				$videos_id  			= new VideosClub();
+				$videos_id->video_id = $v->id;
+				$videos_id->club_id	  = $club;
+				$videos_id->save();			
+			}	
+		}	
 
 		return $this->getIndex();
 
@@ -72,7 +83,7 @@ class VideoController extends BaseController
 		$data['modelo'] = Video::find($id);
 		$data['modulo'] = "Video";
 		$data['action'] = "edit";
-
+		$data['clubes']	= Club::all();
 		return View::make('contenido.video.form')->with($data);
 	}
 
@@ -83,7 +94,7 @@ class VideoController extends BaseController
 		$id 		= Crypt::decrypt($id);
 		$video 	= Video::find($id);
 		$input  	= Input::all();
-
+		/*
 		if($input['imagen'] != null)
 		{
 			$up 	= $this->up->up($input['imagen'] , $this->imgPath );
@@ -98,10 +109,27 @@ class VideoController extends BaseController
 		{
 			$input['imagen'] = $video->imagen;
 		}
-		
-
+		*/
 		$video->fill($input);
 		$video->save();
+
+		$videoClub = VideosClub::where('video_id','=',$video->id)->get();
+		
+		foreach($videoClub as $nc )
+		{
+		 $nc->delete();
+		}
+
+		if(isset($input['club']))
+		{
+			foreach($input['club'] as $club )
+			{
+				$videos_id  			= new VideosClub();
+				$videos_id->video_id    = $video->id;
+				$videos_id->club_id	    = $club;
+				$videos_id->save();			
+			}	
+		}
 
 		return $this->getIndex();
 	}
