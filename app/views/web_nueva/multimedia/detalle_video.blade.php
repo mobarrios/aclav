@@ -24,18 +24,21 @@
                 
                 <header class="post__header">
                   <h2 class="post__title"><p>{{$model->titulo}}</p></h2>
-                  
+                    <div class="post-author__info">
+                          <h6>@foreach($model->club as $club)
+                          <img src="uploads/escudos/{{$club->escudo}}" width="40">
+                          @endforeach</h6>
+                  </div>
+                  <font color="#000000"></font><font color="#000000"> <p> {{$model->created_at}}</p></font>
+
                 </header>
-                <div class="post-author__info">
-                          <h4 class="post-author__name"><p>Prensa ACLAV</p></h4>
-                        </div>
-
-
+               
                 <div class="post__content">
                   <p><font size="3">{{$model->copete}}</font> 
                   </p>
   
               </div>
+               <h5 class="post-author__name"><p>{{$model->fuente}}</p></h5>
             </article>
             <!-- Article / End -->
 

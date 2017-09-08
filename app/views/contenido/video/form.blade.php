@@ -57,7 +57,7 @@
 				@foreach($clubes as $club)
 
 					@if(isset($modelo))	
-						@if(NoticiasClub::where('noticias_id','=',$modelo->id)->where('club_id','=',$club->id)->count() == 1 )
+						@if(VideosClub::where('video_id','=',$modelo->id)->where('club_id','=',$club->id)->count() == 1 )
 							
 							{{Form::checkbox('club[]', $club->id, true)}} {{$club->nombre}}<br>	
 						@else
@@ -73,6 +73,14 @@
 				@endforeach	
 
 				
+			</div>
+		</div>
+		
+		<div class="form-group">	  
+	    {{ Form::label('label', 'Fuente', array('class' => 'col-sm-2 control-label')) }}
+
+		    <div class="col-sm-10">
+			    {{ Form::text ('fuente', Input::old('fuente'), array('class' => 'form-control')) }}
 			</div>
 		</div>
 

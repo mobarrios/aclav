@@ -142,14 +142,16 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  {{$j->BuenaFe->nro}}                              
+                                  {{$j->nro}}                              
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total">{{ $j->BuenaFe->Jugador->nombre}} {{ $j->BuenaFe->Jugador->apellido}} </td>
-                            <td class="team-leader__gp">{{$j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
+                            <td class="team-leader__total">{{ $j->nombre}} {{ $j->apellido}} </td>
+                            <td class="team-leader__gp">{{ Jugador::Posicion($j->posicion) }}</td>                            
                           </tr>
-                        @endforeach  
+                        @endforeach
+
+              
                         @endif
                         </tbody>
                       </table>
@@ -223,12 +225,12 @@
                             <td class="team-leader__player">
                               <div class="team-leader__player-info">                                
                                 <div class="team-leader__player-inner">
-                                  {{ $j->BuenaFe->nro}}                                 
+                                  {{$j->nro}}                              
                                 </div>
                               </div>
                             </td>
-                            <td class="team-leader__total"> {{ $j->BuenaFe->Jugador->nombre}} {{ $j->BuenaFe->Jugador->apellido}}</td>
-                            <td class="team-leader__gp">{{ $j->BuenaFe->Jugador->Posicion($j->BuenaFe->Jugador->posicion)}}</td>                            
+                            <td class="team-leader__total">{{ $j->nombre}} {{ $j->apellido}} </td>
+                            <td class="team-leader__gp">{{ Jugador::Posicion($j->posicion) }}</td>                            
                           </tr>
                            @endforeach 
                            @endif

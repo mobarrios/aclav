@@ -84,7 +84,7 @@ class ContactoController extends BaseController
 		$id 		= Crypt::decrypt($id);
 		$contacto 	= Contacto::find($id);
 		$input  	= Input::all();
-
+		/*
 		if($input['imagen'] != null)
 		{
 			$up 	= $this->up->up($input['imagen'] , $this->imgPath );
@@ -99,7 +99,7 @@ class ContactoController extends BaseController
 		{
 			$input['imagen'] = $contacto->imagen;
 		}
-		
+		*/
 
 		$contacto->fill($input);
 		$contacto->save();
