@@ -59,7 +59,7 @@
                           </tr>
 
                               @foreach($leg->partidoCalendario as $partido)
-
+                              
                                <tr>
                                 @if($partido->condicional == true)
 
