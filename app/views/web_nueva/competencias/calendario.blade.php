@@ -79,9 +79,7 @@
                     @foreach($torneo->Equipo as $equipo)
                       @if($equipo->id != 15)
                         <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
-                         
-                            <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}" >
-                         
+                          <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}" >
                         </a>
                       @endif
                     @endforeach

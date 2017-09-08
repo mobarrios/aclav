@@ -62,6 +62,7 @@ class NuevaWebController extends BaseController
 	}
 
 	public function getTorneos(){
+		
 		$temporada_id = Input::get('temporada_id');
 		$serie_id     = Input::get('serie_id');
 		$torneos = Torneos::where('temporada_id', $temporada_id)->where('serie_id', $serie_id)->get();
@@ -71,13 +72,24 @@ class NuevaWebController extends BaseController
 
 	public function getSeries(){
 		$temporada_id = Input::get('temporada_id');
-		$torneos 	  = Torneos::where('temporada_id', $temporada_id)->groupBy('serie_id')->distinct()->lists('serie_id');
-		
-		//$torneos 	  = ['1','2'];
-		$series 	  = Series::whereIn('id', $torneos)->get();
+
+		$torneos = Torneos::where('temporada_id', $temporada_id)->select('serie_id')->distinct()->get();
+		$series  = [];
+
+		foreach ($torneos as $value) {
+			$serie = Series::where('nombre_serie' ,$value->serie_id)->first();
+			
+			$data['id'] = $serie->id;
+			$data['nombre_serie'] = $serie->nombre_serie;
+			
+			array_push($series, $data);
+
+		}
+		$data['nombre_serie'] = "Seleccione Serie";
+		array_unshift($series, $data);
 		return Response::json($series);
-		//$series  = Series::where('id', )
-	}
+	}	
+
 
 	public function calendario($id =  null , $legId = null)
 	{
