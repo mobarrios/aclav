@@ -53,7 +53,7 @@ class NuevaWebController extends BaseController
 	//Competencias
 	public function temporadas(){
  		$data['goleador']       =  Goleador::where('estado','=',1)->first();
- 		$data['temporadas'] 	=  Temporada::all();
+ 		$data['temporadas'] 	=  Temporada::orderBy('id','desc')->get();
  		$data['series'] 		=  Series::all();
  		
  		$data['torneos']		=  Torneos::all();
@@ -68,6 +68,26 @@ class NuevaWebController extends BaseController
 		return Response::json($torneos);
 		
 	}
+
+	public function getSeries(){
+		$temporada_id = Input::get('temporada_id');
+
+		$torneos = Torneos::where('temporada_id', $temporada_id)->select('serie_id')->distinct()->get();
+		$series  = [];
+
+		foreach ($torneos as $value) {
+			$serie = Series::where('nombre_serie' ,$value->serie_id)->first();
+			
+			$data['id'] = $serie->id;
+			$data['nombre_serie'] = $serie->nombre_serie;
+			
+			array_push($series, $data);
+
+		}
+
+		return Response::json($series);
+	}	
+
 
 	public function calendario($id =  null , $legId = null)
 	{
@@ -384,10 +404,25 @@ class NuevaWebController extends BaseController
 		$data['partido'] 		   = Partido::find($id);	
 		$data['torneo'] = Torneos::find(Session::get('torneo_id'));
 		if($data['partido']->estado != '' || $data['partido']->estado != 0){
+			
+
 			$data['jugadores_locales'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
+			/*	
+			
+			$data['jugadores_locales'] = DB::table('buena_fe_bis')
+            ->join('buena_fe', 'buena_fe_bis.buena_fe_id', '=', 'buena_fe.id')
+            ->where('partido_id', $data['partido']->id)
+            ->where('equipo_id', $data['partido']->local_equipo_id->id)
+            ->orderBy('nro','ASC')
+            ->get();
+			*/
 			$data['staff_local'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->local_equipo_id->id)->get();
 			$data['jugadores_visitantes'] = BuenaFeBis::where('partido_id', $data['partido']->id)->where('equipo_id',$data['partido']->visita_equipo_id->id)->get();
 			$data['staff_visitante'] = BuenaFeStaffBis::where('partido_id', $data['partido']->id)->where('equipo_id', $data['partido']->visita_equipo_id->id)->get();	
+
+
+
+
 		}
 		$data['torneo_fase'] = TorneoFaseLegPartido::where('partido_id', $data['partido']->id)->get()->first();
 		$data['sesion_calendario'] = 1;

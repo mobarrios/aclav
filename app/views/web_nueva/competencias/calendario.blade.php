@@ -79,9 +79,7 @@
                     @foreach($torneo->Equipo as $equipo)
                       @if($equipo->id != 15)
                         <a class="equipo btn btn-default2 btn-outline btn-xs card-header__button" equipo-id="{{$equipo->id}}" >
-                          <figure class="widget-game-result__team-logo">
-                            <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}" >
-                          </figure>
+                          <img src="uploads/escudos/{{$equipo->escudo}}" title="{{$equipo->nombre}}" >
                         </a>
                       @endif
                     @endforeach
@@ -98,13 +96,14 @@
                   @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
 
-                  <div class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                  <div  class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
+                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
                    >
                           <div class="card__content1">                
                               <!-- comienzo titulos -->
-                              <header class="game-result__header1 game-result__header--alt">
+                              <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
                                   <h3 class="game-result__title">{{$leg->fase->nombre}} :  {{$leg->nombre}}</h3>
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>

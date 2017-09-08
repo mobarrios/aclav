@@ -13,6 +13,7 @@ Route::group(array('prefix' => 'web'), function()
     Route::get('informacion/{id}', array('as'=>'informacion','uses'=>'NuevaWebController@informacion'));
     Route::get('temporadas', array('as'=>'temporadas','uses'=>'NuevaWebController@temporadas'));
     Route::post('getTorneos', array('as'=>'getTorneos','uses'=>'NuevaWebController@getTorneos'));      
+    Route::post('getSeries', array('as'=>'getSeries','uses'=>'NuevaWebController@getSeries'));      
 
     //Equipos
     Route::get('participantes', array( 'as' => 'participantes' , 'uses' => 'NuevaWebController@participantes'));
