@@ -5,6 +5,10 @@ class Partido extends Eloquent
 	protected $table	=	'partido';
 	protected $guarded	=	array('');
 	
+	public function TorneoFaseLeg()
+	{
+		return $this->belongsToMany('TorneoFaseLeg','torneo_fase_leg_partido');
+	}
 
 	public function PartidoCosto()
 	{

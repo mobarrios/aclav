@@ -111,8 +111,6 @@ class NuevaWebController extends BaseController
 		$data['temporadas'] = 	Temporada::all();
 
 		$act = array();
-
-		
 		// foreach($data['fases'] as $fase)
 		// {
 		
@@ -147,6 +145,24 @@ class NuevaWebController extends BaseController
 
 			$data['legs'] = $legs;
 		}
+
+
+
+		$partidos = array();
+
+		foreach ($data['torneo']->TorneoFase as $fase ) 
+		{
+			foreach ($fase->leg as $leg) 
+			{
+				foreach ($leg->PartidoCalendario as $partido) 
+				{
+					array_push($partidos, $partido);	
+				}
+			}
+			
+		}
+
+		$data['partidos'] = $partidos;
 
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;

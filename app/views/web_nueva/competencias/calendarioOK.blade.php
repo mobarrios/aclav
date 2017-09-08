@@ -91,12 +91,12 @@
 {{--             @foreach($fases as $fase)
  --}}             
 
-               {{-- @foreach($legs as $leg) --}}
+               @foreach($legs as $leg)
             
-                  @foreach($partidos as $partido)
+                  @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
 
-                  <div  class="partido card1" fase-id='{{$partido->TorneoFaseLeg->first()->Fase->id}}' leg-id='{{$partido->TorneoFaseLeg->first()->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                  <div  class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
                     style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
@@ -105,7 +105,7 @@
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
-                                  <h3 class="game-result__title">{{$partido->TorneoFaseLeg->first()->Fase->nombre}} :  {{$partido->TorneoFaseLeg->first()->nombre}}</h3>
+                                  <h3 class="game-result__title">{{$leg->fase->nombre}} :  {{$leg->nombre}}</h3>
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    
@@ -199,7 +199,7 @@
                   @endforeach
                              
                   <!-- fin de una fecha -->
-                  {{-- @endforeach --}}
+                  @endforeach
                   
 
 
@@ -274,8 +274,6 @@ var teams_id = 0;
 
     });
 
-
-
     //muestra todos las fases
     $('.allFases').on('click',function(ev)
     {
@@ -310,20 +308,17 @@ var teams_id = 0;
         $('.partido').each(function()
         {
 
-          if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-              // if($(this).css('display') == 'none')
-                  $(this).show();
-          else
-                $(this).hide();
-          //else
-          //  $(this).hide();
+          if($(this).css('display') == 'block' )
+            {
+              console.log($(this).attr('local-id'));
+                            console.log(id);
 
-
-          //if($(this).css('display') == 'block' )
-          //  {
-          //    if($(this).attr('local-id') != id  &&  $(this).attr('visita-id') != id )
-          //        $(this).hide();
-          //  }         
+              if($(this).attr('local-id') != id  &&  $(this).attr('visita-id') != id )
+                  $(this).hide();
+              
+              //if($(this).attr('visita-id') != id )
+                //  $(this).hide();  
+            }         
         }); 
      });
 
@@ -338,3 +333,4 @@ var teams_id = 0;
 
 </script>
 @endsection   
+
