@@ -62,6 +62,7 @@ class NuevaWebController extends BaseController
 	}
 
 	public function getTorneos(){
+		
 		$temporada_id = Input::get('temporada_id');
 		$serie_id     = Input::get('serie_id');
 		$torneos = Torneos::where('temporada_id', $temporada_id)->where('serie_id', $serie_id)->get();
@@ -84,7 +85,8 @@ class NuevaWebController extends BaseController
 			array_push($series, $data);
 
 		}
-
+		$data['nombre_serie'] = "Seleccione Serie";
+		array_unshift($series, $data);
 		return Response::json($series);
 	}	
 

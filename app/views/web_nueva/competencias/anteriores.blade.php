@@ -80,16 +80,15 @@
   {
       var temporada_id = ($(".temporada_id option:selected" ).val());
       var serie_id = ($(".serie_id option:selected" ).val());
-      console.log(serie_id);
-       console.log(temporada_id);
+
       $('.torneo_id').empty();
       $.ajax({
                 type: "POST",
                 url : "{{route('getTorneos')}}",
                 data :  {temporada_id: temporada_id, serie_id: serie_id},
                 success : function(data){
+                    
                     $.each(data, function(index, sub){
-                      console.log(data);
                         $('.torneo_id').append('<option value="'+sub.id+'"> '+ sub.nombre_torneo+' </option>')
                     });
                 }
