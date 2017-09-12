@@ -145,6 +145,17 @@ class NuevaWebController extends BaseController
 
 			$data['legs'] = $legs;
 		}
+		//todas las fases donde sea torneo=id
+		$data['partidos'] = DB::table('torneo_fase')
+			->where('torneo_fase.torneo_id', $data['torneo']->id)
+			->join('torneo_fase_leg', 'torneo_fase_leg.torneo_fase_id', '=', 'torneo_fase.id')
+			->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.torneo_fase_leg_id','=','torneo_fase_leg.id')
+			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
+			->orderBy('partido.fecha_inicio', 'DESC')
+			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
+            ->get();
+
+      
 
 
 
@@ -250,7 +261,7 @@ class NuevaWebController extends BaseController
 	}	
 
 	public function detalle_staff($id){
-		$data['models'] 	= Oficial::find($id);
+		$data['models'] 	=  Oficial::find($id);
 		$data['goleador']   =  Goleador::where('estado','=',1)->first();
 		return View::make('web_nueva.equipos.detalle_staff')->with($data);
 	}
