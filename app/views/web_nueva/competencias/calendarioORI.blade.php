@@ -88,14 +88,8 @@
             <!-- fin Encabezado por equipos -->
 
 
-{{--             @foreach($fases as $fase)
- --}}             
-
-               {{-- @foreach($legs as $leg) --}}
             
                   @foreach($partidos as $partido)
-
-
                   <!-- comienzo primer Equipo -->
 
                   <div  class="partido card1" fase-id='{{$partido->TorneoFaseLeg->first()->Fase->id}}' leg-id='{{$partido->TorneoFaseLeg->first()->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
@@ -270,9 +264,7 @@ var teams_id = 0;
       
         $('.partido').each(function()
         {
-          if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
-            $(this).show();
-          else
+          if($(this).attr('fase-id') == fase_id && $(this).attr('leg-id') == leg_id)
             $(this).show();
         }); 
 
@@ -291,8 +283,6 @@ var teams_id = 0;
         {
            $(this).show();
         }); 
-
-         fase_id = 0;
     });
 
     //muestra todos los legs
@@ -304,8 +294,6 @@ var teams_id = 0;
           if(fase_id == $(this).attr('fase-id'))
               $(this).show();
         }); 
-
-       leg_id = 0;
     });
 
     //filtra equipos
@@ -313,57 +301,16 @@ var teams_id = 0;
         var id = $(this).attr('equipo-id');
         //teams_id = id;
 
-        $('.partido').hide();
+       // $('.partido').hide();
 
-        $('.partido').each(function()
+        $('.partido').each(functiocn()
         {
 
-          if(fase_id == 0 ){
-              if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-           }
-          else if(fase_id == $(this).attr('fase-id'))
-          {
-            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-          }
-               
-
-
-          // if($(this).attr('fase-id') == fase_id )
-          // {
-
-          //   if($(this).attr('leg-id') == leg_id)
-
-          //     if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-          //         $(this).show();
-            
-          // }
-          //   else
-          // {
-          //   $(this).hide();
-
-          // }
-          
-
-
-            
-          // if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id )
-          // {
-          //   if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-          //   {
-          //       $(this).show();
-          //   }
-          //   else
-          //   {
-          //     $(this).hide();
-          //   }
-          // }
-
-        
-
-
-
+          if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+              // if($(this).css('display') == 'none')
+                  $(this).show();
+          else
+                $(this).hide();
           //else
           //  $(this).hide();
 
@@ -386,4 +333,4 @@ var teams_id = 0;
 
 
 </script>
-@endsection   
+@endsection
