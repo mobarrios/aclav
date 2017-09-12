@@ -88,24 +88,18 @@
             <!-- fin Encabezado por equipos -->
 
 
-{{--             @foreach($fases as $fase)
- --}}             
-
-               @foreach($legs as $leg)
-            
-                  @foreach($leg->partidoCalendario as $partido)
-                  <!-- comienzo primer Equipo -->
-
-                  <div  class="partido card1" fase-id='{{$leg->torneo_fase_id}}' leg-id='{{$leg->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
-                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
-                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
-                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
-                   >
+               @foreach($partidos as $partido_calendario)
+                  <?php $partido = Partido::find($partido_calendario->partido_id); ?>
+                 
+                  <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
+                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
+                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
                           <div class="card__content1">                
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
-                                  <h3 class="game-result__title">{{$leg->fase->nombre}} :  {{$leg->nombre}}</h3>
+                                  <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    
@@ -198,12 +192,7 @@
                         </div>         
                   @endforeach
                              
-                  <!-- fin de una fecha -->
-                  @endforeach
-                  
 
-
-                {{-- @endforeach --}}
         
                   </section>
                   </div>
