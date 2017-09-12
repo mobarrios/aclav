@@ -111,6 +111,8 @@ class NuevaWebController extends BaseController
 		$data['temporadas'] = 	Temporada::all();
 
 		$act = array();
+
+		
 		// foreach($data['fases'] as $fase)
 		// {
 		
@@ -153,27 +155,10 @@ class NuevaWebController extends BaseController
 			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
 			->orderBy('partido.fecha_inicio', 'DESC')
 			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
+
             ->get();
 
       
-
-
-
-		$partidos = array();
-
-		foreach ($data['torneo']->TorneoFase as $fase ) 
-		{
-			foreach ($fase->leg as $leg) 
-			{
-				foreach ($leg->PartidoCalendario as $partido) 
-				{
-					array_push($partidos, $partido);	
-				}
-			}
-			
-		}
-
-		$data['partidos'] = $partidos;
 
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;
