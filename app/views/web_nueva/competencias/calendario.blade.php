@@ -88,6 +88,7 @@
             <!-- fin Encabezado por equipos -->
 
 
+<<<<<<< HEAD
 {{--             @foreach($fases as $fase)
  --}}             
 
@@ -103,11 +104,24 @@
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
                     style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
                    >
+=======
+               @foreach($partidos as $partido_calendario)
+                  <?php $partido = Partido::find($partido_calendario->partido_id); ?>
+                 
+                  <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
+                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
+                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
+>>>>>>> 7b2def56dae75f74ae908f88b33868db6d99eb1f
                           <div class="card__content1">                
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
+<<<<<<< HEAD
                                   <h3 class="game-result__title">{{$partido->TorneoFaseLeg->first()->Fase->nombre}} :  {{$partido->TorneoFaseLeg->first()->nombre}}</h3>
+=======
+                                  <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
+>>>>>>> 7b2def56dae75f74ae908f88b33868db6d99eb1f
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    
@@ -200,12 +214,8 @@
                         </div>         
                   @endforeach
                              
-                  <!-- fin de una fecha -->
-                  {{-- @endforeach --}}
-                  
 
 
-                {{-- @endforeach --}}
         
                   </section>
                   </div>
