@@ -1012,6 +1012,16 @@ Route::group(array('before' => 'auth'), function()
 			return Response::json($torneos);
 		});
 
+		Route::post('postImage', function(){
+
+			$image = GaleriaImagenes::find(Input::get('image_id'));
+
+			$image->owner = Input::get('input_owner');
+			$image->save();
+
+			//$credito = Input::get('')
+		});
+
 		Route::get('getTemporadas',function(){
 			$temporadas = Temporada::all();
 			return Response::json($temporadas);
@@ -1290,6 +1300,8 @@ Route::group(array('before' => 'auth'), function()
 				return Response::make($contenido, 200, $headers);
 		});
 				
+		//  Route::post('postImage', array('as'=>'postImage','uses'=>'GaleriaController@postImage'));    
+
 });
 
 

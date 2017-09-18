@@ -54,6 +54,13 @@
 				<a href="uploads/contenidos/galeria/{{$galeria_id}}/{{$sub->id}}/{{$models->imagen}}" class="thumbnail">
 					<img src="uploads/contenidos/galeria/{{$galeria_id}}/{{$sub->id}}/{{$models->imagen}}"  >
 				</a>
+				
+				 <div class="input-group">
+			       {{ Form::text ('owner', $models->owner , array('class' => 'form-control', 'id' => $models->id)) }}
+			      <span class="input-group-btn">
+			        <button class="btn btn-secondary btn_edit" type="button" data-id="{{$models->id}}"><span class="fa fa-edit"></span></button>
+			      </span>
+			    </div>
 			</div>
 
 			</div>
@@ -70,5 +77,43 @@
 
 
 @endsection	
+@section('extraJs')
+<script type="text/javascript">
+	
+
+	$(".btn_edit").click(function(){
+		if (confirm("Desea Editar La Imagen?"))
+		{
+		
+			  var image_id    = $(this).data("id");
+			  var input_owner = ($("#"+image_id ).val());
+		
+			  /*
+		    	 $.get('getTorneos/'+$(this).val() ,function(data){
+                    
+                });
+			*/
+		      $.ajax({
+				type: "POST",
+				url : "postImage",
+				data :  {input_owner: input_owner, image_id: image_id },
+				success : function(data){
+					alert("Se ha editado correctamente la imagen.");
+				},
+				error: function(e) {
+				    alert(e.responseText);
+				  }
+		    });
+		}
+	    
+	});
+
+
+	
+</script>
+
+@endsection
+
 
 @stop
+

@@ -264,6 +264,7 @@ class GaleriaController extends BaseController
 
 	}
 
+
 }
 
 ?>
