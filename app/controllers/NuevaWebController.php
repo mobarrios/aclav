@@ -153,7 +153,7 @@ class NuevaWebController extends BaseController
 			->join('torneo_fase_leg', 'torneo_fase_leg.torneo_fase_id', '=', 'torneo_fase.id')
 			->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.torneo_fase_leg_id','=','torneo_fase_leg.id')
 			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
-			->orderBy('partido.fecha_inicio', 'DESC')
+			->orderBy('partido.fecha_inicio', 'ASC')
 			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
 
             ->get();

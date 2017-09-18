@@ -259,14 +259,34 @@ var teams_id = 0;
     {
       ev.preventDefault();
       
+        $('.partido').hide();
+
         $('.partido').each(function()
         {
-          if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
-            $(this).show();
-          else
-            $(this).show();
+
+          if(fase_id == 0)
+          {
+                    $(this).show();
+          }
+          else if( $(this).attr('fase-id') == fase_id )
+          {
+            if(leg_id == 0 )
+            {
+                  $(this).show();
+            }
+            else if( $(this).attr('leg-id') == leg_id )
+            {
+                    $(this).show();
+            }
+
+          }
+          // if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
+          //   $(this).show();
+          // else
+          //   $(this).show();
         }); 
 
+        teams_id = 0;
     });
 
 
@@ -309,16 +329,37 @@ var teams_id = 0;
         $('.partido').each(function()
         {
 
-          if(fase_id == 0 ){
-              if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-           }
-          else if(fase_id == $(this).attr('fase-id'))
+
+          if(fase_id == 0)
           {
-            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
+            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id ){
+                    $(this).show();
+            } 
+
           }
-               
+          else if( $(this).attr('fase-id') == fase_id )
+          {
+            if(leg_id == 0 )
+            {
+                if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+                    $(this).show();
+            }
+            else if( $(this).attr('leg-id') == leg_id )
+            {
+                  if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+                    $(this).show();
+            }
+
+          }
+
+              
+              // if(teams_id == 0)
+              // {
+              //   if(fase_id!= 0 && $(this).attr('fase-id') == fase_id) 
+              //   {
+              //     $(this).show();
+              //   }
+              // }
 
 
           // if($(this).attr('fase-id') == fase_id )
