@@ -128,7 +128,6 @@ class NuevaWebController extends BaseController
 
 		// //$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
 		// $data['leg_actual'] = $act;
-
 		$legs = array();
 
 		if($legId != null)
@@ -139,14 +138,35 @@ class NuevaWebController extends BaseController
 		{
 			foreach ($data['fases'] as $fase ) 
 			{
+
 				foreach ($fase->leg as $leg ) 
 				{
+					/*	
+					 $ob = DB::table('partido')
+       					->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.partido_id', '=', 'partido.id')
+						->where('torneo_fase_leg_id', $leg->id)
+						->orderBy('partido.fecha_inicio','ASC')
+						->orderBy('partido.hora','ASC')
+						->get();
+					*/
+
 					array_push($legs, $leg);
 				}
 			}
 
 			$data['legs'] = $legs;
 		}
+	
+		/*
+		 $data['legs'] = DB::table('partido')
+        ->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.partido_id', '=', 'partido.id')
+        ->join('torneo_fase_leg', 'torneo_fase_leg_partido.torneo_fase_leg_id', '=', 'torneo_fase_leg.id')
+        ->join('torneo_fase', 'torneo_fase_leg.id','=' ,'torneo_fase.tipo_fase_id')
+        ->where('torneo_fase.torneo_id',$data['torneo']->id)
+        ->get();
+		*/
+
+   
 
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;

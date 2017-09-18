@@ -92,7 +92,7 @@
  --}}             
 
                @foreach($legs as $leg)
-            
+                  
                   @foreach($leg->partidoCalendario as $partido)
                   <!-- comienzo primer Equipo -->
 
