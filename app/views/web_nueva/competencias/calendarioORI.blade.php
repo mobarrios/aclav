@@ -88,21 +88,20 @@
             <!-- fin Encabezado por equipos -->
 
 
+            
+                  @foreach($partidos as $partido)
+                  <!-- comienzo primer Equipo -->
 
-               @foreach($partidos as $partido_calendario)
-                  <?php $partido = Partido::find($partido_calendario->partido_id); ?>
-                 
-                  <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
-                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
-                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
-                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
-
+                  <div  class="partido card1" fase-id='{{$partido->TorneoFaseLeg->first()->Fase->id}}' leg-id='{{$partido->TorneoFaseLeg->first()->id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+                   local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: ''  }}"
+                    visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: ''  }}"
+                    style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }} "
+                   >
                           <div class="card__content1">                
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
-
-                                  <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
+                                  <h3 class="game-result__title">{{$partido->TorneoFaseLeg->first()->Fase->nombre}} :  {{$partido->TorneoFaseLeg->first()->nombre}}</h3>
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    
@@ -195,8 +194,12 @@
                         </div>         
                   @endforeach
                              
+                  <!-- fin de una fecha -->
+                  {{-- @endforeach --}}
+                  
 
 
+                {{-- @endforeach --}}
         
                   </section>
                   </div>
@@ -261,9 +264,7 @@ var teams_id = 0;
       
         $('.partido').each(function()
         {
-          if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
-            $(this).show();
-          else
+          if($(this).attr('fase-id') == fase_id && $(this).attr('leg-id') == leg_id)
             $(this).show();
         }); 
 
@@ -282,8 +283,6 @@ var teams_id = 0;
         {
            $(this).show();
         }); 
-
-         fase_id = 0;
     });
 
     //muestra todos los legs
@@ -295,8 +294,6 @@ var teams_id = 0;
           if(fase_id == $(this).attr('fase-id'))
               $(this).show();
         }); 
-
-       leg_id = 0;
     });
 
     //filtra equipos
@@ -304,57 +301,16 @@ var teams_id = 0;
         var id = $(this).attr('equipo-id');
         //teams_id = id;
 
-        $('.partido').hide();
+       // $('.partido').hide();
 
-        $('.partido').each(function()
+        $('.partido').each(functiocn()
         {
 
-          if(fase_id == 0 ){
-              if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-           }
-          else if(fase_id == $(this).attr('fase-id'))
-          {
-            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-          }
-               
-
-
-          // if($(this).attr('fase-id') == fase_id )
-          // {
-
-          //   if($(this).attr('leg-id') == leg_id)
-
-          //     if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-          //         $(this).show();
-            
-          // }
-          //   else
-          // {
-          //   $(this).hide();
-
-          // }
-          
-
-
-            
-          // if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id )
-          // {
-          //   if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-          //   {
-          //       $(this).show();
-          //   }
-          //   else
-          //   {
-          //     $(this).hide();
-          //   }
-          // }
-
-        
-
-
-
+          if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+              // if($(this).css('display') == 'none')
+                  $(this).show();
+          else
+                $(this).hide();
           //else
           //  $(this).hide();
 
@@ -377,4 +333,4 @@ var teams_id = 0;
 
 
 </script>
-@endsection   
+@endsection
