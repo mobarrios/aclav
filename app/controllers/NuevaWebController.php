@@ -20,8 +20,6 @@ class NuevaWebController extends BaseController
 		$data['resultados'] 	 =	Partido::where('home',1)->where('estado','=', 2 )->orderBy('fecha_inicio','ASC')->get();
 		$data['proximos_partidos'] 	 =	Partido::where('home',1)->where('estado','')->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		
-
-		
 		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['videos'] = Video::where('estado','=',1)->orderBy('id','DESC')->take(5)->get();
 		
@@ -752,6 +750,9 @@ class NuevaWebController extends BaseController
 		
 		*/
 	}
+
+
+
 
 }
 

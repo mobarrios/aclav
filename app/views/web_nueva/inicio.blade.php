@@ -403,12 +403,90 @@
 
 @endsection
 
-@if(count($modal_pop) > 0)
-  @section('javascript')
-  <script type="text/javascript">
-   $(window).on('load',function(){
+@section('javascript')
+  @if(count($modal_pop) > 0)
+    <script type="text/javascript">
+      $(window).on('load',function(){
           $('#modal').modal('show');
       });
+    </script>
+  @endif
+  @if($partidosDiarios->count() != 0)
+  <script type="text/javascript">
+    function pxp()
+    {      
+        $.get('web/pxp',function(data){
+
+        for(var i=0; i < data.length; i++) {
+
+            $('#divPXP').append(i);
+
+             $('#partido_'+ data[i].partido +'_set_total_local').text(data[i].set_local);
+             $('#partido_'+ data[i].partido +'_set_total_visita').text(data[i].set_visita);
+
+    
+
+             for(var key=0 ; key < data[i].punto_partido.length; key++)
+             {  
+              
+              if(data[i].punto_partido[key].set_numero == 1)
+                {
+                  $('#partido_'+data[i].partido+'_set_1_Local').text(data[i].punto_partido[key].set_1_local);
+                  $('#partido_'+data[i].partido+'_set_1_Visita').text(data[i].punto_partido[key].set_1_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 2)
+                {
+                  $('#partido_'+data[i].partido+'_set_2_Local').text(data[i].punto_partido[key].set_2_local);
+                  $('#partido_'+data[i].partido+'_set_2_Visita').text(data[i].punto_partido[key].set_2_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 3)
+                {
+                  $('#partido_'+data[i].partido+'_set_3_Local').text(data[i].punto_partido[key].set_3_local);
+                  $('#partido_'+data[i].partido+'_set_3_Visita').text(data[i].punto_partido[key].set_3_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 4)
+                {
+                  $('#partido_'+data[i].partido+'_set_4_Local').text(data[i].punto_partido[key].set_4_local);
+                  $('#partido_'+data[i].partido+'_set_4_Visita').text(data[i].punto_partido[key].set_4_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 5)
+                {
+                  $('#partido_'+data[i].partido+'_set_5_Local').text(data[i].punto_partido[key].set_5_local);
+                  $('#partido_'+data[i].partido+'_set_5_Visita').text(data[i].punto_partido[key].set_5_visita);   
+                }
+             }
+        
+             console.log('---');
+        }          
+
+     });
+    }
+    
+    function interval()
+    {
+       if($('.actual').length != 0)
+       {
+            setInterval(function()
+            {
+             pxp();
+            }, 
+            45000);
+
+
+       }
+    }
+
+       // very simple to use!
+    $(document).ready(function() 
+    {     
+        interval();
+    
+    });
   </script>
-  @endsection
-@endif
+  @endif
+@endsection
+
