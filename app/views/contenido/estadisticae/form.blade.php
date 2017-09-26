@@ -7,7 +7,7 @@
 
 	<div class="panel-heading">
 		
-		<b>{{$modulo}}</b>
+		<b>Popup Web</b>
 			
 	</div>
 

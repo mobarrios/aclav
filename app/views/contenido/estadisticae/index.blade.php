@@ -7,19 +7,18 @@
 
 	<div class="panel-heading">
 		
-		<b>{{$modulo}}</b>
+		<b>Popup Web</b>
 			
 	</div>
 
 	<div class="panel-body">
 
-		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar Estadística</a>
+		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar Popup Web</a>
 
 		<table class="table table-hover datatable">
 			<thead>
 				<tr>
 					<th>Imágen</th>
-					<th>Tipo Estadística</th>
 					<th>Estado</th>
 					<th>Accion</th>		
 				</tr>
@@ -36,9 +35,6 @@
 							</div>
 						</td>
 						
-						<td>
-							<a href="estadisticae/edit/{{Crypt::encrypt($models->id)}}">{{$models->cuerpo}}</a>
-						</td>
 						
 						<td>
 							@if($models->estado == 1)

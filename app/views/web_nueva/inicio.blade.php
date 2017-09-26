@@ -1,4 +1,39 @@
 @extends('web_nueva.template')
+@section('css')
+<style>
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.7);
+    display:none;
+}
+
+.ventana{
+    width:600px;
+    position:absolute;
+    top:20%;
+    left:35%;
+    margin-left:-100px;
+}
+
+.ventana span{
+    color:#fff;
+    background-color:#000;
+    padding:.2em .5em .3em .5em;
+    font-family:Arial;
+    font-weight:bold;
+    border:2px solid #fff;
+    border-radius:50%;
+    position:absolute;
+    top:-15px;
+    right:-20px;
+    cursor:pointer;
+}
+</style>
+@endsection
 @section('site-content')
 
 
@@ -345,87 +380,113 @@
 
     
     <!-- Footer / End --> 
-    
-    
+    @if(count($modal_pop) > 0)
     <!-- Login/Register Modal -->
-    <div class="modal fade" id="modal-login-register" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg modal--login" role="document">
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" >
+      <div class="ventana">
+        <!-- Modal content-->
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
+          
           <div class="modal-body">
-    
-            <div class="modal-account-holder">
-              <div class="modal-account__item">
-    
-                <!-- Register Form -->
-                <form action="#" class="modal-form">
-                  <h5>Register Now!</h5>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your email address...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter your password...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Repeat your password...">
-                  </div>
-                  <div class="form-group form-group--submit">
-                    <a href="shop-account.html" class="btn btn-primary btn-block">Create Your Account</a>
-                  </div>
-                  <div class="modal-form--note">You?ll receive a confirmation email in your inbox with a link to activate your account. </div>
-                </form>
-                <!-- Register Form / End -->
-    
-              </div>
-              <div class="modal-account__item">
-    
-                <!-- Login Form -->
-                <form action="#" class="modal-form">
-                  <h5>Login to your account</h5>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your email address...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter your password...">
-                  </div>
-                  <div class="form-group form-group--pass-reminder">
-                    <label class="checkbox checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Remember Me
-                      <span class="checkbox-indicator"></span>
-                    </label>
-                    <a href="#">Forgot your password?</a>
-                  </div>
-                  <div class="form-group form-group--submit">
-                    <a href="shop-account.html" class="btn btn-primary-inverse btn-block">Enter to your account</a>
-                  </div>
-                  <div class="modal-form--social">
-                    <h6>or Login with your social profile:</h6>
-                    <ul class="social-links social-links--btn text-center">
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--fb"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--twitter"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--gplus"><i class="fa fa-google-plus"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-                <!-- Login Form / End -->
-    
-              </div>
-            </div>
+            <img src="uploads/contenidos/estadisticae/{{$modal_pop->imagen}}">
+          </div>
+          <div>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
         </div>
       </div>
     </div>
     <!-- Login/Register Modal / End -->
-    
+    @endif
     
 </div>
 
 @endsection
+
+@section('javascript')
+  @if(count($modal_pop) > 0)
+    <script type="text/javascript">
+      $(window).on('load',function(){
+          $('#modal').modal('show');
+      });
+    </script>
+  @endif
+  @if($partidosDiarios->count() != 0)
+  <script type="text/javascript">
+    function pxp()
+    {      
+        $.get('web/pxp',function(data){
+
+        for(var i=0; i < data.length; i++) {
+
+            $('#divPXP').append(i);
+
+             $('#partido_'+ data[i].partido +'_set_total_local').text(data[i].set_local);
+             $('#partido_'+ data[i].partido +'_set_total_visita').text(data[i].set_visita);
+
+    
+
+             for(var key=0 ; key < data[i].punto_partido.length; key++)
+             {  
+              
+              if(data[i].punto_partido[key].set_numero == 1)
+                {
+                  $('#partido_'+data[i].partido+'_set_1_Local').text(data[i].punto_partido[key].set_1_local);
+                  $('#partido_'+data[i].partido+'_set_1_Visita').text(data[i].punto_partido[key].set_1_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 2)
+                {
+                  $('#partido_'+data[i].partido+'_set_2_Local').text(data[i].punto_partido[key].set_2_local);
+                  $('#partido_'+data[i].partido+'_set_2_Visita').text(data[i].punto_partido[key].set_2_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 3)
+                {
+                  $('#partido_'+data[i].partido+'_set_3_Local').text(data[i].punto_partido[key].set_3_local);
+                  $('#partido_'+data[i].partido+'_set_3_Visita').text(data[i].punto_partido[key].set_3_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 4)
+                {
+                  $('#partido_'+data[i].partido+'_set_4_Local').text(data[i].punto_partido[key].set_4_local);
+                  $('#partido_'+data[i].partido+'_set_4_Visita').text(data[i].punto_partido[key].set_4_visita);   
+                }
+
+              if(data[i].punto_partido[key].set_numero == 5)
+                {
+                  $('#partido_'+data[i].partido+'_set_5_Local').text(data[i].punto_partido[key].set_5_local);
+                  $('#partido_'+data[i].partido+'_set_5_Visita').text(data[i].punto_partido[key].set_5_visita);   
+                }
+             }
+        
+             console.log('---');
+        }          
+
+     });
+    }
+    
+    function interval()
+    {
+       if($('.actual').length != 0)
+       {
+            setInterval(function()
+            {
+             pxp();
+            }, 
+            45000);
+
+
+       }
+    }
+
+       // very simple to use!
+    $(document).ready(function() 
+    {     
+        interval();
+    
+    });
+  </script>
+  @endif
+@endsection
+

@@ -89,7 +89,41 @@ Route::group(array('prefix' => 'web'), function()
     */
     
     Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
-   // Route::get('test', function() { Mail::send('Email.test', function ($message) { $message->to('rochaleandroleonel@gmail.com', [], 'example')->subject('Welcome!'); }); });
-   // Route::post(array('action' => 'NuevaWebController@procesar'));
+    Route::get('/pxp', function()
+    {
+            
+            $date = date('Y-m-d');
+            $buscaPartido   = Partido::where('fecha_inicio','=', $date )->get();
+
+            $data   = array();
+            $puntos = array();
+
+            foreach($buscaPartido as $partido)
+            {
+                $puntoPartido = PartidoPunto::where('partido_id','=',$partido->id)->get();
+                $puntos = array();
+
+                foreach($partido->puntoPartido as $pto)
+                {
+                    array_push($puntos, array(
+                        'set_numero'=>$pto->set_numero,
+                        'set_'.$pto->set_numero.'_local' => $pto->puntos_local,
+                        'set_'.$pto->set_numero.'_visita' => $pto->puntos_visita,
+
+                        ));
+                }
+                             
+                array_push($data , array(
+                            
+                            'partido'       => $partido->id,
+                            'set_local'     => $partido->local_set,
+                            'set_visita'    => $partido->visita_set,
+                            'punto_partido' => $puntos
+                             ));
+
+            }
+
+            return Response::json($data);    
+    });
 
 });	
