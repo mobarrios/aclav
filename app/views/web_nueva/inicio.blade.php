@@ -7,7 +7,8 @@
     left:0;
     width:100%;
     height:100%;
-    background-color:rgba(0,0,0,.7);
+    background-color:rgba(0,0,0,.7); 
+    opacity: 0.5;
     display:none;
 }
 
@@ -431,32 +432,81 @@
               
               if(data[i].punto_partido[key].set_numero == 1)
                 {
-                  $('#partido_'+data[i].partido+'_set_1_Local').text(data[i].punto_partido[key].set_1_local);
-                  $('#partido_'+data[i].partido+'_set_1_Visita').text(data[i].punto_partido[key].set_1_visita);   
+                  if(data[i].punto_partido[key].set_1_local > data[i].punto_partido[key].set_1_visita){
+                    $('#partido_'+data[i].partido+'_set_1_Local').html('<b>'+data[i].punto_partido[key].set_1_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_1_Local').html(data[i].punto_partido[key].set_1_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_1_visita > data[i].punto_partido[key].set_1_local){
+                    $('#partido_'+data[i].partido+'_set_1_Visita').html('<b>'+data[i].punto_partido[key].set_1_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_1_Visita').html(data[i].punto_partido[key].set_1_visita);   
+                  }
                 }
 
               if(data[i].punto_partido[key].set_numero == 2)
                 {
-                  $('#partido_'+data[i].partido+'_set_2_Local').text(data[i].punto_partido[key].set_2_local);
-                  $('#partido_'+data[i].partido+'_set_2_Visita').text(data[i].punto_partido[key].set_2_visita);   
+                  if(data[i].punto_partido[key].set_2_local > data[i].punto_partido[key].set_2_visita){
+                    $('#partido_'+data[i].partido+'_set_2_Local').html('<b>'+data[i].punto_partido[key].set_2_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_2_Local').html(data[i].punto_partido[key].set_2_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_2_visita > data[i].punto_partido[key].set_2_local){
+                    $('#partido_'+data[i].partido+'_set_2_Visita').html('<b>'+data[i].punto_partido[key].set_2_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_2_Visita').html(data[i].punto_partido[key].set_2_visita);   
+                  }
+
                 }
 
               if(data[i].punto_partido[key].set_numero == 3)
                 {
-                  $('#partido_'+data[i].partido+'_set_3_Local').text(data[i].punto_partido[key].set_3_local);
-                  $('#partido_'+data[i].partido+'_set_3_Visita').text(data[i].punto_partido[key].set_3_visita);   
+                  if(data[i].punto_partido[key].set_3_local > data[i].punto_partido[key].set_3_visita){
+                    $('#partido_'+data[i].partido+'_set_3_Local').html('<b>'+data[i].punto_partido[key].set_3_local+'</b>');
+                    }else{
+                    $('#partido_'+data[i].partido+'_set_3_Local').html(data[i].punto_partido[key].set_3_local);
+                    }
+
+                  if(data[i].punto_partido[key].set_3_visita > data[i].punto_partido[key].set_3_local){
+                    $('#partido_'+data[i].partido+'_set_3_Visita').html('<b>'+data[i].punto_partido[key].set_3_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_3_Visita').html(data[i].punto_partido[key].set_3_visita);   
+                  }  
+                    
+                
                 }
+
 
               if(data[i].punto_partido[key].set_numero == 4)
                 {
-                  $('#partido_'+data[i].partido+'_set_4_Local').text(data[i].punto_partido[key].set_4_local);
-                  $('#partido_'+data[i].partido+'_set_4_Visita').text(data[i].punto_partido[key].set_4_visita);   
+                  if(data[i].punto_partido[key].set_4_local > data[i].punto_partido[key].set_4_visita){
+                    $('#partido_'+data[i].partido+'_set_4_Local').html('<b>'+data[i].punto_partido[key].set_4_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_4_Local').html(data[i].punto_partido[key].set_4_local);                   
+                  }
+
+                  if(data[i].punto_partido[key].set_4_visita > data[i].punto_partido[key].set_4_local){
+                    $('#partido_'+data[i].partido+'_set_4_Visita').html('<b>'+data[i].punto_partido[key].set_4_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_4_Visita').html(data[i].punto_partido[key].set_4_visita);                     
+                  }
                 }
 
               if(data[i].punto_partido[key].set_numero == 5)
                 {
-                  $('#partido_'+data[i].partido+'_set_5_Local').text(data[i].punto_partido[key].set_5_local);
-                  $('#partido_'+data[i].partido+'_set_5_Visita').text(data[i].punto_partido[key].set_5_visita);   
+                  if(data[i].punto_partido[key].set_5_local > data[i].punto_partido[key].set_5_visita){
+                    $('#partido_'+data[i].partido+'_set_5_Local').html('<b>'+data[i].punto_partido[key].set_5_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_5_Local').html(data[i].punto_partido[key].set_5_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_5_visita > data[i].punto_partido[key].set_5_local){
+                    $('#partido_'+data[i].partido+'_set_5_Visita').html('<b>'+data[i].punto_partido[key].set_5_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_5_Visita').html(data[i].punto_partido[key].set_5_visita);   
+                  }
                 }
              }
         
