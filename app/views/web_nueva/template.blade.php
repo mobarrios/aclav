@@ -119,7 +119,7 @@
      <!-- Footer
     ================================================== -->
 
-   @include('web_nueva.template.footer')
+    @include('web_nueva.template.footer')
     <!-- Footer / End --> 
     
     

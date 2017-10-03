@@ -1,4 +1,38 @@
 @extends('web_nueva.template')
+@section('css')
+<style>
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.ventana{
+    width:600px;
+    position:absolute;
+    top:3%;
+    left:40%;
+    margin-left:-100px;
+}
+
+.ventana span{
+    color:#fff;
+    background-color:#000;
+    padding:.2em .5em .3em .5em;
+    font-family:Arial;
+    font-weight:bold;
+    border:2px solid #fff;
+    border-radius:50%;
+    position:absolute;
+    top:-15px;
+    right:-20px;
+    cursor:pointer;
+}
+</style>
+@endsection
 @section('site-content')
 
 
@@ -348,6 +382,8 @@
     
     
     <!-- Login/Register Modal -->
+     @if(count($modal_pop) > 0)
+    <!-- Login/Register Modal
     <div class="modal fade" id="modal-login-register" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg modal--login" role="document">
         <div class="modal-content">
@@ -357,75 +393,50 @@
           <div class="modal-body">
     
             <div class="modal-account-holder">
-              <div class="modal-account__item">
-    
-                <!-- Register Form -->
-                <form action="#" class="modal-form">
-                  <h5>Register Now!</h5>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your email address...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter your password...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Repeat your password...">
-                  </div>
-                  <div class="form-group form-group--submit">
-                    <a href="shop-account.html" class="btn btn-primary btn-block">Create Your Account</a>
-                  </div>
-                  <div class="modal-form--note">You?ll receive a confirmation email in your inbox with a link to activate your account. </div>
-                </form>
-                <!-- Register Form / End -->
-    
-              </div>
-              <div class="modal-account__item">
-    
-                <!-- Login Form -->
-                <form action="#" class="modal-form">
-                  <h5>Login to your account</h5>
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your email address...">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter your password...">
-                  </div>
-                  <div class="form-group form-group--pass-reminder">
-                    <label class="checkbox checkbox-inline">
-                      <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Remember Me
-                      <span class="checkbox-indicator"></span>
-                    </label>
-                    <a href="#">Forgot your password?</a>
-                  </div>
-                  <div class="form-group form-group--submit">
-                    <a href="shop-account.html" class="btn btn-primary-inverse btn-block">Enter to your account</a>
-                  </div>
-                  <div class="modal-form--social">
-                    <h6>or Login with your social profile:</h6>
-                    <ul class="social-links social-links--btn text-center">
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--fb"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--twitter"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link--lg social-links__link--gplus"><i class="fa fa-google-plus"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </form>
-                <!-- Login Form / End -->
-    
-              </div>
+                 <img src="uploads/contenidos/estadisticae/{{$modal_pop->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
             </div>
           </div>
         </div>
       </div>
     </div>
+    -->
+
+    <div id="modal" class="modal">
+      <div class="ventana">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          
+          <div class="modal-body">
+            <img src="assets/images/popup.png">
+          </div>
+          <div>
+            <button type="button" class="cerrar">cerrar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Login/Register Modal / End -->
+    @endif
+    
     <!-- Login/Register Modal / End -->
     
     
 </div>
 
 @endsection
+@if(count($modal_pop) > 0)
+  @section('javascript')
+  <script type="text/javascript">
+   $(window).on('load',function(){
+           $(".modal").fadeIn();
+              $(".cerrar").click(function(){
+                  $(".modal").fadeOut(200);
+              });
+     });
+
+
+  </script>
+  @endsection
+@endif

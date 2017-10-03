@@ -103,6 +103,7 @@
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
 
                                   <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
+
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    

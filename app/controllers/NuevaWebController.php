@@ -34,7 +34,7 @@ class NuevaWebController extends BaseController
 		$data['torneos'] 	 	 = 	Torneos::find(19);
 		$data['fases'] 			 = 	TorneoFase::where('torneo_id','=',19)->get();
 		$data['tablas']			 =  TorneoFase::where('tabla_web',1)->get();
-		
+		$data['modal_pop']		 =  Estadisticae::where('estado','=',1)->first();
 		
         return View::make('web_nueva.inicio')->with($data);
 	}
