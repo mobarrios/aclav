@@ -22,6 +22,17 @@
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-107182388-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107182388-1');
+  </script>
+
   <!-- Google Web Fonts
   ================================================== -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CSource+Sans+Pro:400,700" rel="stylesheet">

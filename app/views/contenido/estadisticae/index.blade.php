@@ -48,7 +48,14 @@
 							@endif
 			
 						</td>
-                               <td><a href="estadisticae/delete/{{Crypt::encrypt($models->id)}}" class="del btn btn-sm  btn-danger " type="button"><i class="fa fa-times-circle "></i></a></td>
+									
+								
+                               <td>
+                               	<a href="estadisticae/edit/{{Crypt::encrypt($models->id)}}" class="btn btn-sm  btn-info " type="button">
+                               	<i class="fa fa-edit "></i></a>
+
+                               <a href="estadisticae/delete/{{Crypt::encrypt($models->id)}}" class="del btn btn-sm  btn-danger " type="button"><i class="fa fa-times-circle "></i></a>
+                               </td>
 						
 					</tr>
 

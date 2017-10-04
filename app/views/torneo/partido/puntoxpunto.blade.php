@@ -6,7 +6,7 @@
 
 	<div class="panel-heading">
 		
-		<b>Partido Nro: {{$partido->numero_partido}}</b>
+		<b>Partido Nro: {{$partido->numero_partido}} </b>
 
 			Local
 			vs
