@@ -89,7 +89,7 @@ Route::group(array('prefix' => 'web'), function()
     */
     
     Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
-    Route::get('/pxp', function()
+    Route::get('pxp', function()
     {
             
             $date = date('Y-m-d');
