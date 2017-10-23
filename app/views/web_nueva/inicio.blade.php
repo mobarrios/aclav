@@ -39,7 +39,6 @@
 
 <div class="site-contentchico">
 
-@if($partidosDiarios->count() != 0)
     <div class="container">
      <div class="owl-carousel col-lg-12">
      
@@ -57,7 +56,7 @@
         
       </div>
     </div>
-  @endif
+
 </div>        
 
     <!-- Pushy Panel action-->
