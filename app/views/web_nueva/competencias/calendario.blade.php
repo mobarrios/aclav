@@ -101,6 +101,9 @@
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b></span>
+                                @if($partido->condicional)
+                                  <label class="pull-left label label-danger">Condicional</label>
+                                @endif
 
                                   <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
@@ -131,10 +134,10 @@
                                       <div class="game-result__date"><font size="3"><p>{{ isset($partido->Estadio->nombre) ? $partido->Estadio->nombre : '' }}</p></font></div>             
                                         
                                         @if($partido->televisado == 1 )
-                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play"><img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243">
+                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play"><img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243">
                                        @elseif($partido->televisado == 2 )
 
-                                       <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports"><img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
+                                       <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports" target="_blank" ><img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
 
                                         @endif
 
@@ -160,15 +163,15 @@
                                         
                                         @if($partido->televisado == 1 )
                                            <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
-                                           <img src="assets/webnueva/images/tyc_play.png"></a> <span style="font-weight:100;color:#CD3243"> |
+                                           <img src="assets/webnueva/images/tyc_play.png" target="_blank" ></a> <span style="font-weight:100;color:#CD3243"> |
                                         @elseif($partido->televisado == 2 )
-<a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
+<a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
                                            <img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
                                         @endif
 
                                          </span>  
                                         <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
-                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" target="_blank" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                               </div>
                               @endif
@@ -259,14 +262,34 @@ var teams_id = 0;
     {
       ev.preventDefault();
       
+        $('.partido').hide();
+
         $('.partido').each(function()
         {
-          if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
-            $(this).show();
-          else
-            $(this).show();
+
+          if(fase_id == 0)
+          {
+                    $(this).show();
+          }
+          else if( $(this).attr('fase-id') == fase_id )
+          {
+            if(leg_id == 0 )
+            {
+                  $(this).show();
+            }
+            else if( $(this).attr('leg-id') == leg_id )
+            {
+                    $(this).show();
+            }
+
+          }
+          // if($(this).attr('fase-id') == fase_id || $(this).attr('leg-id') == leg_id)
+          //   $(this).show();
+          // else
+          //   $(this).show();
         }); 
 
+        teams_id = 0;
     });
 
 
@@ -309,16 +332,37 @@ var teams_id = 0;
         $('.partido').each(function()
         {
 
-          if(fase_id == 0 ){
-              if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
-           }
-          else if(fase_id == $(this).attr('fase-id'))
+
+          if(fase_id == 0)
           {
-            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                   $(this).show();
+            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id ){
+                    $(this).show();
+            } 
+
           }
-               
+          else if( $(this).attr('fase-id') == fase_id )
+          {
+            if(leg_id == 0 )
+            {
+                if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+                    $(this).show();
+            }
+            else if( $(this).attr('leg-id') == leg_id )
+            {
+                  if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
+                    $(this).show();
+            }
+
+          }
+
+              
+              // if(teams_id == 0)
+              // {
+              //   if(fase_id!= 0 && $(this).attr('fase-id') == fase_id) 
+              //   {
+              //     $(this).show();
+              //   }
+              // }
 
 
           // if($(this).attr('fase-id') == fase_id )
@@ -369,8 +413,8 @@ var teams_id = 0;
 
 
      $('html, body').animate({
-        scrollTop: $("#today").offset().top
-    }, 2000);
+        scrollTop: $("#today").offset().top -10%
+    }, 1000);
 
 
 

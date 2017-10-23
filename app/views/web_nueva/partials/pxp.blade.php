@@ -10,10 +10,10 @@
 @endif
 <p>{{ strtoupper($pxp->getFechaDeInicio()) }} | {{$pxp->hora}}
 @if($pxp->televisado == 1 )
-<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}"><img src="assets/webnueva/images/tyc_play.png"></a></span>
+<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" target="_blank" ><img src="assets/webnueva/images/tyc_play.png"></a></span>
 
 @elseif($pxp->televisado == 2 )
-<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}"><img src="assets/webnueva/images/tyc_tv.png"></a></span>
+<span class="label1 posts__cat-label1"><a href="{{$pxp->televisado_url ? $pxp->televisado_url  : '#' }}" target="_blank" ><img src="assets/webnueva/images/tyc_tv.png"></a></span>
 @endif
 
 </p>

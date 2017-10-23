@@ -30,7 +30,7 @@
                      
                      @if($pto->set_actual == 1)
                        
-                        <?php $actual = $pto->set_numero ?>
+                        <?php $actual = $pto->set_numero ;?>
                   
                      @endif
 
@@ -99,7 +99,7 @@
         @if(isset($set_actual))    
             @if($set_actual->puntos_local != $set_actual->puntos_visita)
               @if($partido->estado != 0)
-              <button class="terminar_set btn btn-xs btn-success">Terminar Set</button>
+                <button class="terminar_set btn btn-xs btn-success">Terminar Set</button>
               @endif
             @endif
         @endif

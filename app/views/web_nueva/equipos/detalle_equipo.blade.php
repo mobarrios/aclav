@@ -86,7 +86,12 @@
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->nro}}</font></a>
                           </td> 
                           <td class="team-roster-table__name">
-                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a>
+                            <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->apellido}} {{$k->Jugador->nombre}}</font></a><br>
+                               @if(date("d-m-Y", strtotime($k->fecha_desde)) > date("d-m-Y", strtotime($jugadores->first()->o2->updated_at)))
+                              <font color="#808080">desde {{$k->fecha_desde}}</font>
+                              @endif
+                              
+
                           </td>
                           <td class="team-roster-table__position">
                             <a href="{{route('jugador',$k->Jugador->id)}}"><font color="#000000">{{$k->Jugador->Posicion($k->Jugador->posicion)}}</font>

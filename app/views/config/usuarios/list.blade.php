@@ -7,7 +7,7 @@
 
 				<tbody>
 				
-					@foreach ($grupos as $grupo)
+					@foreach ($grupos as $grupo )
 						<tr>
 							<td colspan="2" align="center"><strong>{{ $grupo->grupo}} </strong></td>
 							

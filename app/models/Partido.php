@@ -226,7 +226,13 @@ class Partido extends Eloquent
 						break;
 			
 				}
+
+		if($this->attributes['fecha_inicio'] != '1969-12-31' )
 			return $dia .' '. date('d',strtotime($this->attributes['fecha_inicio'])) .' de '. $m;
+		else
+							return 'a Confirmar';
+
+
 
 		}
 
@@ -287,14 +293,14 @@ class Partido extends Eloquent
 
 		public function getFechaInicioAttribute($value)
 		{
-			if($value == '1969-12-31' )
+			if($value == '1969-12-31')
 			{
 				return 'a Confirmar';
 			}
 			else
 			{
-					$value = date("d-m-Y",strtotime($value));
-					return $value; 
+				$value = date("d-m-Y",strtotime($value));
+				return $value; 
 			}
 
 		
@@ -308,8 +314,13 @@ class Partido extends Eloquent
 
 		}
 
-		public function getFechaDeInicio(){
-			return $this->getDiaAttribute() .' '. date('d',strtotime($this->attributes['fecha_inicio'])) .' '.$this->getMesAttribute();
+		public function getFechaDeInicio()
+		{
+		
+			if($this->attributes['fecha_inicio'] != '1969-12-31' )
+				return $this->getDiaAttribute() .' '. date('d',strtotime($this->attributes['fecha_inicio'])) .' '.$this->getMesAttribute();
+			else
+				return 'a Confirmar';
 		}
 
 		public function getHoraAttribute($value)

@@ -6,7 +6,7 @@
 <div class="panel panel-default">
 
 	<div class="panel-heading">
-		<b>Partido Nro : {{$partido->numero_partido}}</b>
+		<b>Partido Nro : {{$partido->numero_partido}} </b>
 	</div>
 
 	<div class="panel-body">
@@ -168,7 +168,8 @@
 												
 												<th>Set</th>
 												<th>Local</th>
-												<th>Visitante</th>
+												<th>Visitante </th>
+												<th></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -176,8 +177,13 @@
 											@foreach($partido->puntoPartido as $punto)
 											<tr>
 												<td><strong>{{$punto->set_numero}}</strong></td>
-												<td><input type='text' name='local_{{$punto->id}}' value='{{$punto->puntos_local}}'></td>	
+												<td><input type='text' name='local_{{$punto->id}}' value='{{$punto->puntos_local}}'></td>
 												<td><input type='text' name='visita_{{$punto->id}}' value='{{$punto->puntos_visita}}'></td>
+												<td>
+												@if($punto->set_actual == 1)
+													<label class="label label-danger">Set Actual</label>
+												@endif
+												</td>
 											</tr>									
 											@endforeach
 						
