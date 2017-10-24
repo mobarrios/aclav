@@ -7,14 +7,24 @@
     left:0;
     width:100%;
     height:100%;
+<<<<<<< HEAD
+=======
+    background-color:rgba(0,0,0,.7); 
+    opacity: 0.5;
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
     display:none;
 }
 
 .ventana{
     width:600px;
     position:absolute;
+<<<<<<< HEAD
     top:3%;
     left:40%;
+=======
+    top:20%;
+    left:35%;
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
     margin-left:-100px;
 }
 
@@ -379,22 +389,32 @@
 
     
     <!-- Footer / End --> 
-    
-    
+    @if(count($modal_pop) > 0)
     <!-- Login/Register Modal -->
+<<<<<<< HEAD
      @if(count($modal_pop) > 0)
     <!-- Login/Register Modal
     <div class="modal fade" id="modal-login-register" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-lg modal--login" role="document">
+=======
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" >
+      <div class="ventana">
+        <!-- Modal content-->
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
+          
           <div class="modal-body">
+<<<<<<< HEAD
     
             <div class="modal-account-holder">
                  <img src="uploads/contenidos/estadisticae/{{$modal_pop->imagen}}" alt="" class="duotone-img" data-gradient-map="#282840, #0fe3ab">
             </div>
+=======
+            <img src="uploads/contenidos/estadisticae/{{$modal_pop->imagen}}">
+          </div>
+          <div>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
           </div>
         </div>
       </div>
@@ -421,11 +441,12 @@
     @endif
     
     <!-- Login/Register Modal / End -->
-    
+    @endif
     
 </div>
 
 @endsection
+<<<<<<< HEAD
 @if(count($modal_pop) > 0)
   @section('javascript')
   <script type="text/javascript">
@@ -440,3 +461,142 @@
   </script>
   @endsection
 @endif
+=======
+
+@section('javascript')
+  @if(count($modal_pop) > 0)
+    <script type="text/javascript">
+      $(window).on('load',function(){
+          $('#modal').modal('show');
+      });
+    </script>
+  @endif
+  @if($partidosDiarios->count() != 0)
+  <script type="text/javascript">
+    function pxp()
+    {      
+        $.get('web/pxp',function(data){
+
+        for(var i=0; i < data.length; i++) {
+
+            $('#divPXP').append(i);
+
+             $('#partido_'+ data[i].partido +'_set_total_local').text(data[i].set_local);
+             $('#partido_'+ data[i].partido +'_set_total_visita').text(data[i].set_visita);
+
+    
+
+             for(var key=0 ; key < data[i].punto_partido.length; key++)
+             {  
+              
+              if(data[i].punto_partido[key].set_numero == 1)
+                {
+                  if(data[i].punto_partido[key].set_1_local > data[i].punto_partido[key].set_1_visita){
+                    $('#partido_'+data[i].partido+'_set_1_Local').html('<b>'+data[i].punto_partido[key].set_1_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_1_Local').html(data[i].punto_partido[key].set_1_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_1_visita > data[i].punto_partido[key].set_1_local){
+                    $('#partido_'+data[i].partido+'_set_1_Visita').html('<b>'+data[i].punto_partido[key].set_1_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_1_Visita').html(data[i].punto_partido[key].set_1_visita);   
+                  }
+                }
+
+              if(data[i].punto_partido[key].set_numero == 2)
+                {
+                  if(data[i].punto_partido[key].set_2_local > data[i].punto_partido[key].set_2_visita){
+                    $('#partido_'+data[i].partido+'_set_2_Local').html('<b>'+data[i].punto_partido[key].set_2_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_2_Local').html(data[i].punto_partido[key].set_2_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_2_visita > data[i].punto_partido[key].set_2_local){
+                    $('#partido_'+data[i].partido+'_set_2_Visita').html('<b>'+data[i].punto_partido[key].set_2_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_2_Visita').html(data[i].punto_partido[key].set_2_visita);   
+                  }
+
+                }
+
+              if(data[i].punto_partido[key].set_numero == 3)
+                {
+                  if(data[i].punto_partido[key].set_3_local > data[i].punto_partido[key].set_3_visita){
+                    $('#partido_'+data[i].partido+'_set_3_Local').html('<b>'+data[i].punto_partido[key].set_3_local+'</b>');
+                    }else{
+                    $('#partido_'+data[i].partido+'_set_3_Local').html(data[i].punto_partido[key].set_3_local);
+                    }
+
+                  if(data[i].punto_partido[key].set_3_visita > data[i].punto_partido[key].set_3_local){
+                    $('#partido_'+data[i].partido+'_set_3_Visita').html('<b>'+data[i].punto_partido[key].set_3_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_3_Visita').html(data[i].punto_partido[key].set_3_visita);   
+                  }  
+                    
+                
+                }
+
+
+              if(data[i].punto_partido[key].set_numero == 4)
+                {
+                  if(data[i].punto_partido[key].set_4_local > data[i].punto_partido[key].set_4_visita){
+                    $('#partido_'+data[i].partido+'_set_4_Local').html('<b>'+data[i].punto_partido[key].set_4_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_4_Local').html(data[i].punto_partido[key].set_4_local);                   
+                  }
+
+                  if(data[i].punto_partido[key].set_4_visita > data[i].punto_partido[key].set_4_local){
+                    $('#partido_'+data[i].partido+'_set_4_Visita').html('<b>'+data[i].punto_partido[key].set_4_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_4_Visita').html(data[i].punto_partido[key].set_4_visita);                     
+                  }
+                }
+
+              if(data[i].punto_partido[key].set_numero == 5)
+                {
+                  if(data[i].punto_partido[key].set_5_local > data[i].punto_partido[key].set_5_visita){
+                    $('#partido_'+data[i].partido+'_set_5_Local').html('<b>'+data[i].punto_partido[key].set_5_local+'</b>');
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_5_Local').html(data[i].punto_partido[key].set_5_local);
+                  }
+
+                  if(data[i].punto_partido[key].set_5_visita > data[i].punto_partido[key].set_5_local){
+                    $('#partido_'+data[i].partido+'_set_5_Visita').html('<b>'+data[i].punto_partido[key].set_5_visita+'</b>');   
+                  }else{
+                    $('#partido_'+data[i].partido+'_set_5_Visita').html(data[i].punto_partido[key].set_5_visita);   
+                  }
+                }
+             }
+        
+             console.log('---');
+        }          
+
+     });
+    }
+    
+    function interval()
+    {
+       if($('.actual').length != 0)
+       {
+            setInterval(function()
+            {
+             pxp();
+            }, 
+            45000);
+
+
+       }
+    }
+
+       // very simple to use!
+    $(document).ready(function() 
+    {     
+        interval();
+    
+    });
+  </script>
+  @endif
+@endsection
+
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe

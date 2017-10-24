@@ -13,7 +13,11 @@
 
 	<div class="panel-body">
 
+<<<<<<< HEAD
 		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar popup web</a>
+=======
+		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar Popup Web</a>
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
 
 		<table class="table table-hover datatable">
 			<thead>
@@ -48,7 +52,14 @@
 							@endif
 			
 						</td>
-                               <td><a href="estadisticae/delete/{{Crypt::encrypt($models->id)}}" class="del btn btn-sm  btn-danger " type="button"><i class="fa fa-times-circle "></i></a></td>
+									
+								
+                               <td>
+                               	<a href="estadisticae/edit/{{Crypt::encrypt($models->id)}}" class="btn btn-sm  btn-info " type="button">
+                               	<i class="fa fa-edit "></i></a>
+
+                               <a href="estadisticae/delete/{{Crypt::encrypt($models->id)}}" class="del btn btn-sm  btn-danger " type="button"><i class="fa fa-times-circle "></i></a>
+                               </td>
 						
 					</tr>
 

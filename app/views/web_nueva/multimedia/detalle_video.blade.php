@@ -33,11 +33,12 @@
 
                 </header>
                
+               <br>
                 <div class="post__content">
                   <p><font size="3">{{$model->copete}}</font> 
                   </p>
   
-              </div>
+              </div><br>
                <h5 class="post-author__name"><p>{{$model->fuente}}</p></h5>
             </article>
             <!-- Article / End -->

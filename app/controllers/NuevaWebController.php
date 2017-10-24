@@ -20,8 +20,6 @@ class NuevaWebController extends BaseController
 		$data['resultados'] 	 =	Partido::where('home',1)->where('estado','=', 2 )->orderBy('fecha_inicio','ASC')->get();
 		$data['proximos_partidos'] 	 =	Partido::where('home',1)->where('estado','')->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		
-
-		
 		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
 		$data['videos'] = Video::where('estado','=',1)->orderBy('id','DESC')->take(5)->get();
 		
@@ -34,6 +32,10 @@ class NuevaWebController extends BaseController
 		$data['torneos'] 	 	 = 	Torneos::find(19);
 		$data['fases'] 			 = 	TorneoFase::where('torneo_id','=',19)->get();
 		$data['tablas']			 =  TorneoFase::where('tabla_web',1)->get();
+<<<<<<< HEAD
+=======
+		//modal pop up
+>>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
 		$data['modal_pop']		 =  Estadisticae::where('estado','=',1)->first();
 		
         return View::make('web_nueva.inicio')->with($data);
@@ -128,7 +130,6 @@ class NuevaWebController extends BaseController
 
 		// //$data['leg_actual'] = 	TorneoFaseLeg::where('torneo_fase_id','=', $data['fase']->first()->id)->where('fecha_final','>=',date('Y-m-d'))->where('fecha_inicio','<=',date('Y-m-d'))->first();
 		// $data['leg_actual'] = $act;
-
 		$legs = array();
 
 		if($legId != null)
@@ -139,14 +140,34 @@ class NuevaWebController extends BaseController
 		{
 			foreach ($data['fases'] as $fase ) 
 			{
+
 				foreach ($fase->leg as $leg ) 
 				{
+					/*	
+					 $ob = DB::table('partido')
+       					->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.partido_id', '=', 'partido.id')
+						->where('torneo_fase_leg_id', $leg->id)
+						->orderBy('partido.fecha_inicio','ASC')
+						->orderBy('partido.hora','ASC')
+						->get();
+					*/
+
 					array_push($legs, $leg);
 				}
 			}
 
 			$data['legs'] = $legs;
 		}
+
+		/*
+		 $data['legs'] = DB::table('partido')
+        ->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.partido_id', '=', 'partido.id')
+        ->join('torneo_fase_leg', 'torneo_fase_leg_partido.torneo_fase_leg_id', '=', 'torneo_fase_leg.id')
+        ->join('torneo_fase', 'torneo_fase_leg.id','=' ,'torneo_fase.tipo_fase_id')
+        ->where('torneo_fase.torneo_id',$data['torneo']->id)
+        ->get();
+		*/
+
 		//todas las fases donde sea torneo=id
 		$data['partidos'] = DB::table('torneo_fase')
 			->where('torneo_fase.torneo_id', $data['torneo']->id)
@@ -154,11 +175,11 @@ class NuevaWebController extends BaseController
 			->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.torneo_fase_leg_id','=','torneo_fase_leg.id')
 			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
 			->orderBy('partido.fecha_inicio', 'DESC')
+			->orderBy('partido.hora','ASC')
 			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
 
             ->get();
 
-      
 
 		$data['today'] =  date('d-m-Y');
 		$data['sesion_calendario'] = 1;
@@ -731,6 +752,9 @@ class NuevaWebController extends BaseController
 		
 		*/
 	}
+
+
+
 
 }
 
