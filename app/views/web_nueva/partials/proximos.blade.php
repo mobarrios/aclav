@@ -1,13 +1,14 @@
 @foreach($proximos_partidos as $partido) 
+
 <div class="team-roster__item card_novivo card--no-paddings">
     <div class="card__content">
-        <h5 class="widget-results__title"><p>proxima fecha</p></h5>              
+        <h5 class="widget-results__title"><p>proxima fecha </p></h5>              
         <h5 class="widget-results__title"><font size="2"><p>{{ strtoupper($partido->getFechaDeInicio()) }} | {{$partido->hora}}</p></font></h5>
           <div class="widget-results__content">
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
                   @if($partido->local_text == '')
-                  <img src="uploads/escudos/{{isset($partido->local_equipo_id->escudo)}}" alt="">
+                   <img src="uploads/escudos/{{$partido->local_equipo_id->escudo}}" title="{{$partido->local_equipo_id->nombre}}">
                   @endif
                 </figure></center>
                 <center><div class="widget-results__team-logo">
@@ -28,7 +29,7 @@
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
                   @if($partido->visita_text == '')
-                  <img src="uploads/escudos/{{isset($partido->visita_equipo_id->escudo)}}" alt="">
+                  <img src="uploads/escudos/{{$partido->visita_equipo_id->escudo}}" alt="{{$partido->visita_equipo_id->nombre}}">
                   @endif
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">

@@ -14,6 +14,7 @@ Route::group(array('prefix' => 'web'), function()
     Route::get('temporadas', array('as'=>'temporadas','uses'=>'NuevaWebController@temporadas'));
     Route::post('getTorneos', array('as'=>'getTorneos','uses'=>'NuevaWebController@getTorneos'));    
     Route::post('getSeries', array('as'=>'getSeries','uses'=>'NuevaWebController@getSeries'));        
+    Route::get('reporte/{id}', array('as'=>'partidos.reporte','uses'=>'NuevaWebController@partidoReporte'));
 
     //Equipos
     Route::get('participantes', array( 'as' => 'participantes' , 'uses' => 'NuevaWebController@participantes'));
@@ -89,7 +90,7 @@ Route::group(array('prefix' => 'web'), function()
     */
     
     Route::post('procesar', array('as'=>'procesar',  'uses' => 'NuevaWebController@procesar' ));
-    Route::get('/pxp', function()
+    Route::get('pxp', function()
     {
             
             $date = date('Y-m-d');
