@@ -46,7 +46,9 @@ class BannerController extends BaseController
 	public function postNew()
 	{
 		$input  = Input::all();
+
 		$up 	= $this->up->up($input['imagen'] , $this->imgPath );
+
 
 			if($up != false)
 			{
