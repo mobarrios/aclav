@@ -10,7 +10,6 @@
     opacity: 0.5;
     display:none;
 }
-
 .ventana{
     width:600px;
     position:absolute;
@@ -18,7 +17,6 @@
     left:35%;
     margin-left:-100px;
 }
-
 .ventana span{
     color:#fff;
     background-color:#000;
@@ -39,7 +37,9 @@
 
 <div class="site-contentchico">
 
+
 {{-- @if($partidosDiarios->count() != 0) --}}
+
     <div class="container">
      <div class="owl-carousel col-lg-12">
      
@@ -57,7 +57,9 @@
         
       </div>
     </div>
+
   {{-- @endif --}}
+
 </div>        
 
     <!-- Pushy Panel action-->
@@ -416,16 +418,11 @@
     function pxp()
     {      
         $.get('web/pxp',function(data){
-
         for(var i=0; i < data.length; i++) {
-
             $('#divPXP').append(i);
-
              $('#partido_'+ data[i].partido +'_set_total_local').text(data[i].set_local);
              $('#partido_'+ data[i].partido +'_set_total_visita').text(data[i].set_visita);
-
     
-
              for(var key=0 ; key < data[i].punto_partido.length; key++)
              {  
               
@@ -436,14 +433,12 @@
                   }else{
                     $('#partido_'+data[i].partido+'_set_1_Local').html(data[i].punto_partido[key].set_1_local);
                   }
-
                   if(data[i].punto_partido[key].set_1_visita > data[i].punto_partido[key].set_1_local){
                     $('#partido_'+data[i].partido+'_set_1_Visita').html('<b>'+data[i].punto_partido[key].set_1_visita+'</b>');   
                   }else{
                     $('#partido_'+data[i].partido+'_set_1_Visita').html(data[i].punto_partido[key].set_1_visita);   
                   }
                 }
-
               if(data[i].punto_partido[key].set_numero == 2)
                 {
                   if(data[i].punto_partido[key].set_2_local > data[i].punto_partido[key].set_2_visita){
@@ -451,15 +446,12 @@
                   }else{
                     $('#partido_'+data[i].partido+'_set_2_Local').html(data[i].punto_partido[key].set_2_local);
                   }
-
                   if(data[i].punto_partido[key].set_2_visita > data[i].punto_partido[key].set_2_local){
                     $('#partido_'+data[i].partido+'_set_2_Visita').html('<b>'+data[i].punto_partido[key].set_2_visita+'</b>');   
                   }else{
                     $('#partido_'+data[i].partido+'_set_2_Visita').html(data[i].punto_partido[key].set_2_visita);   
                   }
-
                 }
-
               if(data[i].punto_partido[key].set_numero == 3)
                 {
                   if(data[i].punto_partido[key].set_3_local > data[i].punto_partido[key].set_3_visita){
@@ -467,7 +459,6 @@
                     }else{
                     $('#partido_'+data[i].partido+'_set_3_Local').html(data[i].punto_partido[key].set_3_local);
                     }
-
                   if(data[i].punto_partido[key].set_3_visita > data[i].punto_partido[key].set_3_local){
                     $('#partido_'+data[i].partido+'_set_3_Visita').html('<b>'+data[i].punto_partido[key].set_3_visita+'</b>');   
                   }else{
@@ -476,8 +467,6 @@
                     
                 
                 }
-
-
               if(data[i].punto_partido[key].set_numero == 4)
                 {
                   if(data[i].punto_partido[key].set_4_local > data[i].punto_partido[key].set_4_visita){
@@ -485,14 +474,12 @@
                   }else{
                     $('#partido_'+data[i].partido+'_set_4_Local').html(data[i].punto_partido[key].set_4_local);                   
                   }
-
                   if(data[i].punto_partido[key].set_4_visita > data[i].punto_partido[key].set_4_local){
                     $('#partido_'+data[i].partido+'_set_4_Visita').html('<b>'+data[i].punto_partido[key].set_4_visita+'</b>');   
                   }else{
                     $('#partido_'+data[i].partido+'_set_4_Visita').html(data[i].punto_partido[key].set_4_visita);                     
                   }
                 }
-
               if(data[i].punto_partido[key].set_numero == 5)
                 {
                   if(data[i].punto_partido[key].set_5_local > data[i].punto_partido[key].set_5_visita){
@@ -500,7 +487,6 @@
                   }else{
                     $('#partido_'+data[i].partido+'_set_5_Local').html(data[i].punto_partido[key].set_5_local);
                   }
-
                   if(data[i].punto_partido[key].set_5_visita > data[i].punto_partido[key].set_5_local){
                     $('#partido_'+data[i].partido+'_set_5_Visita').html('<b>'+data[i].punto_partido[key].set_5_visita+'</b>');   
                   }else{
@@ -511,7 +497,6 @@
         
              console.log('---');
         }          
-
      });
     }
     
@@ -524,11 +509,8 @@
              pxp();
             }, 
             20000);
-
-
        }
     }
-
        // very simple to use!
     $(document).ready(function() 
     {     
@@ -538,4 +520,3 @@
   </script>
   @endif
 @endsection
-

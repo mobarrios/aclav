@@ -17,7 +17,7 @@ class NuevaWebController extends BaseController
 		$data['social_ultima'] 	 =  Noticias::where('fecha','<=', date('Y-m-d'))->where('web_social','=',1)->orderBy('created_at','=','ASC')->first();
 		//Tabla partidos
 		$data['partidosDiarios'] = 	Partido::where('pxp',1)->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
-		$data['resultados'] 	 =	Partido::where('home',1)->where('estado','=', 2 )->orderBy('fecha_inicio','ASC')->get();
+		$data['resultados'] 	 =	Partido::where('home',1)->where('estado','=', 2 )->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		$data['proximos_partidos'] 	 =	Partido::where('home',1)->where('estado','')->orderBy('fecha_inicio','ASC')->orderBy('hora','ASC')->get();
 		
 		//$data['video_ultimo']	 =  Video::where('estado','=',1)->orderBy('created_at','=','DESC')->first();
@@ -32,6 +32,7 @@ class NuevaWebController extends BaseController
 		$data['torneos'] 	 	 = 	Torneos::find(19);
 		$data['fases'] 			 = 	TorneoFase::where('torneo_id','=',19)->get();
 		$data['tablas']			 =  TorneoFase::where('tabla_web',1)->get();
+
 		//modal pop up
 		$data['modal_pop']		 =  Estadisticae::where('estado','=',1)->first();
 		
@@ -174,7 +175,6 @@ class NuevaWebController extends BaseController
 			->orderBy('partido.fecha_inicio', 'ASC')
 			->orderBy('partido.hora','ASC')
 			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
-
             ->get();
 
 
@@ -182,6 +182,22 @@ class NuevaWebController extends BaseController
 		$data['sesion_calendario'] = 1;
 
 		return View::make('web_nueva.competencias.calendario')->with($data);
+	}
+
+
+	public function partidoReporte($id){
+
+		$partido = Partido::find($id);
+		$file = PDF::loadFile("uploads/partidos/reportes/".$partido->reporte);
+	
+	    $headers = array(
+	              'Content-Type: application/pdf',
+	            );
+
+	    return Response::download($file, 'filename.pdf', $headers);
+
+		//return $file->download();
+
 	}
 
 	public function formula($id){

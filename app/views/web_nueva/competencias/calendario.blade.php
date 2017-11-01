@@ -91,8 +91,8 @@
 
                @foreach($partidos as $partido_calendario)
                   <?php $partido = Partido::find($partido_calendario->partido_id); ?>
-                 
-                  <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' id='{{($partido->fecha_inicio == $today) ? 'today' : '' }}'
+               
+                  <div  class="partido card1" id="{{($partido->fecha_inicio == $today) ? 'today' : '' }}" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
                     style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
@@ -106,6 +106,7 @@
                                 @endif
 
                                   <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
+
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
                               </header>                         
                               <!-- fin titulos -->                    
@@ -170,8 +171,13 @@
                                         @endif
 
                                          </span>  
+<<<<<<< HEAD
                                         <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información" target="_blank" ><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
                                         <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas" ><i class="fa fa-bar-chart"></i></a>                            
+=======
+                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" target="_blank" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+>>>>>>> 30db28611c2508bcc346359c31e1cb7bbe063768
                                     </div>                        
                               </div>
                               @endif

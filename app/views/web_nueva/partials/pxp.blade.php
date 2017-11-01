@@ -177,6 +177,8 @@
           @if($pxp->visita_text == '')
             <img src="uploads/escudos/{{$pxp->visita_equipo_id->escudo}}" title="{{$pxp->visita_equipo_id->nombre}}">
           @endif
+
+          
           </figure></center>                        
           <center><div class="widget-results__team-logo">
             <h5 class="widget-results__team-name"><p>
