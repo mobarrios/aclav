@@ -224,6 +224,9 @@
 
                     @foreach($staffs as $k)
                       @if($k->fecha_hasta == 'actual' && $k->borrado == 0)
+                        <?php
+                        $oficial=Oficial::find($k->id);
+                        ?>
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
@@ -234,7 +237,9 @@
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a>
                           </td>
                           <td class="team-roster-table__age">
-                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font><br>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ $oficial->Funcion->funcion}}</font>
+                            
                           </td>
                         </tr>
                       @endif
@@ -279,6 +284,9 @@
                     <tbody>
                      @foreach($staffs as $k)
                       @if($k->fecha_hasta != 'actual' && $k->borrado == 0)
+                        <?php
+                        $oficial=Oficial::find($k->id);
+                        ?>
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
@@ -290,7 +298,9 @@
                               <font color="#808080">hasta {{$k->fecha_hasta}}</font>
                           </td>
                           <td class="team-roster-table__age">
-                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->Funcion->funcion}}</font><br>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ $oficial->Funcion->funcion}}</font>
+                            
                           </td>
                         </tr>
                       @endif
