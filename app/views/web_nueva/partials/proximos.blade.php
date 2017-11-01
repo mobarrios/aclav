@@ -29,7 +29,7 @@
               <div class="widget-results__team-logo"><h3></h3>                        
                 <center><figure class="widget-results__team-logo">
                   @if($partido->visita_text == '')
-                  <img src="uploads/escudos/{{$partido->visita_equipo_id->escudo}}" alt="{{$partido->visita_equipo_id->nombre}}">
+                  <img src="uploads/escudos/{{$partido->visita_equipo_id->escudo}}" title="{{$partido->visita_equipo_id->nombre}}">
                   @endif
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">

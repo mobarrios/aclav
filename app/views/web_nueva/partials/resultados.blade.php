@@ -117,7 +117,7 @@
                 </div></center>                        
                 <center><figure class="widget-results__team-logo">
                   @if($resultado->visita_text == '')
-                      <img src="uploads/escudos/{{$resultado->visita_equipo_id->escudo}}" title="{{$resultado->local_equipo_id->nombre}}">
+                      <img src="uploads/escudos/{{$resultado->visita_equipo_id->escudo}}" title="{{$resultado->visita_equipo_id->nombre}}">
                   @endif
                 </figure></center>                        
                 <center><div class="widget-results__team-logo">

@@ -142,8 +142,8 @@
                                         @endif
 
                                         <span style="font-weight:100;color:#CD3243"> | </span>  
-                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
-                                        <a href="{{route('porequipo')}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Más Información" target="_blank"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="{{route('porequipo')}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="Estadísticas" target="_blank"><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                                 </div>
                               @else
@@ -162,16 +162,16 @@
                                       </font></div>          
                                         
                                         @if($partido->televisado == 1 )
-                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
-                                           <img src="assets/webnueva/images/tyc_play.png" target="_blank" ></a> <span style="font-weight:100;color:#CD3243"> |
+                                           <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play" target="_blank" >
+                                           <img src="assets/webnueva/images/tyc_play.png" ></a> <span style="font-weight:100;color:#CD3243"> |
                                         @elseif($partido->televisado == 2 )
 <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
                                            <img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
                                         @endif
 
                                          </span>  
-                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
-                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
+                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información" target="_blank" ><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas" ><i class="fa fa-bar-chart"></i></a>                            
                                     </div>                        
                               </div>
                               @endif
@@ -413,7 +413,7 @@ var teams_id = 0;
 
 
      $('html, body').animate({
-        scrollTop: $("#today").offset().top -10%
+        scrollTop: parseInt($("#today").offset().top) - 100
     }, 1000);
 
 

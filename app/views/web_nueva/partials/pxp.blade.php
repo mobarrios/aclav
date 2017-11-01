@@ -174,7 +174,7 @@
             <h3><p id="partido_{{$pxp->id}}_set_total_visita">{{$pxp->visita_set}}</p></h3>
           </div></center>                        
           <center><figure class="widget-results__team-logo">
-          @if($pxp->local_text == '')
+          @if($pxp->visita_text == '')
             <img src="uploads/escudos/{{$pxp->visita_equipo_id->escudo}}" title="{{$pxp->visita_equipo_id->nombre}}">
           @endif
           </figure></center>                        
