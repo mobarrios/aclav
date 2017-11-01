@@ -101,9 +101,10 @@
               <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
               
               <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> 
-                
-                  @if($partido->televisado == 1 )  
-                  <a href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}"><img src="assets/webnueva/images/tyc_tv.png"></a>
+                  @if($partido->pxp == 1)
+                    <a href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"><img src="assets/webnueva/images/tyc_play.png"></a>
+                  @else
+                    <a href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"><img src="assets/webnueva/images/tyc_tv.png"></a>
                   @endif
               </div>
          
