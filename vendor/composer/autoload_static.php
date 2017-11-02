@@ -484,6 +484,7 @@ class ComposerStaticInitd1d48f1fd026eef1671294c65e777260
         'UsuariosController' => __DIR__ . '/../..' . '/app/controllers/UsuariosController.php',
         'Video' => __DIR__ . '/../..' . '/app/models/Video.php',
         'VideoController' => __DIR__ . '/../..' . '/app/controllers/VideoController.php',
+        'VideosClub' => __DIR__ . '/../..' . '/app/models/VideosClub.php',
         'o2' => __DIR__ . '/../..' . '/app/models/o2.php',
         'o2Staff' => __DIR__ . '/../..' . '/app/models/o2Staff.php',
         'sendMail' => __DIR__ . '/../..' . '/app/helpers/sendMail.php',

@@ -297,6 +297,7 @@ return array(
     'UsuariosController' => $baseDir . '/app/controllers/UsuariosController.php',
     'Video' => $baseDir . '/app/models/Video.php',
     'VideoController' => $baseDir . '/app/controllers/VideoController.php',
+    'VideosClub' => $baseDir . '/app/models/VideosClub.php',
     'o2' => $baseDir . '/app/models/o2.php',
     'o2Staff' => $baseDir . '/app/models/o2Staff.php',
     'sendMail' => $baseDir . '/app/helpers/sendMail.php',
