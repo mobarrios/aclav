@@ -101,11 +101,14 @@
               <div class="glossary__item"><span class="glossary__abbr">Estadio:</span> {{ $partido->Estadio->nombre }}</div>
               
               <div class="glossary__item"><span class="glossary__abbr">Televisado:</span> 
-                  @if($partido->pxp == 1)
-                    <a href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"><img src="assets/webnueva/images/tyc_play.png"></a>
-                  @else
-                    <a href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"><img src="assets/webnueva/images/tyc_tv.png"></a>
-                  @endif
+             
+                @if($partido->televisado == 1 )
+                   <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play">
+                   <img src="assets/webnueva/images/tyc_play.png" target="_blank" ></a> <span style="font-weight:100;color:#CD3243">
+                @elseif($partido->televisado == 2 )
+                <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
+                   <img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243">
+                @endif
               </div>
          
             </div>
