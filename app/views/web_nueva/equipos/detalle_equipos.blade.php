@@ -225,7 +225,9 @@
 
                     @foreach($staffs as $k)
                       @if($k->fecha_hasta == 'actual' && $k->borrado == 0)
-                     
+                        <?php
+                        $oficial=Oficial::find($k->id);
+                        ?>
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
@@ -237,7 +239,7 @@
                           </td>
                           <td class="team-roster-table__age">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}</font><br>
-                         
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($oficial->Funcion->funcion) ? $oficial->Funcion->funcion : '' }}</font>
                             
                           </td>
                         </tr>
@@ -283,7 +285,9 @@
                     <tbody>
                      @foreach($staffs as $k)
                       @if($k->fecha_hasta != 'actual' && $k->borrado == 0)
-                      
+                        <?php
+                        $oficial=Oficial::find($k->id);
+                        ?>
                         <tr>
                           <td class="team-roster-table__number">
                             <figure class="team-meta__logo">
@@ -296,7 +300,7 @@
                           </td>
                           <td class="team-roster-table__age">
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}</font><br>
-                          
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($oficial->Funcion->funcion) ? $oficial->Funcion->funcion : '' }}</font>
                             
                           </td>
                         </tr>

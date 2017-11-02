@@ -289,7 +289,6 @@ class NuevaWebController extends BaseController
 		   $temporada_actual 	=  Temporada::where('actual','=','1')->first()->id;
 		   $torneos    			=  Torneos::where('o2_web',1)->first();
 
-
 		   $data['jugadores']   =  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFe;
 		   
 		   $data['staffs']		=  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFeStaff;
@@ -440,7 +439,6 @@ class NuevaWebController extends BaseController
 		   //$data['jugadores']	= BuenaFe::where('equipo_id','=',$id)->where('temporada_id','=', $temporada_actual)->where('jugador_id','!=','0')->get();
 		   //$data['staffs']		= BuenaFeStaff::where('equipo_id','=',$id)->where('temporada_id','=', $temporada_actual)->where('oficial_id','!=','0')->get();
 		   $data['models']  	= Equipo::find($id);
-
 
 
 		return View::make('web_nueva.equipos.detalle_equipo')->with($data);
