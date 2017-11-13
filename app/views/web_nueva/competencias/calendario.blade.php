@@ -92,7 +92,7 @@
                @foreach($partidos as $partido_calendario)
                   <?php $partido = Partido::find($partido_calendario->partido_id); ?>
                
-                  <div  class="partido card1" id="{{($partido->fecha_inicio == $today) ? 'today' : '' }}" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
+                  <div  class="partido card1"  id="{{($partido->fecha_inicio == $today) ? 'today' : '' }}" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
                     style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
@@ -418,13 +418,17 @@ var teams_id = 0;
      });
 
 
+<<<<<<< HEAD
      $('html, body').animate({
         scrollTop: parseInt($("#today").offset().top) - 100
+=======
+    $('html, body').animate({
+        scrollTop: $("#today").offset().top -10%
+>>>>>>> 7f08b78c9e452e83f0b942b696ec799976e8876d
     }, 1000);
 
 
-
-
+     
 
 </script>
 @endsection   
