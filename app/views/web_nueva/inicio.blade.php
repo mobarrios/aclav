@@ -326,34 +326,8 @@
             <!-- Post Area 2 / End -->
             
             <!-- Videos Inicio -->
-            <div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
-              <div class="rvs-item-container">
-                <div class="rvs-item-stage">
-                  @foreach($videos as $video)
+            <!--
 
-                  <div class="rvs-item" style="background-image: url({{$video->getFetchHighestRes()}})">
-                    <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
-                    <a href="https://www.youtube.com/watch?v={{$video->object}}" class="rvs-play-video"></a>
-                  </div>
-                  @endforeach
-               
-                </div>
-              </div>
-              <div class="rvs-nav-container">
-                <a class="rvs-nav-prev"></a>
-                <div class="rvs-nav-stage">
-                  @foreach($videos as $video)
-                    
-                   <a class="rvs-nav-item">
-                    <span class="rvs-nav-item-thumb" style="background-image: url(https://i.ytimg.com/vi/{{$video->object}}/default.jpg)"></span>
-                    <h5 class="rvs-nav-item-title" style="text-transform: none"><p>{{$video->titulo}}</p></h5>        
-                  </a>
-                  @endforeach
-                
-                </div>
-                <a class="rvs-nav-next"></a>
-              </div>
-            </div>
             <!-- Videos / End -->
 
             

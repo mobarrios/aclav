@@ -49,7 +49,10 @@
   <!-- Estilos Videos-->
   <script src="assets/webnueva/sliderengine/jquery.js"></script>
   <script src="assets/webnueva/sliderengine/amazingslider.js"></script>
+
+  <!--
   <script src="assets/webnueva/sliderengine/initslider-1.js"></script>
+  -->
   <link href="assets/webnueva/css/rvslider.min.css" rel="stylesheet">
   <link   rel="stylesheet" type="text/css" href="assets/webnueva/sliderengine/amazingslider-1.css">
 
@@ -171,8 +174,9 @@
   <script src="assets/webnueva/sliderengine/jquery.js"></script>
   <script src="assets/webnueva/sliderengine/amazingslider.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/webnueva/sliderengine/amazingslider-1.css">
+  <!--
   <script src="assets/webnueva/liderengine/initslider-1.js"></script>
-
+  -->
   <!-- Core JS -->
   <script src="assets/webnueva/vendor/jquery/jquery.min.js"></script>
   <script src="assets/webnueva/js/core-min.js"></script>
