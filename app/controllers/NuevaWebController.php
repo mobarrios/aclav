@@ -177,17 +177,9 @@ class NuevaWebController extends BaseController
 			->select('partido.id as partido_id', 'torneo_fase.id as torneo_fase_id', 'torneo_fase_leg.id as leg_id', 'torneo_fase.nombre as fase', 'torneo_fase_leg.nombre as leg')
             ->get();
 
-        $data['partidos_hoy'] = DB::table('torneo_fase')
-			->where('torneo_fase.torneo_id', $data['torneo']->id)
-			->join('torneo_fase_leg', 'torneo_fase_leg.torneo_fase_id', '=', 'torneo_fase.id')
-			->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.torneo_fase_leg_id','=','torneo_fase_leg.id')
-			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
-			->orderBy('partido.fecha_inicio', 'ASC')
-			->orderBy('partido.hora','ASC')
-			->select('partido.id as partido_id', 'partido.fecha_inicio as fecha_inicio');
-            
                 
 		$data['today'] =  date('Y-m-d');
+
 		$data['sesion_calendario'] = 1;
 
 		return View::make('web_nueva.competencias.calendario')->with($data);
