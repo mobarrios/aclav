@@ -427,7 +427,7 @@ var teams_id = 0;
      $('#today').scrollTop();
 =======
     $('html, body').animate({
-        scrollTop: $("#today").offset().top -10%
+        scrollTop: parseInt($("#today").offset().top) - 100
     }, 1000);
 
 >>>>>>> d3753c3e722780d8c8ae145932320c88e0fa802c

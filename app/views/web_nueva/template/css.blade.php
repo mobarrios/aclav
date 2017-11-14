@@ -2,9 +2,9 @@
 
   <!-- CSS
   ================================================== -->
-  <!-- Preloader CSS -->
- 
+  <!-- Preloader CSS
   <link href="{{asset('css/preloader.css')}}" rel="stylesheet">
+   -->
 
   <!-- Vendor CSS -->
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
