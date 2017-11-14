@@ -414,7 +414,7 @@ var teams_id = 0;
 
 
     $('html, body').animate({
-        scrollTop: $("#today").offset().top -10%
+        scrollTop: parseInt($("#today").offset().top) - 100
     }, 1000);
 
 
