@@ -326,12 +326,11 @@
             <!-- Post Area 2 / End -->
             
             <!-- Videos Inicio -->
-            
-            <div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
+             <div class="rvs-container rvs-horizontal rvs-light rvs-blue-highlight">
               <div class="rvs-item-container">
                 <div class="rvs-item-stage">
                   @foreach($videos as $video)
-                  <div class="rvs-item" style="background-image: url({{$video->getFetchHighestRes()}})">
+                  <div class="rvs-item" style="background-image: url(https://i.ytimg.com/vi/{{$video->object}}/hqdefault.jpg )">
                     <p class="rvs-item-text">{{$video->titulo}} <small>by Voley ACLAV</small></p>
                     <a href="https://www.youtube.com/watch?v={{$video->object}}" class="rvs-play-video"></a>
                   </div>
@@ -354,7 +353,7 @@
                 <a class="rvs-nav-next"></a>
               </div>
             </div>
-            
+           
             <!-- Videos / End -->
 
             

@@ -7,12 +7,12 @@
 
 ;(function($){
   "use strict";
-
+  /*
   $('body').jpreLoader({
     showSplash: false,
     loaderVPos: "50%",
   });
-
+  */
   $.fn.exists = function () {
     return this.length > 0;
   };
