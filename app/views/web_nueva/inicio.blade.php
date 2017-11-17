@@ -406,13 +406,13 @@
 @endsection
 
 @section('javascript')
-  {{-- @if(count($modal_pop) > 0)
+   @if(count($modal_pop) > 0)
     <script type="text/javascript">
       $(window).on('load',function(){
           $('#modal').modal('show');
       });
     </script>
-  @endif --}}
+  @endif
   @if($partidosDiarios->count() != 0)
   <script type="text/javascript">
     function pxp()
