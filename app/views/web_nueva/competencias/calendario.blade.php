@@ -171,13 +171,8 @@
                                         @endif
 
                                          </span>  
-<<<<<<< HEAD
-                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información" target="_blank" ><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
-                                        <a href="uploads/partidos/reportes/{{$partido->reporte}}" download class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas" ><i class="fa fa-bar-chart"></i></a>                            
-=======
-                                        <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
+                                       <a href="{{route('informacion',$partido->id)}}" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Más Información"><i class="fa fa-info-circle"></i></a> <span style="font-weight:100;color:#CD3243"> | </span> 
                                         <a href="uploads/partidos/reportes/{{$partido->reporte}}" target="_blank" class="partidos-links__link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Estadísticas"><i class="fa fa-bar-chart"></i></a>                            
->>>>>>> 30db28611c2508bcc346359c31e1cb7bbe063768
                                     </div>                        
                               </div>
                               @endif
@@ -418,17 +413,8 @@ var teams_id = 0;
      });
 
 
-<<<<<<< HEAD
      $('html, body').animate({
         scrollTop: parseInt($("#today").offset().top) - 100
-=======
-    $('html, body').animate({
-<<<<<<< HEAD
-        scrollTop: $("#today").offset().top -10%
->>>>>>> 7f08b78c9e452e83f0b942b696ec799976e8876d
-=======
-        scrollTop: parseInt($("#today").offset().top) - 100
->>>>>>> f12ab05e4b350919e0f1ac79070c6cce08a96198
     }, 1000);
 
 

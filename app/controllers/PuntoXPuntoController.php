@@ -513,17 +513,17 @@ class PuntoXPuntoController extends BaseController
 
 		if($partido->estado == 1 )
 		{			
-		$partido->estado 			= 2;
-		$partido->save();
+			$partido->estado 			= 2;
+			$partido->save();
 		
 
-		$idLocal 	= $partido->local_equipo_id->id;
-		$idVisita	= $partido->visita_equipo_id->id;
+			$idLocal 	= $partido->local_equipo_id->id;
+			$idVisita	= $partido->visita_equipo_id->id;
 
-		$local 		= $partido->local_set;
-		$visita 	= $partido->visita_set;
+			$local 		= $partido->local_set;
+			$visita 	= $partido->visita_set;
 		
-		$sistema 		=  TorneoFase::find(Session::get('fase_id'));
+			$sistema 		=  TorneoFase::find(Session::get('fase_id'));
 
 
 		if($sistema->tipo_fase_id == 1)
@@ -531,6 +531,10 @@ class PuntoXPuntoController extends BaseController
 
 			$punto_partido	=  PartidoPunto::where('partido_id','=',Session::get('partido_id'))->get();
 
+				$this->calcularTabla($partido, $punto_partido, $sistema );
+
+
+			/*
 			$pto_local 	= null;
 			$pto_visita = null;
 
@@ -726,7 +730,7 @@ class PuntoXPuntoController extends BaseController
 			//	$tabla1->racha				= -1;
 				$tabla1->save();
 
-
+			*/
 			}
 		}
 
@@ -734,40 +738,280 @@ class PuntoXPuntoController extends BaseController
 			Session::put('set_id', "");
 			Session::put('set_numero', "");
 
-		 }
+		 //}
 
 		//return Redirect::to('torneos/detalle');
 		return Redirect::to('home');
 	
 	}
 
-	public function recalcularTabla()
+
+	public function calcularTabla($partido, $puntoPartido, $sistema)
+	{
+
+			$punto_partido	=  $puntoPartido;
+
+			$idLocal 	= $partido->local_equipo_id->id;
+			$idVisita	= $partido->visita_equipo_id->id;
+
+			$local 		= $partido->local_set;
+			$visita 	= $partido->visita_set;
+
+			
+			$pto_local 	= null;
+			$pto_visita = null;
+
+			foreach($punto_partido as $pto)
+			{	
+				$pto_local  =  $pto_local + $pto->puntos_local;
+				$pto_visita =  $pto_visita + $pto->puntos_visita;
+			}
+		
+			//si gana el local
+			if($local > $visita)
+			{	
+				//asignaciona  local
+				$asigna 				= $sistema->sistema_punto_id->where('sistema_punto_id','=',$sistema->sistema_punto_id->id)->where('set_gana','=',$local)->where('set_pierde','=',$visita)->first();
+
+				$tabla 					= TablaPosicion::where('fase_id','=',Session::get('fase_id'))->where('equipo_id','=',$idLocal)->first();
+				
+
+				$tabla->puntos 			= $tabla->puntos + $asigna->punto_gana;
+				$tabla->partido_ganado 	= $tabla->partido_ganado + 1;
+				$tabla->partido_total	= $tabla->partido_total + 1;
+
+
+				$tabla->set_ganado		= $tabla->set_ganado + $local;
+				$tabla->set_perdido		= $tabla->set_perdido + $visita;	
+
+
+				if($tabla->set_perdido != 0)
+				{
+					$tabla->set_coeficiente	= $tabla->set_ganado / $tabla->set_perdido;
+				}
+				else
+				{
+					$tabla->set_coeficiente	= 1000;
+
+				}		
+
+				$tabla->punto_ganado		= $tabla->punto_ganado + $pto_local;
+				$tabla->punto_perdido		= $tabla->punto_perdido + $pto_visita;	
+
+				if($tabla->punto_perdido != 0)
+				{
+					$tabla->punto_coeficiente 	= $tabla->punto_ganado / $tabla->punto_perdido;
+				}
+				else
+				{
+					$tabla->punto_coeficiente = 1000;
+				}
+		
+
+				if($tabla->racha > 0)
+				{
+
+					$tabla->racha  = $tabla->racha + 1;
+				
+				}else{
+
+					$tabla->racha  = 1;
+				}
+				
+				$tabla->save();
+			
+
+
+				//asignacion a visita
+				$tabla1 					= TablaPosicion::where('fase_id','=',Session::get('fase_id'))->where('equipo_id','=',$idVisita)->first();
+				$tabla1->puntos 			= $tabla1->puntos + $asigna->punto_pierde;
+				$tabla1->partido_perdido 	= $tabla1->partido_perdido  + 1;
+				$tabla1->partido_total		= $tabla1->partido_total    + 1;
+
+				$tabla1->set_ganado			= $tabla1->set_ganado + $visita;
+				$tabla1->set_perdido		= $tabla1->set_perdido + $local;
+				
+				if($tabla1->set_perdido != 0)
+				{
+						$tabla1->set_coeficiente	= $tabla1->set_ganado / $tabla1->set_perdido;
+				}else{
+						$tabla1->set_coeficiente	= 1000;
+
+				}
+
+				$tabla1->punto_ganado		= $tabla1->punto_ganado + $pto_visita;
+				$tabla1->punto_perdido		= $tabla1->punto_perdido + $pto_local;	
+
+				
+				if($tabla1->punto_perdido != 0)
+				{
+					$tabla1->punto_coeficiente 	= $tabla1->punto_ganado / $tabla1->punto_perdido;
+				}
+				else
+				{
+					$tabla1->punto_coeficiente = 1000;
+				}
+
+
+				if($tabla1->racha > 0)
+				{
+					$tabla1->racha = - 1;
+
+				}else{
+
+					$tabla1->racha = $tabla1->racha - 1 ;				
+				}
+				
+				$tabla1->save();
+
+			}
+
+			//si gana visiti
+			if($visita > $local)
+			{
+			
+				$asigna1 				= $sistema->sistema_punto_id->where('sistema_punto_id','=',$sistema->sistema_punto_id->id)->where('set_gana','=',$visita)->where('set_pierde','=',$local)->first();
+
+				$tabla 					= TablaPosicion::where('fase_id','=',Session::get('fase_id'))->where('equipo_id','=',$idVisita)->first();
+
+
+				$tabla->puntos 			= $tabla->puntos + $asigna1->punto_gana;
+				$tabla->partido_ganado 	= $tabla->partido_ganado + 1;
+				$tabla->partido_total	= $tabla->partido_total + 1;
+
+				$tabla->set_ganado		= $tabla->set_ganado + $visita;
+				$tabla->set_perdido		= $tabla->set_perdido + $local;			
+				
+				if($tabla->set_perdido != 0){
+					$tabla->set_coeficiente	= $tabla->set_ganado / $tabla->set_perdido;
+				}else{
+					$tabla->set_coeficiente	= 1000;
+
+				}
+
+				
+				$tabla->punto_ganado	= $tabla->punto_ganado + $pto_visita;
+				$tabla->punto_perdido	= $tabla->punto_perdido + $pto_local;	
+				
+				if($tabla->punto_perdido != 0)
+				{
+					$tabla->punto_coeficiente 	= $tabla->punto_ganado / $tabla->punto_perdido;
+				}
+				else
+				{
+					$tabla->punto_coeficiente = 1000;
+				}
+
+				if($tabla->racha > 0)
+				{
+
+					$tabla->racha  = $tabla->racha + 1;
+
+				}else{
+
+					$tabla->racha  = 1;
+				}
+				//$tabla->racha 			= $tabla->racha + 1;
+
+				$tabla->save();
+
+
+				$tabla1 					= TablaPosicion::where('fase_id','=',Session::get('fase_id'))->where('equipo_id','=',$idLocal)->first();
+				$tabla1->puntos 			= $tabla1->puntos + $asigna1->punto_pierde;			
+				$tabla1->partido_perdido 	= $tabla1->partido_perdido  + 1;
+				$tabla1->partido_total		= $tabla1->partido_total    + 1;
+
+				$tabla1->set_ganado			= $tabla1->set_ganado  + $local;
+				$tabla1->set_perdido		= $tabla1->set_perdido + $visita;
+
+				if($tabla1->set_perdido != 0)
+				{
+					$tabla1->set_coeficiente	= $tabla1->set_ganado / $tabla1->set_perdido;
+				}else{
+					$tabla1->set_coeficiente	= 1000;
+
+				}
+
+			
+				$tabla1->punto_ganado		= $tabla1->punto_ganado +  $pto_local;
+				$tabla1->punto_perdido		= $tabla1->punto_perdido + $pto_visita;	
+				
+				if($tabla1->punto_perdido != 0)
+				{
+					$tabla1->punto_coeficiente 	= $tabla1->punto_ganado / $tabla1->punto_perdido;
+				}
+				else
+				{
+					$tabla1->punto_coeficiente = 1000;
+				}
+
+				if($tabla1->racha > 0)
+				{
+					$tabla1->racha = - 1;
+
+				}else{
+
+					$tabla1->racha = $tabla1->racha - 1 ;				
+				}
+				
+			//	$tabla1->racha				= -1;
+				$tabla1->save();
+	}
+}
+
+	public function getRecalculartabla()
 	{
 		
 		$sistema 	=  TorneoFase::find(Session::get('fase_id'));
 		$tfl  		=  TorneoFaseLeg::where('torneo_fase_id',Session::get('fase_id'))->get();
 
+
+		//limpia la tabla 
+		$tablas = TablaPosicion::where('fase_id',Session::get('fase_id'))->get();
+
+		foreach ($tablas as $tabla ) 
+		{
+			$tabla->puntos 			= 0;
+			$tabla->partido_ganado 	= 0;
+			$tabla->partido_perdido = 0;
+			$tabla->partido_total	= 0;
+			$tabla->set_ganado		= 0;
+			$tabla->set_perdido		= 0;
+			$tabla->set_coeficiente	= 0;
+			$tabla->punto_ganado	= 0;
+			$tabla->punto_perdido	= 0;
+			$tabla->racha  			= 0;
+			$tabla->save();
+		}
+
+		
+		
 		$tabla 		=  array();
- 
+
 		foreach($tfl as $tflp)
 		{
 		
 			$tflp 	= TorneoFaseLegPartido::where('torneo_fase_leg_id',$tflp->id)->get();
 
 			foreach ($tflp as $a) 
-			{
-				
+			{				
 				$partido 	=  Partido::find($a->id) ;
 
 
 				if($partido->estado == 2)
 				{
-
 					$pp 		=  PartidoPunto::where('partido_id',$partido->id)->get();
+					$this->calcularTabla($partido, $pp, $sistema);
+						/*
+
+					
+
 					$local 		= $partido->local_equipo_id->id;
 					$visita 	= $partido->visita_equipo_id->id;
 
 					$asigna 	= $sistema->sistema_punto_id->where('sistema_punto_id','=',$sistema->sistema_punto_id->id)->where('set_gana','=',$partido->local_set)->where('set_pierde','=',$partido->visita_set)->first();
+
+					dd($asigna);
 
 					$pl = 0;
 					$pv = 0;
@@ -778,63 +1022,103 @@ class PuntoXPuntoController extends BaseController
 						$pv = $pv + $pts->puntos_visita;
 					}
 
-					if($partido->local_set > $partido->visita_set)
-					{
-						//echo 'partido'.$partido->numero_partido .'= ganolocal';
-						$tabla = TablaPosicion::where('fase_id',Session::get('fase_id'))->where('equipo_id',$local)->first();
+						if($partido->local_set > $partido->visita_set)
+						{
+							//echo 'partido'.$partido->numero_partido .'= ganolocal';
+							$tabla = TablaPosicion::where('fase_id',Session::get('fase_id'))->where('equipo_id',$local)->first();
 
-							$tabla->puntos 			= $tabla->puntos + $asigna->punto_gana;
-							$tabla->partido_ganado 	= $tabla->partido_ganado + 1;
-							$tabla->partido_total	= $tabla->partido_total + 1;
+								$tabla->puntos 			= $tabla->puntos + $asigna->punto_gana;
+								$tabla->partido_ganado 	= $tabla->partido_ganado + 1;
+								$tabla->partido_total	= $tabla->partido_total + 1;
 
-							$tabla->set_ganado		= $tabla->set_ganado + $partido->local_set;
-							$tabla->set_perdido		= $tabla->set_perdido + $partido->visita_set;			
+								$tabla->set_ganado		= $tabla->set_ganado + $partido->local_set;
+								$tabla->set_perdido		= $tabla->set_perdido + $partido->visita_set;			
 
-							if($tabla->set_perdido != 0)
-							{
-								$tabla->set_coeficiente	= $tabla->set_ganado / $tabla->set_perdido;
-							}
-							else
-							{
-								$tabla->set_coeficiente	= 1000;
-							}
-
-
-							$tabla->punto_ganado	= $tabla->punto_ganado + $pl;
-							$tabla->punto_perdido	= $tabla->punto_perdido + $pv;	
-
-							if($tabla->punto_perdido != 0)
-							{
-								$tabla->punto_coeficiente 	= $tabla->punto_ganado / $tabla->punto_perdido;
-							}
-							else
-							{
-								$tabla->punto_coeficiente = 1000;
-							}
-
-							if($tabla->racha > 0)
-							{
-								$tabla->racha  = $tabla->racha + 1;
-							}
-							else
-							{
-								$tabla->racha  = 1;
-							}
+								if($tabla->set_perdido != 0)
+								{
+									$tabla->set_coeficiente	= $tabla->set_ganado / $tabla->set_perdido;
+								}
+								else
+								{
+									$tabla->set_coeficiente	= 1000;
+								}
 
 
+								$tabla->punto_ganado	= $tabla->punto_ganado + $pl;
+								$tabla->punto_perdido	= $tabla->punto_perdido + $pv;	
+
+								if($tabla->punto_perdido != 0)
+								{
+									$tabla->punto_coeficiente 	= $tabla->punto_ganado / $tabla->punto_perdido;
+								}
+								else
+								{
+									$tabla->punto_coeficiente = 1000;
+								}
+
+								if($tabla->racha > 0)
+								{
+									$tabla->racha  = $tabla->racha + 1;
+								}
+								else
+								{
+									$tabla->racha  = 1;
+								}
+
+							 $tabla->save();
+
+						}
+						else
+						{
+
+							$tabla = TablaPosicion::where('fase_id',Session::get('fase_id'))->where('equipo_id',$local)->first();
+
+return $asigna;
+								$tabla->puntos 			= $tabla->puntos + $asigna->punto_gana;
+								$tabla->partido_ganado 	= $tabla->partido_ganado + 1;
+								$tabla->partido_total	= $tabla->partido_total + 1;
+
+								$tabla->set_ganado		= $tabla->set_ganado + $partido->local_set;
+								$tabla->set_perdido		= $tabla->set_perdido + $partido->visita_set;			
+
+								if($tabla->set_perdido != 0)
+								{
+									$tabla->set_coeficiente	= $tabla->set_ganado / $tabla->set_perdido;
+								}
+								else
+								{
+									$tabla->set_coeficiente	= 1000;
+								}
 
 
+								$tabla->punto_ganado	= $tabla->punto_ganado + $pl;
+								$tabla->punto_perdido	= $tabla->punto_perdido + $pv;	
 
-						echo $tabla;
+								if($tabla->punto_perdido != 0)
+								{
+									$tabla->punto_coeficiente 	= $tabla->punto_ganado / $tabla->punto_perdido;
+								}
+								else
+								{
+									$tabla->punto_coeficiente = 1000;
+								}
+
+								if($tabla->racha > 0)
+								{
+									$tabla->racha  = $tabla->racha + 1;
+								}
+								else
+								{
+									$tabla->racha  = 1;
+								}
+
+							 $tabla->save();
+
+						}
+						*/
 
 
-					}
-					else
-					{
-						echo 'partido'.$partido->numero_partido .'= ganovisita';
-					}
-
-					echo '<br>';
+			
 				}
 				
 
@@ -848,10 +1132,9 @@ class PuntoXPuntoController extends BaseController
 
 
 			}	
-	
 		}
 		
-		return;
+		return Redirect::back();
 	}
 
 }
