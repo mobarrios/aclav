@@ -6,7 +6,7 @@
 <div class="panel panel-default">
 
 	<div class="panel-heading">
-		<b>Partido Nro : {{$partido->numero_partido}} </b>
+		<b>Partido Nro : {{$partido->numero_partido}}</b>
 	</div>
 
 	<div class="panel-body">
@@ -116,11 +116,6 @@
 								
 									{{ Form::label('label', 'Televisado', array('class' => ' control-label')) }}
 				                    {{ Form::select('televisado', array('0'=>'No','1'=>'Web','2'=>'TV') , Input::old('televisado') , array('class'=>'form-control'))}}
-
-
-				                    {{ Form::label('label', 'URL Televisado', array('class' => ' control-label')) }}
-				                    {{ Form::text('televisado_url' , Input::old('televisado_url') , array('class'=>'form-control'))}}
-
 								
 									{{ Form::label('label', 'Condicional', array('class' => ' control-label')) }}
 				                    {{ Form::checkbox('condicional') }}
@@ -154,11 +149,10 @@
 								@if($partido->estado == 0)
 									<a href="puntoxpunto/empezarpartido" class="btn btn-xs btn-success ">Iniciar Partido</a>			
 								@elseif($partido->estado == 2)
-									
+									<a href="puntoxpunto/recalculartabla" class="btn btn-xs btn-success ">Recalcular Tabla</a>
 								@else
 									<a href="puntoxpunto/terminarpartido" class="btn btn-xs btn-success ">Cargar Tabla</a>
 								@endif
-								
 								<hr>
 
 								<form action='puntoxpunto/edit' method='POST' > 
@@ -168,8 +162,7 @@
 												
 												<th>Set</th>
 												<th>Local</th>
-												<th>Visitante </th>
-												<th></th>
+												<th>Visitante</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -177,13 +170,8 @@
 											@foreach($partido->puntoPartido as $punto)
 											<tr>
 												<td><strong>{{$punto->set_numero}}</strong></td>
-												<td><input type='text' name='local_{{$punto->id}}' value='{{$punto->puntos_local}}'></td>
+												<td><input type='text' name='local_{{$punto->id}}' value='{{$punto->puntos_local}}'></td>	
 												<td><input type='text' name='visita_{{$punto->id}}' value='{{$punto->puntos_visita}}'></td>
-												<td>
-												@if($punto->set_actual == 1)
-													<label class="label label-danger">Set Actual</label>
-												@endif
-												</td>
 											</tr>									
 											@endforeach
 						

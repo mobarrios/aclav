@@ -14,12 +14,12 @@
     "confirm_sync": true,
     "confirm_overwrite_newer": false,
     
-    "host": "190.105.235.240",
-    "user": "aclav",
-    "password": "AQeTGQjHEFcT",
+    "host": "200.61.136.134",
+    "user": "admin",
+    "password": "oTxWtOP",
     //"port": "22",
     
-    "remote_path": "/domains/aclav.com/public_html/",
+    "remote_path": "/public_html/datachost.com/aclav/",
     "ignore_regexes": [
         "\\.sublime-(project|workspace)", "sftp-config(-alt\\d?)?\\.json",
         "sftp-settings\\.json", "/venv/", "\\.svn/", "\\.hg/", "\\.git/",
