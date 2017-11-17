@@ -91,8 +91,18 @@
 
                @foreach($partidos as $partido_calendario)
                   <?php $partido = Partido::find($partido_calendario->partido_id); ?>
+<<<<<<< HEAD
+                  <?php $partidoToday = $partidos_hoy->where('partido.fecha_inicio', $today)->first(); ?>
+
+                  @if($partido->id == $partidoToday->partido_id)
+                  <div id="today"></div>
+                  @endif
+
+                  <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
+=======
                
                   <div  class="partido card1"  id="{{($partido->fecha_inicio == $today) ? 'today' : '' }}" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
+>>>>>>> d3753c3e722780d8c8ae145932320c88e0fa802c
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
                     visita-id = "{{ ($partido->visita_text == '') ? $partido->visita_equipo_id->id: '' }}"
                     style="{{ $partido->condicional == true ? "background-color:#f5e6e6;" : "" }}">
@@ -413,10 +423,18 @@ var teams_id = 0;
      });
 
 
+<<<<<<< HEAD
      $('html, body').animate({
+=======
+<<<<<<< HEAD
+     $('#today').scrollTop();
+=======
+    $('html, body').animate({
+>>>>>>> 1f6c31e6f290ad6f6ff2e0bb9573f2faf27177e1
         scrollTop: parseInt($("#today").offset().top) - 100
     }, 1000);
 
+>>>>>>> d3753c3e722780d8c8ae145932320c88e0fa802c
 
      
 

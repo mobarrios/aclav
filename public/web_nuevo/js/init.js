@@ -7,7 +7,7 @@
 
 ;(function($){
   "use strict";
-
+  
   $('body').jpreLoader({
     showSplash: false,
     loaderVPos: "50%",
