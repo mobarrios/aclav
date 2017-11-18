@@ -97,6 +97,13 @@
                     @endif
                   @endif
 
+                  @if(isset($partidos_proximo))
+                    @if($partido->id == $partidos_proximo[0]->partido_id)
+                    <div id="today"></div>
+                    @endif
+                  @endif
+
+
                   <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
 
                    local-id="{{ ($partido->local_text == '') ? $partido->local_equipo_id->id: '' }}"
@@ -175,6 +182,7 @@
                                            <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Play" target="_blank" >
                                            <img src="assets/webnueva/images/tyc_play.png" ></a> <span style="font-weight:100;color:#CD3243"> |
                                         @elseif($partido->televisado == 2 )
+              
 <a class="chac" href="{{$partido->televisado_url ? $partido->televisado_url  : '#' }}" target="_blank"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="TyC Sports">
                                            <img src="assets/webnueva/images/tyc_tv.png"></a> <span style="font-weight:100;color:#CD3243"> |
                                         @endif
