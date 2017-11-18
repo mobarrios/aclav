@@ -90,8 +90,11 @@
 
                @foreach($partidos as $partido_calendario)
                   <?php $partido = Partido::find($partido_calendario->partido_id); ?>
-                  @if($partido->id == $partidos_today[0]->partido_id)
-                  <div id="today"></div>
+
+                  @if(!empty($partidos_today[0]->partido_id))
+                    @if($partido->id == $partidos_today[0]->partido_id)
+                    <div id="today"></div>
+                    @endif
                   @endif
 
                   <div  class="partido card1" fase-id='{{$partido_calendario->torneo_fase_id}}' leg-id='{{$partido_calendario->leg_id}}' 
