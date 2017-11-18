@@ -305,7 +305,7 @@ class NuevaWebController extends BaseController
 		   $data['jugadores']   =  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFe;
 		   
 		   $data['staffs']		=  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFeStaff;
-		
+			
 
 		   
 		   $torneos_ex 			= Torneos::where('temporada_id',$temporada_actual)->where('o2_web','1')->get();

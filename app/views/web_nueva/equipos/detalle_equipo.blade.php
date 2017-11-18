@@ -236,7 +236,16 @@
                             <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{$k->Oficial->apellido}} {{$k->Oficial->nombre}}</font></a>
                           </td>
                           <td class="team-roster-table__age">
-                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}</font><br>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">
+                            {{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}<br>
+                            
+                            @if($k->oficial_funcion_id != $k->Oficial->Funcion->id)
+                             {{ isset($k->Funcion->funcion) ? $k->Funcion->funcion : '' }}
+                            @endif
+
+                            </font>
+                            </a>
+
                          
                             
                           </td>
@@ -295,7 +304,13 @@
                               <font color="#808080">hasta {{$k->fecha_hasta}}</font>
                           </td>
                           <td class="team-roster-table__age">
-                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}</font><br>
+                            <a href="{{route('detalle_staff',$k->Oficial->id)}}"><font color="#000000">{{ isset($k->Oficial->Funcion->funcion) ? $k->Oficial->Funcion->funcion : '' }}
+                            <br>
+                             @if($k->oficial_funcion_id != $k->Oficial->Funcion->id)
+                             {{ isset($k->Funcion->funcion) ? $k->Funcion->funcion : '' }}
+                            @endif
+                            </font>
+                            </a>
                           
                             
                           </td>
