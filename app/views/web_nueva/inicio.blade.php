@@ -30,6 +30,9 @@
     right:-20px;
     cursor:pointer;
 }
+.fade.in {
+  background-color: #08080861 !important;
+}
 </style>
 @endsection
 @section('site-content')
