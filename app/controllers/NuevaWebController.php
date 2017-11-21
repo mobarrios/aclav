@@ -191,6 +191,20 @@ class NuevaWebController extends BaseController
 			->select('partido.id as partido_id')
 		    ->get();
 
+		if(empty($data['partidos_today'])){    
+		$data['partidos_proximo'] = DB::table('torneo_fase')
+			->where('torneo_fase.torneo_id', $data['torneo']->id)
+			->join('torneo_fase_leg', 'torneo_fase_leg.torneo_fase_id', '=', 'torneo_fase.id')
+			->join('torneo_fase_leg_partido', 'torneo_fase_leg_partido.torneo_fase_leg_id','=','torneo_fase_leg.id')
+			->join('partido', 'torneo_fase_leg_partido.partido_id','=','partido.id')
+			->orderBy('partido.fecha_inicio', 'desc')
+			->orderBy('partido.hora','asc')
+			->limit(1)
+			->select('partido.id as partido_id')
+		    ->get();  
+		}
+
+
 		 
 		$data['sesion_calendario'] = 1;
 
@@ -305,7 +319,7 @@ class NuevaWebController extends BaseController
 		   $data['jugadores']   =  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFe;
 		   
 		   $data['staffs']		=  o2::where('torneos_id','=',$torneos->id)->where('equipo_id','=',$id)->first()->BuenaFeStaff;
-		
+			
 
 		   
 		   $torneos_ex 			= Torneos::where('temporada_id',$temporada_actual)->where('o2_web','1')->get();
