@@ -13,11 +13,7 @@
 
 	<div class="panel-body">
 
-<<<<<<< HEAD
 		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar popup web</a>
-=======
-		<a href="estadisticae/new" class="btn btn-xs btn-success">Cargar Popup Web</a>
->>>>>>> 91ad8e969e6b98d9ffae5998206b44670ce696fe
 
 		<table class="table table-hover datatable">
 			<thead>
