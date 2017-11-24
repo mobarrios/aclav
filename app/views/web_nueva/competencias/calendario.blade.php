@@ -1,4 +1,9 @@
 @extends('web_nueva.template')
+@section('css')
+<style>
+.condicional{}
+</style>
+@endsection
 @section('site-content')
 
  <div class="site-content1">
@@ -114,13 +119,12 @@
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b>
-                                 <br>
-                                  @if($partido->condicional)
-                                  <label class="pull-left label label-danger">Condicional</label>
-                                 @endif
-
                                 </span>
                                 
+                                @if($partido->condicional)
+                                  <label class="pull-left label label-danger condicional">Condicional</label>
+                                @endif
+
                                   <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
 
                                   <time class="game-result__league1"><b>{{$partido->getFechaDeInicio()}} | {{ $partido->hora}}</b></time>
@@ -351,27 +355,9 @@ var teams_id = 0;
         {
 
 
-          if(fase_id == 0)
-          {
-            if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id ){
+          if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id ){
                     $(this).show();
             } 
-
-          }
-          else if( $(this).attr('fase-id') == fase_id )
-          {
-            if(leg_id == 0 )
-            {
-                if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                    $(this).show();
-            }
-            else if( $(this).attr('leg-id') == leg_id )
-            {
-                  if($(this).attr('local-id') == id  ||  $(this).attr('visita-id') == id )
-                    $(this).show();
-            }
-
-          }
 
               
               // if(teams_id == 0)

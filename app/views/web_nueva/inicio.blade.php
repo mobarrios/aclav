@@ -16,6 +16,7 @@
     top:20%;
     left:35%;
     margin-left:-100px;
+
 }
 .ventana span{
     color:#fff;
@@ -33,6 +34,7 @@
 .fade.in {
   background-color: #08080861 !important;
 }
+
 </style>
 @endsection
 @section('site-content')
@@ -387,7 +389,7 @@
     <!-- Footer / End --> 
     @if(count($modal_pop) > 0)
     <!-- Login/Register Modal -->
-    <div id="modal" class="modal fade" tabindex="-1" role="dialog" >
+    <div id="modal" class="modal fade " tabindex="-1" role="dialog" >
       <div class="ventana">
         <!-- Modal content-->
         <div class="modal-content">
