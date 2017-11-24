@@ -1,7 +1,25 @@
 @extends('web_nueva.template')
 @section('css')
 <style>
-.condicional{}
+
+.condicional{
+
+background-color: red;
+color: #fff;
+padding: 3px 7px;
+display: inline;
+padding: .2em .6em .3em;
+font-size: 75%;
+font-weight: bold;
+line-height: 1;
+color: #ffffff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25em;
+}
+
+
 </style>
 @endsection
 @section('site-content')
@@ -119,11 +137,15 @@
                               <!-- comienzo titulos -->
                               <header class="game-result__header1 game-result__header--alt" >
                                 <span class="game-result__league"><b>N° {{$partido->numero_partido}}</b>
+                                   @if($partido->condicional)
+                                  <b  class=" condicional">CONDICIONAL</b>
+                                  
+                                  @endif
+
                                 </span>
                                 
-                                @if($partido->condicional)
-                                  <label class="pull-left label label-danger condicional">Condicional</label>
-                                @endif
+                               
+
 
                                   <h3 class="game-result__title">{{$partido_calendario->fase}} :  {{$partido_calendario->leg}}</h3>
 
