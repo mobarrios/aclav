@@ -2,38 +2,51 @@
 @section('css')
 <style>
 .modal{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    opacity: 0.5;
-    display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 0.5;
+  display:none;
 }
 .ventana{
-    width:600px;
-    position:absolute;
-    top:20%;
-    left:35%;
-    margin-left:-100px;
+  min-width:300px;
+  max-width:600px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 .ventana span{
-    color:#fff;
-    background-color:#000;
-    padding:.2em .5em .3em .5em;
-    font-family:Arial;
-    font-weight:bold;
-    border:2px solid #fff;
-    border-radius:50%;
-    position:absolute;
-    top:-15px;
-    right:-20px;
-    cursor:pointer;
+  color:#fff;
+  background-color:#000;
+  padding:.2em .5em .3em .5em;
+  font-family:Arial;
+  font-weight:bold;
+  border:2px solid #fff;
+  border-radius:50%;
+  position:absolute;
+  top:-15px;
+  right:-20px;
+  cursor:pointer;
 }
+
+.ventana button{
+  top: 4px;
+  right: 4px;
+  position: absolute;
+}
+
 .fade.in {
   background-color: #08080861 !important;
 }
+.modal-body {
+  padding: 0px !important;
+}
+
 
 </style>
 @endsection
@@ -392,14 +405,13 @@
     <div id="modal" class="modal fade " tabindex="-1" role="dialog" >
       <div class="ventana">
         <!-- Modal content-->
+        
         <div class="modal-content">
-          
           <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  
             <img src="uploads/contenidos/estadisticae/{{$modal_pop->imagen}}">
           </div>
-          <div>
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
+
         </div>
       </div>
     </div>
