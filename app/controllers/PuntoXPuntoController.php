@@ -92,7 +92,7 @@ class PuntoXPuntoController extends BaseController
 
 		//$partido = Partido::where('fecha_inicio','=',date('Y-m-d'))->where('local_equipo_id','=',Auth::user()->equipo_id)->get();
 		$partido = Partido::where('pxp','=',1)->where('local_equipo_id','=',Auth::user()->equipo_id)->get();
-		
+
 		foreach($partido as $p)
 		{
 			$fase = TorneoFaseLegPartido::where('partido_id','=',$p->id)->get();
